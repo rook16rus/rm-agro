@@ -1,0 +1,91 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  padding: 3.2rem 0 3rem;
+
+  font: 500 2.4rem/120% var(--main-ff);
+  color: #fff;
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 14rem;
+    align-items: flex-start;
+  }
+
+  &__logo {
+    img {
+      width: 7.3rem;
+      height: 10.6rem;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1.4rem;
+  }
+
+  &__column {
+    display: flex;
+    align-items: center;
+  }
+
+  &__menu {
+    display: flex;
+    gap: 4rem;
+  }
+
+  &__burger {
+    position: relative;
+    width: 4.7rem;
+    height: 1.2rem;
+    margin-left: 4rem;
+
+    &::before {
+      content: '';
+
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 100%;
+      height: 0.2rem;
+
+      border-radius: 0.2rem;
+      background-color: #fff;
+    }
+
+    &::after {
+      content: '';
+
+      position: absolute;
+      bottom: 0;
+      left: 0;
+
+      width: 85%;
+      height: 0.2rem;
+
+      border-radius: 0.2rem;
+      background-color: #fff;
+    }
+  }
+
+
+  &__phone {
+    display: flex;
+    align-items: center;
+    height: 3.3rem;
+    padding: 0 1.5rem;
+    margin-left: 9rem;
+
+    border: 1px solid #fff;
+    border-radius: 99.9rem;
+
+    font: var(--text-t4);
+  }
+}

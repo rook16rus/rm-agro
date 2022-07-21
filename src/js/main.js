@@ -10,6 +10,7 @@ import editableTextContainer from './custom/editableTextContainer';
 import initSliders from "./custom/initSliders";
 import fancybox from "./build-in/fancybox";
 import loadApi from "./build-in/loadApi";
+import header from "./build-in/header";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -19,6 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
     setScrollbarWidth();
     anchorLinks();
     fancybox();
+    header()
 
     // custom
     initSliders();

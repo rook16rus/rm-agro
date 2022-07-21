@@ -1,3 +1,22 @@
 {
-
+  "menuLeft": [
+    {
+      "href": "catalog.html",
+      "text": "Каталог"
+    },
+    {
+      "href": "activities.html",
+      "text": "Направления деятельности"
+    }
+  ],
+  "menuRight": [
+    {
+      "href": "contacts.html",
+      "text": "Контакты"
+    },
+    {
+      "href": "about.html",
+      "text": "О холдинге"
+    }
+  ]
 }

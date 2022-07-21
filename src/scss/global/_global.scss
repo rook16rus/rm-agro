@@ -15,6 +15,7 @@ address {
 }
 
 html {
+    padding-top: var(--header-height);
     box-sizing: border-box;
     font-size: 10px;
     -webkit-text-size-adjust: 100%;
