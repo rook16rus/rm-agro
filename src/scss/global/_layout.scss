@@ -9,6 +9,32 @@
     }
 }
 
+.button {
+    display: flex;
+    align-items: center;
+    height: 3.5rem;
+    padding: 0 1.6rem;
+
+    border: 1px solid transparent;
+    border-radius: 4rem;
+    cursor: pointer;
+
+    font: var(--text-t4);
+    text-transform: uppercase;
+
+    &--white {
+        background-color: #fff;
+        border-color: #fff;
+        color: #000;
+
+        &:hover {
+            color: #fff;
+            background-color: #000;
+            border-color: #000;
+        }
+    }
+}
+
 .visually-hidden {
     border: 0;
     clip: rect(0 0 0 0);

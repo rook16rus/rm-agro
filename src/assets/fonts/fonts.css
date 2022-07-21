@@ -2,8 +2,7 @@
 	font-family: 'Onyx';
 	font-weight: 400;
 	font-style: normal;
-	src: url('./OnyxMTStd.woff2'),
-         url('./OnyxMTStd.woff');
+	src: url('./Onyx-Regular.otf');
 }
 
 @font-face {
