@@ -43,5 +43,22 @@
     {
       "img": "img/intro-7.jpg"
     }
+  ],
+  "aboutFeatures": [
+    {
+      "title": "250 000",
+      "text": "тонн — производство грубых и сочных кормов",
+      "img": "img/about-1.jpeg"
+    },
+    {
+      "title": "13 000",
+      "text": "тонн — производство грубых и сочных кормов",
+      "img": "img/about-2.jpeg"
+    },
+    {
+      "title": "14+",
+      "text": "гектаров-земельный бак",
+      "img": "img/about-3.jpeg"
+    }
   ]
 }

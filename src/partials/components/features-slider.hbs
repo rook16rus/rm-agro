@@ -1,0 +1,15 @@
+<div class="features-slider swiper js-init-slider" data-space="50" data-slides="auto" data-free-mode="true">
+    <div class="swiper-wrapper">
+        {{#each data }}
+            <div class="features-slider__slide swiper-slide">
+                <div class="features-slider__content">
+                    <h3>{{this.title}}</h3>
+                    <p>{{this.text}}</p>
+                </div>
+                <div class="features-slider__slide-img">
+                    <img src="{{this.img}}" alt="Фото преимущества">
+                </div>
+            </div>
+        {{/each}}
+    </div>
+</div>

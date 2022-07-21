@@ -6,12 +6,7 @@
                 <div class="intro__wrapper">
                     <div class="intro__header">
                         <h1 class="intro__title">РМ АГРО</h1>
-                        <div class="intro__link-block">
-                            <div class="intro__link-text">
-                                <p>Производство качественных колбасных изделий и экологически чистой мясной продукции</p>
-                            </div>
-                            <a class="intro__link button button--white" href="#">подробнее</a>
-                        </div>
+                        {{> link-block buttonMod='button--white' buttonText='подробнее' text="Производство качественных колбасных изделий и экологически чистой мясной продукции"}}
                     </div>
                     <div class="intro__body">
                         <a class="intro__video-link" href="#">
@@ -46,6 +41,21 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
+        <section class="about">
+            <div class="container">
+                {{> section-header title='о компании' }}
+                <div class="about__top">
+                    <div class="about__lead">
+                        <h3>
+                            Одно из ведущих в Российской федерации агропромышленных объединений с замкнутым циклом
+                            «От поля до прилавка»
+                        </h3>
+                    </div>
+                    {{> link-block buttonMod='button--green' buttonText='подробнее' text='Специализация: животноводство, производство мясной и молочной продукции и её реализация потребителям' }}
+                </div>
+                {{> features-slider data=aboutFeatures }}
             </div>
         </section>
 

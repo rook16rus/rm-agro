@@ -27,11 +27,19 @@
         border-color: #fff;
         color: #000;
 
+        transition: $base-transition-time;
+
         &:hover {
             color: #fff;
             background-color: #000;
             border-color: #000;
         }
+    }
+
+    &--green {
+        background-color: var(--accent-color);
+        border-color: var(--accent-color);
+        color: #fff;
     }
 }
 
@@ -61,7 +69,8 @@
 }
 
 .section-title {
-    font: var(--title-h2);
+    font: var(--title-h4);
+    color: var(--title-color);
     text-transform: uppercase;
 }
 

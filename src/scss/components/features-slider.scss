@@ -1,0 +1,49 @@
+.features-slider {
+  overflow: visible;
+
+  &__slide {
+    position: relative;
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    width: auto;
+    min-height: 40.5rem;
+    padding: 2rem 12.8rem 0 0;
+
+    h3 {
+      position: relative;
+      z-index: 1;
+
+      font: var(--title-h2);
+      color: var(--accent-color);
+    }
+
+    p {
+      position: relative;
+      z-index: 1;
+
+      max-width: 25rem;
+
+      font: var(--text-t2);
+    }
+  }
+
+  &__slide-img {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 28.7rem;
+    aspect-ratio: 1 / 1;
+
+    border-radius: 50%;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}

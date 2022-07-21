@@ -1,0 +1,17 @@
+.link-block {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: flex-start;
+  max-width: 44rem;
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+
+    font: var(--text-t2);
+    opacity: 0.8;
+  }
+}
+

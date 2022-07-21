@@ -1,0 +1,20 @@
+.about {
+  padding: 12rem 0 9.4rem;
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+    margin-bottom: 11rem;
+  }
+
+  &__lead {
+    max-width: 95rem;
+
+    font: var(--title-h3);
+    letter-spacing: -0.01em;
+    text-indent: 3.5rem;
+    text-transform: uppercase;
+    color: var(--title-color);
+  }
+}
