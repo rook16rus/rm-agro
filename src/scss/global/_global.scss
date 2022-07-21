@@ -23,14 +23,14 @@ html {
 }
 
 body {
-    font-size: 1.4rem;
-    line-height: 1.4;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    font-family: 'Onest', sans-serif;
-    color: var(--primary);
-    background-color: #F2F2F2;
+
+    background-color: var(--bg-color);
+
+    font: var(--text-t2);
+    color: var(--text-color);
 }
 
 main {

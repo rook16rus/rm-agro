@@ -35,10 +35,11 @@
 }
 
 .section-title {
-    @extend %fs-h2;
+    font: var(--title-h2);
+    text-transform: uppercase;
 }
 
 .main-title {
+    font: var(--title-h1);
     text-transform: uppercase;
-    @extend %fs-h1;
 }
