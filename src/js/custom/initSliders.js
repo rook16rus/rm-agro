@@ -111,10 +111,9 @@ export default function initSliders() {
             ...fadeEffect,
             pagination: {
                 el: slider.querySelector('.swiper-pagination'),
+                type: "fraction",
                 clickable: true,
                 bulletElement: 'button',
-                bulletClass: 'slider-bullet',
-                bulletActiveClass: 'slider-bullet--active',
             },
             ...breakpointsSpacebetween,
             ...breakpointsPerview,

@@ -1,0 +1,27 @@
+.slider-navigation {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    aspect-ratio: 1 / 1;
+
+    border-radius: 50%;
+    border: 1px solid rgba(17, 17, 17, 0.3);
+
+    color: #111111;
+
+    &:last-child {
+      transform: rotate(180deg);
+    }
+
+    svg {
+      width: 0.6rem;
+      height: 1.2rem;
+    }
+  }
+}

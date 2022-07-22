@@ -81,6 +81,69 @@
                 </ul>
             </div>
         </section>
+        <section class="job">
+            <div class="container">
+                <div class="job__inner">
+                    <div class="job__body">
+                        <h2 class="job__title">работа у&nbsp;нас</h2>
+                        <div class="job__slider">
+                            <div class="swiper js-init-slider">
+                                <div class="swiper-wrapper">
+                                    {{#each job }}
+                                        <blockquote class="job__slide swiper-slide">
+                                            <div class="job__slide-top">
+                                                <div class="job__slide-img">
+                                                    <img src="{{this.img}}" alt="Фото сотрудника">
+                                                </div>
+                                                <div class="job__slide-text">
+                                                    <p>РМ Агро — компания, где можно начать или продолжить карьерный
+                                                        путь</p>
+                                                </div>
+                                            </div>
+                                            <cite class="job__slide-author">
+                                                <span>Мутигуллин Р.М.</span>
+                                                <span>Генеральный директор РМ Агро</span>
+                                            </cite>
+                                        </blockquote>
+                                    {{/each}}
+                                </div>
+                                {{> slider-navigation }}
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="job__footer">
+                        <div class="job__employments">
+                            <div class="job__employments-images">
+                                <img class="lazyload" data-src="img/employment-1.jpg" alt="Фото сотрудника">
+                                <img class="lazyload" data-src="img/employment-2.jpg" alt="Фото сотрудника">
+                                <img class="lazyload" data-src="img/employment-3.jpg" alt="Фото сотрудника">
+                            </div>
+                            <div class="job__employments-text">
+                                <p>
+                                    Опыт профессионалов сельского хозяйства, который позволяет расти и развиваться молодым
+                                    специалистам отрасли
+                                </p>
+                            </div>
+                        </div>
+                        <div class="job__links">
+                            <a class="job__link" href="#">
+                                <span>смотреть вакансии</span>
+                                <svg>
+                                    <use xlink:href="#link-arrow-icon"></use>
+                                </svg>
+                            </a>
+                            <a class="job__link" href="#">
+                                <span>Больше о работе с нами</span>
+                                <svg>
+                                    <use xlink:href="#link-arrow-icon"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
     {{/content}}
 {{/extend}}

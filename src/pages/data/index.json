@@ -97,5 +97,22 @@
       "title": "колбасные изделия",
       "img": "img/products-2.png"
     }
+  ],
+  "job": [
+    {
+      "img": "img/director.jpg"
+    },
+    {
+      "img": "img/director.jpg"
+    },
+    {
+      "img": "img/director.jpg"
+    },
+    {
+      "img": "img/director.jpg"
+    },
+    {
+      "img": "img/director.jpg"
+    }
   ]
 }

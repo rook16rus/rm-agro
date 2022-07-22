@@ -19,6 +19,12 @@
     transition: opacity 300ms;
 }
 
+.swiper-pagination {
+    font: var(--text-t5);
+    color: #221F20;
+    opacity: 0.6;
+}
+
 /* Яндекс карты */
 
 [class*="ground-pane"] {
