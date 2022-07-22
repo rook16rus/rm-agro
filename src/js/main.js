@@ -10,19 +10,20 @@ import editableTextContainer from './custom/editableTextContainer';
 import initSliders from "./custom/initSliders";
 import fancybox from "./build-in/fancybox";
 import header from "./build-in/header";
+import activitiesSlider from "./build-in/activitiesSlider";
 
 gsap.registerPlugin(ScrollTrigger);
 
 document.addEventListener('DOMContentLoaded', function () {
+    initSliders();
+    editableTextContainer();
+
     detectTouch();
     setScrollbarWidth();
     anchorLinks();
     fancybox();
-    header()
-
-    // custom
-    initSliders();
-    editableTextContainer();
+    header();
+    activitiesSlider();
 });
 
 document.addEventListener('lazyloaded', () => {

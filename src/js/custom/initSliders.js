@@ -18,6 +18,7 @@ export default function initSliders() {
         const hashNavigation = !!slider.dataset.hash;
         const allowTouchMove = !slider.dataset.noTouch;
         const slidesPerColumn = Number(slider.dataset.column);
+        const reverseDirection = !!slider.dataset.reverse;
         let freeMode = slider.dataset.freeMode;
 
         let gridColumn;

@@ -22,7 +22,7 @@
                         <div class="intro__footer-column">
                             <h3 class="intro__list-title">направления деятельности</h3>
                             <ul class="intro__list">
-                                {{#each activities }}
+                                {{#each introActivities }}
                                     <li class="intro__list-item">
                                         <img src="{{this.img}}" alt="Фото направления">
                                     </li>
@@ -56,6 +56,12 @@
                     {{> link-block buttonMod='button--green' buttonText='подробнее' text='Специализация: животноводство, производство мясной и молочной продукции и её реализация потребителям' }}
                 </div>
                 {{> features-slider data=aboutFeatures }}
+            </div>
+        </section>
+        <section class="activities">
+            <div class="container">
+                {{> section-header sliderMod='js-activities-slider-thumb' slider=true data=activities title='направления деятельности' }}
+                {{> activities-slider data=activities }}
             </div>
         </section>
 

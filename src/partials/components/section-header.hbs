@@ -1,6 +1,15 @@
 <div class="section-header">
     <div class="section-header__top">
         <h2 class="section-header__title section-title">{{title}}</h2>
+        {{#if slider}}
+            <div class="section-header__slider swiper js-init-slider{{#if sliderMod }} {{sliderMod}}{{/if}}" data-slides="auto">
+                <div class="swiper-wrapper">
+                    {{#each data }}
+                        <div class="section-header__slide swiper-slide"><div class="section-header__slide-inner">{{this.title}}</div></div>
+                    {{/each}}
+                </div>
+            </div>
+        {{/if}}
     </div>
     <div class="section-header__line"></div>
 </div>

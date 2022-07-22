@@ -1,0 +1,17 @@
+<div class="activities-slider swiper js-activities-slider">
+    <div class="swiper-wrapper">
+        {{#each data }}
+            <div class="activities-slider__slide swiper-slide">
+                <h3 class="activities-slider__title">{{title}}</h3>
+            </div>
+        {{/each}}
+    </div>
+    {{#each data }}
+        <div class="activities-slider__content">
+            <div class="activities-slider__img">
+                <img src="{{this.img}}" alt="">
+            </div>
+            {{> link-block buttonMod='button--green' buttonText='узнать подробнее' text=this.text }}
+        </div>
+    {{/each}}
+</div>
