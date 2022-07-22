@@ -1,0 +1,30 @@
+@font-face {
+	font-family: 'Onyx';
+	font-weight: 400;
+	font-style: normal;
+	src: url('./Onyx-Regular.otf');
+}
+
+@font-face {
+    font-family: 'Raleway';
+    font-weight: 500;
+    font-style: normal;
+    src: url('./Raleway-Medium.woff2'),
+    url('./Raleway-Medium.woff');
+}
+
+@font-face {
+    font-family: 'Raleway';
+    font-weight: 400;
+    font-style: normal;
+    src: url('./Raleway-Regular.woff2'),
+    url('./Raleway-Regular.woff');
+}
+
+@font-face {
+    font-family: 'Raleway';
+    font-weight: 600;
+    font-style: normal;
+    src: url('./Raleway-SemiBold.woff2'),
+    url('./Raleway-SemiBold.woff');
+}
