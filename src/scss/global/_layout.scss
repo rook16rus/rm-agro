@@ -43,6 +43,65 @@
     }
 }
 
+.input {
+    display: flex;
+    align-content: center;
+    padding: 0 2.5rem;
+    height: 6rem;
+
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+
+    font: var(--text-t2);
+    color: rgba(251, 251, 251, 0.8);
+    text-transform: uppercase;
+    
+    @include placeholder() {
+        font: var(--text-t2);
+        color: rgba(251, 251, 251, 0.8);
+        text-transform: uppercase;
+    }
+}
+
+.textarea {
+    @extend .input;
+
+    height: auto;
+    padding: 2rem 2.5rem;
+}
+
+.checkbox {
+    @extend .visually-hidden;
+
+    & + label {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        cursor: pointer;
+
+        font: var(--text-t5);
+        opacity: 0.8;
+
+        &::before {
+            content: '';
+
+            width: 2rem;
+            height: 2rem;
+
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            border-radius: 0.4rem;
+            
+            transition: 0.3s;
+        }
+    }
+
+    &:checked + label::before {
+        background: url("../img/check-icon.svg") no-repeat center;
+        background-size: 1.5rem 1.5rem;
+    }
+}
+
 .visually-hidden {
     border: 0;
     clip: rect(0 0 0 0);
