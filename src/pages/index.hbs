@@ -121,7 +121,8 @@
                             </div>
                             <div class="job__employments-text">
                                 <p>
-                                    Опыт профессионалов сельского хозяйства, который позволяет расти и развиваться молодым
+                                    Опыт профессионалов сельского хозяйства, который позволяет расти и развиваться
+                                    молодым
                                     специалистам отрасли
                                 </p>
                             </div>
@@ -141,6 +142,96 @@
                             </a>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
+        <section class="news">
+            <div class="container">
+                {{> section-header allLink=true title='новости и акции' }}
+                <div class="news__wrapper">
+                    <div class="news__slider">
+                        <div class="swiper js-init-slider">
+                            <div class="swiper-wrapper">
+                                <div class="news__slide swiper-slide">
+                                    <div class="news__slide-header">
+                                        <a class="news__tag" href="#">Акция</a>
+                                        <time class="news__time" datetime="2021-12-28">28 декабря 2021</time>
+                                    </div>
+                                    <div class="news__slide-content">
+                                        <h3>Специальное предложения только для наших партнеров</h3>
+                                        <div class="news__slide-text">
+                                            <p>
+                                                Генеральный директор ООО «АПК Продовольственная программа» Мутигуллин Рифат
+                                                Махмутович стал Лауреатом конкурса в номинации «За активное развитие
+                                                кадрового потенциала»
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <a class="news__slide-link button button--green" href="#">узнать подробнее</a>
+                                    <div class="news__slide-img">
+                                        <img class="lazyload" data-src="img/news-4.png" alt="Фото колбаски">
+                                    </div>
+                                </div>
+                                <div class="news__slide swiper-slide">
+                                    <div class="news__slide-header">
+                                        <a class="news__tag" href="#">Акция</a>
+                                        <time class="news__time" datetime="2021-12-28">28 декабря 2021</time>
+                                    </div>
+                                    <div class="news__slide-content">
+                                        <h3>Специальное предложения только для наших партнеров</h3>
+                                        <div class="news__slide-text">
+                                            <p>
+                                                Генеральный директор ООО «АПК Продовольственная программа» Мутигуллин Рифат
+                                                Махмутович стал Лауреатом конкурса в номинации «За активное развитие
+                                                кадрового потенциала»
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <a class="news__slide-link button button--green" href="#">узнать подробнее</a>
+                                    <div class="news__slide-img">
+                                        <img class="lazyload" data-src="img/news-4.png" alt="Фото колбаски">
+                                    </div>
+                                </div>
+                                <div class="news__slide swiper-slide">
+                                    <div class="news__slide-header">
+                                        <a class="news__tag" href="#">Акция</a>
+                                        <time class="news__time" datetime="2021-12-28">28 декабря 2021</time>
+                                    </div>
+                                    <div class="news__slide-content">
+                                        <h3>Специальное предложения только для наших партнеров</h3>
+                                        <div class="news__slide-text">
+                                            <p>
+                                                Генеральный директор ООО «АПК Продовольственная программа» Мутигуллин Рифат
+                                                Махмутович стал Лауреатом конкурса в номинации «За активное развитие
+                                                кадрового потенциала»
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <a class="news__slide-link button button--green" href="#">узнать подробнее</a>
+                                    <div class="news__slide-img">
+                                        <img class="lazyload" data-src="img/news-4.png" alt="Фото колбаски">
+                                    </div>
+                                </div>
+                            </div>
+                            {{> slider-navigation }}
+                        </div>
+                    </div>
+                    <ul class="news__list">
+                        {{#each news }}
+                            <li class="news__item">
+                                <div class="news__item-img">
+                                    <img class="lazyload" data-src="{{this.img}}" alt="Фото новости">
+                                </div>
+                                <div class="news__item-content">
+                                    <h3>{{this.title}}</h3>
+                                    <div class="news__item-footer">
+                                        <time class="news__time" datetime="2021-12-28">28 декабря 2021</time>
+                                        <a class="news__tag" href="#">Новость</a>
+                                    </div>
+                                </div>
+                            </li>
+                        {{/each}}
+                    </ul>
                 </div>
             </div>
         </section>
