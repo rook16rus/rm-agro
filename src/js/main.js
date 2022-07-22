@@ -11,6 +11,7 @@ import initSliders from "./custom/initSliders";
 import fancybox from "./build-in/fancybox";
 import header from "./build-in/header";
 import activitiesSlider from "./build-in/activitiesSlider";
+import hoverButton from "./build-in/hoverButton";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -24,6 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
     fancybox();
     header();
     activitiesSlider();
+    hoverButton();
 });
 
 document.addEventListener('lazyloaded', () => {

@@ -32,7 +32,7 @@
                         <div class="intro__footer-column">
                             <h3 class="intro__list-title">смотреть продукцию</h3>
                             <ul class="intro__list">
-                                {{#each products }}
+                                {{#each introProducts }}
                                     <li class="intro__list-item">
                                         <img src="{{this.img}}" alt="Фото направления">
                                     </li>
@@ -62,6 +62,23 @@
             <div class="container">
                 {{> section-header sliderMod='js-activities-slider-thumb' slider=true data=activities title='направления деятельности' }}
                 {{> activities-slider data=activities }}
+            </div>
+        </section>
+        <section class="products">
+            <div class="container">
+                {{> section-header  allLink=true title='наша продукция' }}
+                <ul class="products__list">
+                    {{#each products }}
+                        <li class="products__item-wrapper">
+                            <a class="products__item" href="#">
+                                <h3 class="products__item-title">{{this.title}}</h3>
+                                <span class="products__item-link button button--white js-hover-button">перейти в раздел</span>
+                                <span class="products__item-link-transparent button button--white js-hover-button-clone">перейти в раздел</span>
+                                <img class="products__item-img" src="{{this.img}}" alt="Фото продукции">
+                            </a>
+                        </li>
+                    {{/each}}
+                </ul>
             </div>
         </section>
 

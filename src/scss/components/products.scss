@@ -1,0 +1,86 @@
+.products {
+  padding-bottom: 15rem;
+  background-color: #fff;
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+    margin-left: 3.5rem;
+  }
+
+  &__item {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 3.5rem;
+    height: 100%;
+    min-height: 53.9rem;
+
+    border-radius: 2rem;
+    background: var(--bg-color) url("../img/steaks.svg") no-repeat center;
+    overflow: hidden;
+
+    transition: 0.3s;
+
+    &:hover {
+      background-color: var(--accent-color);
+
+      .products__item-title {
+        color: #FDFCFC;
+      }
+
+      .products__item-link {
+        width: var(--button-width);
+        padding: 0 1.5rem;
+      }
+    }
+  }
+
+  &__item-title {
+    max-width: 30rem;
+
+    font: var(--title-h3);
+    color: var(--title-color);
+    text-transform: uppercase;
+
+    transition: 0.3s;
+  }
+
+  &__item-img {
+    position: absolute;
+    right: -10rem;
+    bottom: 6.5rem;
+
+    width: 56rem;
+    aspect-ratio: 560 / 409;
+  }
+
+  &__item-link {
+    width: 0;
+    padding: 0;
+
+    border: 0;
+    overflow: hidden;
+
+    color: var(--accent-color);
+    white-space: nowrap;
+
+    transition: 0.3s;
+
+    &:hover {
+      border-color: #fff;
+      background-color: #fff;
+      color: var(--accent-color);
+    }
+  }
+
+  &__item-link-transparent {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+  }
+}
