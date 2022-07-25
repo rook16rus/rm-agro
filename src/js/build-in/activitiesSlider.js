@@ -8,10 +8,17 @@ export default function activitiesSlider() {
     });
 
     const swiper = new Swiper('.js-activities-slider', {
-        slidesPerView: 'auto',
-        spaceBetween: 110,
+        slidesPerView: 1.1,
+        spaceBetween: 25,
+        autoHeight: true,
         thumbs: {
             swiper: swiperThumb,
+        },
+        breakpoints: {
+            769: {
+                slidesPerView: 'auto',
+                spaceBetween: 110,
+            }
         }
     })
 }

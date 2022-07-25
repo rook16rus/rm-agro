@@ -20,10 +20,18 @@
 
   &__title {
     max-width: 27rem;
+
+    @include breakpoint(small-tablet) {
+      max-width: 15rem;
+    }
   }
 
   &__slider {
     margin-right: 0;
+
+    @include breakpoint(small-tablet) {
+      display: none;
+    }
   }
 
   &__slide {
@@ -54,6 +62,37 @@
     white-space: nowrap;
 
     transition: $base-transition-time;
+
+    @include breakpoint(tablet) {
+      height: 3rem;
+      margin-left: 1.2rem;
+
+      font-size: 1.4rem;
+    }
+  }
+
+  &__slider-link {
+    display: none;
+
+    @include breakpoint(small-tablet) {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      font: var(--medium) 1.6rem/120% var(--main-ff);
+      letter-spacing: -0.01;
+      text-transform: uppercase;
+      color: var(--title-color);
+
+      svg {
+        width: 1rem;
+        height: 1rem;
+      }
+    }
+
+    @include breakpoint(mobile) {
+      font-size: 1.2rem;
+    }
   }
 
   &__link {
@@ -67,10 +106,12 @@
 
     @include breakpoint(small-tablet) {
       gap: 2rem;
+      font-size: 1.6rem;
     }
 
     @include breakpoint(mobile) {
       gap: 1rem;
+      font-size: 1.2rem;
     }
 
     svg {
