@@ -2,11 +2,34 @@
   padding-bottom: 15rem;
   background-color: #fff;
 
+  @include breakpoint(tablet) {
+    padding-bottom: 12rem;
+  }
+
+  @include breakpoint(small-tablet) {
+    padding-bottom: 9rem;
+  }
+
+  @include breakpoint(mobile) {
+    padding-bottom: 7rem;
+  }
+
   &__list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2.5rem;
     margin-left: 3.5rem;
+
+
+    @include breakpoint(small-tablet) {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+      margin-left: 1rem;
+    }
+
+    @include breakpoint(mobile) {
+      gap: 2rem;
+    }
   }
 
   &__item {
@@ -25,6 +48,17 @@
     overflow: hidden;
 
     transition: 0.3s;
+
+    @include breakpoint(tablet) {
+      padding: 3rem;
+      min-height: 35rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      aspect-ratio: 321 / 226;
+      min-height: 0;
+      padding: 2rem;
+    }
 
     &:hover {
       background-color: var(--accent-color);
@@ -48,6 +82,14 @@
     text-transform: uppercase;
 
     transition: 0.3s;
+
+    @include breakpoint(tablet) {
+      max-width: 20rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      max-width: 15rem;
+    }
   }
 
   &__item-img {
@@ -57,6 +99,21 @@
 
     width: 56rem;
     aspect-ratio: 560 / 409;
+
+    @include breakpoint(tablet) {
+      width: 40rem;
+      right: -15rem;
+      bottom: 3rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      width: 50rem;
+    }
+
+    @include breakpoint(mobile) {
+      width: 40rem;
+      bottom: 1.4rem;
+    }
   }
 
   &__item-link {
