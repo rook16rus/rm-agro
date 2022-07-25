@@ -3,11 +3,33 @@
   top: 0;
   left: 0;
   right: 0;
+  z-index: 20;
 
   padding: 3.2rem 0 3rem;
 
   font: 500 2.4rem/120% var(--main-ff);
   color: #fff;
+
+  transition: 0.4s;
+
+  &--white {
+    padding: 2rem;
+
+    box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.25);
+    background-color: #fff;
+
+    color: var(--title-color);
+
+    .header__burger {
+      &::before, &::after {
+        background-color: var(--title-color);
+      }
+    }
+
+    .header__phone {
+      border-color: var(--title-color);
+    }
+  }
 
   &__wrapper {
     display: grid;
@@ -54,10 +76,12 @@
       left: 0;
 
       width: 100%;
-      height: 0.2rem;
+      height: 2px;
 
       border-radius: 0.2rem;
       background-color: #fff;
+
+      transition: 0.4s;
     }
 
     &::after {
@@ -68,10 +92,12 @@
       left: 0;
 
       width: 85%;
-      height: 0.2rem;
+      height: 2px;
 
       border-radius: 0.2rem;
       background-color: #fff;
+
+      transition: 0.4s;
     }
   }
 

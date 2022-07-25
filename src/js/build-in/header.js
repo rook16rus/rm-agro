@@ -7,4 +7,13 @@ export default function header() {
     } else {
         document.documentElement.style.setProperty('--header-height', header.clientHeight + 'px');
     }
+
+    window.addEventListener('scroll', () => {
+        if (header.getBoundingClientRect().top > document.documentElement.getBoundingClientRect().top) {
+            if (header.classList.contains('header--whiter')) return;
+            header.classList.add('header--white');
+        } else {
+            header.classList.remove('header--white');
+        }
+    });
 }
