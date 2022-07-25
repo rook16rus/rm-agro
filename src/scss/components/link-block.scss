@@ -5,6 +5,18 @@
   align-items: flex-start;
   max-width: 44rem;
 
+  @include breakpoint(tablet) {
+    max-width: 34rem;
+  }
+
+  @include breakpoint(small-tablet) {
+    gap: 3rem;
+  }
+
+  @include breakpoint(mobile) {
+    max-width: 29rem;
+  }
+
   &__text {
     display: flex;
     flex-direction: column;

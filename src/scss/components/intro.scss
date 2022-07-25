@@ -6,6 +6,15 @@
 
   color: #fff;
 
+  @include breakpoint(tablet) {
+    min-height: 0;
+    padding-top: calc(var(--header-height) + 2.4rem);
+  }
+
+  @include breakpoint(small-tablet) {
+    padding-bottom: 3rem;
+  }
+
   &__wrapper {
     display: flex;
     flex-direction: column;
@@ -15,16 +24,38 @@
   &__header {
     display: flex;
     gap: 5.2rem;
+
+    @include breakpoint(tablet) {
+      gap: 4rem;
+      flex-direction: column;
+    }
+
+    @include breakpoint(small-tablet) {
+      gap: 2rem;
+    }
+
+    @include breakpoint(mobile) {
+      gap: 1.4rem;
+    }
   }
 
   &__title {
     font: var(--title-h0);
     line-height: 80%;
+
+    @media (max-width: 350px) {
+      font-size: 12rem;
+    }
   }
 
   &__body {
     position: relative;
     flex-grow: 1;
+
+    @include breakpoint(tablet) {
+      display: flex;
+      justify-content: flex-end;
+    }
   }
 
   &__video-link {
@@ -39,6 +70,26 @@
     border-radius: 99.9rem;
     overflow: hidden;
 
+    @include breakpoint(tablet) {
+      position: relative;
+      top: auto;
+      right: auto;
+
+      width: 45rem;
+      height: 24rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      width: 30rem;
+      height: 18rem;
+      margin: 2rem 0;
+    }
+
+    @include breakpoint(mobile) {
+      width: 19.8rem;
+      height: 12.8rem;
+    }
+
     img {
       width: 100%;
       height: 100%;
@@ -52,21 +103,54 @@
     top: 50%;
     transform: translateY(-50%);
 
+    @include breakpoint(small-tablet) {
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
     svg {
       width: 5.1rem;
       height: 5.8rem;
+
+      @include breakpoint(mobile) {
+        width: 3.5rem;
+        height: 4rem;
+      }
     }
   }
 
   &__footer {
     display: flex;
     gap: 14rem;
+
+    @include breakpoint(tablet) {
+      flex-direction: column;
+      gap: 3.5rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      align-self: flex-start;
+      flex-direction: row;
+    }
+
+    @media (max-width: 350px) {
+      flex-direction: column;
+      gap: 2rem;
+    }
   }
 
   &__footer-column {
     display: flex;
     flex-direction: column;
     gap: 3.8rem;
+
+    @include breakpoint(tablet) {
+      gap: 2.4rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      gap: 0;
+    }
   }
 
   &__list-title {
@@ -74,11 +158,47 @@
 
     font: var(--title-h3);
     text-transform: uppercase;
+
+    @include breakpoint(small-tablet) {
+      display: block;
+      gap: 1.5rem;
+      align-items: flex-end;
+    }
+
+    @include breakpoint(mobile) {
+
+      font-size: 1.6rem;
+    }
+
+    svg {
+      display: none;
+
+      @include breakpoint(small-tablet) {
+        display: inline-block;
+        width: 3rem;
+        height: 3rem;
+        margin-left: 1.5rem;
+      }
+
+      @include breakpoint(mobile) {
+        width: 1.3rem;
+        height: 1.2rem;
+        margin-left: 0.6rem;
+      }
+    }
   }
 
   &__list {
     display: flex;
     gap: 3rem;
+
+    @include breakpoint(tablet) {
+      gap: 1.6rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      display: none;
+    }
   }
 
   &__list-item {

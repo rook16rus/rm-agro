@@ -20,7 +20,12 @@
                     </div>
                     <div class="intro__footer">
                         <div class="intro__footer-column">
-                            <h3 class="intro__list-title">направления деятельности</h3>
+                            <a class="intro__list-title" href="#">
+                                <span>направления <br> деятельности</span>
+                                <svg>
+                                    <use xlink:href="#link-arrow-icon"></use>
+                                </svg>
+                            </a>
                             <ul class="intro__list">
                                 {{#each introActivities }}
                                     <li class="intro__list-item">
@@ -30,7 +35,12 @@
                             </ul>
                         </div>
                         <div class="intro__footer-column">
-                            <h3 class="intro__list-title">смотреть продукцию</h3>
+                            <a class="intro__list-title" href="#">
+                                <span>смотреть <br> продукцию</span>
+                                <svg>
+                                    <use xlink:href="#link-arrow-icon"></use>
+                                </svg>
+                            </a>
                             <ul class="intro__list">
                                 {{#each introProducts }}
                                     <li class="intro__list-item">
@@ -275,3 +285,19 @@
 
     {{/content}}
 {{/extend}}
+
+<!--
+
+  @include breakpoint(tablet) {
+
+  }
+
+  @include breakpoint(small-tablet) {
+
+  }
+
+  @include breakpoint(mobile) {
+
+  }
+
+-->
