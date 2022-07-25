@@ -15,6 +15,14 @@
 
     color: #111111;
 
+    @include breakpoint(small-tablet) {
+      width: 4rem;
+    }
+
+    @include breakpoint(mobile) {
+      width: 3.6rem;
+    }
+
     &:last-child {
       transform: rotate(180deg);
     }

@@ -3,6 +3,18 @@
 
   background-color: #fff;
   color: #fff;
+
+  @include breakpoint(tablet) {
+    padding-bottom: 12rem;
+  }
+
+  @include breakpoint(small-tablet) {
+    padding-bottom: 9rem;
+  }
+
+  @include breakpoint(mobile) {
+    padding-bottom: 7rem;
+  }
   
   &__inner {
     display: flex;
@@ -13,6 +25,18 @@
     border-radius: 2rem;
     background: var(--accent-color) url("../img/wheat.svg") no-repeat center;
     background-size: cover;
+
+    @include breakpoint(tablet) {
+      padding: 5rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      padding: 3.6rem;
+    }
+
+    @include breakpoint(mobile) {
+      padding: 2rem;
+    }
   }
 
   &__body {
@@ -20,12 +44,21 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
     align-items: flex-start;
+
+    @include breakpoint(tablet) {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
   }
 
   &__title {
     margin-top: -4rem;
 
     font: var(--title-h1);
+
+    @include breakpoint(tablet) {
+      margin-top: 0;
+    }
   }
 
   &__slider {
@@ -34,6 +67,10 @@
     background-color: var(--bg-color);
     border-radius: 4rem;
     overflow: hidden;
+
+    @include breakpoint(mobile) {
+      border-radius: 2rem;
+    }
   }
 
   &__slide {
@@ -43,6 +80,16 @@
     min-height: 35.8rem;
     gap: 2rem;
     padding: 3.5rem;
+
+    @include breakpoint(tablet) {
+      padding: 3rem;
+      min-height: 30rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      min-height: 0;
+      padding: 2rem 2rem 8.4rem;
+    }
   }
 
   &__slide-top {
@@ -50,6 +97,18 @@
     grid-template-columns: auto 1fr;
     align-items: flex-start;
     gap: 2rem;
+
+    @include breakpoint(tablet) {
+      gap: 1.6rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      gap: 1rem;
+    }
+
+    @include breakpoint(mobile) {
+      gap: 0.2rem;
+    }
   }
 
   &__slide-img {
@@ -58,6 +117,18 @@
 
     border-radius: 50%;
     overflow: hidden;
+
+    @include breakpoint(tablet) {
+      width: 12rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      width: 10rem;
+    }
+
+    @include breakpoint(mobile) {
+      width: 7.4rem;
+    }
 
     img {
       width: 100%;
@@ -78,6 +149,18 @@
     font-weight: 500;
     color: #3E3E3E;
 
+    @include breakpoint(tablet) {
+      padding: 2.6rem 0 0 3.3rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      padding: 2rem 0 0 2.8rem;
+    }
+
+    @include breakpoint(mobile) {
+      padding: 1.2rem 0 0 2.2rem;
+    }
+
     &::before {
       content: '';
 
@@ -90,6 +173,19 @@
 
 
       background: url("../img/quotes.svg") no-repeat center;
+      background-size: cover;
+
+      @include breakpoint(tablet) {
+        width: 5rem;
+        height: 5rem;
+      }
+
+      @include breakpoint(small-tablet) {
+        width: 4rem;
+        height: 4rem;
+      }
+
+
     }
 
     p {
@@ -102,6 +198,10 @@
     display: flex;
     flex-direction: column;
     padding-right: 12rem;
+
+    @include breakpoint(small-tablet) {
+      padding-right: 0;
+    }
 
     span:first-child {
       font: var(--text-t1);
@@ -119,6 +219,16 @@
     right: 3.5rem;
     bottom: 3.5rem;
     z-index: 1;
+
+    @include breakpoint(tablet) {
+      right: 3rem;
+      bottom: 3rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      right: 2rem;
+      bottom: 2rem;
+    }
   }
 
   .swiper-pagination {
@@ -129,6 +239,19 @@
     bottom: auto;
 
     width: auto;
+
+    @include breakpoint(tablet) {
+      top: 2rem;
+      right: 4rem;
+
+    }
+
+    @include breakpoint(small-tablet) {
+      top: auto;
+      right: auto;
+      bottom: 2rem;
+      left: 2.2rem;
+    }
   }
 
   &__footer {
@@ -136,12 +259,22 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
     align-items: flex-end;
+
+    @include breakpoint(tablet) {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
   }
 
   &__employments {
     display: flex;
     align-items: flex-start;
     gap: 5rem;
+
+    @include breakpoint(small-tablet) {
+      flex-direction: column;
+      gap: 2rem;
+    }
   }
 
   &__employments-images {
@@ -152,6 +285,10 @@
       aspect-ratio: 1 / 1;
 
       border-radius: 50%;
+
+      @include breakpoint(mobile) {
+        width: 6rem;
+      }
 
       &:not(:first-child) {
         margin-left: -2rem;
@@ -175,6 +312,10 @@
     flex-direction: column;
     align-items: flex-end;
     gap: 2.4rem;
+
+    @include breakpoint(small-tablet) {
+      gap: 2rem;
+    }
   }
 
   &__link {
@@ -189,6 +330,14 @@
     font: var(--title-h3-reg);
     text-transform: uppercase;
 
+    @include breakpoint(small-tablet) {
+      gap: 3.2rem;
+    }
+
+    @include breakpoint(mobile) {
+      gap: 2rem;
+    }
+
     &::before {
       content: '';
 
@@ -201,11 +350,31 @@
 
       border-top: 1px solid #FDFCFC;
       border-radius: 18rem 0 0 0;
+
+      @include breakpoint(small-tablet) {
+        width: calc(100% + 1.1rem);
+        height: 1.8rem;
+        top: 1.2rem;
+      }
+
+      @include breakpoint(mobile) {
+        height: 1rem;
+      }
     }
 
     svg {
       width: 3rem;
       height: 3rem;
+
+      @include breakpoint(small-tablet) {
+        width: 2.2rem;
+        height: 2.2rem;
+      }
+
+      @include breakpoint(mobile) {
+        width: 1.2rem;
+        height: 1.2rem;
+      }
     }
   }
 }
