@@ -17,10 +17,14 @@ address {
 html {
     padding-top: var(--header-height);
     box-sizing: border-box;
-    font-size: 10px;
+    font-size: clamp(4.2px, 0.60vw, 25px);
     -webkit-text-size-adjust: 100%;
 
     @include noHighlight();
+
+    @include breakpoint(tablet) {
+        font-size: 10px;
+    }
 }
 
 body {

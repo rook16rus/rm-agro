@@ -12,6 +12,20 @@
 
   transition: 0.4s;
 
+  @include breakpoint(tablet) {
+    padding: 2.4rem 0;
+    font-size: 1.8rem;
+  }
+
+  @include breakpoint(small-tablet) {
+    padding: 1.6rem 0;
+    font-size: 1.6rem;
+  }
+
+  @include breakpoint(mobile) {
+    padding: 0.9rem 0;
+  }
+
   &--white {
     padding: 2rem;
 
@@ -19,6 +33,18 @@
     background-color: #fff;
 
     color: var(--title-color);
+
+    @include breakpoint(tablet) {
+      padding: 1.8rem 0;
+    }
+
+    @include breakpoint(small-tablet) {
+      padding: 1.6rem 0;
+    }
+
+    @include breakpoint(mobile) {
+      padding: 0.9rem 0;
+    }
 
     .header__burger {
       &::before, &::after {
@@ -36,12 +62,34 @@
     grid-template-columns: auto 1fr;
     gap: 14rem;
     align-items: flex-start;
+
+    @include breakpoint(tablet) {
+      gap: 4rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      align-items: center;
+    }
   }
 
   &__logo {
     img {
       width: 7.3rem;
       height: 10.6rem;
+
+      @include breakpoint(tablet) {
+        width: 6rem;
+        height: 8rem;
+      }
+
+      @include breakpoint(small-tablet) {
+
+      }
+
+      @include breakpoint(mobile) {
+        width: 4rem;
+        height: 5.8rem;
+      }
     }
   }
 
@@ -50,6 +98,22 @@
     align-items: center;
     justify-content: space-between;
     padding-top: 1.4rem;
+    gap: 1rem;
+
+    @include breakpoint(tablet) {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    @include breakpoint(small-tablet) {
+      flex-direction: row;
+      align-items: center;
+      padding-top: 0;
+    }
+
+    @include breakpoint(mobile) {
+
+    }
   }
 
   &__column {
@@ -60,6 +124,18 @@
   &__menu {
     display: flex;
     gap: 4rem;
+
+    @include breakpoint(tablet) {
+      gap: 2.4rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      display: none;
+    }
+
+    @include breakpoint(mobile) {
+
+    }
   }
 
   &__burger {
@@ -67,6 +143,18 @@
     width: 4.7rem;
     height: 1.2rem;
     margin-left: 4rem;
+
+    @include breakpoint(tablet) {
+      margin-left: auto;
+    }
+
+    @include breakpoint(small-tablet) {
+      margin-left: 2rem;
+    }
+
+    @include breakpoint(mobile) {
+      margin-left: 0;
+    }
 
     &::before {
       content: '';
@@ -113,5 +201,16 @@
     border-radius: 99.9rem;
 
     font: var(--text-t4);
+
+    @include breakpoint(tablet) {
+      margin-left: auto;
+    }
+
+    @include breakpoint(small-tablet) {
+      height: 3rem;
+    }
+
+    @include breakpoint(mobile) {
+    }
   }
 }
