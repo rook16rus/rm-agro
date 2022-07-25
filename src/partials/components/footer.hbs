@@ -1,0 +1,49 @@
+<footer class="footer">
+    <div class="container">
+        <div class="footer__wrapper">
+            <a class="footer__logo" href="index.html">
+                <img class="lazyload" data-src="img/logo.png" alt="Логотип РМ Агро">
+            </a>
+            <div class="footer__content">
+                <div class="footer__row">
+                    <ul class="footer__menu">
+                        {{#each footerMenu }}
+                            <li class="footer__menu-item">
+                                <a href="{{this.href}}">{{this.text}}</a>
+                            </li>
+                        {{/each}}
+                    </ul>
+                    <div class="footer__contacts">
+                        <address class="footer__address">Республика Татарстан, г. Казань, ул. Марселя Салимжанова, 2В</address>
+                        <div class="footer__contacts-footer">
+                            <ul class="footer__socials">
+                                {{#each footerSocials }}
+                                    <li class="footer__socials-item">
+                                        <a href="{{this.href}}">
+                                            <svg>
+                                                <use xlink:href="#{{this.img}}"></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                {{/each}}
+                            </ul>
+                            <a class="footer__phone" href="tel:+79061201515">+7 (906) 120-15-15</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__row">
+                    <p class="footer__confidence">
+                        © 2011-2019 ООО "РМ АГРО"<br>
+                        <a href="#">Политика конфиденциальности</a>
+                    </p>
+                    <a class="footer__developer" href="#">
+                        <span>Сайт разработан</span>
+                        <svg>
+                            <use xlink:href="#mark-weber"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
