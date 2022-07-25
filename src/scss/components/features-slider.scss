@@ -1,6 +1,14 @@
 .features-slider {
   overflow: visible;
 
+  .swiper-wrapper {
+    @include breakpoint(mobile) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 4rem 2.2rem;
+    }
+  }
+
   &__slide {
     position: relative;
 
@@ -10,6 +18,21 @@
     width: auto;
     min-height: 40.5rem;
     padding: 2rem 12.8rem 0 0;
+
+    @include breakpoint(tablet) {
+      min-height: 32rem;
+      padding: 2rem 8rem 0 0;
+    }
+
+    @include breakpoint(small-tablet) {
+      min-height: 28rem;
+      padding: 2rem 4rem 0 0;
+    }
+
+    @include breakpoint(mobile) {
+      padding: 10.5rem 0 0;
+      min-height: 0;
+    }
 
     h3 {
       position: relative;
@@ -39,6 +62,20 @@
 
     border-radius: 50%;
     overflow: hidden;
+
+    @include breakpoint(tablet) {
+      width: 24rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      width: 20rem;
+    }
+
+    @include breakpoint(mobile) {
+      width: 12.4rem;
+      right: auto;
+      left: 3rem;
+    }
 
     img {
       width: 100%;

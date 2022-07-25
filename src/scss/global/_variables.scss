@@ -13,7 +13,7 @@
 
   /* Font Family */
   --main-ff: 'Raleway', sans-serif;
-  --secondary-ff: 'Onyx', serif;
+  --secondary-ff: 'Oniks', serif;
 
   /* Font Weight */
   --semi-bold: 600;
@@ -42,6 +42,9 @@
 
 @include breakpoint(tablet) {
   :root {
+    /* Layout containers */
+    --content-padding: 3rem;
+
     /* Text */
     --text-t1: var(--semi-bold) 2rem/130% var(--main-ff);
     --text-t2: var(--medium) 1.8rem/130% var(--main-ff);

@@ -5,6 +5,8 @@ Swiper.use([Navigation, EffectFade, Autoplay, Pagination, HashNavigation, Grid, 
 export default function initSliders() {
     const sliders = Array.from(document.querySelectorAll('.js-init-slider'));
     sliders.forEach((slider, i) => {
+        if (slider.classList.contains('js-init-slider-mobile') && matchMedia('(max-width: 640px)').matches) return
+
         const fadeEffect = slider.dataset.fade ? {effect: 'fade', fadeEffect: {crossFade: true}} : {};
         const autoplay = slider.dataset.delay ? {
             autoplay: {
