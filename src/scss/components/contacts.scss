@@ -21,6 +21,7 @@
   }
 
   &__title {
+    margin-top: 6rem;
     margin-bottom: 5.5rem;
 
     font: var(--title-h1);
@@ -28,11 +29,13 @@
     text-transform: uppercase;
 
     @include breakpoint(tablet) {
+      margin-top: 1rem;
       margin-bottom: 4.6rem;
     }
 
     @include breakpoint(small-tablet) {
       text-transform: lowercase;
+      margin-top: 0;
       margin-bottom: 4rem;
     }
 
