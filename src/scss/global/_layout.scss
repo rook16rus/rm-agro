@@ -55,11 +55,28 @@
     font: var(--text-t2);
     color: rgba(251, 251, 251, 0.8);
     text-transform: uppercase;
+
+    @include breakpoint(tablet) {
+        height: 5rem;
+    }
+
+    @include breakpoint(small-tablet) {
+        padding: 0 2rem;
+    }
+
+    @include breakpoint(mobile) {
+        height: 4.5rem;
+        font-size: 1.2rem;
+    }
     
     @include placeholder() {
         font: var(--text-t2);
         color: rgba(251, 251, 251, 0.8);
         text-transform: uppercase;
+
+        @include breakpoint(mobile) {
+            font-size: 1.2rem;
+        }
     }
 }
 
@@ -68,6 +85,10 @@
 
     height: auto;
     padding: 2rem 2.5rem;
+
+    @include breakpoint(small-tablet) {
+        padding: 1.6rem 2rem;
+    }
 }
 
 .checkbox {
