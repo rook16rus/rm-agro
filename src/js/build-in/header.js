@@ -9,7 +9,8 @@ export default function header() {
     }
 
     window.addEventListener('scroll', () => {
-        if (header.getBoundingClientRect().top > document.documentElement.getBoundingClientRect().top) {
+        let scrollDistance = window.scrollY;
+        if (scrollDistance >= 150) {
             if (header.classList.contains('header--whiter')) return;
             header.classList.add('header--white');
         } else {

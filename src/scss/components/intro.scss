@@ -39,9 +39,18 @@
     }
   }
 
+  &__title-wrapper {
+    flex-grow: 1;
+  }
+
   &__title {
+    padding-top: 3rem;
+
+    overflow: hidden;
+
     font: var(--title-h0);
     line-height: 80%;
+    white-space: nowrap;
 
     @media (max-width: 350px) {
       font-size: 12rem;

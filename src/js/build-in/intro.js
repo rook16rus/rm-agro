@@ -1,6 +1,13 @@
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
+
 export default function intro() {
     const intro = document.querySelector('.intro');
     if (!intro) return;
+
+    /* Реализация анимации при наведении на пункт направления деятельности */
 
     const introListItem = document.querySelectorAll('.intro__list-item');
     const introHideImg = document.querySelector('.intro__video-hide-img');
@@ -45,4 +52,27 @@ export default function intro() {
             })
         })
     })
+
+    /* Реализация появления элементов при загрузке страницы */
+
+    const tl = gsap.timeline();
+
+    tl.from('.intro__title', {
+        width: 0,
+        delay: 0.5,
+        duration: 1.5,
+        ease: "power3.out"
+    }).from('.intro__footer', {
+        transform: 'translateY(2rem)',
+        opacity: 0,
+        duration: 0.5
+    }, '=-0.8').from('.intro .link-block', {
+        transform: 'translateY(4rem)',
+        opacity: 0,
+        duration: 0.5,
+    }, '=-0.2').from('.header', {
+        transform: 'translateY(4rem)',
+        opacity: 0,
+        duration: 0.5
+    }, '=-0.5')
 }
