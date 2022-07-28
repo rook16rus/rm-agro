@@ -71,6 +71,10 @@
         width: var(--button-width);
         padding: 0 1.5rem;
       }
+
+      .products__item-img {
+        transform: scale(1.1);
+      }
     }
   }
 
@@ -100,6 +104,8 @@
     width: 56rem;
     aspect-ratio: 560 / 409;
 
+    transition: 0.3s ease-out;
+
     @include breakpoint(tablet) {
       width: 40rem;
       right: -15rem;
@@ -126,7 +132,7 @@
     color: var(--accent-color);
     white-space: nowrap;
 
-    transition: 0.3s;
+    transition: 0.3s ease-out;
 
     &:hover {
       border-color: #fff;

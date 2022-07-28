@@ -40,6 +40,7 @@
         margin-bottom: 2rem;
 
         border-radius: 8rem 2rem 8rem 2rem;
+        opacity: 1;
       }
     }
 
@@ -48,9 +49,12 @@
 
       @include breakpoint(small-tablet) {
         position: static;
+        transform: translateY(0);
 
         display: flex;
         gap: 2rem;
+
+        opacity: 1;
       }
     }
   }
@@ -68,6 +72,27 @@
     @include breakpoint(small-tablet) {
       display: none;
     }
+
+    &.active {
+      .activities-slider__img {
+        width: 91.3rem;
+
+        opacity: 1;
+
+        transition: 0.6s width, opacity 0.2s;
+
+        @include breakpoint(tablet) {
+          width: 45rem;
+        }
+      }
+
+      .link-block {
+        transform: translateY(0);
+        opacity: 1;
+
+        transition: 0.5s ease-out;
+      }
+    }
   }
 
   &__title {
@@ -77,6 +102,7 @@
     font: var(--title-h1);
     color: #0B100C;
     opacity: 0.2;
+    cursor: pointer;
 
     transition: 0.3s;
 
@@ -95,18 +121,25 @@
     left: 0;
     bottom: 0;
 
-    width: 91.3rem;
+    width: 0;
     aspect-ratio: 913 / 588;
 
     border-radius: 30rem 2rem 30rem 2rem;
+    opacity: 0;
     overflow: hidden;
+
+    transition: width 0s 0.3s, opacity 0.3s;
 
     @include breakpoint(tablet) {
       bottom: auto;
       top: 13.5rem;
 
-      width: 45rem;
       border-radius: 17rem 2rem 17rem 2rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      margin-bottom: 1rem;
+      margin-left: 1rem;
     }
 
     img {
@@ -116,18 +149,33 @@
     }
   }
 
-  .link-block {
+  &__link-wrapper {
     position: absolute;
     top: 60%;
     transform: translateY(-50%);
     right: 0;
 
-    max-width: 53rem;
+    overflow: hidden;
 
     @include breakpoint(tablet) {
       transform: none;
       top: 65%;
 
+      max-width: 46rem;
+    }
+  }
+
+  .link-block {
+    transform: translateY(100%);
+
+    max-width: 53rem;
+    padding-right: 1rem;
+
+    opacity: 0;
+
+    transition: opacity 0.4s, transform 0s 0.4s;
+
+    @include breakpoint(tablet) {
       max-width: 46rem;
       padding-right: 2rem;
     }

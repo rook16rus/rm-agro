@@ -12,6 +12,7 @@ import fancybox from "./build-in/fancybox";
 import header from "./build-in/header";
 import activitiesSlider from "./build-in/activitiesSlider";
 import hoverButton from "./build-in/hoverButton";
+import intro from "./build-in/intro";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -24,6 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
     anchorLinks();
     fancybox();
     header();
+    intro();
     activitiesSlider();
     hoverButton();
 });

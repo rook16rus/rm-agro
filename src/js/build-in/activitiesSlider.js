@@ -5,6 +5,14 @@ Swiper.use([Navigation, EffectFade, Autoplay, Pagination, HashNavigation, Grid, 
 export default function activitiesSlider() {
     const swiperThumb = new Swiper('.js-activities-slider-thumb', {
         slidesPerView: 'auto',
+        on: {
+            touchEnd: function(s,e) {
+                let range = 5;
+                let diff = s.touches.diff = s.isHorizontal() ? s.touches.currentX - s.touches.startX : s.touches.currentY
+                    - s.touches.startY;
+                if (diff < range || diff > -range) s.allowClick = true;
+            }
+        }
     });
 
     const swiper = new Swiper('.js-activities-slider', {
@@ -19,6 +27,14 @@ export default function activitiesSlider() {
                 slidesPerView: 'auto',
                 spaceBetween: 110,
             }
-        }
+        },
+    })
+
+    const contents = document.querySelectorAll('.activities-slider__content');
+    contents[0].classList.add('active');
+
+    swiper.on('slideChange', () => {
+        contents.forEach(item => item.classList.remove('active'));
+        contents[swiper.activeIndex] ? contents[swiper.activeIndex].classList.add('active') : null;
     })
 }
