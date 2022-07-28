@@ -2,7 +2,9 @@
     <div class="swiper-wrapper">
         {{#each data }}
             <div class="activities-slider__slide swiper-slide">
-                <h3 class="activities-slider__title">{{title}}</h3>
+                <div class="activities-slider__title-wrapper">
+                    <h3 class="activities-slider__title">{{title}}</h3>
+                </div>
                 <div class="activities-slider__img">
                     <img src="{{this.img}}" alt="">
                 </div>

@@ -15,11 +15,11 @@ export default function aboutAnimation() {
     });
 
     headerTl.from('.about .section-header', {
-        transform: 'translateY(20rem)',
+        y: '20rem',
         duration: 1,
         ease: "power1.out"
     }).from('.about__top', {
-        transform: 'translateY(20rem)',
+        y: '20rem',
         duration: 1,
         ease: "power1.out"
     }, '=-1')
@@ -32,7 +32,7 @@ export default function aboutAnimation() {
     });
 
     sliderTl.from('.about .features-slider', {
-        transform: 'translateX(60%)',
+        xPercent: 60,
         duration: 3,
         ease: "power3.out"
     }).from('.about .features-slider__slide-img', {
