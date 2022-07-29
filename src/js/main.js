@@ -16,6 +16,7 @@ import intro from "./build-in/intro";
 import aboutAnimation from "./build-in/aboutAnimation";
 import activitiesAnimation from "./build-in/activitiesAnimation";
 import productsAnimation from "./build-in/productsAnimation";
+import jobAnimation from "./build-in/jobAnimation";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -28,12 +29,13 @@ document.addEventListener('DOMContentLoaded', function () {
     anchorLinks();
     fancybox();
     header();
-    intro();
+    /*intro();*/
     activitiesSlider();
     hoverButton();
-    aboutAnimation();
+    /*aboutAnimation();
     activitiesAnimation();
-    productsAnimation();
+    productsAnimation();*/
+    jobAnimation()
 });
 
 document.addEventListener('lazyloaded', () => {
