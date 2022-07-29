@@ -28,7 +28,6 @@ export default function activitiesAnimation() {
         scrollTrigger: {
             trigger: '.activities .activities-slider',
             start: "top 80%",
-            markers: true
         }
     });
 

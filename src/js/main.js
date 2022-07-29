@@ -15,6 +15,7 @@ import hoverButton from "./build-in/hoverButton";
 import intro from "./build-in/intro";
 import aboutAnimation from "./build-in/aboutAnimation";
 import activitiesAnimation from "./build-in/activitiesAnimation";
+import productsAnimation from "./build-in/productsAnimation";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -31,7 +32,8 @@ document.addEventListener('DOMContentLoaded', function () {
     activitiesSlider();
     hoverButton();
     aboutAnimation();
-    activitiesAnimation()
+    activitiesAnimation();
+    productsAnimation();
 });
 
 document.addEventListener('lazyloaded', () => {
