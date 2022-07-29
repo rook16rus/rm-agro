@@ -20,5 +20,11 @@ export default function newsAnimation() {
     },).to('.news .section-header__mask rect', {
         height: '100%',
         duration: 1.6,
-    }, '=-1').from()
+    }, '=-1').to('.news__item-mask rect', {
+        height: '100%',
+        duration: 1,
+    }, '=-1.3').to('.news__slide-mask rect', {
+        height: '100%',
+        duration: 0.7,
+    }, '=-0.8')
 }
