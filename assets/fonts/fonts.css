@@ -1,15 +1,15 @@
 @font-face {
-	font-family: 'Onyx';
+	font-family: 'Oniks';
 	font-weight: 400;
 	font-style: normal;
-	src: url('./Onyx-Regular.otf');
+	src: url('./Oniks.otf');
 }
 
 @font-face {
     font-family: 'Raleway';
     font-weight: 500;
     font-style: normal;
-    src: url('./Raleway-Medium.woff2'),
+    src: url('./Raleway-Medium.ttf'),
     url('./Raleway-Medium.woff');
 }
 
@@ -17,7 +17,7 @@
     font-family: 'Raleway';
     font-weight: 400;
     font-style: normal;
-    src: url('./Raleway-Regular.woff2'),
+    src: url('./Raleway-Regular.ttf'),
     url('./Raleway-Regular.woff');
 }
 
@@ -25,6 +25,6 @@
     font-family: 'Raleway';
     font-weight: 600;
     font-style: normal;
-    src: url('./Raleway-SemiBold.woff2'),
+    src: url('./Raleway-SemiBold.ttf'),
     url('./Raleway-SemiBold.woff');
 }
