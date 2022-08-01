@@ -20,6 +20,15 @@
     }
   }
 
+  &__mask {
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+  }
+
   &__title {
     margin-top: 6rem;
     margin-bottom: 5.5rem;

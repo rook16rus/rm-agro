@@ -17,11 +17,9 @@ export default function activitiesAnimation() {
     headerTl.from('.activities .section-header', {
         y: '20rem',
         duration: 1,
-        ease: "power1.out"
     }).from('.activities .activities-slider__title-wrapper', {
         y: '30rem',
         duration: 1,
-        ease: "power1.out"
     }, '=-0.9')
 
     const sliderTl = gsap.timeline({
@@ -32,10 +30,9 @@ export default function activitiesAnimation() {
     });
 
     sliderTl.fromTo('.activities .activities-slider__content.active .activities-slider__img img', {
-        width: 0,
-        ease: "power1.out",
+        scale: 0
     }, {
         duration: 1,
-        width: '100%'
+        scale: 1
     })
 }

@@ -38,6 +38,7 @@ document.addEventListener('DOMContentLoaded', function () {
     productsAnimation();
     jobAnimation();
     newsAnimation();
+
 });
 
 document.addEventListener('lazyloaded', () => {

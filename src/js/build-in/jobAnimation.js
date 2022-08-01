@@ -5,7 +5,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function jobAnimation() {
     const job = document.querySelector('.job');
-    if (!job) return;
+    if (!job) return
 
     const tl = gsap.timeline({
         scrollTrigger: {
@@ -14,15 +14,14 @@ export default function jobAnimation() {
         }
     })
 
-    tl.to('.job__mask rect', {
-        scale: 1,
-        duration: 1
+    tl.to('.job__inner',{
+        'clip-path': 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
+        duration: 0.6,
     }).from('.job__title', {
         y: '20rem',
         duration: 1,
-    }, '=-0.8').from('.job__slider', {
+    }, '=-0.4').from('.job__slider', {
         y: '20rem',
-        scale: 0.6,
         duration: 1,
     }, '=-1').from('.job__footer', {
         y: '15rem',

@@ -17,10 +17,8 @@ export default function productsAnimation() {
     tl.from('.products .section-header', {
         y: '20rem',
         duration: 1,
-        ease: "power1.out"
     }).from('.products__list', {
         y: '20rem',
         duration: 1,
-        ease: "power1.out"
     }, '=-0.9')
 }
