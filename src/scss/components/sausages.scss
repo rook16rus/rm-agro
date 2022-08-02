@@ -1,21 +1,64 @@
 .sausages {
   padding-bottom: 15rem;
 
+  @include breakpoint(tablet) {
+    padding-bottom: 12rem;
+  }
+
+  @include breakpoint(small-tablet) {
+    padding-bottom: 10rem;
+  }
+
+  @include breakpoint(mobile) {
+    padding-bottom: 7rem;
+  }
+
   .main-titles {
     padding-top: 5rem;
     margin-bottom: 7rem;
+
+    @include breakpoint(tablet) {
+      padding-top: 4rem;
+      margin-bottom: 5rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      margin-bottom: 4rem;
+    }
+
+    @include breakpoint(mobile) {
+      padding-top: 3rem;
+      margin-bottom: 2.8rem;
+    }
   }
 
   &__filter {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    gap: 2rem;
+    gap: 2.8rem;
     margin-bottom: 4.5rem;
+
+    @include breakpoint(tablet) {
+      flex-direction: column;
+      margin-bottom: 3rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      margin-bottom: 2.4rem;
+    }
+
+    @include breakpoint(mobile) {
+      margin-bottom: 2rem;
+    }
   }
 
   .filter-tags {
     max-width: 109rem;
+
+    @include breakpoint(tablet) {
+      max-width: none;
+    }
   }
 
   &__list {
@@ -23,6 +66,18 @@
     grid-auto-flow: dense;
     grid-template-columns: repeat(4, 1fr);
     gap: 2.5rem;
+
+    @include breakpoint(tablet) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include breakpoint(small-tablet) {
+      grid-template-columns: 1fr;
+    }
+
+    @include breakpoint(mobile) {
+      gap: 2rem;
+    }
   }
 
   &__item {
@@ -35,10 +90,30 @@
     border-radius: 2rem;
     background-color: #fff;
 
+    @include breakpoint(tablet) {
+      min-height: 35rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      min-height: 3rem;
+    }
+
+    @include breakpoint(mobile) {
+      gap: 1rem;
+      min-height: 21.7rem;
+      padding: 1rem;
+
+      border-radius: 1.5rem;
+    }
+
     &:nth-child(11n+1),
     &:nth-child(7n+6),
     &:nth-child(10n+8) {
       grid-column: span 2;
+
+      @include breakpoint(small-tablet) {
+        grid-column: span 1;
+      }
     }
   }
 
@@ -49,6 +124,19 @@
     height: 33.6rem;
 
     border-radius: 2rem;
+
+    @include breakpoint(tablet) {
+      height: 28rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      height: 22rem;
+    }
+
+    @include breakpoint(mobile) {
+      height: 17rem;
+      border-radius: 1rem;
+    }
 
     img {
       width: 100%;
@@ -79,5 +167,17 @@
 
   .more-button {
     margin-top: 7rem;
+
+    @include breakpoint(tablet) {
+      margin-top: 5rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      margin-top: 3.6rem;
+    }
+
+    @include breakpoint(mobile) {
+      margin-top: 2rem;
+    }
   }
 }
