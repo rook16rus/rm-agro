@@ -3,6 +3,9 @@ import {Swiper, Navigation, EffectFade, Autoplay, Pagination, HashNavigation, Gr
 Swiper.use([Navigation, EffectFade, Autoplay, Pagination, HashNavigation, Grid, FreeMode, Thumbs]);
 
 export default function activitiesSlider() {
+    const slider = document.querySelector('.js-activities-slider');
+    if (!slider) return;
+
     const swiperThumb = new Swiper('.js-activities-slider-thumb', {
         slidesPerView: 'auto',
         on: {

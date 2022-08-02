@@ -43,6 +43,20 @@
     }
 }
 
+.more-button {
+    justify-content: center;
+    width: 100%;
+    max-width: 89.7rem;
+    height: 6rem;
+    margin: 0 auto;
+
+    border-radius: 4rem;
+
+    font: var(--medium) 3rem/120% var(--main-ff);
+    text-transform: uppercase;
+    color: #38271F;
+}
+
 .input {
     display: flex;
     align-content: center;

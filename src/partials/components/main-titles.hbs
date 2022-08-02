@@ -1,0 +1,8 @@
+<div class="main-titles">
+    {{#if firstTitleMain }} <h1 class="main-titles__title active">{{else}} <h2 class="main-titles__title"> {{/if}}
+        <a href="#">{{this.title-1}}</a>
+    {{#if firstTitleMain }} </h1> {{else}} </h2> {{/if}}
+    {{#if secondTitleMain }} <h1 class="main-titles__title active">{{else}} <h2 class="main-titles__title"> {{/if}}
+        <a href="#">{{this.title-2}}</a>
+    {{#if secondTitleMain }} </h1> {{else}} </h2> {{/if}}
+</div>

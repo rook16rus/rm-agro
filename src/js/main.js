@@ -20,6 +20,7 @@ import jobAnimation from "./build-in/jobAnimation";
 import newsAnimation from "./build-in/newsAnimation";
 import contactsAnimation from "./build-in/contactsAnimation";
 import footerAnimation from "./build-in/footerAnimation";
+import filterTags from "./build-in/filterTags";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -42,6 +43,7 @@ document.addEventListener('DOMContentLoaded', function () {
     newsAnimation();
     contactsAnimation();
     footerAnimation();
+    filterTags();
 });
 
 document.addEventListener('lazyloaded', () => {

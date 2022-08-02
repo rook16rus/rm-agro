@@ -1,0 +1,45 @@
+.download-link {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.6rem;
+  width: 100%;
+  max-width: 37.7rem;
+  padding: 2.2rem 1.8rem 2.2rem 2.5rem;
+
+  border-radius: 2rem;
+  background-color: #fff;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+
+  &__text {
+    font: var(--text-t4);
+    color: var(--title-color);
+    text-transform: uppercase;
+  }
+
+  &__size {
+    font: var(--text-t5);
+    color: var(--text-color);
+  }
+
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4.5rem;
+    aspect-ratio: 1 / 1;
+    flex-shrink: 0;
+
+    border-radius: 50%;
+    background-color: var(--bg-color);
+
+    img {
+      width: 2.8rem;
+      aspect-ratio: 1 / 1;
+    }
+  }
+}

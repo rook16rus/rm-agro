@@ -1,0 +1,84 @@
+{{#extend "layout"}}
+    {{#content "main"}}
+
+        <section class="sausages">
+            <div class="container">
+                {{> breadcrumbs data=breadcrumbs }}
+                {{> main-titles firstTitleMain=true title-1='Колбасные изделия' title-2='Мясная продукция' }}
+                <div class="sausages__filter">
+                    {{> filter-tags data=filter }}
+                    {{> download-link }}
+                </div>
+                <ul class="sausages__list">
+                    {{#each sausages }}
+                        <li class="sausages__item">
+                            <div class="sausages__item-img" style="background: {{this.background}}">
+                                <img class="lazyload" data-src="{{this.img}}" alt="Фото колбаски">
+                            </div>
+                            <div class="sausages__item-content">
+                                <h3 class="sausages__item-title">{{this.title}}</h3>
+                                <svg class="sausages__item-icon">
+                                    <use xlink:href="#link-arrow-icon"></use>
+                                </svg>
+                            </div>
+                        </li>
+                    {{/each}}
+                </ul>
+                <button class="more-button button button--white">показать больше</button>
+            </div>
+        </section>
+        <section class="contacts">
+            <div class="container">
+                <div class="contacts__inner">
+                    <div class="contacts__title-wrapper">
+                        <h2 class="contacts__title">связаться с&nbsp;нами</h2>
+                    </div>
+                    <div class="contacts__wrapper">
+                        <form class="contacts__form">
+                            <div class="contacts__form-wrapper">
+                                <input class="contacts__input input" name="contactsName" type="text" placeholder="имя">
+                                <input class="contacts__input input" name="contactsPhone" type="tel" placeholder="номер телефона">
+                                <textarea class="contacts__textarea textarea" name="contactsComment" placeholder="Ваше сообщение"></textarea>
+                            </div>
+                            <div class="contacts__checkbox-wrapper">
+                                <input class="contacts__checkbox checkbox" name="contactsCheckbox" id="contactsCheckbox"
+                                       type="checkbox">
+                                <label for="contactsCheckbox">Согласен на обработку персональных данных</label>
+                            </div>
+                            <button class="contacts__button button button--white" type="submit">отправить</button>
+                        </form>
+                        <div class="contacts__content">
+                            <div class="contacts__text">
+                                <p>
+                                    Мы всегда рады услашать ваше мнение о&nbsp;нашей&nbsp;продукции, а также пригласить в нашу
+                                    команду
+                                </p>
+                            </div>
+                            <div class="contacts__links">
+                                <a class="contacts__link" href="tel:+79061201515">+7 (906) 120-15-15</a>
+                                <a class="contacts__link" href="mailto:sbyt@rm-mamad.ru">sbyt@rm-mamad.ru</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    {{/content}}
+{{/extend}}
+
+<!--
+
+  @include breakpoint(tablet) {
+
+  }
+
+  @include breakpoint(small-tablet) {
+
+  }
+
+  @include breakpoint(mobile) {
+
+  }
+
+-->

@@ -1,0 +1,15 @@
+.main-titles {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+
+  &__title {
+    font: var(--regular) 25rem/75% var(--secondary-ff);
+    color: var(--title-color);
+    opacity: 0.1;
+
+    &.active {
+      opacity: 1;
+    }
+  }
+}
