@@ -155,6 +155,7 @@
       border-radius: 30rem 2rem 30rem 2rem;
 
       @include breakpoint(tablet) {
+        position: static;
         border-radius: 17rem 2rem 17rem 2rem;
       }
 
