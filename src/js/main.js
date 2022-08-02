@@ -18,6 +18,7 @@ import activitiesAnimation from "./build-in/activitiesAnimation";
 import productsAnimation from "./build-in/productsAnimation";
 import jobAnimation from "./build-in/jobAnimation";
 import newsAnimation from "./build-in/newsAnimation";
+import contactsAnimation from "./build-in/contactsAnimation";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -38,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
     productsAnimation();
     jobAnimation();
     newsAnimation();
-
+    contactsAnimation();
 });
 
 document.addEventListener('lazyloaded', () => {

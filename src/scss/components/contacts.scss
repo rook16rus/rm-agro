@@ -4,6 +4,8 @@
 
     border-radius: 2rem;
     background-color: var(--accent-color);
+    will-change: clip-path;
+    clip-path: inset(0% 50% 100% round 2rem);
 
     color: #fff;
 
@@ -11,45 +13,39 @@
       padding: 3rem;
     }
 
-    @include breakpoint(small-tablet) {
-
-    }
-
     @include breakpoint(mobile) {
       padding: 2rem 2rem 3rem;
     }
   }
 
-  &__mask {
-    position: absolute;
-    left: 0;
-    top: 0;
-
-    width: 100%;
-    height: 100%;
-  }
-
-  &__title {
-    margin-top: 6rem;
+  &__title-wrapper {
+    padding-top: 6rem;
     margin-bottom: 5.5rem;
 
-    font: var(--title-h1);
-    letter-spacing: -0.01em;
-    text-transform: uppercase;
+    overflow: hidden;
 
     @include breakpoint(tablet) {
-      margin-top: 1rem;
+      padding-top: 1rem;
       margin-bottom: 4.6rem;
     }
 
     @include breakpoint(small-tablet) {
-      text-transform: lowercase;
-      margin-top: 0;
+      padding-top: 0;
       margin-bottom: 4rem;
     }
 
     @include breakpoint(mobile) {
       margin-bottom: 3rem;
+    }
+  }
+
+  &__title {
+    font: var(--title-h1);
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+
+    @include breakpoint(small-tablet) {
+      text-transform: lowercase;
     }
   }
 

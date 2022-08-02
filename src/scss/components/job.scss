@@ -38,7 +38,7 @@
     background-size: cover;
     overflow: hidden;
     will-change: clip-path;
-    clip-path: polygon(50% 0%, 50% 0%, 50% 0%, 50% 0%);
+    clip-path: inset(0% 50% 100% round 2rem);
 
     transition: 0.6s linear;
 
@@ -86,7 +86,6 @@
     border-radius: 4rem;
     overflow: hidden;
     backface-visibility: hidden;
-    will-change: transform;
 
     @include breakpoint(mobile) {
       border-radius: 2rem;
@@ -280,7 +279,6 @@
     gap: 2rem;
     align-items: flex-end;
 
-    will-change: transform;
     backface-visibility: hidden;
 
     @include breakpoint(tablet) {
