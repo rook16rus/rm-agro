@@ -37,22 +37,7 @@
     border-radius: 2rem;
     background-color: #fff;
     overflow: hidden;
-  }
-
-  &__slide-mask {
-    position: absolute;
-    left: 0;
-    top: 0;
-
-    width: 100%;
-    height: 100%;
-
-    rect {
-      position: absolute;
-
-      width: 100%;
-      height: 0;
-    }
+    clip-path: inset(100% 0% 0%);
   }
 
   &__slide {
@@ -249,6 +234,8 @@
     grid-template-columns: auto 1fr;
     gap: 2rem;
 
+    clip-path: inset(100% 0% 0%);
+
     &:not(:last-child) {
       padding-bottom: 2rem;
       border-bottom: 1px solid rgba(11, 16, 12, 0.2);
@@ -311,20 +298,6 @@
     }
   }
 
-  &__item-mask {
-    position: absolute;
-    left: 0;
-    top: 0;
-
-    width: 100%;
-    height: 100%;
-
-    rect {
-      width: 100%;
-      height: 0;
-    }
-  }
-
   &__item-img {
     width: 100%;
     max-width: 23.7rem;
@@ -340,10 +313,6 @@
     @include breakpoint(small-tablet) {
       order: 1;
       aspect-ratio: 332 / 181;
-    }
-
-    @include breakpoint(mobile) {
-
     }
 
     img {

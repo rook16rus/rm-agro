@@ -166,14 +166,7 @@
             <div class="container">
                 {{> section-header maskId='newsHeader' mask=true allLink=true title='новости и акции' }}
                 <div class="news__wrapper">
-                    <div class="news__slider" style="clip-path: url(#newsSlider); --overlay-color: rgba(0, 0, 0, 0.2);">
-                        <svg class="news__slide-mask" width="0" height="0">
-                            <defs>
-                                <clipPath id="newsSlider">
-                                    <rect fill="#E5E2DB" x="0" y="0"/>
-                                </clipPath>
-                            </defs>
-                        </svg>
+                    <div class="news__slider">
                         <div class="swiper js-init-slider">
                             <div class="swiper-wrapper">
                                 {{#each newsAction }}
@@ -206,14 +199,7 @@
                     </div>
                     <ul class="news__list">
                         {{#each news }}
-                            <li class="news__item" style="clip-path: url(#{{maskId}}); --overlay-color: rgba(0, 0, 0, 0.2);">
-                                <svg class="news__item-mask" width="0" height="0">
-                                    <defs>
-                                        <clipPath id="{{maskId}}">
-                                            <rect fill="#E5E2DB" x="0" y="0"/>
-                                        </clipPath>
-                                    </defs>
-                                </svg>
+                            <li class="news__item">
                                 <div class="news__item-img">
                                     <img class="lazyload" data-src="{{this.img}}" alt="Фото новости">
                                 </div>

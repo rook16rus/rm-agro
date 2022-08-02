@@ -57,8 +57,8 @@ export default function intro() {
 
     const tl = gsap.timeline();
 
-    tl.from('.intro__title', {
-        width: 0,
+    tl.to('.intro__title', {
+        'clip-path': 'inset(0% 0% 0% 0%)',
         delay: 0.5,
         duration: 1.5,
         ease: "power3.out"

@@ -46,6 +46,7 @@
   &__title {
     padding-top: 3rem;
 
+    clip-path: inset(0% 100% 0% 0%);
     overflow: hidden;
 
     font: var(--title-h0);
