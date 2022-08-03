@@ -1,14 +1,7 @@
-/* ######
-
-Как пользоваться:
-
-Пример:
-
-###### */
-
 import 'parsleyjs';
 import dayjs from 'dayjs';
 import customParseFormat from 'dayjs/plugin/customParseFormat';
+import $ from "jquery";
 
 dayjs.extend(customParseFormat);
 

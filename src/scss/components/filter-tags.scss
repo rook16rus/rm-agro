@@ -42,6 +42,12 @@
       height: 3.2rem;
       padding: 0 1rem;
     }
+
+    &:hover {
+      border-color: rgba(27, 80, 26, 0.1);
+      background-color: rgba(27, 80, 26, 0.1);
+      color: #1B501A;
+    }
   }
 
   input:checked + &__label {

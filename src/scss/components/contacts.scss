@@ -90,8 +90,15 @@
     }
   }
 
-  &__textarea {
+  &__input-wrapper:last-child {
     grid-column: span 2;
+
+    @include breakpoint(mobile) {
+      grid-column: span 1;
+    }
+  }
+
+  &__textarea {
     min-height: 16.5rem;
 
     @include breakpoint(tablet) {
@@ -104,11 +111,13 @@
 
     @include breakpoint(mobile) {
       min-height: 10.2rem;
-      grid-column: span 1;
     }
   }
 
-  &__checkbox-wrapper {
+  &__checkbox-block {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
     margin-bottom: 2.5rem;
 
     @include breakpoint(small-tablet) {
@@ -156,6 +165,7 @@
   &__links {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     gap: 2rem;
 
     @include breakpoint(small-tablet) {

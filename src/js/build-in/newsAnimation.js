@@ -17,8 +17,8 @@ export default function newsAnimation() {
     tl.from('.news .section-header', {
         y: '20rem',
         duration: 1.2
-    },).to('.news .section-header__mask rect', {
-        height: '100%',
+    },).to('.news .section-header--clipped', {
+        'clip-path': 'inset(0% -10% 0%)',
         duration: 1.6,
     }, '=-1').to('.news__item', {
         'clip-path': 'inset(0% 0% 0%)',

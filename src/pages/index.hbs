@@ -145,13 +145,13 @@
                             </div>
                         </div>
                         <div class="job__links">
-                            <a class="job__link" href="#">
+                            <a class="job__link link link--pale-white" href="#">
                                 <span>смотреть вакансии</span>
                                 <svg>
                                     <use xlink:href="#link-arrow-icon"></use>
                                 </svg>
                             </a>
-                            <a class="job__link" href="#">
+                            <a class="job__link link link--pale-white" href="#">
                                 <span>Больше о работе с нами</span>
                                 <svg>
                                     <use xlink:href="#link-arrow-icon"></use>
@@ -172,7 +172,7 @@
                                 {{#each newsAction }}
                                     <div class="news__slide swiper-slide">
                                         <div class="news__slide-header">
-                                            <a class="news__tag" href="#">Акция</a>
+                                            <a class="news__tag border-button" href="#">Акция</a>
                                             <time class="news__time" datetime="2021-12-28">28 декабря 2021</time>
                                         </div>
                                         <div class="news__slide-content">
@@ -186,7 +186,12 @@
                                                 </p>
                                             </div>
                                         </div>
-                                        <a class="news__slide-link button button--green" href="#">узнать подробнее</a>
+                                        <a class="news__slide-link button button--green" href="#">
+                                            <span>узнать подробнее</span>
+                                            <svg>
+                                                <use xlink:href="#link-arrow-icon"></use>
+                                            </svg>
+                                        </a>
                                         <div class="news__slide-img">
                                             <img class="lazyload" data-src="img/news-4.png" alt="Фото колбаски">
                                         </div>
@@ -207,9 +212,10 @@
                                     <h3>{{this.title}}</h3>
                                     <div class="news__item-footer">
                                         <time class="news__time" datetime="2021-12-28">28 декабря 2021</time>
-                                        <a class="news__tag" href="#">Новость</a>
+                                        <a class="news__tag border-button" href="#">Новость</a>
                                     </div>
                                 </div>
+                                <a class="news__item-link" href="#"></a>
                             </li>
                         {{/each}}
                     </ul>
@@ -223,18 +229,34 @@
                         <h2 class="contacts__title">связаться с&nbsp;нами</h2>
                     </div>
                     <div class="contacts__wrapper">
-                        <form class="contacts__form">
+                        <form class="contacts__form" data-need-validation="true" novalidate>
                             <div class="contacts__form-wrapper">
-                                <input class="contacts__input input" name="contactsName" type="text" placeholder="имя">
-                                <input class="contacts__input input" name="contactsPhone" type="tel" placeholder="номер телефона">
-                                <textarea class="contacts__textarea textarea" name="contactsComment" placeholder="Ваше сообщение"></textarea>
+                                <div class="contacts__input-wrapper input-wrapper">
+                                    <input class="contacts__input input" name="contactsName" id="contactsName" type="text" required>
+                                    <label for="contactsName">Имя</label>
+                                </div>
+                                <div class="contacts__input-wrapper input-wrapper">
+                                    <input class="contacts__input input js-phone-input" name="contactsPhone" id="contactsPhone" type="tel" required>
+                                    <label for="contactsPhone">номер телефона</label>
+                                </div>
+                                <div class="contacts__input-wrapper input-wrapper">
+                                    <textarea class="contacts__textarea textarea input" name="contactsComment" id="contactsComment"></textarea>
+                                    <label for="contactsComment">Ваше сообщение</label>
+                                </div>
                             </div>
-                            <div class="contacts__checkbox-wrapper">
-                                <input class="contacts__checkbox checkbox" name="contactsCheckbox" id="contactsCheckbox"
-                                       type="checkbox">
-                                <label for="contactsCheckbox">Согласен на обработку персональных данных</label>
+                            <div class="contacts__checkbox-block">
+                                <div class="contacts__checkbox-wrapper">
+                                    <input class="contacts__checkbox checkbox" name="contactsCheckbox" id="contactsCheckbox"
+                                           type="checkbox" required>
+                                    <label for="contactsCheckbox">Согласен на обработку персональных данных</label>
+                                </div>
                             </div>
-                            <button class="contacts__button button button--white" type="submit">отправить</button>
+                            <button class="contacts__button button button--white" type="submit">
+                                <span>отправить</span>
+                                <svg>
+                                    <use xlink:href="#link-arrow-icon"></use>
+                                </svg>
+                            </button>
                         </form>
                         <div class="contacts__content">
                             <div class="contacts__text">
@@ -244,8 +266,8 @@
                                 </p>
                             </div>
                             <div class="contacts__links">
-                                <a class="contacts__link" href="tel:+79061201515">+7 (906) 120-15-15</a>
-                                <a class="contacts__link" href="mailto:sbyt@rm-mamad.ru">sbyt@rm-mamad.ru</a>
+                                <a class="contacts__link link link--white" href="tel:+79061201515">+7 (906) 120-15-15</a>
+                                <a class="contacts__link link link--white" href="mailto:sbyt@rm-mamad.ru">sbyt@rm-mamad.ru</a>
                             </div>
                         </div>
                     </div>

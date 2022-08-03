@@ -9,7 +9,7 @@
                     <ul class="footer__menu">
                         {{#each footerMenu }}
                             <li class="footer__menu-item">
-                                <a href="{{this.href}}">{{this.text}}</a>
+                                <a class="link link--black" href="{{this.href}}">{{this.text}}</a>
                             </li>
                         {{/each}}
                     </ul>
@@ -20,9 +20,7 @@
                                 {{#each footerSocials }}
                                     <li class="footer__socials-item">
                                         <a href="{{this.href}}">
-                                            <svg>
-                                                <use xlink:href="#{{this.img}}"></use>
-                                            </svg>
+                                            {{{this.img}}}
                                         </a>
                                     </li>
                                 {{/each}}
@@ -34,7 +32,7 @@
                 <div class="footer__row">
                     <p class="footer__confidence">
                         © 2011-2019 ООО "РМ АГРО"<br>
-                        <a href="#">Политика конфиденциальности</a>
+                        <a class="link link--black" href="#">Политика конфиденциальности</a>
                     </p>
                     <a class="footer__developer" href="#">
                         <span>Сайт разработан</span>

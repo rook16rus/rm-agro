@@ -1,4 +1,4 @@
-<div class="section-header"{{#if maskId }} style="clip-path: url(#{{maskId}}); --overlay-color: rgba(0, 0, 0, 0.2);"{{/if}}>
+<div class="section-header{{#if mask }} section-header--clipped{{/if}}">
     <div class="section-header__top">
         <h2 class="section-header__title section-title">{{title}}</h2>
         {{#if slider}}
@@ -17,7 +17,7 @@
             </a>
         {{/if}}
         {{#if allLink }}
-            <a class="section-header__link" href="#">
+            <a class="section-header__link link link--black" href="#">
                 <span>смотреть все</span>
                 <svg>
                     <use xlink:href="#link-arrow-icon"></use>
@@ -26,14 +26,5 @@
         {{/if}}
     </div>
     <div class="section-header__line"></div>
-    {{#if mask }}
-        <svg class="section-header__mask" width="0" height="0">
-            <defs>
-                <clipPath id="{{maskId}}">
-                    <rect fill="#FFFFFF" x="0" y="0"/>
-                </clipPath>
-            </defs>
-        </svg>
-    {{/if}}
 
 </div>

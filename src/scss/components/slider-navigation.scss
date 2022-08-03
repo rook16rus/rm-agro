@@ -15,6 +15,8 @@
 
     color: #111111;
 
+    transition: 0.4s;
+
     @include breakpoint(small-tablet) {
       width: 4rem;
     }
@@ -25,6 +27,11 @@
 
     &:last-child {
       transform: rotate(180deg);
+    }
+
+    &:hover {
+      background-color: var(--accent-color);
+      color: #fff;
     }
 
     svg {

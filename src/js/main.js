@@ -21,6 +21,9 @@ import newsAnimation from "./build-in/newsAnimation";
 import contactsAnimation from "./build-in/contactsAnimation";
 import footerAnimation from "./build-in/footerAnimation";
 import filterTags from "./build-in/filterTags";
+import inputPlaceholder from "./build-in/inputPlaceholder";
+import validation from "./build-in/validation";
+import masks from "./build-in/masks";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -31,6 +34,8 @@ document.addEventListener('DOMContentLoaded', function () {
     detectTouch();
     setScrollbarWidth();
     anchorLinks();
+    validation();
+    masks();
     fancybox();
     header();
     intro();
@@ -44,6 +49,7 @@ document.addEventListener('DOMContentLoaded', function () {
     contactsAnimation();
     footerAnimation();
     filterTags();
+    inputPlaceholder();
 });
 
 document.addEventListener('lazyloaded', () => {

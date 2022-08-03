@@ -83,9 +83,6 @@
   }
 
   &__item {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
     padding: 1.5rem;
     min-height: 41.9rem;
     
@@ -101,7 +98,6 @@
     }
 
     @include breakpoint(mobile) {
-      gap: 1rem;
       min-height: 21.7rem;
       padding: 1rem;
 
@@ -116,6 +112,28 @@
       @include breakpoint(small-tablet) {
         grid-column: span 1;
       }
+    }
+  }
+
+  &__item-link {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+    height: 100%;
+
+    &:hover {
+      img {
+        transform: scale(1.1);
+      }
+
+      .sausages__item-icon {
+        transform: rotate(45deg);
+      }
+    }
+
+    @include breakpoint(mobile) {
+      gap: 1rem;
     }
   }
 
@@ -145,6 +163,8 @@
       max-width: 80%;
       max-height: 80%;
       object-fit: contain;
+
+      transition: 0.3s;
     }
   }
 
@@ -165,6 +185,8 @@
   &__item-icon {
     width: 1.6rem;
     height: 1.6rem;
+
+    transition: 0.3s;
   }
 
   .more-button {

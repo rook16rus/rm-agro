@@ -14,6 +14,10 @@
     gap: 0.8rem;
   }
 
+  &--clipped {
+    clip-path: inset(0% 0% 100%);
+  }
+
   &__top {
     display: flex;
     justify-content: space-between;
@@ -46,6 +50,12 @@
         border-color: transparent;
         color: var(--accent-color);
       }
+    }
+
+    &:hover .section-header__slide-inner {
+      background-color: rgba(57, 89, 55, 0.4);
+      border-color: transparent;
+      color: var(--accent-color);
     }
   }
 
@@ -100,16 +110,18 @@
   }
 
   &__link {
+    position: relative;
+    z-index: 1;
+
     display: flex;
     align-items: center;
-    gap: 3rem;
+    gap: 2rem;
 
     font: var(--text-t2);
     text-transform: uppercase;
     color: var(--title-color);
 
     @include breakpoint(small-tablet) {
-      gap: 2rem;
       font-size: 1.6rem;
     }
 
@@ -141,20 +153,6 @@
 
     @include breakpoint(mobile) {
       height: 1rem;
-    }
-  }
-
-  &__mask {
-    position: absolute;
-    left: 0;
-    top: 0;
-
-    width: 100%;
-    height: 100%;
-
-    rect {
-      width: 100%;
-      height: 0;
     }
   }
 }

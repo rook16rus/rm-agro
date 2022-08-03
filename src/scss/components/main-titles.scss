@@ -34,6 +34,10 @@
       opacity: 1;
     }
 
+    &:hover {
+      opacity: 1;
+    }
+
     @include breakpoint(mobile) {
       padding: 0 1rem;
     }
@@ -43,6 +47,8 @@
     font: var(--regular) 25rem/75% var(--secondary-ff);
     color: var(--title-color);
     opacity: 0.1;
+
+    transition: 0.3s;
 
     @include breakpoint(tablet) {
       font-size: 16rem;
@@ -56,8 +62,16 @@
       font-size: 9rem;
     }
 
-    &.active {
+    &--active {
       opacity: 1;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+
+    a {
+      display: block;
     }
   }
   
