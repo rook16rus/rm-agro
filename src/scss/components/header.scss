@@ -228,6 +228,7 @@
     border-radius: 99.9rem;
 
     font: var(--text-t4);
+    font-variant-numeric: lining-nums;
 
     @include breakpoint(tablet) {
       margin-left: auto;

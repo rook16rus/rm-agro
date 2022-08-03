@@ -154,6 +154,7 @@
     border: 1px solid rgba(255, 255, 255, 0.6);
 
     font: var(--text-t2);
+    font-variant-numeric: lining-nums;
     color: rgba(251, 251, 251, 1);
     text-transform: uppercase;
 
@@ -172,6 +173,7 @@
     
     @include placeholder() {
         font: var(--text-t2);
+        font-variant-numeric: lining-nums;
         color: rgba(251, 251, 251, 0.8);
         text-transform: uppercase;
 

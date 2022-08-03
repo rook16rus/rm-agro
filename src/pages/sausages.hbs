@@ -43,18 +43,29 @@
                         <h2 class="contacts__title">связаться с&nbsp;нами</h2>
                     </div>
                     <div class="contacts__wrapper">
-                        <form class="contacts__form">
+                        <form class="contacts__form js-handle-form" action="#" data-need-validation="true" novalidate>
                             <div class="contacts__form-wrapper">
-                                <input class="contacts__input input" name="contactsName" type="text" placeholder="имя">
-                                <input class="contacts__input input" name="contactsPhone" type="tel" placeholder="номер телефона">
-                                <textarea class="contacts__textarea textarea" name="contactsComment" placeholder="Ваше сообщение"></textarea>
+                                <div class="contacts__input-wrapper input-wrapper">
+                                    <input class="contacts__input input" name="contactsName" id="contactsName" type="text" required>
+                                    <label for="contactsName">Имя</label>
+                                </div>
+                                <div class="contacts__input-wrapper input-wrapper">
+                                    <input class="contacts__input input js-phone-input" name="contactsPhone" id="contactsPhone" type="tel" required>
+                                    <label for="contactsPhone">номер телефона</label>
+                                </div>
+                                <div class="contacts__input-wrapper input-wrapper">
+                                    <textarea class="contacts__textarea textarea input" name="contactsComment" id="contactsComment"></textarea>
+                                    <label for="contactsComment">Ваше сообщение</label>
+                                </div>
                             </div>
-                            <div class="contacts__checkbox-wrapper">
-                                <input class="contacts__checkbox checkbox" name="contactsCheckbox" id="contactsCheckbox"
-                                       type="checkbox">
-                                <label for="contactsCheckbox">Согласен на обработку персональных данных</label>
+                            <div class="contacts__checkbox-block">
+                                <div class="contacts__checkbox-wrapper">
+                                    <input class="contacts__checkbox checkbox" name="contactsCheckbox" id="contactsCheckbox"
+                                           type="checkbox" required>
+                                    <label for="contactsCheckbox">Согласен на обработку персональных данных</label>
+                                </div>
                             </div>
-                            <button class="contacts__button button button--white" type="submit">
+                            <button class="contacts__button button button--white js-submit-form" type="submit">
                                 <span>отправить</span>
                                 <svg>
                                     <use xlink:href="#link-arrow-icon"></use>

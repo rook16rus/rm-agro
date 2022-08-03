@@ -184,6 +184,7 @@
 
   &__phone {
     font: var(--title-h3);
+    font-variant-numeric: lining-nums;
     color: var(--accent-color);
 
     transition: 0.3s;
@@ -198,6 +199,7 @@
     max-width: 73.2rem;
 
     font: var(--text-t4);
+    font-variant-numeric: lining-nums;
     color: #414141;
 
     @include breakpoint(tablet) {
