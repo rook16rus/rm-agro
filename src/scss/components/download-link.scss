@@ -9,6 +9,11 @@
   border-radius: 2rem;
   background-color: #fff;
 
+  @include breakpoint(mobile) {
+    padding: 1.4rem 2rem;
+    border-radius: 1.5rem;
+  }
+
   &__content {
     display: flex;
     flex-direction: column;
@@ -31,15 +36,21 @@
     justify-content: center;
     align-items: center;
     width: 4.5rem;
-    aspect-ratio: 1 / 1;
+    height: 4.5rem;
     flex-shrink: 0;
 
     border-radius: 50%;
     background-color: var(--bg-color);
 
+
+    @include breakpoint(mobile) {
+      width: 3.7rem;
+      height: 3.7rem;
+    }
+
     img {
       width: 2.8rem;
-      aspect-ratio: 1 / 1;
+      height: 2.8rem;
     }
   }
 }

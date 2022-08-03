@@ -27,7 +27,7 @@
     }
 
     @include breakpoint(mobile) {
-      padding-top: 3rem;
+      padding-top: 2.6rem;
       margin-bottom: 2.8rem;
     }
   }
@@ -41,6 +41,7 @@
 
     @include breakpoint(tablet) {
       flex-direction: column;
+      align-items: stretch;
       margin-bottom: 3rem;
     }
 
@@ -53,8 +54,9 @@
     }
   }
 
-  .filter-tags {
+  &__filter-tags {
     max-width: 109rem;
+    min-width: 0;
 
     @include breakpoint(tablet) {
       max-width: none;

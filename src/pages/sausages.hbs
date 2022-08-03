@@ -6,7 +6,9 @@
                 {{> breadcrumbs data=breadcrumbs }}
                 {{> main-titles firstTitleMain=true title-1='Колбасные изделия' title-2='Мясная продукция' }}
                 <div class="sausages__filter">
-                    {{> filter-tags data=filter }}
+                    <div class="sausages__filter-tags">
+                        {{> filter-tags data=filter }}
+                    </div>
                     {{> download-link }}
                 </div>
                 <ul class="sausages__list">

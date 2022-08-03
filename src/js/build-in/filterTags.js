@@ -3,7 +3,10 @@ import {Swiper, Navigation, EffectFade, Autoplay, Pagination, HashNavigation, Gr
 Swiper.use([Navigation, EffectFade, Autoplay, Pagination, HashNavigation, Grid, FreeMode]);
 
 export default function filterTags() {
-    /*const swiper = new Swiper('.js-filter-tags', {
+    if (!matchMedia('(max-width: 768px)').matches) return;
 
-    })*/
+    const swiper = new Swiper('.js-filter-tags', {
+        slidesPerView: "auto",
+        spaceBetween: 14,
+    })
 }
