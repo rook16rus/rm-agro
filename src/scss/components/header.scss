@@ -7,6 +7,8 @@
 
   padding: 3.2rem 0 3rem;
 
+  border-bottom: 1px solid transparent;
+
   font: 500 2.4rem/120% var(--main-ff);
   color: #fff;
 
@@ -27,8 +29,9 @@
   &--white {
     padding: 2rem;
 
-    box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.25);
-    background-color: #fff;
+    background-color: #E5E2DB;
+    border-color: var(--title-color);
+
     animation: fadeIn ease-out 300ms;
 
     color: var(--title-color);
@@ -47,9 +50,21 @@
       padding: 0.9rem 0;
     }
 
+    .header__menu-link {
+      &:hover {
+        color: var(--accent-color);
+        opacity: 1;
+      }
+    }
+
     .header__burger {
       &::before, &::after {
         background-color: var(--title-color);
+
+        &:hover {
+          opacity: 1;
+          background-color: var(--accent-color);
+        }
       }
     }
 
@@ -137,6 +152,15 @@
     }
   }
 
+  &__menu-link {
+    transition: 0.3s;
+
+    &:hover {
+      color: #fff;
+      opacity: 0.8;
+    }
+  }
+
   &__burger {
     position: relative;
     width: 4.7rem;
@@ -185,6 +209,10 @@
       background-color: #fff;
 
       transition: 0.4s;
+    }
+
+    &:hover::after, &:hover::before {
+      opacity: 0.8;
     }
   }
 
