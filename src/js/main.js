@@ -24,6 +24,7 @@ import filterTags from "./build-in/filterTags";
 import inputPlaceholder from "./build-in/inputPlaceholder";
 import validation from "./build-in/validation";
 import masks from "./build-in/masks";
+import modals from "./build-in/modals";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -35,6 +36,7 @@ document.addEventListener('DOMContentLoaded', function () {
     setScrollbarWidth();
     anchorLinks();
     validation();
+    modals();
     masks();
     fancybox();
     header();

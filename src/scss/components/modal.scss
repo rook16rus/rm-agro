@@ -17,7 +17,7 @@
   width: 100%;
   height: 100%;
 
-  background: $overlay-color;
+  background: rgba(0, 0, 0, 0.7);
 
   overflow-x: hidden;
   opacity: 0;
@@ -31,20 +31,90 @@
   }
 
   &__container {
-    max-width: var(--max-container-width);
+    width: 100%;
+    max-width: 128.1rem;
     margin: 0 auto;
     padding: 6rem 0;
+
+    @include breakpoint(mobile) {
+      margin-top: auto;
+      padding: 0;
+    }
   }
 
   &__inner {
     position: relative;
 
-    padding: 4rem;
+    padding: 5rem 4rem 5rem 5rem;
+
+    background-color: #fff;
+    border-radius: 2rem;
+
+    @include breakpoint(mobile) {
+      border-radius: 2rem 2rem 0 0;
+    }
   }
 
   &__close {
     position: absolute;
     bottom: 100%;
     right: 0;
+  }
+}
+
+.modal-success {
+  .modal__inner {
+    padding: 10rem 7rem 10.6rem 9rem;
+
+    background: var(--accent-color) url("../img/wheat.svg") no-repeat center;
+    background-size: cover;
+
+    color: #fff;
+
+    @include breakpoint(tablet) {
+      padding: 9rem 7rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      padding: 5rem;
+    }
+
+    @include breakpoint(mobile) {
+      padding: 5rem 2rem;
+    }
+  }
+
+  &__title {
+    font: var(--regular) 20rem/75% var(--secondary-ff);
+    margin-bottom: 7rem;
+
+    @include breakpoint(tablet) {
+      font-size: 11rem;
+      margin-bottom: 5.6rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      font-size: 10rem;
+      margin-bottom: 4.6rem;
+    }
+
+    @include breakpoint(mobile) {
+      font-size: 8rem;
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__button {
+    height: 4rem;
+    padding: 0 5rem;
+
+    font: var(--text-t4);
+    text-transform: uppercase;
+
+
+    @include breakpoint(mobile) {
+      height: 3rem;
+      padding: 0 2rem;
+    }
   }
 }
