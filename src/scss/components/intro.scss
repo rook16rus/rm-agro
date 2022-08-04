@@ -60,7 +60,7 @@
 
   &__body {
     position: relative;
-    min-height: 32.5rem;
+    min-height: 14rem;
     flex-grow: 1;
 
     @include breakpoint(tablet) {
@@ -73,7 +73,7 @@
   &__video-link {
     position: absolute;
     right: 0;
-    top: -17rem;
+    top: -20rem;
 
     display: block;
     width: 70.6rem;

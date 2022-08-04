@@ -16,15 +16,7 @@
                     <div class="footer__contacts">
                         <address class="footer__address">Республика Татарстан, г. Казань, ул. Марселя Салимжанова, 2В</address>
                         <div class="footer__contacts-footer">
-                            <ul class="footer__socials">
-                                {{#each footerSocials }}
-                                    <li class="footer__socials-item">
-                                        <a href="{{this.href}}">
-                                            {{{this.img}}}
-                                        </a>
-                                    </li>
-                                {{/each}}
-                            </ul>
+                            {{> socials data=socials }}
                             <a class="footer__phone" href="tel:+79061201515">+7 (906) 120-15-15</a>
                         </div>
                     </div>

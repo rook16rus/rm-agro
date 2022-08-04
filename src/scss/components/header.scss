@@ -3,14 +3,16 @@
   top: 0;
   left: 0;
   right: 0;
-  z-index: 20;
 
   padding: 3.2rem 0 3rem;
+  margin: 0;
 
-  border-bottom: 1px solid transparent;
+  border: 1px solid transparent;
 
   font: 500 2.4rem/120% var(--main-ff);
   color: #fff;
+
+  transition: margin 0.3s;
 
   @include breakpoint(tablet) {
     padding: 2.4rem 0;
@@ -27,12 +29,14 @@
   }
 
   &--white {
-    padding: 2rem;
+    padding: 1.3rem 0 0.9rem;
+    margin: 2rem 1.7rem 0;
 
     background-color: #E5E2DB;
+    border-radius: 2rem;
     border-color: var(--title-color);
 
-    animation: fadeIn ease-out 300ms;
+    animation: fadeIn ease-out 500ms;
 
     color: var(--title-color);
 
@@ -44,10 +48,30 @@
 
     @include breakpoint(small-tablet) {
       padding: 1.6rem 0;
+      margin: 0;
+
+      border: none;
+      border-bottom: 1px solid var(--title-color);
+      border-radius: 0;
     }
 
     @include breakpoint(mobile) {
       padding: 0.9rem 0;
+    }
+
+    .header__logo img {
+      width: 4.2rem;
+      height: 6.1rem;
+
+      @include breakpoint(tablet) {
+        width: 6rem;
+        height: 8rem;
+      }
+
+      @include breakpoint(mobile) {
+        width: 4rem;
+        height: 5.8rem;
+      }
     }
 
     .header__menu-link {
@@ -69,13 +93,59 @@
     }
 
     .header__phone {
-      border-color: var(--title-color);
+      border: 0;
+    }
+  }
+
+  &--burgered {
+    @extend .header--white;
+
+    position: relative;
+
+    animation: none;
+
+    @include breakpoint(small-tablet) {
+      border-color: transparent;
+    }
+
+    .header__menu {
+      opacity: 0;
+      visibility: hidden;
+      color: #fff;
+    }
+
+    .header__burger {
+      &::before, &::after {
+        top: 50%;
+        transform: translateY(-50%) rotate(45deg);
+        transform-origin: center;
+
+        width: 3.1rem;
+      }
+
+      &::after {
+        transform: translateY(-50%) rotate(-45deg);
+      }
+    }
+
+    & + .header__burger-nav {
+      position: relative;
+      bottom: 0;
+
+      margin: 1rem 1.5rem;
+
+      opacity: 1;
+      visibility: visible;
+
+      @include breakpoint(small-tablet) {
+        margin: -1px 0 0;
+      }
     }
   }
 
   @keyframes fadeIn {
       from {
-        transform: translateY(-100%);
+        transform: translateY(0);
       }
 
     to {
@@ -102,6 +172,8 @@
     img {
       width: 7.3rem;
       height: 10.6rem;
+
+      transition: 0.3s;
 
       @include breakpoint(tablet) {
         width: 6rem;
@@ -142,6 +214,8 @@
   &__menu {
     display: flex;
     gap: 4rem;
+
+    transition: 0.3s;
 
     @include breakpoint(tablet) {
       gap: 2.4rem;
@@ -237,5 +311,202 @@
     @include breakpoint(small-tablet) {
       height: 3rem;
     }
+  }
+
+  &__burger-nav {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+    padding: 6rem 3.6rem 6rem 6rem;
+    margin: 0;
+
+    border-radius: 2rem;
+    background: var(--bg-color) url("../img/wheat.svg") repeat center;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: 0.3s;
+
+    @include breakpoint(tablet) {
+      flex-direction: column;
+      gap: 5rem;
+      padding: 5rem 3rem 3rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      border-radius: 0 0 2rem 2rem;
+      padding: 4rem 2rem 2rem;
+    }
+
+    @include breakpoint(mobile) {
+      padding: 3rem 1.5rem 1.5rem;
+    }
+  }
+
+  &__burger-multi-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  &__burger-multi-menu-item {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    @include breakpoint(mobile) {
+      gap: 1.5rem;
+    }
+  }
+
+  &__burger-multi-menu-title {
+    font: var(--medium) 3rem/120% var(--main-ff);
+    text-transform: uppercase;
+    color: var(--title-color);
+
+    @include breakpoint(tablet) {
+      font-size: 2.8rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      font-weight: 600;
+      font-size: 2.4rem;
+    }
+
+    @include breakpoint(mobile) {
+      font-size: 1.8rem;
+    }
+  }
+
+  &__burger-submenu {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  &__burger-submenu-link {
+    font: var(--text-t4);
+    text-transform: uppercase;
+    color: var(--text-color);
+  }
+
+  &__burger-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+
+    @include breakpoint(tablet) {
+      gap: 2.6rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      gap: 2rem;
+    }
+
+    @include breakpoint(mobile) {
+      gap: 1.5rem;
+    }
+  }
+
+  &__burger-menu-link {
+    font: var(--medium) 3rem/120% var(--main-ff);
+    text-transform: uppercase;
+    color: var(--title-color);
+
+    @include breakpoint(tablet) {
+      font-size: 2.8rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      font-weight: 600;
+      font-size: 2.4rem;
+    }
+
+    @include breakpoint(mobile) {
+      font-size: 1.8rem;
+    }
+  }
+
+  &__burger-contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 2rem;
+    justify-content: space-between;
+
+    @include breakpoint(tablet) {
+      flex-direction: row-reverse;
+      align-items: stretch;
+    }
+  }
+
+  &__burger-contacts-top {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1rem;
+
+    @include breakpoint(tablet) {
+      justify-content: space-between;
+    }
+  }
+
+  &__burger-mail {
+    font: var(--text-t4);
+    text-transform: uppercase;
+    color: var(--text-color);
+  }
+
+  &__burger-contacts-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 2rem;
+
+    @include breakpoint(tablet) {
+      align-items: flex-start;
+    }
+  }
+
+  &__burger-contacts-phone-block {
+    font: var(--text-t4);
+    text-align: right;
+    text-transform: uppercase;
+    color: var(--text-color);
+
+    @include breakpoint(tablet) {
+      text-align: left;
+    }
+  }
+
+  &__burger-contacts-phone {
+    color: var(--title-color);
+  }
+}
+
+.header-container {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 20;
+
+  width: 100%;
+  height: 0;
+
+  transition: background-color 0.3s;
+
+  &.active {
+    z-index: 10;
+
+    min-height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.8);
+    overflow-y: auto;
   }
 }
