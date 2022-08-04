@@ -97,6 +97,14 @@
     color: #3C3C3A;
   }
 
+  &__menu-link {
+    transition: 0.3s;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
   &__contacts {
     display: flex;
     flex-direction: column;

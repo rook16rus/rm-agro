@@ -76,8 +76,8 @@
 
     .header__menu-link {
       &:hover {
-        color: var(--accent-color);
-        opacity: 1;
+        color: var(--title-color);
+        opacity: 0.8;
       }
     }
 
@@ -93,7 +93,11 @@
     }
 
     .header__phone {
-      border: 0;
+      border-color: var(--title-color);
+
+      &:hover {
+        border-color: var(--accent-color);
+      }
     }
   }
 
@@ -112,6 +116,12 @@
       opacity: 0;
       visibility: hidden;
       color: #fff;
+    }
+
+    &.header--white {
+      .header__menu {
+        color: var(--title-color);
+      }
     }
 
     .header__burger {
