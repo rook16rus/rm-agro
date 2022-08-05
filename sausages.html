@@ -28,8 +28,14 @@
                 <symbol viewBox="0 0 51 60" fill="none" id="arrow-icon" xmlns="http://www.w3.org/2000/svg">
                     <path d="M48.422 34.493L7.86 58.487C4.418 60.522 0 58.06 0 53.957V5.969C0 1.874 4.411-.596 7.86 1.445L48.422 25.44a5.162 5.162 0 011.887 1.91 5.291 5.291 0 010 5.233 5.162 5.162 0 01-1.887 1.91z" fill="#fff" />
                 </symbol>
+                <symbol viewBox="0 0 22 22" fill="none" id="close-icon" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 21L1 1m0 20L21 1 1 21z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                </symbol>
                 <symbol viewBox="0 0 33 32" fill="none" id="link-arrow-icon" xmlns="http://www.w3.org/2000/svg">
                     <path d="M1 31L32 1m0 0H1m31 0v30" stroke="currentColor" stroke-width="2" />
+                </symbol>
+                <symbol viewBox="0 0 24 24" fill="none" id="long-slider-arrow" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.75 21L2 12l8.75-9M22 12H2h20z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
                 </symbol>
                 <symbol viewBox="0 0 88 22" fill="none" id="mark-weber" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_92_15271)" fill-rule="evenodd" clip-rule="evenodd" fill="currentColor">
@@ -58,7 +64,7 @@
         <div class="page-content">
             <div class="header-container">
 
-                <header class="header">
+                <header class="header header--dark">
                     <div class="container">
                         <div class="header__wrapper">
                             <a class="header__logo" href="/index.html">
@@ -66,11 +72,25 @@
                             </a>
                             <nav class="header__nav">
                                 <div class="header__column">
-                                    <ul class="header__menu"></ul>
+                                    <ul class="header__menu">
+                                        <li class="header__menu-item">
+                                            <a class="header__menu-link" href="catalog.html">Каталог</a>
+                                        </li>
+                                        <li class="header__menu-item">
+                                            <a class="header__menu-link" href="activities.html">Направления деятельности</a>
+                                        </li>
+                                    </ul>
                                     <button class="header__burger" type="button"></button>
                                 </div>
                                 <div class="header__column">
-                                    <ul class="header__menu"></ul>
+                                    <ul class="header__menu">
+                                        <li class="header__menu-item">
+                                            <a class="header__menu-link" href="contacts.html">Контакты</a>
+                                        </li>
+                                        <li class="header__menu-item">
+                                            <a class="header__menu-link" href="about.html">О холдинге</a>
+                                        </li>
+                                    </ul>
                                     <a class="header__phone border-button" href="tel:+79061201515">+7 906 120-15-15</a>
                                 </div>
                             </nav>
@@ -258,7 +278,7 @@
                         </div>
                         <ul class="sausages__list">
                             <li class="sausages__item">
-                                <a class="sausages__item-link" href="#">
+                                <a class="sausages__item-link" href="#product">
                                     <div class="sausages__item-img" style="background: radial-gradient(73.54% 73.54% at 49.02% 56.29%, #EEE1D9 0%, #DDC6BA 100%)">
                                         <img class="lazyload" data-src="img/saus-1.png" alt="Фото колбаски">
                                     </div>
@@ -271,7 +291,7 @@
                                 </a>
                             </li>
                             <li class="sausages__item">
-                                <a class="sausages__item-link" href="#">
+                                <a class="sausages__item-link" href="#product">
                                     <div class="sausages__item-img" style="background: radial-gradient(73.54% 73.54% at 49.02% 56.29%, #EEE1D9 0%, #DDC6BA 100%)">
                                         <img class="lazyload" data-src="img/saus-2.png" alt="Фото колбаски">
                                     </div>
@@ -284,7 +304,7 @@
                                 </a>
                             </li>
                             <li class="sausages__item">
-                                <a class="sausages__item-link" href="#">
+                                <a class="sausages__item-link" href="#product">
                                     <div class="sausages__item-img" style="background: radial-gradient(73.54% 73.54% at 49.02% 56.29%, #EEE1D9 0%, #DDC6BA 100%)">
                                         <img class="lazyload" data-src="img/saus-3.png" alt="Фото колбаски">
                                     </div>
@@ -297,7 +317,7 @@
                                 </a>
                             </li>
                             <li class="sausages__item">
-                                <a class="sausages__item-link" href="#">
+                                <a class="sausages__item-link" href="#product">
                                     <div class="sausages__item-img" style="background: radial-gradient(73.54% 73.54% at 49.02% 56.29%, #EEE1D9 0%, #DDC6BA 100%)">
                                         <img class="lazyload" data-src="img/saus-4.png" alt="Фото колбаски">
                                     </div>
@@ -310,7 +330,7 @@
                                 </a>
                             </li>
                             <li class="sausages__item">
-                                <a class="sausages__item-link" href="#">
+                                <a class="sausages__item-link" href="#product">
                                     <div class="sausages__item-img" style="background: radial-gradient(73.54% 73.54% at 49.02% 56.29%, #EEE1D9 0%, #DDC6BA 100%)">
                                         <img class="lazyload" data-src="img/saus-5.png" alt="Фото колбаски">
                                     </div>
@@ -323,7 +343,7 @@
                                 </a>
                             </li>
                             <li class="sausages__item">
-                                <a class="sausages__item-link" href="#">
+                                <a class="sausages__item-link" href="#product">
                                     <div class="sausages__item-img" style="background: radial-gradient(73.54% 73.54% at 49.02% 56.29%, #EEE1D9 0%, #DDC6BA 100%)">
                                         <img class="lazyload" data-src="img/saus-6.png" alt="Фото колбаски">
                                     </div>
@@ -336,7 +356,7 @@
                                 </a>
                             </li>
                             <li class="sausages__item">
-                                <a class="sausages__item-link" href="#">
+                                <a class="sausages__item-link" href="#product">
                                     <div class="sausages__item-img" style="background: radial-gradient(73.54% 73.54% at 49.02% 56.29%, #EEE1D9 0%, #DDC6BA 100%)">
                                         <img class="lazyload" data-src="img/saus-7.png" alt="Фото колбаски">
                                     </div>
@@ -349,7 +369,7 @@
                                 </a>
                             </li>
                             <li class="sausages__item">
-                                <a class="sausages__item-link" href="#">
+                                <a class="sausages__item-link" href="#product">
                                     <div class="sausages__item-img" style="background: radial-gradient(73.54% 73.54% at 49.02% 56.29%, #EEE1D9 0%, #DDC6BA 100%)">
                                         <img class="lazyload" data-src="img/saus-8.png" alt="Фото колбаски">
                                     </div>
@@ -362,7 +382,7 @@
                                 </a>
                             </li>
                             <li class="sausages__item">
-                                <a class="sausages__item-link" href="#">
+                                <a class="sausages__item-link" href="#product">
                                     <div class="sausages__item-img" style="background: radial-gradient(73.54% 73.54% at 49.02% 56.29%, #EEE1D9 0%, #DDC6BA 100%)">
                                         <img class="lazyload" data-src="img/saus-1.png" alt="Фото колбаски">
                                     </div>
@@ -375,7 +395,7 @@
                                 </a>
                             </li>
                             <li class="sausages__item">
-                                <a class="sausages__item-link" href="#">
+                                <a class="sausages__item-link" href="#product">
                                     <div class="sausages__item-img" style="background: radial-gradient(73.54% 73.54% at 49.02% 56.29%, #EEE1D9 0%, #DDC6BA 100%)">
                                         <img class="lazyload" data-src="img/saus-2.png" alt="Фото колбаски">
                                     </div>
@@ -388,7 +408,7 @@
                                 </a>
                             </li>
                             <li class="sausages__item">
-                                <a class="sausages__item-link" href="#">
+                                <a class="sausages__item-link" href="#product">
                                     <div class="sausages__item-img" style="background: radial-gradient(73.54% 73.54% at 49.02% 56.29%, #EEE1D9 0%, #DDC6BA 100%)">
                                         <img class="lazyload" data-src="img/saus-3.png" alt="Фото колбаски">
                                     </div>
@@ -401,7 +421,7 @@
                                 </a>
                             </li>
                             <li class="sausages__item">
-                                <a class="sausages__item-link" href="#">
+                                <a class="sausages__item-link" href="#product">
                                     <div class="sausages__item-img" style="background: radial-gradient(73.54% 73.54% at 49.02% 56.29%, #EEE1D9 0%, #DDC6BA 100%)">
                                         <img class="lazyload" data-src="img/saus-4.png" alt="Фото колбаски">
                                     </div>
@@ -414,7 +434,7 @@
                                 </a>
                             </li>
                             <li class="sausages__item">
-                                <a class="sausages__item-link" href="#">
+                                <a class="sausages__item-link" href="#product">
                                     <div class="sausages__item-img" style="background: radial-gradient(73.54% 73.54% at 49.02% 56.29%, #EEE1D9 0%, #DDC6BA 100%)">
                                         <img class="lazyload" data-src="img/saus-5.png" alt="Фото колбаски">
                                     </div>
@@ -427,7 +447,7 @@
                                 </a>
                             </li>
                             <li class="sausages__item">
-                                <a class="sausages__item-link" href="#">
+                                <a class="sausages__item-link" href="#product">
                                     <div class="sausages__item-img" style="background: radial-gradient(73.54% 73.54% at 49.02% 56.29%, #EEE1D9 0%, #DDC6BA 100%)">
                                         <img class="lazyload" data-src="img/saus-6.png" alt="Фото колбаски">
                                     </div>
@@ -440,7 +460,7 @@
                                 </a>
                             </li>
                             <li class="sausages__item">
-                                <a class="sausages__item-link" href="#">
+                                <a class="sausages__item-link" href="#product">
                                     <div class="sausages__item-img" style="background: radial-gradient(73.54% 73.54% at 49.02% 56.29%, #EEE1D9 0%, #DDC6BA 100%)">
                                         <img class="lazyload" data-src="img/saus-7.png" alt="Фото колбаски">
                                     </div>
@@ -453,7 +473,7 @@
                                 </a>
                             </li>
                             <li class="sausages__item">
-                                <a class="sausages__item-link" href="#">
+                                <a class="sausages__item-link" href="#product">
                                     <div class="sausages__item-img" style="background: radial-gradient(73.54% 73.54% at 49.02% 56.29%, #EEE1D9 0%, #DDC6BA 100%)">
                                         <img class="lazyload" data-src="img/saus-8.png" alt="Фото колбаски">
                                     </div>
@@ -466,7 +486,7 @@
                                 </a>
                             </li>
                             <li class="sausages__item">
-                                <a class="sausages__item-link" href="#">
+                                <a class="sausages__item-link" href="#product">
                                     <div class="sausages__item-img" style="background: radial-gradient(73.54% 73.54% at 49.02% 56.29%, #EEE1D9 0%, #DDC6BA 100%)">
                                         <img class="lazyload" data-src="img/saus-1.png" alt="Фото колбаски">
                                     </div>
@@ -479,7 +499,7 @@
                                 </a>
                             </li>
                             <li class="sausages__item">
-                                <a class="sausages__item-link" href="#">
+                                <a class="sausages__item-link" href="#product">
                                     <div class="sausages__item-img" style="background: radial-gradient(73.54% 73.54% at 49.02% 56.29%, #EEE1D9 0%, #DDC6BA 100%)">
                                         <img class="lazyload" data-src="img/saus-2.png" alt="Фото колбаски">
                                     </div>
@@ -667,6 +687,88 @@
                     <div class="modal__inner">
                         <h3 class="modal-success__title">Ваша заявка успешно отправлена!</h3>
                         <button class="modal-success__button button button--white js-close-modal">закрыть</button>
+                    </div>
+                </div>
+            </div>
+            <div class="modal modal-product js-modal js-modal-product" id="">
+                <div class="modal__container">
+                    <div class="modal__inner">
+                        <button class="modal__close js-close-modal" type="button" title="Закрыть">
+                            <svg>
+                                <use xlink:href="#close-icon"></use>
+                            </svg>
+                        </button>
+                        <div class="modal-product__body">
+                            <div class="modal-product__img">
+                                <img class="lazyload" data-src="img/saus-1.png" alt="Фото продукта">
+                            </div>
+                            <div class="modal-product__content">
+                                <div class="modal-product__main-info">
+                                    <h3 class="modal-product__title">колбаса сырокопчёная охлаждённая «миланская»</h3>
+                                    <div class="modal-product__desc">
+                                        <p>Мясной продукт категории А, колбасное изделие, колбаса сыро-копчёная, охлаждённая</p>
+                                    </div>
+                                </div>
+                                <div class="modal-product__property">
+                                    <h4 class="modal-product__property-title">Энергетическая ценность на&nbsp;100&nbsp;г&nbsp;продукта:</h4>
+                                    <ul class="modal-product__property-list">
+                                        <li class="modal-product__property-item"><span class="modal-product__property">Калорийность</span><span class="modal-product__property-value">419ккал/1754кДж</span>
+                                        </li>
+                                        <li class="modal-product__property-item"><span class="modal-product__property">Белок</span><span class="modal-product__property-value">17 г</span>
+                                        </li>
+                                        <li class="modal-product__property-item"><span class="modal-product__property">Жир</span><span class="modal-product__property-value">39 г</span>
+                                        </li>
+                                    </ul>
+                                    <ul class="modal-product__guarantee-list">
+                                        <li class="modal-product__guarantee-item">
+                                            <img class="modal-product__guarantee-img lazyload" data-src="img/guarantee-1.svg" alt="Фото иконки"><span class="modal-product__guarantee-text">от +0 до +6 С</span>
+                                        </li>
+                                        <li class="modal-product__guarantee-item">
+                                            <img class="modal-product__guarantee-img lazyload" data-src="img/guarantee-2.svg" alt="Фото иконки"><span class="modal-product__guarantee-text">30 суток</span>
+                                        </li>
+                                    </ul>
+                                    <div class="modal-product__guarantee-desc">
+                                        <p>Срок годности и условия хранения при температуре от 0 до +6°С и относительной влажности 75–78%,упакованных в вакуум — 30 суток, после вскрытия упаковки — 72 часа в пределах общего срока годности при аналогичных условиях хранения</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-product__footer">
+                            <h4 class="modal-product__footer-title">Варианты сервировки</h4>
+                            <div class="modal-product__slider-container">
+                                <div class="modal-product__slider swiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="modal-product__slide swiper-slide">
+                                            <img class="lazyload" data-src="img/serving-1.jpg" alt="Фото сервировки">
+                                        </div>
+                                        <div class="modal-product__slide swiper-slide">
+                                            <img class="lazyload" data-src="img/serving-2.jpg" alt="Фото сервировки">
+                                        </div>
+                                        <div class="modal-product__slide swiper-slide">
+                                            <img class="lazyload" data-src="img/serving-3.jpg" alt="Фото сервировки">
+                                        </div>
+                                        <div class="modal-product__slide swiper-slide">
+                                            <img class="lazyload" data-src="img/serving-1.jpg" alt="Фото сервировки">
+                                        </div>
+                                        <div class="modal-product__slide swiper-slide">
+                                            <img class="lazyload" data-src="img/serving-2.jpg" alt="Фото сервировки">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slider-navigation slider-navigation--white js-slider-navigation">
+                                    <button class="slider-navigation__button js-prev-slide">
+                                        <svg>
+                                            <use xlink:href="#long-slider-arrow"></use>
+                                        </svg>
+                                    </button>
+                                    <button class="slider-navigation__button js-next-slide">
+                                        <svg>
+                                            <use xlink:href="#long-slider-arrow"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

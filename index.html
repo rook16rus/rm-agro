@@ -28,8 +28,14 @@
                 <symbol viewBox="0 0 51 60" fill="none" id="arrow-icon" xmlns="http://www.w3.org/2000/svg">
                     <path d="M48.422 34.493L7.86 58.487C4.418 60.522 0 58.06 0 53.957V5.969C0 1.874 4.411-.596 7.86 1.445L48.422 25.44a5.162 5.162 0 011.887 1.91 5.291 5.291 0 010 5.233 5.162 5.162 0 01-1.887 1.91z" fill="#fff" />
                 </symbol>
+                <symbol viewBox="0 0 22 22" fill="none" id="close-icon" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 21L1 1m0 20L21 1 1 21z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                </symbol>
                 <symbol viewBox="0 0 33 32" fill="none" id="link-arrow-icon" xmlns="http://www.w3.org/2000/svg">
                     <path d="M1 31L32 1m0 0H1m31 0v30" stroke="currentColor" stroke-width="2" />
+                </symbol>
+                <symbol viewBox="0 0 24 24" fill="none" id="long-slider-arrow" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.75 21L2 12l8.75-9M22 12H2h20z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
                 </symbol>
                 <symbol viewBox="0 0 88 22" fill="none" id="mark-weber" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_92_15271)" fill-rule="evenodd" clip-rule="evenodd" fill="currentColor">
@@ -977,6 +983,58 @@
                     <div class="modal__inner">
                         <h3 class="modal-success__title">Ваша заявка успешно отправлена!</h3>
                         <button class="modal-success__button button button--white js-close-modal">закрыть</button>
+                    </div>
+                </div>
+            </div>
+            <div class="modal modal-product js-modal js-modal-product" id="">
+                <div class="modal__container">
+                    <div class="modal__inner">
+                        <button class="modal__close js-close-modal" type="button" title="Закрыть">
+                            <svg>
+                                <use xlink:href="#close-icon"></use>
+                            </svg>
+                        </button>
+                        <div class="modal-product__body">
+                            <div class="modal-product__img">
+                                <img class="lazyload" data-src="img/saus-1.png" alt="Фото продукта">
+                            </div>
+                            <div class="modal-product__content">
+                                <div class="modal-product__main-info">
+                                    <h3 class="modal-product__title">колбаса сырокопчёная охлаждённая «миланская»</h3>
+                                    <div class="modal-product__desc">
+                                        <p>Мясной продукт категории А, колбасное изделие, колбаса сыро-копчёная, охлаждённая</p>
+                                    </div>
+                                </div>
+                                <div class="modal-product__property">
+                                    <h4 class="modal-product__property-title">Энергетическая ценность на&nbsp;100&nbsp;г&nbsp;продукта:</h4>
+                                    <ul class="modal-product__property-list"></ul>
+                                    <ul class="modal-product__guarantee-list"></ul>
+                                    <div class="modal-product__guarantee-desc">
+                                        <p>Срок годности и условия хранения при температуре от 0 до +6°С и относительной влажности 75–78%,упакованных в вакуум — 30 суток, после вскрытия упаковки — 72 часа в пределах общего срока годности при аналогичных условиях хранения</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-product__footer">
+                            <h4 class="modal-product__footer-title">Варианты сервировки</h4>
+                            <div class="modal-product__slider-container">
+                                <div class="modal-product__slider swiper">
+                                    <div class="swiper-wrapper"></div>
+                                </div>
+                                <div class="slider-navigation slider-navigation--white js-slider-navigation">
+                                    <button class="slider-navigation__button js-prev-slide">
+                                        <svg>
+                                            <use xlink:href="#long-slider-arrow"></use>
+                                        </svg>
+                                    </button>
+                                    <button class="slider-navigation__button js-next-slide">
+                                        <svg>
+                                            <use xlink:href="#long-slider-arrow"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
