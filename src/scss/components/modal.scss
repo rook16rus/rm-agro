@@ -36,9 +36,10 @@
     margin: 0 auto;
     padding: 6rem 0;
 
-    @include breakpoint(mobile) {
+    @include breakpoint(tablet) {
+      height: 100%;
       margin-top: auto;
-      padding: 0;
+      padding: 10rem 0 0;
     }
   }
 
@@ -50,8 +51,17 @@
     background-color: var(--light-bg-color);
     border-radius: 2rem;
 
-    @include breakpoint(mobile) {
+    @include breakpoint(tablet) {
+      padding: 5rem 4rem;
       border-radius: 2rem 2rem 0 0;
+    }
+
+    @include breakpoint(small-tablet) {
+      padding: 4rem 3rem;
+    }
+
+    @include breakpoint(mobile) {
+      padding: 3rem 1.5rem;
     }
   }
 
@@ -182,6 +192,16 @@
     display: flex;
     gap: 5rem;
     margin-bottom: 5rem;
+
+    @include breakpoint(tablet) {
+      flex-direction: column;
+      margin-bottom: 3.4rem;
+      gap: 0;
+    }
+
+    @include breakpoint(mobile) {
+      margin-bottom: 3rem;
+    }
   }
 
   &__img {
@@ -197,24 +217,70 @@
       max-width: 90%;
       max-height: 90%;
     }
+
+    @include breakpoint(tablet) {
+      height: 45rem;
+      margin-bottom: 3rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      height: 35rem;
+    }
+
+    @include breakpoint(mobile) {
+      height: 18.7rem;
+    }
+
   }
 
   &__content {
     display: flex;
     flex-direction: column;
     gap: 5rem;
+
+    @include breakpoint(tablet) {
+      display: contents;
+    }
   }
 
   &__main-info {
     display: flex;
     flex-direction: column;
     gap: 3rem;
+
+    @include breakpoint(tablet) {
+      order: -1;
+      margin-bottom: 4rem;
+      gap: 2.6rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      margin-bottom: 3rem;
+      gap: 2.4rem;
+    }
+
+    @include breakpoint(mobile) {
+      margin-bottom: 2rem;
+      gap: 2rem;
+    }
   }
 
   &__title {
     font: var(--semi-bold) 3rem/120% var(--main-ff);
     text-transform: uppercase;
     color: var(--title-color);
+
+    @include breakpoint(tablet) {
+      font-size: 2.8rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      font-size: 2.4rem;
+    }
+
+    @include breakpoint(mobile) {
+      font-size: 1.8rem;
+    }
   }
 
   &__desc {
@@ -230,6 +296,18 @@
     display: flex;
     flex-direction: column;
     gap: 3rem;
+
+    @include breakpoint(tablet) {
+      gap: 2.6rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      gap: 2.4rem;
+    }
+
+    @include breakpoint(mobile) {
+      gap: 2rem;
+    }
   }
 
   &__property-title {
@@ -242,11 +320,25 @@
     justify-content: space-between;
     align-items: center;
     gap: 2rem;
+    padding-top: 1rem;
     padding-bottom: 1rem;
     border-bottom: 1px dashed rgba(11, 16, 12, 0.2);
 
     font: var(--text-t4);
     color: var(--text-color);
+
+    @include breakpoint(small-tablet) {
+      gap: 1rem;
+    }
+
+    @include breakpoint(mobile) {
+      padding-top: 0.8rem;
+      padding-bottom: 0.8rem;
+    }
+
+    &:first-child {
+      padding-top: 0;
+    }
   }
 
   &__property-value {
@@ -256,7 +348,16 @@
   &__guarantee-list {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     gap: 5rem;
+
+    @include breakpoint(small-tablet) {
+      gap: 4.6rem;
+    }
+
+    @include breakpoint(mobile) {
+      gap: 1rem 4.2rem;
+    }
   }
 
   &__guarantee-item {
@@ -266,6 +367,18 @@
 
     font: var(--text-t3);
     color: var(--accent-color);
+
+    @include breakpoint(tablet) {
+      font-size: 1.6rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      font-size: 1.4rem;
+    }
+
+    @include breakpoint(mobile) {
+      gap: 1rem;
+    }
   }
 
   &__guarantee-img {
@@ -283,6 +396,14 @@
 
     font: var(--text-t1);
     color: var(--title-color);
+
+    @include breakpoint(small-tablet) {
+      margin-bottom: 2.4rem;
+    }
+
+    @include breakpoint(mobile) {
+      margin-bottom: 2rem;
+    }
   }
 
   &__slider-container {
@@ -294,6 +415,18 @@
 
     border-radius: 2rem;
     overflow: hidden;
+
+    @include breakpoint(tablet) {
+      height: 22rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      height: 20rem;
+    }
+
+    @include breakpoint(mobile) {
+      height: 17.6rem;
+    }
 
     img {
       width: 100%;
@@ -309,6 +442,11 @@
     left: -2.7rem;
     right: -2.7rem;
     z-index: 1;
+
+    @include breakpoint(small-tablet) {
+      opacity: 0;
+      visibility: hidden;
+    }
   }
 
   .slider-navigation__button {
