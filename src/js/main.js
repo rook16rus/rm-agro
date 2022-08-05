@@ -25,6 +25,7 @@ import inputPlaceholder from "./build-in/inputPlaceholder";
 import validation from "./build-in/validation";
 import masks from "./build-in/masks";
 import modals from "./build-in/modals";
+import productSlider from "./build-in/productSlider";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -52,6 +53,7 @@ document.addEventListener('DOMContentLoaded', function () {
     footerAnimation();
     filterTags();
     inputPlaceholder();
+    productSlider();
 });
 
 document.addEventListener('lazyloaded', () => {

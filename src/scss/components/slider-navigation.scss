@@ -3,6 +3,14 @@
   justify-content: space-between;
   gap: 1rem;
 
+  &--white {
+    .slider-navigation__button {
+      background-color: #fff;
+      border-color: #fff;
+      color: var(--title-color);
+    }
+  }
+
   &__button {
     display: flex;
     justify-content: center;
@@ -30,6 +38,7 @@
     }
 
     &:hover {
+      border-color: var(--accent-color);
       background-color: var(--accent-color);
       color: #fff;
     }

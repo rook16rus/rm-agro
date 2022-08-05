@@ -1,14 +1,14 @@
 <div class="modal js-modal" id="{{id}}">
-  <div class="modal__container">
-    <div class="modal__inner">
-      <button class="modal__close js-close-modal" type="button" title="Закрыть">X</button>
-      <div class="modal__content">
-        {{#block "content"}}
+    <div class="modal__container">
+        <div class="modal__inner">
+            <button class="modal__close js-close-modal" type="button" title="Закрыть">X</button>
+            <div class="modal__content">
+                {{#block "content"}}
 
-        {{/block}}
-      </div>
+                {{/block}}
+            </div>
+        </div>
     </div>
-  </div>
 </div>
 
 <div class="modal modal-success js-modal js-modal-success" id="{{id}}">
@@ -16,6 +16,73 @@
         <div class="modal__inner">
             <h3 class="modal-success__title">Ваша заявка успешно отправлена!</h3>
             <button class="modal-success__button button button--white js-close-modal">закрыть</button>
+        </div>
+    </div>
+</div>
+
+<div class="modal modal-product js-modal js-modal-product active" id="{{id}}">
+    <div class="modal__container">
+        <div class="modal__inner">
+            <button class="modal__close js-close-modal" type="button" title="Закрыть">
+                <svg>
+                    <use xlink:href="#close-icon"></use>
+                </svg>
+            </button>
+            <div class="modal-product__body">
+                <div class="modal-product__img">
+                    <img class="lazyload" data-src="img/saus-1.png" alt="Фото продукта">
+                </div>
+                <div class="modal-product__content">
+                    <div class="modal-product__main-info">
+                        <h3 class="modal-product__title">колбаса сырокопчёная охлаждённая «миланская»</h3>
+                        <div class="modal-product__desc">
+                            <p>Мясной продукт категории А, колбасное изделие, колбаса сыро-копчёная, охлаждённая</p>
+                        </div>
+                    </div>
+                    <div class="modal-product__property">
+                        <h4 class="modal-product__property-title">Энергетическая ценность на 100 г продукта:</h4>
+                        <ul class="modal-product__property-list">
+                            {{#each properties }}
+                                <li class="modal-product__property-item">
+                                    <span class="modal-product__property">{{this.property}}</span>
+                                    <span class="modal-product__property-value">{{this.value}}</span>
+                                </li>
+                            {{/each}}
+                        </ul>
+                        <ul class="modal-product__guarantee-list">
+                            {{#each guarantee }}
+                                <li class="modal-product__guarantee-item">
+                                    <img class="modal-product__guarantee-img lazyload" data-src="{{this.img}}"
+                                         alt="Фото иконки">
+                                    <span class="modal-product__guarantee-text">{{this.text}}</span>
+                                </li>
+                            {{/each}}
+                        </ul>
+                        <div class="modal-product__guarantee-desc">
+                            <p>
+                                Срок годности и условия хранения при температуре от 0 до +6°С и относительной влажности
+                                75–78%,упакованных в вакуум — 30 суток, после вскрытия упаковки — 72 часа в пределах
+                                общего срока годности при аналогичных условиях хранения
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-product__footer">
+                <h4 class="modal-product__footer-title">Варианты сервировки</h4>
+                <div class="modal-product__slider-container">
+                    <div class="modal-product__slider swiper">
+                        <div class="swiper-wrapper">
+                            {{#each serving }}
+                                <div class="modal-product__slide swiper-slide">
+                                    <img class="lazyload" data-src="{{this.img}}" alt="Фото сервировки">
+                                </div>
+                            {{/each}}
+                        </div>
+                    </div>
+                    {{> slider-navigation longArrow=true mod='slider-navigation--white' }}
+                </div>
+            </div>
         </div>
     </div>
 </div>
