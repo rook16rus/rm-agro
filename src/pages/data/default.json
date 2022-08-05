@@ -1,72 +1,22 @@
 {
-  "menu": [
+  "menuLeft": [
     {
-      "link": "about.html",
-      "name": "О нас",
-      "active": false
+      "href": "catalog.html",
+      "text": "Каталог"
     },
     {
-      "link": "portfolio.html",
-      "name": "Портфолио",
-      "active": false
-    },
-    {
-      "link": "services.html",
-      "name": "Услуги",
-      "active": false
-    },
-    {
-      "link": "video.html",
-      "name": "Видео",
-      "active": false
-    },
-    {
-      "link": "contacts.html",
-      "name": "Контакты",
-      "active": false
+      "href": "activities.html",
+      "text": "Направления деятельности"
     }
   ],
-  "aboutNav": [
+  "menuRight": [
     {
-      "name": "Мастерская",
-      "active": true,
-      "href": "about.html"
+      "href": "contacts.html",
+      "text": "Контакты"
     },
     {
-      "name": "Награды",
-      "active": false,
-      "href": "about-awards.html"
-    },
-    {
-      "name": "Публикации",
-      "active": false,
-      "href": "about-publications.html"
-    }
-  ],
-  "portfolioNav": [
-    {
-      "name": "Все проекты",
-      "active": true
-    },
-    {
-      "name": "Общественные",
-      "active": false
-    },
-    {
-      "name": "Градо",
-      "active": false
-    },
-    {
-      "name": "Жилые",
-      "active": false
-    },
-    {
-      "name": "Офисы и деловые центры",
-      "active": false
-    },
-    {
-      "name": "Интерьеры",
-      "active": false
+      "href": "about.html",
+      "text": "О холдинге"
     }
   ],
   "footerMenu": [

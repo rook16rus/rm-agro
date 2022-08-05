@@ -28,6 +28,27 @@
     padding: 0.9rem 0;
   }
 
+  &--dark {
+    color: var(--title-color);
+
+    .header__burger {
+      &::before, &::after {
+        background-color: var(--title-color);
+      }
+    }
+
+    .header__menu-link {
+      &:hover {
+        color: var(--title-color);
+        opacity: 0.8;
+      }
+    }
+
+    .header__phone {
+      border-color: var(--title-color);
+    }
+  }
+
   &--white {
     padding: 1.3rem 0 0.9rem;
     margin: 2rem 1.7rem 0;
