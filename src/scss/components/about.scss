@@ -53,6 +53,8 @@
   }
 
   .link-block {
+    max-width: 53rem;
+
     @include breakpoint(tablet) {
       max-width: 43rem;
     }

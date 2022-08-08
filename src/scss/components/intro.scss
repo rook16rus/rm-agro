@@ -185,7 +185,6 @@
 
   &__footer-column {
     display: flex;
-    align-items: flex-start;
     flex-direction: column;
     gap: 3.8rem;
 
@@ -255,10 +254,15 @@
         display: inline;
       }
 
-      &:last-of-type {
+      &:not(:first-of-type) {
         position: absolute;
         left: 0;
         top: 100%;
+
+        &.active {
+          position: relative;
+          top: 0;
+        }
       }
     }
 
@@ -267,11 +271,6 @@
         &:first-of-type {
           position: absolute;
           transform: translateY(100%);
-        }
-
-        &:last-of-type {
-          position: relative;
-          top: 0;
         }
       }
     }

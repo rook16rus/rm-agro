@@ -10,21 +10,21 @@ export default function intro() {
     /* Реализация анимации при наведении на пункт направления деятельности */
 
     const introListItem = document.querySelectorAll('.intro__list-item');
-    const introHideImg = document.querySelector('.intro__video-hide-img');
     const introListTitles = document.querySelectorAll('.intro__list-title')
 
-    introListItem.forEach(item => {
+    introListItem.forEach((item, index) => {
         const itemImg = item.querySelector('img');
         const itemText = item.dataset.text;
         const itemTitle = item.closest('.intro__footer-column').querySelector('.intro__list-title');
-        const itemTitleSpan = itemTitle.querySelector('span:last-of-type')
+        const itemTitleSpan = itemTitle.querySelector(`span:nth-of-type(${index + 2})`);
+        const introHideImg = document.querySelector(`.intro__video-hide-img:nth-of-type(${index + 2})`);
 
         item.addEventListener('mouseenter', (e) => {
             introHideImg.classList.add('active');
-            introHideImg.src = itemImg.src;
 
             itemTitle.classList.add('active');
-            itemTitleSpan.textContent = itemText;
+
+            itemTitleSpan.classList.add('active');
 
             introListItem.forEach(anotherItem => {
                 if (anotherItem !== item) {
@@ -42,6 +42,7 @@ export default function intro() {
         item.addEventListener('mouseleave', (e) => {
             introHideImg.classList.remove('active');
             itemTitle.classList.remove('active');
+            itemTitleSpan.classList.remove('active');
 
             introListItem.forEach(anotherItem => {
                 anotherItem.style.opacity = '1';

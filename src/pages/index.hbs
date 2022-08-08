@@ -18,14 +18,24 @@
                                 </svg>
                             </button>
                             <img class="lazyload" data-src="img/intro-video.jpg" alt="Фото">
-                            <img class="intro__video-hide-img" src="" alt="Фото">
+                            {{#each introActivities }}
+                                <img class="intro__video-hide-img" src="{{this.img}}" alt="Фото">
+                            {{/each}}
+                            {{#each introProducts }}
+                                <img class="intro__video-hide-img" src="{{this.img}}" alt="Фото">
+                            {{/each}}
                         </a>
                     </div>
                     <div class="intro__footer">
                         <div class="intro__footer-column">
                             <a class="intro__list-title" href="#">
                                 <span>направления <br> деятельности</span>
-                                <span>направления <br> деятельности</span>
+                                {{#each introActivities }}
+                                    <span>{{this.text}}</span>
+                                {{/each}}
+                                {{#each introProducts }}
+                                    <span>{{this.text}}</span>
+                                {{/each}}
                                 <svg>
                                     <use xlink:href="#link-arrow-icon"></use>
                                 </svg>
@@ -41,7 +51,12 @@
                         <div class="intro__footer-column">
                             <a class="intro__list-title" href="#">
                                 <span>смотреть <br> продукцию</span>
-                                <span>направления <br> деятельности</span>
+                                {{#each introActivities }}
+                                    <span>{{this.text}}</span>
+                                {{/each}}
+                                {{#each introProducts }}
+                                    <span>{{this.text}}</span>
+                                {{/each}}
                                 <svg>
                                     <use xlink:href="#link-arrow-icon"></use>
                                 </svg>
