@@ -31,10 +31,13 @@
   }
 
   &__container {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
     width: 100%;
     max-width: 128.1rem;
     margin: 0 auto;
-    padding: 6rem 0;
 
     @include breakpoint(tablet) {
       height: 100%;
@@ -46,6 +49,7 @@
   &__inner {
     position: relative;
 
+    margin: 6rem 0;
     padding: 5rem 4rem 5rem 5rem;
 
     background-color: var(--light-bg-color);
@@ -459,7 +463,8 @@
     }
 
     &.swiper-button-disabled {
-      opacity: 0;
+
+
     }
   }
 }

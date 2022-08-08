@@ -47,5 +47,15 @@
       width: 0.6rem;
       height: 1.2rem;
     }
+
+    &.swiper-button-disabled {
+      opacity: 0.6;
+
+      &:hover {
+        background-color: inherit;
+        border-color: rgba(17,17,17,.3);
+        color: var(--title-color);
+      }
+    }
   }
 }

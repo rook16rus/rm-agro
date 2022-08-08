@@ -31,9 +31,14 @@
     @include breakpoint(small-tablet) {
       max-width: 15rem;
     }
+
+    @include breakpoint(mobile) {
+      opacity: 0.6;
+    }
   }
 
   &__slider {
+    padding-bottom: 1px;
     margin-right: 0;
 
     @include breakpoint(small-tablet) {
@@ -74,6 +79,7 @@
     font: var(--text-t4);
     text-transform: uppercase;
     white-space: nowrap;
+    vertical-align: middle;
 
     transition: $base-transition-time;
 

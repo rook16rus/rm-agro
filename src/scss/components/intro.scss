@@ -23,6 +23,7 @@
 
   &__header {
     display: flex;
+    justify-content: space-between;
     gap: 5.2rem;
 
     @include breakpoint(tablet) {
@@ -39,15 +40,12 @@
     }
   }
 
-  &__title-wrapper {
-    flex-grow: 1;
-  }
-
   &__title {
     padding-top: 3rem;
 
     clip-path: inset(0% 100% 0% 0%);
     overflow: hidden;
+    cursor: default;
 
     font: var(--title-h0);
     line-height: 80%;
@@ -55,6 +53,15 @@
 
     @media (max-width: 350px) {
       font-size: 12rem;
+    }
+  }
+
+  .link-block {
+    flex-grow: 1;
+    max-width: 52.6rem;
+
+    p {
+      max-width: 42rem;
     }
   }
 
@@ -168,16 +175,17 @@
     @include breakpoint(small-tablet) {
       align-self: flex-start;
       flex-direction: row;
+      gap: 2.5rem;
     }
 
     @media (max-width: 350px) {
       flex-direction: column;
-      gap: 2rem;
     }
   }
 
   &__footer-column {
     display: flex;
+    align-items: flex-start;
     flex-direction: column;
     gap: 3.8rem;
 
@@ -197,6 +205,7 @@
   &__list-title {
     position: relative;
 
+    display: inline-block;
     min-height: 9.6rem;
 
     overflow: hidden;

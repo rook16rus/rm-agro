@@ -36,6 +36,14 @@ export default function modals() {
             document.body.classList.add('modal-open');
             window.activeModal = modal;
 
+            const container = modal.querySelector('.modal__container');
+            console.log(document.documentElement.clientHeight);
+
+            if (container.clientHeight >= document.documentElement.clientHeight) {
+                container.style.top = 0 + 'px';
+                container.style.transform = 'none';
+            }
+
             const openModalEvent = new CustomEvent('openmodal');
             document.dispatchEvent(openModalEvent);
         };
@@ -51,10 +59,14 @@ export default function modals() {
     }
 
     function closeModal(modal) {
+        const container = modal.querySelector('.modal__container');
+
         document.body.classList.remove('modal-open');
         unlockScroll();
 
         modal.classList.remove('active');
+        container.style.top = '';
+        container.style.transform = '';
 
         window.activeModal = null;
 

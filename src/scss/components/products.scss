@@ -134,6 +134,15 @@
 
     transition: 0.3s ease-out;
 
+    @include breakpoint(small-tablet) {
+      width: auto;
+      padding: 0 2rem;
+
+      background-color: var(--accent-color);
+
+      color: #fff;
+    }
+
     &:hover {
       border-color: #fff;
       background-color: #fff;

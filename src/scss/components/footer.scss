@@ -91,17 +91,31 @@
     }
   }
 
-  &__menu-item {
+  &__menu-item,
+  &__mobile-menu-item {
     font: var(--text-t2);
     text-transform: uppercase;
     color: #3C3C3A;
   }
 
-  &__menu-link {
+  &__menu-link,
+  &__mobile-menu-link {
     transition: 0.3s;
 
     &:hover {
       opacity: 0.8;
+    }
+  }
+
+  &__mobile-menu {
+    display: none;
+
+    @include breakpoint(small-tablet) {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 2rem;
     }
   }
 
@@ -112,10 +126,14 @@
     gap: 2rem;
 
     @include breakpoint(small-tablet) {
-      padding: 3rem 0 5rem;
+      padding: 3rem 0;
 
       border-top: 1px solid rgba(60, 60, 58, 0.2);
       border-bottom: 1px solid rgba(60, 60, 58, 0.2);
+    }
+
+    @include breakpoint(mobile) {
+      padding: 2rem 0;
     }
   }
 
@@ -123,6 +141,7 @@
     max-width: 26rem;
 
     font: var(--text-t4);
+    font-size: 1.6rem;
     color: #3C3C3A;
 
     @include breakpoint(small-tablet) {

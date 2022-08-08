@@ -11,12 +11,12 @@
   ],
   "menuRight": [
     {
-      "href": "contacts.html",
-      "text": "Контакты"
-    },
-    {
       "href": "about.html",
       "text": "О холдинге"
+    },
+    {
+      "href": "contacts.html",
+      "text": "Контакты"
     }
   ],
   "footerMenu": [

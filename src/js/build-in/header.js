@@ -27,7 +27,7 @@ export default function header() {
 
     window.addEventListener('scroll', () => {
         let scrollDistance = window.scrollY;
-        if (scrollDistance >= 150) {
+        if (scrollDistance >= 25) {
             if (header.classList.contains('header--white')) return;
             header.classList.add('header--white');
         } else {

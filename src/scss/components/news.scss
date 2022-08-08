@@ -24,7 +24,7 @@
     }
 
     @include breakpoint(small-tablet) {
-      margin-left: 1rem;
+      margin-left: 0;
     }
   }
 
@@ -38,6 +38,10 @@
     background-color: #fff;
     overflow: hidden;
     clip-path: inset(100% 0% 0%);
+
+    @include breakpoint(small-tablet) {
+      margin-left: 1rem;
+    }
   }
 
   &__slide {
@@ -99,6 +103,8 @@
   }
 
   &__slide-content {
+    cursor: default;
+
     h3 {
       max-width: 71rem;
       margin-bottom: 3rem;

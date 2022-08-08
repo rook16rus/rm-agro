@@ -19,6 +19,8 @@
     min-height: 40.5rem;
     padding: 2rem 12.8rem 0 0;
 
+    cursor: default;
+
     @include breakpoint(tablet) {
       min-height: 32rem;
       padding: 2rem 8rem 0 0;
