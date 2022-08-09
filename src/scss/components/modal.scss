@@ -54,6 +54,7 @@
   &__inner {
     position: relative;
 
+    min-width: 0;
     margin: 6rem 0;
     padding: 5rem 4rem 5rem 5rem;
 
@@ -198,6 +199,12 @@
 }
 
 .modal-product {
+  .modal__container {
+    @include breakpoint(tablet) {
+      display: block;
+    }
+  }
+
   &__body {
     display: flex;
     gap: 5rem;
@@ -491,6 +498,15 @@
 
   .modal__inner {
     padding-bottom: 0;
+  }
+
+  .modal__close {
+    @include breakpoint(tablet) {
+      position: fixed;
+      left: auto;
+      right: 1.5rem;
+      bottom: calc(var(--modal-height) + 0.5rem);
+    }
   }
 
   &__content {
