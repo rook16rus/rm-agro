@@ -40,5 +40,27 @@
       "href": "directions-single.html",
       "text": "ГРК «АПРЕЛЬ»"
     }
+  ],
+  "descriptionSlider": [
+    {
+      "title": "250 000",
+      "text": "тонн — производство грубых и сочных кормов",
+      "img": "img/direction-feature-1.jpg"
+    },
+    {
+      "title": "65 000",
+      "text": "тонн — объём хранения зёрна в элеваторах",
+      "img": "img/direction-feature-2.jpg"
+    },
+    {
+      "title": "41",
+      "text": "центнер с гекатара — урожайность",
+      "img": "img/direction-feature-3.jpg"
+    },
+    {
+      "title": "46 000",
+      "text": "гектар — земельный бак",
+      "img": "img/direction-feature-4.jpg"
+    }
   ]
 }

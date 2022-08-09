@@ -9,6 +9,31 @@
     }
 }
 
+.narrow-container {
+    width: 100%;
+    max-width: calc(var(--max-narrow-container-width) + 2 * var(--content-padding));
+    margin: 0 auto;
+    padding: 0 var(--content-padding);
+    @supports (width: max(20vw, 100px)) {
+        padding-left: max(env(safe-area-inset-left, 1.4rem), var(--content-padding));
+        padding-right: max(env(safe-area-inset-right, 1.4rem), var(--content-padding));
+    }
+
+    h2 {
+        margin-bottom: 5rem;
+
+        font: var(--title-h3);
+        text-transform: uppercase;
+        color: var(--title-color);
+    }
+
+    p {
+        margin-bottom: 2rem;
+
+        font: var(--text-t2);
+    }
+}
+
 .button {
     display: flex;
     align-items: center;
