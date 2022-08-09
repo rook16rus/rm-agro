@@ -40,7 +40,7 @@
                             <ul class="header__burger-submenu">
                                 {{#each this.submenu }}
                                     <li class="header__burger-submenu-item">
-                                        <a class="header__burger-submenu-link" href="#">{{this.text}}</a>
+                                        <a class="header__burger-submenu-link" href="{{this.href}}">{{this.text}}</a>
                                     </li>
                                 {{/each}}
                             </ul>
@@ -50,7 +50,7 @@
                 <ul class="header__burger-menu">
                     {{#each burgerMenu }}
                         <li class="header__burger-menu-item">
-                            <a class="header__burger-menu-link" href="#">{{this.text}}</a>
+                            <a class="header__burger-menu-link" href="{{this.href}}">{{this.text}}</a>
                         </li>
                     {{/each}}
                 </ul>

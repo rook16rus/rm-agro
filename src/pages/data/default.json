@@ -1,11 +1,11 @@
 {
   "menuLeft": [
     {
-      "href": "catalog.html",
+      "href": "sausages.html",
       "text": "Каталог"
     },
     {
-      "href": "activities.html",
+      "href": "directions.html",
       "text": "Направления деятельности"
     }
   ],
@@ -21,35 +21,35 @@
   ],
   "footerMenu": [
     {
-      "href": "#",
+      "href": "sausages.html",
       "text": "Каталог"
     },
     {
-      "href": "#",
+      "href": "news.html",
       "text": "новости и акции"
     },
     {
-      "href": "#",
+      "href": "contacts.html",
       "text": "Контакты"
     },
     {
-      "href": "#",
+      "href": "media.html",
       "text": "медиагалерея"
     },
     {
-      "href": "#",
+      "href": "about.html",
       "text": "О холдинге"
     },
     {
-      "href": "#",
+      "href": "awards.html",
       "text": "награды и сертификаты"
     },
     {
-      "href": "#",
+      "href": "career.html",
       "text": "работа в рм-агро"
     },
     {
-      "href": "#",
+      "href": "directions.html",
       "text": "направления деятельности"
     }
   ],
@@ -68,22 +68,28 @@
       "title": "Направления деятельности",
       "submenu": [
         {
+          "href": "directions-single.html",
           "text": "растениеводство"
         },
         {
+          "href": "directions-single.html",
           "text": "животноводство"
         },
         {
+          "href": "directions-single.html",
           "text": "молочное производство"
         },
         {
+          "href": "directions-single.html",
           "text": "производство колбас и деликатесов"
         },
         {
+          "href": "directions-single.html",
           "text": "забой скота"
         },
         {
-          "text": "ГРК «Апрель»"
+          "href": "directions-single.html",
+          "text": "ГРК «Апрель»"
         }
       ]
     },
@@ -91,32 +97,40 @@
       "title": "Каталог",
       "submenu": [
         {
-          "text": "колбасные изделия"
+          "text": "колбасные изделия",
+          "href": "sausages.html"
         },
         {
-          "text": "Мясное производство"
+          "text": "Мясное производство",
+          "href": "meat.html"
         }
       ]
     }
   ],
   "burgerMenu": [
     {
-      "text": "О холдинге"
+      "text": "О холдинге",
+      "href": "about.html"
     },
     {
-      "text": "новости и акции"
+      "text": "новости и акции",
+      "href": "news.html"
     },
     {
-      "text": "работа в рм-агро"
+      "text": "работа в рм-агро",
+      "href": "career.html"
     },
     {
-      "text": "медиагалерея"
+      "text": "медиагалерея",
+      "href": "media.html"
     },
     {
-      "text": "награды и сертификаты"
+      "text": "награды и сертификаты",
+      "href": "awards.html"
     },
     {
-      "text": "Контакты"
+      "text": "Контакты",
+      "href": "contacts.html"
     }
   ]
 }

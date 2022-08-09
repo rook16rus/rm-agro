@@ -4,26 +4,26 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 export default function newsAnimation() {
-    const news = document.querySelector('.news');
+    const news = document.querySelector('.news-section');
     if (!news) return;
 
     const tl = gsap.timeline({
         scrollTrigger: {
-            trigger: '.news',
+            trigger: '.news-section',
             start: 'top 80%'
         }
     })
 
-    tl.from('.news .section-header', {
+    tl.from('.news-section .section-header', {
         y: '20rem',
         duration: 1.2
-    },).to('.news .section-header--clipped', {
+    },).to('.news-section .section-header--clipped', {
         'clip-path': 'inset(0% -10% 0%)',
         duration: 1.6,
-    }, '=-1').to('.news__item', {
+    }, '=-1').to('.news-section__item', {
         'clip-path': 'inset(0% 0% 0%)',
         duration: 1.3,
-    }, '=-1.3').to('.news__slider', {
+    }, '=-1.3').to('.news-section__slider', {
         'clip-path': 'inset(0% 0% 0%)',
         duration: 0.7,
     }, '=-0.8')
