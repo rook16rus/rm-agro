@@ -2,10 +2,12 @@
   "headerMod": "header--dark",
   "breadcrumbs": [
     {
+      "href": "index.html",
       "text": "Главная",
       "active": true
     },
     {
+      "href": "sausages.html",
       "text": "Каталог"
     }
   ],

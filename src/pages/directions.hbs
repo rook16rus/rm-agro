@@ -1,0 +1,95 @@
+{{#extend "layout"}}
+    {{#content "main"}}
+
+        <section class="directions">
+            <div class="container">
+                {{> breadcrumbs data=breadcrumbs }}
+                <h1 class="directions__title">Направления деятелности</h1>
+                <ul class="directions__list">
+                    {{#each directions }}
+                        <li class="directions__item">
+                            <a class="directions__item-link" href="#" style="background: {{this.color}} url('{{this.bg}}') no-repeat center; background-size: cover">
+                                <img class="directions__item-img lazyload" data-src="{{this.img}}" alt="Фото направления">
+                                <span class="directions__item-text">
+                                    <span>{{{this.text}}}</span>
+                                    <svg class="sausages__item-icon">
+                                        <use xlink:href="#link-arrow-icon"></use>
+                                    </svg>
+                                </span>
+                            </a>
+                        </li>
+                    {{/each}}
+                </ul>
+            </div>
+        </section>
+        <section class="contacts">
+            <div class="container">
+                <div class="contacts__inner">
+                    <div class="contacts__title-wrapper">
+                        <h2 class="contacts__title">связаться с&nbsp;нами</h2>
+                    </div>
+                    <div class="contacts__wrapper">
+                        <form class="contacts__form js-handle-form" action="#" data-need-validation="true" novalidate>
+                            <div class="contacts__form-wrapper">
+                                <div class="contacts__input-wrapper input-wrapper">
+                                    <input class="contacts__input input" name="contactsName" id="contactsName" type="text" required>
+                                    <label for="contactsName">Имя</label>
+                                </div>
+                                <div class="contacts__input-wrapper input-wrapper">
+                                    <input class="contacts__input input js-phone-input" name="contactsPhone" id="contactsPhone" type="tel" required>
+                                    <label for="contactsPhone">номер телефона</label>
+                                </div>
+                                <div class="contacts__input-wrapper input-wrapper">
+                                    <textarea class="contacts__textarea textarea input" name="contactsComment" id="contactsComment"></textarea>
+                                    <label for="contactsComment">Ваше сообщение</label>
+                                </div>
+                            </div>
+                            <div class="contacts__checkbox-block">
+                                <div class="contacts__checkbox-wrapper">
+                                    <input class="contacts__checkbox checkbox" name="contactsCheckbox" id="contactsCheckbox"
+                                           type="checkbox" required>
+                                    <label for="contactsCheckbox">Согласен на обработку персональных данных</label>
+                                </div>
+                            </div>
+                            <button class="contacts__button button button--white js-submit-form" type="submit">
+                                <span>отправить</span>
+                                <svg>
+                                    <use xlink:href="#link-arrow-icon"></use>
+                                </svg>
+                            </button>
+                        </form>
+                        <div class="contacts__content">
+                            <div class="contacts__text">
+                                <p>
+                                    Мы всегда рады услашать ваше мнение о&nbsp;нашей&nbsp;продукции, а также пригласить в нашу
+                                    команду
+                                </p>
+                            </div>
+                            <div class="contacts__links">
+                                <a class="contacts__link link link--white" href="tel:+79061201515">+7 (906) 120-15-15</a>
+                                <a class="contacts__link link link--white" href="mailto:sbyt@rm-mamad.ru">sbyt@rm-mamad.ru</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    {{/content}}
+{{/extend}}
+
+<!--
+
+  @include breakpoint(tablet) {
+
+  }
+
+  @include breakpoint(small-tablet) {
+
+  }
+
+  @include breakpoint(mobile) {
+
+  }
+
+-->

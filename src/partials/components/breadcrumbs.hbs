@@ -1,7 +1,7 @@
 <ul class="breadcrumbs">
     {{#each data }}
         <li class="breadcrumbs__item{{#if active }} active{{/if}}">
-            <a href="#">{{this.text}}</a>
+            <a href="{{this.href}}">{{this.text}}</a>
         </li>
     {{/each}}
 </ul>
