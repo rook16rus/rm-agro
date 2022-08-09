@@ -18,6 +18,22 @@
     clip-path: inset(0% 0% 100%);
   }
 
+  &--dotted {
+    &::before {
+      content: '';
+
+      position: absolute;
+      left: 2rem;
+      bottom: -0.9rem;
+
+      width: 1.5rem;
+      height: 1.5rem;
+
+      border-radius: 50%;
+      background-color: var(--accent-color);
+    }
+  }
+
   &__top {
     display: flex;
     justify-content: space-between;

@@ -62,5 +62,72 @@
       "text": "гектар — земельный бак",
       "img": "img/direction-feature-4.jpg"
     }
+  ],
+  "types": [
+    {
+      "bg": "img/directions-single-wheat.svg",
+      "color": "#395937",
+      "img": "img/types-1.jpg",
+      "title": "производство сельскохозяйственных&nbsp;культур",
+      "tags": [
+        {
+          "text": "пшеница"
+        },
+        {
+          "text": "ячмень"
+        },
+        {
+          "text": "рапс"
+        },
+        {
+          "text": "люпин"
+        },
+        {
+          "text": "кукуруза"
+        },
+        {
+          "text": "тритикале"
+        },
+        {
+          "text": "соя"
+        },
+        {
+          "text": "подсолнечник"
+        }
+      ]
+    },
+    {
+      "bg": "img/directions-single-wheat.svg",
+      "color": "#395937",
+      "img": "img/types-1.jpg",
+      "title": "производство грубых и&nbsp;сочных&nbsp;кормов",
+      "tags": [
+        {
+          "text": "сенаж"
+        },
+        {
+          "text": "солома"
+        },
+        {
+          "text": "сено"
+        },
+        {
+          "text": "силос"
+        }
+      ]
+    },
+    {
+      "bg": "img/directions-single-wheat.svg",
+      "color": "#395937",
+      "img": "img/types-1.jpg",
+      "title": "Семеноводство",
+      "text": "Производство, подготовка и реализация семян высших и высоких репродукций."
+    },
+    {
+      "bg": "img/directions-single-wheat.svg",
+      "color": "#395937",
+      "img": "img/types-1.jpg",
+      "title": "Введение в оборот залежных земель"
+    }
   ]
 }

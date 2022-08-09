@@ -4,7 +4,7 @@
         {{> page-header bg='img/directions-1.jpg' title='Растениеводство'}}
         <section class="directions-single__description">
             <div class="container">
-                {{> section-header title='описание' }}
+                {{> section-header title='описание' dot=true }}
             </div>
             <div class="narrow-container">
                 <h2>Лучшее мясное производство в республике татарстан</h2>
@@ -24,6 +24,33 @@
                     обработку данных для максимально продуктивной работы всех составляющих холдинга.
                 </p>
                 {{> features-slider data=descriptionSlider }}
+            </div>
+        </section>
+        <section class="directions-single__types">
+            <div class="container">
+                {{> section-header title='виды деятельности' dot=true }}
+                <ul class="directions-single__types-list">
+                    {{#each types }}
+                        <li class="directions-single__types-item" style="background: {{this.color}} url('{{this.bg}}') no-repeat center; background-size: cover">
+                            <img class="directions-single__types-img lazyload" data-src="{{this.img}}" alt="Фото вида направления">
+                            <div class="directions-single__types-content">
+                                <h3 class="directions-single__types-title">{{{this.title}}}</h3>
+                                {{#if tags }}
+                                    <ul class="directions-single__types-tags">
+                                        {{#each tags }}
+                                            <li class="directions-single__types-tag">{{this.text}}</li>
+                                        {{/each}}
+                                    </ul>
+                                {{/if}}
+                                {{#if text }}
+                                    <div class="directions-single__types-text">
+                                        <p>{{this.text}}</p>
+                                    </div>
+                                {{/if}}
+                            </div>
+                        </li>
+                    {{/each}}
+                </ul>
             </div>
         </section>
         <section class="contacts">
