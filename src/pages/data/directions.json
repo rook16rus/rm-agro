@@ -4,11 +4,11 @@
     {
       "text": "Главная",
       "href": "index.html",
-      "active": true
     },
     {
       "text": "Направления деятельности",
-      "href": "directions.html"
+      "href": "directions.html",
+      "active": true
     }
   ],
   "directions": [

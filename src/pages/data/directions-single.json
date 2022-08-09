@@ -1,0 +1,44 @@
+{
+  "breadcrumbs": [
+    {
+      "text": "Главная",
+      "href": "index.html"
+    },
+    {
+      "text": "Направления деятельности",
+      "href": "directions.html"
+    },
+    {
+      "text": "Растениеводство",
+      "href": "directions-single.html",
+      "active": true
+    }
+  ],
+  "linksData": [
+    {
+      "href": "directions-single.html",
+      "text": "растениеводство",
+      "active": true
+    },
+    {
+      "href": "directions-single.html",
+      "text": "животноводство"
+    },
+    {
+      "href": "directions-single.html",
+      "text": "молочное производство"
+    },
+    {
+      "href": "directions-single.html",
+      "text": "производство колбас и деликатесов"
+    },
+    {
+      "href": "directions-single.html",
+      "text": "забой скота"
+    },
+    {
+      "href": "directions-single.html",
+      "text": "ГРК «АПРЕЛЬ»"
+    }
+  ]
+}

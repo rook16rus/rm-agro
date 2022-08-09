@@ -4,6 +4,7 @@ export default function header() {
     const header = document.querySelector('.header');
     const headerContainer = document.querySelector('.header-container');
     const intro = document.querySelector('.intro');
+    const pageHeader = document.querySelector('.page-header');
     const burger = document.querySelector('.header__burger');
 
     burger.addEventListener('click', (e) => {
@@ -21,6 +22,8 @@ export default function header() {
 
     if (intro) {
         intro.style.setProperty('--header-height', header.clientHeight + 'px');
+    } else if (pageHeader) {
+        pageHeader.style.setProperty('--header-height', header.clientHeight + 'px');
     } else {
         document.documentElement.style.setProperty('--header-height', header.clientHeight + 'px');
     }

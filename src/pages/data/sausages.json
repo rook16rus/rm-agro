@@ -3,12 +3,12 @@
   "breadcrumbs": [
     {
       "href": "index.html",
-      "text": "Главная",
-      "active": true
+      "text": "Главная"
     },
     {
       "href": "sausages.html",
-      "text": "Каталог"
+      "text": "Каталог",
+      "active": true
     }
   ],
   "filter": [

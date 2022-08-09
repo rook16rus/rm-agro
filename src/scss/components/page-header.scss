@@ -1,0 +1,42 @@
+.page-header {
+  display: flex;
+  padding-top: var(--header-height);
+  padding-bottom: 5rem;
+  min-height: 100vh;
+
+  color: #fff;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    height: 100%;
+  }
+  
+  .breadcrumbs__item {
+    color: #fff;
+    
+    &::after {
+      background-color: #fff;
+      opacity: 1;
+    }
+  }
+
+  &__title {
+    margin-top: auto;
+
+    font: var(--regular) 25rem/75% var(--secondary-ff);
+
+    @include breakpoint(tablet) {
+      font-size: 16rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      font-size: 12rem;
+    }
+
+    @include breakpoint(mobile) {
+      font-size: 9rem;
+    }
+  }
+}

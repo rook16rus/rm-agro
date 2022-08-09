@@ -1,27 +1,7 @@
 {{#extend "layout"}}
     {{#content "main"}}
 
-        <section class="directions">
-            <div class="container">
-                {{> breadcrumbs data=breadcrumbs }}
-                <h1 class="directions__title">Направления деятелности</h1>
-                <ul class="directions__list">
-                    {{#each directions }}
-                        <li class="directions__item">
-                            <a class="directions__item-link" href="directions-single.html" style="background: {{this.color}} url('{{this.bg}}') no-repeat center; background-size: cover">
-                                <img class="directions__item-img lazyload" data-src="{{this.img}}" alt="Фото направления">
-                                <span class="directions__item-text">
-                                    <span>{{{this.text}}}</span>
-                                    <svg class="sausages__item-icon">
-                                        <use xlink:href="#link-arrow-icon"></use>
-                                    </svg>
-                                </span>
-                            </a>
-                        </li>
-                    {{/each}}
-                </ul>
-            </div>
-        </section>
+        {{> page-header bg='img/directions-1.jpg' title='Растениеводство'}}
         <section class="contacts">
             <div class="container">
                 <div class="contacts__inner">
@@ -77,3 +57,19 @@
 
     {{/content}}
 {{/extend}}
+
+<!--
+
+  @include breakpoint(tablet) {
+
+  }
+
+  @include breakpoint(small-tablet) {
+
+  }
+
+  @include breakpoint(mobile) {
+
+  }
+
+-->
