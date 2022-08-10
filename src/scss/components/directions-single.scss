@@ -115,4 +115,17 @@
     font: var(--text-t2);
     opacity: 0.8;
   }
+
+  &__features {
+    padding: 10rem 0;
+
+    .section-header__title {
+      max-width: none;
+    }
+
+    .advantages-list {
+      max-width: 131.6rem;
+      margin-left: auto;
+    }
+  }
 }

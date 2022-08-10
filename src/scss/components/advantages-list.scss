@@ -1,0 +1,32 @@
+.advantages-list {
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 3rem;
+    padding: 2rem 0 4.6rem;
+    min-height: 14.6rem;
+
+    border-bottom: 1px solid var(--stroke-color);
+
+    &:first-child {
+      padding-top: 0;
+    }
+  }
+
+  &__title {
+    font: var(--title-h3);
+    text-transform: uppercase;
+    color: #000;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    width: 100%;
+    max-width: 52.6rem;
+
+    font: var(--text-t2);
+  }
+}
