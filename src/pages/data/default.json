@@ -132,5 +132,43 @@
       "text": "Контакты",
       "href": "contacts.html"
     }
+  ],
+  "partners": [
+    {
+      "img": "img/partners-1.jpg"
+    },
+    {
+      "img": "img/partners-2.jpg"
+    },
+    {
+      "img": "img/partners-3.jpg"
+    },
+    {
+      "img": "img/partners-4.jpg"
+    },
+    {
+      "img": "img/partners-5.jpg"
+    },
+    {
+      "img": "img/partners-6.jpg"
+    },
+    {
+      "img": "img/partners-1.jpg"
+    },
+    {
+      "img": "img/partners-2.jpg"
+    },
+    {
+      "img": "img/partners-3.jpg"
+    },
+    {
+      "img": "img/partners-4.jpg"
+    },
+    {
+      "img": "img/partners-5.jpg"
+    },
+    {
+      "img": "img/partners-6.jpg"
+    }
   ]
 }

@@ -27,6 +27,7 @@ import masks from "./build-in/masks";
 import modals from "./build-in/modals";
 import productSlider from "./build-in/productSlider";
 import menuModalClose from "./build-in/menuModalClose";
+import partnersSlider from "./build-in/partnersSlider";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -56,6 +57,7 @@ document.addEventListener('DOMContentLoaded', function () {
     inputPlaceholder();
     productSlider();
     menuModalClose();
+    partnersSlider();
 });
 
 document.addEventListener('lazyloaded', () => {
