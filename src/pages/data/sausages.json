@@ -144,46 +144,5 @@
       "img": "img/saus-2.png",
       "title": "\nсосиски «Хотдог»"
     }
-  ],
-  "properties": [
-    {
-      "property": "Калорийность",
-      "value": "419ккал/1754кДж"
-    },
-    {
-      "property": "Белок",
-      "value": "17 г"
-    },
-    {
-      "property": "Жир",
-      "value": "39 г"
-    }
-  ],
-  "guarantee": [
-    {
-      "img": "img/guarantee-1.svg",
-      "text": "от +0 до +6 С"
-    },
-    {
-      "img": "img/guarantee-2.svg",
-      "text": "30 суток"
-    }
-  ],
-  "serving": [
-    {
-      "img": "img/serving-1.jpg"
-    },
-    {
-      "img": "img/serving-2.jpg"
-    },
-    {
-      "img": "img/serving-3.jpg"
-    },
-    {
-      "img": "img/serving-1.jpg"
-    },
-    {
-      "img": "img/serving-2.jpg"
-    }
   ]
 }

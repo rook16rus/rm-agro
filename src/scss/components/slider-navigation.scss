@@ -11,6 +11,21 @@
     }
   }
 
+  &--green {
+    .slider-navigation__button {
+      width: 6.5rem;
+      height: 6.5rem;
+
+      border-color: var(--accent-color);
+      color: var(--accent-color);
+
+      svg {
+        width: 1.2rem;
+        height: 2.2rem;
+      }
+    }
+  }
+
   &__button {
     display: flex;
     justify-content: center;

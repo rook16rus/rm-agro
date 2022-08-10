@@ -147,5 +147,37 @@
       "title": "шестипольный<br> севооборот",
       "text": "Удобрение полей органическими отходами собственных СВК "
     }
+  ],
+  "products": [
+    {
+      "background": "radial-gradient(73.54% 73.54% at 49.02% 56.29%, #EEE1D9 0%, #DDC6BA 100%)",
+      "img": "img/meat-4.png",
+      "title": "колбаса полукопчёная охлаждённая «Краковская»"
+    },
+    {
+      "background": "radial-gradient(73.54% 73.54% at 49.02% 56.29%, #EEE1D9 0%, #DDC6BA 100%)",
+      "img": "img/meat-5.png",
+      "title": "\nветчина в оболочке"
+    },
+    {
+      "background": "radial-gradient(73.54% 73.54% at 49.02% 56.29%, #EEE1D9 0%, #DDC6BA 100%)",
+      "img": "img/meat-6.png",
+      "title": "\nколбаса сырокопчёная охлаждённая салями «Экстра»"
+    },
+    {
+      "background": "radial-gradient(73.54% 73.54% at 49.02% 56.29%, #EEE1D9 0%, #DDC6BA 100%)",
+      "img": "img/meat-7.png",
+      "title": "\nколбаса варёная «Молочная»"
+    },
+    {
+      "background": "radial-gradient(73.54% 73.54% at 49.02% 56.29%, #EEE1D9 0%, #DDC6BA 100%)",
+      "img": "img/meat-8.png",
+      "title": "\nколбаса полукопчёная охлаждённая «Домашняя»"
+    },
+    {
+      "background": "radial-gradient(73.54% 73.54% at 49.02% 56.29%, #EEE1D9 0%, #DDC6BA 100%)",
+      "img": "img/meat-9.png",
+      "title": "колбаса полукопчёная охлаждённая «Донская»"
+    }
   ]
 }

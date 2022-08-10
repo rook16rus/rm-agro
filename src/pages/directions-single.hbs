@@ -70,6 +70,31 @@
                 {{> partners-slider }}
             </div>
         </section>
+        <section class="directions-single__products">
+            <div class="container">
+                {{> section-header title='Наша продукция' allLink=true }}
+                <div class="directions-single__products-slider-container js-init-slider-container">
+                    <div class="directions-single__products-slider swiper js-init-slider" data-space="24" data-slides="auto" style="clip-path: url(#products-slider); --overlay-color: rgba(0, 0, 0, 0.2);">
+                        <div class="swiper-wrapper">
+                            {{#each products }}
+                                <a class="directions-single__products-slide swiper-slide" href="#product">
+                                    <div class="directions-single__products-img" style="background: {{this.background}}">
+                                        <img class="lazyload" data-src="{{this.img}}" alt="Фото колбаски">
+                                    </div>
+                                    <div class="directions-single__products-content">
+                                        <h3 class="directions-single__products-title">{{this.title}}</h3>
+                                        <svg class="directions-single__products-icon">
+                                            <use xlink:href="#link-arrow-icon"></use>
+                                        </svg>
+                                    </div>
+                                </a>
+                            {{/each}}
+                        </div>
+                    </div>
+                    {{> slider-navigation mod='slider-navigation--green' }}
+                </div>
+            </div>
+        </section>
         <section class="contacts">
             <div class="container">
                 <div class="contacts__inner">
