@@ -104,6 +104,23 @@
     }
 }
 
+.video-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 17.4rem;
+    height: 17.4rem;
+
+    background: url("../img/video-button-bg.svg") no-repeat center;
+    background-size: cover;
+
+    &__icon {
+        width: 7rem;
+        height: 8.4rem;
+        margin-left: 9%;
+    }
+}
+
 .link {
     transition: 0.3s;
 
