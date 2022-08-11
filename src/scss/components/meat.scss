@@ -95,7 +95,7 @@
     }
 
     @include breakpoint(small-tablet) {
-      min-height: 3rem;
+      min-height: 30rem;
     }
 
     @include breakpoint(mobile) {
