@@ -25,6 +25,18 @@
         font: var(--title-h3);
         text-transform: uppercase;
         color: var(--title-color);
+
+        @include breakpoint(tablet) {
+            margin-bottom: 4rem;
+        }
+
+        @include breakpoint(small-tablet) {
+            margin-bottom: 3rem;
+        }
+
+        @include breakpoint(mobile) {
+            margin-bottom: 2rem;
+        }
     }
 
     p {

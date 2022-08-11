@@ -31,6 +31,10 @@
 
       border-radius: 50%;
       background-color: var(--accent-color);
+
+      @include breakpoint(tablet) {
+        display: none;
+      }
     }
   }
 
