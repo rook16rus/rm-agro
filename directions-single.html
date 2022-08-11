@@ -64,7 +64,7 @@
         <div class="page-content">
             <div class="header-container">
 
-                <header class="header header--dark">
+                <header class="header">
                     <div class="container">
                         <div class="header__wrapper">
                             <a class="header__logo" href="index.html">
@@ -195,328 +195,443 @@
             </div>
 
             <main class="page-main">
-                <section class="sausages">
+                <section class="page-header" style="background: url('img/directions-1.jpg') no-repeat center; background-size: cover;">
                     <div class="container">
-                        <div class="breadcrumbs swiper js-init-slider" data-slides="auto">
+                        <div class="page-header__inner">
+                            <div class="breadcrumbs swiper js-init-slider" data-slides="auto">
+                                <div class="swiper-wrapper">
+                                    <div class="breadcrumbs__item swiper-slide">
+                                        <a href="index.html">Главная</a>
+                                    </div>
+                                    <div class="breadcrumbs__item swiper-slide">
+                                        <a href="directions.html">Направления деятельности</a>
+                                    </div>
+                                    <div class="breadcrumbs__item swiper-slide active">
+                                        <a href="directions-single.html">Растениеводство</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="links-list links-list--white swiper js-init-slider" data-slides="auto" data-spaces="280:10,768:20">
+                                <div class="swiper-wrapper">
+                                    <a class="links-list__link active swiper-slide" href="directions-single.html">растениеводство</a>
+                                    <a class="links-list__link swiper-slide" href="directions-single.html">животноводство</a>
+                                    <a class="links-list__link swiper-slide" href="directions-single.html">молочное производство</a>
+                                    <a class="links-list__link swiper-slide" href="directions-single.html">производство колбас и деликатесов</a>
+                                    <a class="links-list__link swiper-slide" href="directions-single.html">забой скота</a>
+                                    <a class="links-list__link swiper-slide" href="directions-single.html">ГРК «АПРЕЛЬ»</a>
+                                </div>
+                            </div>
+                            <h1 class="page-header__title">Растениеводство</h1>
+                        </div>
+                    </div>
+                </section>
+                <section class="directions-single__description">
+                    <div class="container">
+                        <div class="section-header section-header--dotted">
+                            <div class="section-header__top">
+                                <h2 class="section-header__title section-title">описание</h2>
+                            </div>
+                            <div class="section-header__line"></div>
+                        </div>
+                    </div>
+                    <div class="narrow-container">
+                        <h2>Лучшее мясное производство в республике татарстан</h2>
+                        <p>Пашня, молочно-товарные фермы и мясоперерабатывающий комбинат построены в Мамадышском районе Республики Татарстан. Непосредственная близость объектов и производство полного цикла упрощают обработку данных для максимально продуктивной работы всех составляющих холдинга.</p>
+                        <p>Пашня, молочно-товарные фермы и мясоперерабатывающий комбинат построены в Мамадышском районе Республики Татарстан. Непосредственная близость объектов и производство полного цикла упрощают обработку данных для максимально продуктивной работы всех составляющих холдинга.</p>
+                        <p>Пашня, молочно-товарные фермы и мясоперерабатывающий комбинат построены в Мамадышском районе Республики Татарстан. Непосредственная близость объектов и производство полного цикла упрощают обработку данных для максимально продуктивной работы всех составляющих холдинга.</p>
+                        <div class="features-slider swiper js-init-slider js-init-slider-mobile" data-space="50" data-slides="auto" data-free-mode="true">
                             <div class="swiper-wrapper">
-                                <div class="breadcrumbs__item swiper-slide">
-                                    <a href="index.html">Главная</a>
+                                <div class="features-slider__slide swiper-slide">
+                                    <div class="features-slider__content">
+                                        <h3>250 000</h3>
+                                        <p>тонн — производство грубых и сочных кормов</p>
+                                    </div>
+                                    <div class="features-slider__slide-img">
+                                        <img src="img/direction-feature-1.jpg" alt="Фото преимущества">
+                                    </div>
                                 </div>
-                                <div class="breadcrumbs__item swiper-slide active">
-                                    <a href="sausages.html">Каталог</a>
+                                <div class="features-slider__slide swiper-slide">
+                                    <div class="features-slider__content">
+                                        <h3>65 000</h3>
+                                        <p>тонн — объём хранения зёрна в элеваторах</p>
+                                    </div>
+                                    <div class="features-slider__slide-img">
+                                        <img src="img/direction-feature-2.jpg" alt="Фото преимущества">
+                                    </div>
+                                </div>
+                                <div class="features-slider__slide swiper-slide">
+                                    <div class="features-slider__content">
+                                        <h3>41</h3>
+                                        <p>центнер с гекатара — урожайность</p>
+                                    </div>
+                                    <div class="features-slider__slide-img">
+                                        <img src="img/direction-feature-3.jpg" alt="Фото преимущества">
+                                    </div>
+                                </div>
+                                <div class="features-slider__slide swiper-slide">
+                                    <div class="features-slider__content">
+                                        <h3>46 000</h3>
+                                        <p>гектар — земельный бак</p>
+                                    </div>
+                                    <div class="features-slider__slide-img">
+                                        <img src="img/direction-feature-4.jpg" alt="Фото преимущества">
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="main-titles">
-                            <div class="main-titles__links">
-                                <a class="main-titles__link button button--green active" href="sausages.html"><span>Колбасные изделия</span>
-                                </a>
-                                <a class="main-titles__link button button--green" href="meat.html"><span>Мясная продукция</span>
-                                </a>
+                    </div>
+                </section>
+                <section class="directions-single__types">
+                    <div class="container">
+                        <div class="section-header section-header--dotted">
+                            <div class="section-header__top">
+                                <h2 class="section-header__title section-title">виды деятельности</h2>
                             </div>
-                            <h1 class="main-titles__title main-titles__title--active">
-                                <a href="sausages.html">Колбасные изделия</a>
-                            </h1>
-                            <h2 class="main-titles__title">
-                                <a href="meat.html">Мясная продукция</a>
-                            </h2>
+                            <div class="section-header__line"></div>
                         </div>
-                        <div class="sausages__filter">
-                            <div class="sausages__filter-tags">
-                                <form class="filter-tags swiper js-filter-tags">
-                                    <div class="filter-tags__list swiper-wrapper">
-                                        <div class="filter-tags__item swiper-slide">
-                                            <input class="visually-hidden" id="tag1" name="sausageFilter" type="radio">
-                                            <label class="filter-tags__label" for="tag1">весь ассортимент</label>
-                                        </div>
-                                        <div class="filter-tags__item swiper-slide">
-                                            <input class="visually-hidden" id="tag2" name="sausageFilter" type="radio">
-                                            <label class="filter-tags__label" for="tag2">вареные</label>
-                                        </div>
-                                        <div class="filter-tags__item swiper-slide">
-                                            <input class="visually-hidden" id="tag3" name="sausageFilter" type="radio">
-                                            <label class="filter-tags__label" for="tag3">полукопченые</label>
-                                        </div>
-                                        <div class="filter-tags__item swiper-slide">
-                                            <input class="visually-hidden" id="tag4" name="sausageFilter" type="radio">
-                                            <label class="filter-tags__label" for="tag4">сыровяленые</label>
-                                        </div>
-                                        <div class="filter-tags__item swiper-slide">
-                                            <input class="visually-hidden" id="tag5" name="sausageFilter" type="radio">
-                                            <label class="filter-tags__label" for="tag5">варено-копченые</label>
-                                        </div>
-                                        <div class="filter-tags__item swiper-slide">
-                                            <input class="visually-hidden" id="tag6" name="sausageFilter" type="radio">
-                                            <label class="filter-tags__label" for="tag6">сырокопченые</label>
-                                        </div>
-                                        <div class="filter-tags__item swiper-slide">
-                                            <input class="visually-hidden" id="tag7" name="sausageFilter" type="radio">
-                                            <label class="filter-tags__label" for="tag7">мясные деликатесы</label>
-                                        </div>
-                                        <div class="filter-tags__item swiper-slide">
-                                            <input class="visually-hidden" id="tag8" name="sausageFilter" type="radio">
-                                            <label class="filter-tags__label" for="tag8">ветчины и окорока</label>
-                                        </div>
-                                        <div class="filter-tags__item swiper-slide">
-                                            <input class="visually-hidden" id="tag9" name="sausageFilter" type="radio">
-                                            <label class="filter-tags__label" for="tag9">деликатесы сырокопченые</label>
-                                        </div>
-                                        <div class="filter-tags__item swiper-slide">
-                                            <input class="visually-hidden" id="tag10" name="sausageFilter" type="radio">
-                                            <label class="filter-tags__label" for="tag10">сосиски и сардельки</label>
+                        <ul class="directions-single__types-list">
+                            <li class="directions-single__types-item" style="background: #395937 url('img/directions-single-wheat.svg') no-repeat center; background-size: cover">
+                                <img class="directions-single__types-img lazyload" data-src="img/types-1.jpg" alt="Фото вида направления">
+                                <div class="directions-single__types-content">
+                                    <h3 class="directions-single__types-title">производство сельскохозяйственных&nbsp;культур</h3>
+                                    <div class="directions-single__types-tags swiper">
+                                        <div class="swiper-wrapper">
+                                            <div class="directions-single__types-tag swiper-slide">пшеница</div>
+                                            <div class="directions-single__types-tag swiper-slide">ячмень</div>
+                                            <div class="directions-single__types-tag swiper-slide">рапс</div>
+                                            <div class="directions-single__types-tag swiper-slide">люпин</div>
+                                            <div class="directions-single__types-tag swiper-slide">кукуруза</div>
+                                            <div class="directions-single__types-tag swiper-slide">тритикале</div>
+                                            <div class="directions-single__types-tag swiper-slide">соя</div>
+                                            <div class="directions-single__types-tag swiper-slide">подсолнечник</div>
                                         </div>
                                     </div>
-                                </form>
-                            </div>
-                            <a class="download-link">
-                                <div class="download-link__content"><span class="download-link__text">скачать полный прайс-лист</span><span class="download-link__size">5 мб PDF</span>
                                 </div>
-                                <div class="download-link__icon">
-                                    <img class="lazyload" data-src="img/download-icon.svg" alt="Иконка скачивания">
+                            </li>
+                            <li class="directions-single__types-item" style="background: #395937 url('img/directions-single-wheat.svg') no-repeat center; background-size: cover">
+                                <img class="directions-single__types-img lazyload" data-src="img/types-2.jpg" alt="Фото вида направления">
+                                <div class="directions-single__types-content">
+                                    <h3 class="directions-single__types-title">производство грубых и&nbsp;сочных&nbsp;кормов</h3>
+                                    <div class="directions-single__types-tags swiper">
+                                        <div class="swiper-wrapper">
+                                            <div class="directions-single__types-tag swiper-slide">сенаж</div>
+                                            <div class="directions-single__types-tag swiper-slide">солома</div>
+                                            <div class="directions-single__types-tag swiper-slide">сено</div>
+                                            <div class="directions-single__types-tag swiper-slide">силос</div>
+                                        </div>
+                                    </div>
                                 </div>
-                            </a>
-                        </div>
-                        <ul class="sausages__list">
-                            <li class="sausages__item">
-                                <a class="sausages__item-link" href="#product">
-                                    <div class="sausages__item-img" style="background: radial-gradient(73.54% 73.54% at 49.02% 56.29%, #EEE1D9 0%, #DDC6BA 100%)">
-                                        <img class="lazyload" data-src="img/saus-1.png" alt="Фото колбаски">
-                                    </div>
-                                    <div class="sausages__item-content">
-                                        <h3 class="sausages__item-title">колбаса сырокопчёная охлаждённая «Миланская»</h3>
-                                        <svg class="sausages__item-icon">
-                                            <use xlink:href="#link-arrow-icon"></use>
-                                        </svg>
-                                    </div>
-                                </a>
                             </li>
-                            <li class="sausages__item">
-                                <a class="sausages__item-link" href="#product">
-                                    <div class="sausages__item-img" style="background: radial-gradient(73.54% 73.54% at 49.02% 56.29%, #EEE1D9 0%, #DDC6BA 100%)">
-                                        <img class="lazyload" data-src="img/saus-2.png" alt="Фото колбаски">
+                            <li class="directions-single__types-item" style="background: #395937 url('img/directions-single-wheat.svg') no-repeat center; background-size: cover">
+                                <img class="directions-single__types-img lazyload" data-src="img/types-3.jpg" alt="Фото вида направления">
+                                <div class="directions-single__types-content">
+                                    <h3 class="directions-single__types-title">Семеноводство</h3>
+                                    <div class="directions-single__types-text">
+                                        <p>Производство, подготовка и реализация семян высших и высоких репродукций.</p>
                                     </div>
-                                    <div class="sausages__item-content">
-                                        <h3 class="sausages__item-title">Грудинка домашняя</h3>
-                                        <svg class="sausages__item-icon">
-                                            <use xlink:href="#link-arrow-icon"></use>
-                                        </svg>
-                                    </div>
-                                </a>
+                                </div>
                             </li>
-                            <li class="sausages__item">
-                                <a class="sausages__item-link" href="#product">
-                                    <div class="sausages__item-img" style="background: radial-gradient(73.54% 73.54% at 49.02% 56.29%, #EEE1D9 0%, #DDC6BA 100%)">
-                                        <img class="lazyload" data-src="img/saus-3.png" alt="Фото колбаски">
-                                    </div>
-                                    <div class="sausages__item-content">
-                                        <h3 class="sausages__item-title">колбаса вареная “Русская”</h3>
-                                        <svg class="sausages__item-icon">
-                                            <use xlink:href="#link-arrow-icon"></use>
-                                        </svg>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="sausages__item">
-                                <a class="sausages__item-link" href="#product">
-                                    <div class="sausages__item-img" style="background: radial-gradient(73.54% 73.54% at 49.02% 56.29%, #EEE1D9 0%, #DDC6BA 100%)">
-                                        <img class="lazyload" data-src="img/saus-4.png" alt="Фото колбаски">
-                                    </div>
-                                    <div class="sausages__item-content">
-                                        <h3 class="sausages__item-title">колбаса полукопчёная охлаждённая «Краковская»</h3>
-                                        <svg class="sausages__item-icon">
-                                            <use xlink:href="#link-arrow-icon"></use>
-                                        </svg>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="sausages__item">
-                                <a class="sausages__item-link" href="#product">
-                                    <div class="sausages__item-img" style="background: radial-gradient(73.54% 73.54% at 49.02% 56.29%, #EEE1D9 0%, #DDC6BA 100%)">
-                                        <img class="lazyload" data-src="img/saus-5.png" alt="Фото колбаски">
-                                    </div>
-                                    <div class="sausages__item-content">
-                                        <h3 class="sausages__item-title">ветчина в оболочке</h3>
-                                        <svg class="sausages__item-icon">
-                                            <use xlink:href="#link-arrow-icon"></use>
-                                        </svg>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="sausages__item">
-                                <a class="sausages__item-link" href="#product">
-                                    <div class="sausages__item-img" style="background: radial-gradient(73.54% 73.54% at 49.02% 56.29%, #EEE1D9 0%, #DDC6BA 100%)">
-                                        <img class="lazyload" data-src="img/saus-6.png" alt="Фото колбаски">
-                                    </div>
-                                    <div class="sausages__item-content">
-                                        <h3 class="sausages__item-title">колбаса сырокопчёная охлаждённая салями «Экстра»</h3>
-                                        <svg class="sausages__item-icon">
-                                            <use xlink:href="#link-arrow-icon"></use>
-                                        </svg>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="sausages__item">
-                                <a class="sausages__item-link" href="#product">
-                                    <div class="sausages__item-img" style="background: radial-gradient(73.54% 73.54% at 49.02% 56.29%, #EEE1D9 0%, #DDC6BA 100%)">
-                                        <img class="lazyload" data-src="img/saus-7.png" alt="Фото колбаски">
-                                    </div>
-                                    <div class="sausages__item-content">
-                                        <h3 class="sausages__item-title">колбаса варёная «Молочная»</h3>
-                                        <svg class="sausages__item-icon">
-                                            <use xlink:href="#link-arrow-icon"></use>
-                                        </svg>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="sausages__item">
-                                <a class="sausages__item-link" href="#product">
-                                    <div class="sausages__item-img" style="background: radial-gradient(73.54% 73.54% at 49.02% 56.29%, #EEE1D9 0%, #DDC6BA 100%)">
-                                        <img class="lazyload" data-src="img/saus-8.png" alt="Фото колбаски">
-                                    </div>
-                                    <div class="sausages__item-content">
-                                        <h3 class="sausages__item-title">колбаса полукопчёная охлаждённая «Домашняя»</h3>
-                                        <svg class="sausages__item-icon">
-                                            <use xlink:href="#link-arrow-icon"></use>
-                                        </svg>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="sausages__item">
-                                <a class="sausages__item-link" href="#product">
-                                    <div class="sausages__item-img" style="background: radial-gradient(73.54% 73.54% at 49.02% 56.29%, #EEE1D9 0%, #DDC6BA 100%)">
-                                        <img class="lazyload" data-src="img/saus-1.png" alt="Фото колбаски">
-                                    </div>
-                                    <div class="sausages__item-content">
-                                        <h3 class="sausages__item-title">колбаса полукопчёная охлаждённая «Донская»</h3>
-                                        <svg class="sausages__item-icon">
-                                            <use xlink:href="#link-arrow-icon"></use>
-                                        </svg>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="sausages__item">
-                                <a class="sausages__item-link" href="#product">
-                                    <div class="sausages__item-img" style="background: radial-gradient(73.54% 73.54% at 49.02% 56.29%, #EEE1D9 0%, #DDC6BA 100%)">
-                                        <img class="lazyload" data-src="img/saus-2.png" alt="Фото колбаски">
-                                    </div>
-                                    <div class="sausages__item-content">
-                                        <h3 class="sausages__item-title">колбаса варёная «докторская»</h3>
-                                        <svg class="sausages__item-icon">
-                                            <use xlink:href="#link-arrow-icon"></use>
-                                        </svg>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="sausages__item">
-                                <a class="sausages__item-link" href="#product">
-                                    <div class="sausages__item-img" style="background: radial-gradient(73.54% 73.54% at 49.02% 56.29%, #EEE1D9 0%, #DDC6BA 100%)">
-                                        <img class="lazyload" data-src="img/saus-3.png" alt="Фото колбаски">
-                                    </div>
-                                    <div class="sausages__item-content">
-                                        <h3 class="sausages__item-title">колбаса варено-копчёная охлаждённая «киевский сервелат»</h3>
-                                        <svg class="sausages__item-icon">
-                                            <use xlink:href="#link-arrow-icon"></use>
-                                        </svg>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="sausages__item">
-                                <a class="sausages__item-link" href="#product">
-                                    <div class="sausages__item-img" style="background: radial-gradient(73.54% 73.54% at 49.02% 56.29%, #EEE1D9 0%, #DDC6BA 100%)">
-                                        <img class="lazyload" data-src="img/saus-4.png" alt="Фото колбаски">
-                                    </div>
-                                    <div class="sausages__item-content">
-                                        <h3 class="sausages__item-title">щековина казачья</h3>
-                                        <svg class="sausages__item-icon">
-                                            <use xlink:href="#link-arrow-icon"></use>
-                                        </svg>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="sausages__item">
-                                <a class="sausages__item-link" href="#product">
-                                    <div class="sausages__item-img" style="background: radial-gradient(73.54% 73.54% at 49.02% 56.29%, #EEE1D9 0%, #DDC6BA 100%)">
-                                        <img class="lazyload" data-src="img/saus-5.png" alt="Фото колбаски">
-                                    </div>
-                                    <div class="sausages__item-content">
-                                        <h3 class="sausages__item-title">колбасаварено-копченая копчёная охлаждённая салями «Экстра»</h3>
-                                        <svg class="sausages__item-icon">
-                                            <use xlink:href="#link-arrow-icon"></use>
-                                        </svg>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="sausages__item">
-                                <a class="sausages__item-link" href="#product">
-                                    <div class="sausages__item-img" style="background: radial-gradient(73.54% 73.54% at 49.02% 56.29%, #EEE1D9 0%, #DDC6BA 100%)">
-                                        <img class="lazyload" data-src="img/saus-6.png" alt="Фото колбаски">
-                                    </div>
-                                    <div class="sausages__item-content">
-                                        <h3 class="sausages__item-title">колбаса полукопчёная охлаждённая «Салями с сыром»</h3>
-                                        <svg class="sausages__item-icon">
-                                            <use xlink:href="#link-arrow-icon"></use>
-                                        </svg>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="sausages__item">
-                                <a class="sausages__item-link" href="#product">
-                                    <div class="sausages__item-img" style="background: radial-gradient(73.54% 73.54% at 49.02% 56.29%, #EEE1D9 0%, #DDC6BA 100%)">
-                                        <img class="lazyload" data-src="img/saus-7.png" alt="Фото колбаски">
-                                    </div>
-                                    <div class="sausages__item-content">
-                                        <h3 class="sausages__item-title">колбаса варено-копчёная охлаждённая «Московская»</h3>
-                                        <svg class="sausages__item-icon">
-                                            <use xlink:href="#link-arrow-icon"></use>
-                                        </svg>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="sausages__item">
-                                <a class="sausages__item-link" href="#product">
-                                    <div class="sausages__item-img" style="background: radial-gradient(73.54% 73.54% at 49.02% 56.29%, #EEE1D9 0%, #DDC6BA 100%)">
-                                        <img class="lazyload" data-src="img/saus-8.png" alt="Фото колбаски">
-                                    </div>
-                                    <div class="sausages__item-content">
-                                        <h3 class="sausages__item-title">сардельки говяжьи</h3>
-                                        <svg class="sausages__item-icon">
-                                            <use xlink:href="#link-arrow-icon"></use>
-                                        </svg>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="sausages__item">
-                                <a class="sausages__item-link" href="#product">
-                                    <div class="sausages__item-img" style="background: radial-gradient(73.54% 73.54% at 49.02% 56.29%, #EEE1D9 0%, #DDC6BA 100%)">
-                                        <img class="lazyload" data-src="img/saus-1.png" alt="Фото колбаски">
-                                    </div>
-                                    <div class="sausages__item-content">
-                                        <h3 class="sausages__item-title">ветчинный крем</h3>
-                                        <svg class="sausages__item-icon">
-                                            <use xlink:href="#link-arrow-icon"></use>
-                                        </svg>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="sausages__item">
-                                <a class="sausages__item-link" href="#product">
-                                    <div class="sausages__item-img" style="background: radial-gradient(73.54% 73.54% at 49.02% 56.29%, #EEE1D9 0%, #DDC6BA 100%)">
-                                        <img class="lazyload" data-src="img/saus-2.png" alt="Фото колбаски">
-                                    </div>
-                                    <div class="sausages__item-content">
-                                        <h3 class="sausages__item-title">сосиски «Хотдог»</h3>
-                                        <svg class="sausages__item-icon">
-                                            <use xlink:href="#link-arrow-icon"></use>
-                                        </svg>
-                                    </div>
-                                </a>
+                            <li class="directions-single__types-item" style="background: #395937 url('img/directions-single-wheat.svg') no-repeat center; background-size: cover">
+                                <img class="directions-single__types-img lazyload" data-src="img/types-4.jpg" alt="Фото вида направления">
+                                <div class="directions-single__types-content">
+                                    <h3 class="directions-single__types-title">Введение в оборот залежных земель</h3>
+                                </div>
                             </li>
                         </ul>
-                        <button class="more-button button button--white"><span>показать больше</span>
-                            <svg>
-                                <use xlink:href="#link-arrow-icon"></use>
-                            </svg>
-                        </button>
+                    </div>
+                </section>
+                <section class="directions-single__features">
+                    <div class="container">
+                        <div class="section-header section-header--dotted">
+                            <div class="section-header__top">
+                                <h2 class="section-header__title section-title">Ключевые особенности</h2>
+                            </div>
+                            <div class="section-header__line"></div>
+                        </div>
+                        <ul class="advantages-list">
+                            <li class="advantages-list__item">
+                                <h3 class="advantages-list__title">Метод точного земледелия</h3>
+                                <div class="advantages-list__text">
+                                    <p>Cистема глобального позиционирования ГЛОНАСС, точный высев семян, агрохимическое картирование полейCистема глобального позиционирования ГЛОНАСС, точный высев семян, агрохимическое картирование полей</p>
+                                </div>
+                            </li>
+                            <li class="advantages-list__item">
+                                <h3 class="advantages-list__title">Система No-till</h3>
+                                <div class="advantages-list__text">
+                                    <p>Cистема глобального позиционирования ГЛОНАСС, точный высев семян, агрохимическое картирование полей</p>
+                                </div>
+                            </li>
+                            <li class="advantages-list__item">
+                                <h3 class="advantages-list__title">Раскисление почв</h3>
+                                <div class="advantages-list__text">
+                                    <p>Использование сырья мелового карьера</p>
+                                </div>
+                            </li>
+                            <li class="advantages-list__item">
+                                <h3 class="advantages-list__title">шестипольный севооборот</h3>
+                                <div class="advantages-list__text">
+                                    <p>Удобрение полей органическими отходами собственных СВК</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="directions-single__video">
+                    <div class="container">
+                        <a class="section-video" data-src="https://youtu.be/e-Y7jWF1ATo" data-fancybox>
+                            <h2 class="section-video__title">Видео о растениеводстве</h2>
+                            <img class="section-video__preview lazyload" data-src="img/video-preview-1.jpg" alt="Превью видео">
+                            <button class="video-button" type="button">
+                                <svg class="video-button__icon">
+                                    <use xlink:href="#arrow-icon"></use>
+                                </svg>
+                            </button>
+                        </a>
+                    </div>
+                </section>
+                <section class="directions-single__partners">
+                    <div class="container">
+                        <div class="section-header">
+                            <div class="section-header__top">
+                                <h2 class="section-header__title section-title">наша партнеры</h2>
+                            </div>
+                            <div class="section-header__line"></div>
+                        </div>
+                        <div class="partners-slider">
+                            <div class="partners-slider__block">
+                                <h3 class="partners-slider__title">Федерального уровня</h3>
+                                <div class="partners-slider__slider swiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="partners-slider__slide swiper-slide">
+                                            <a href="#">
+                                                <img src="img/partners-1.jpg" alt="Фото партнера">
+                                            </a>
+                                        </div>
+                                        <div class="partners-slider__slide swiper-slide">
+                                            <a href="#">
+                                                <img src="img/partners-2.jpg" alt="Фото партнера">
+                                            </a>
+                                        </div>
+                                        <div class="partners-slider__slide swiper-slide">
+                                            <a href="#">
+                                                <img src="img/partners-3.jpg" alt="Фото партнера">
+                                            </a>
+                                        </div>
+                                        <div class="partners-slider__slide swiper-slide">
+                                            <a href="#">
+                                                <img src="img/partners-4.jpg" alt="Фото партнера">
+                                            </a>
+                                        </div>
+                                        <div class="partners-slider__slide swiper-slide">
+                                            <a href="#">
+                                                <img src="img/partners-5.jpg" alt="Фото партнера">
+                                            </a>
+                                        </div>
+                                        <div class="partners-slider__slide swiper-slide">
+                                            <a href="#">
+                                                <img src="img/partners-6.jpg" alt="Фото партнера">
+                                            </a>
+                                        </div>
+                                        <div class="partners-slider__slide swiper-slide">
+                                            <a href="#">
+                                                <img src="img/partners-1.jpg" alt="Фото партнера">
+                                            </a>
+                                        </div>
+                                        <div class="partners-slider__slide swiper-slide">
+                                            <a href="#">
+                                                <img src="img/partners-2.jpg" alt="Фото партнера">
+                                            </a>
+                                        </div>
+                                        <div class="partners-slider__slide swiper-slide">
+                                            <a href="#">
+                                                <img src="img/partners-3.jpg" alt="Фото партнера">
+                                            </a>
+                                        </div>
+                                        <div class="partners-slider__slide swiper-slide">
+                                            <a href="#">
+                                                <img src="img/partners-4.jpg" alt="Фото партнера">
+                                            </a>
+                                        </div>
+                                        <div class="partners-slider__slide swiper-slide">
+                                            <a href="#">
+                                                <img src="img/partners-5.jpg" alt="Фото партнера">
+                                            </a>
+                                        </div>
+                                        <div class="partners-slider__slide swiper-slide">
+                                            <a href="#">
+                                                <img src="img/partners-6.jpg" alt="Фото партнера">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="partners-slider__block">
+                                <h3 class="partners-slider__title">Локальные и региональные</h3>
+                                <div class="partners-slider__slider swiper" data-reverse="true">
+                                    <div class="swiper-wrapper">
+                                        <div class="partners-slider__slide swiper-slide">
+                                            <a href="#">
+                                                <img src="img/partners-1.jpg" alt="Фото партнера">
+                                            </a>
+                                        </div>
+                                        <div class="partners-slider__slide swiper-slide">
+                                            <a href="#">
+                                                <img src="img/partners-2.jpg" alt="Фото партнера">
+                                            </a>
+                                        </div>
+                                        <div class="partners-slider__slide swiper-slide">
+                                            <a href="#">
+                                                <img src="img/partners-3.jpg" alt="Фото партнера">
+                                            </a>
+                                        </div>
+                                        <div class="partners-slider__slide swiper-slide">
+                                            <a href="#">
+                                                <img src="img/partners-4.jpg" alt="Фото партнера">
+                                            </a>
+                                        </div>
+                                        <div class="partners-slider__slide swiper-slide">
+                                            <a href="#">
+                                                <img src="img/partners-5.jpg" alt="Фото партнера">
+                                            </a>
+                                        </div>
+                                        <div class="partners-slider__slide swiper-slide">
+                                            <a href="#">
+                                                <img src="img/partners-6.jpg" alt="Фото партнера">
+                                            </a>
+                                        </div>
+                                        <div class="partners-slider__slide swiper-slide">
+                                            <a href="#">
+                                                <img src="img/partners-1.jpg" alt="Фото партнера">
+                                            </a>
+                                        </div>
+                                        <div class="partners-slider__slide swiper-slide">
+                                            <a href="#">
+                                                <img src="img/partners-2.jpg" alt="Фото партнера">
+                                            </a>
+                                        </div>
+                                        <div class="partners-slider__slide swiper-slide">
+                                            <a href="#">
+                                                <img src="img/partners-3.jpg" alt="Фото партнера">
+                                            </a>
+                                        </div>
+                                        <div class="partners-slider__slide swiper-slide">
+                                            <a href="#">
+                                                <img src="img/partners-4.jpg" alt="Фото партнера">
+                                            </a>
+                                        </div>
+                                        <div class="partners-slider__slide swiper-slide">
+                                            <a href="#">
+                                                <img src="img/partners-5.jpg" alt="Фото партнера">
+                                            </a>
+                                        </div>
+                                        <div class="partners-slider__slide swiper-slide">
+                                            <a href="#">
+                                                <img src="img/partners-6.jpg" alt="Фото партнера">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="directions-single__products">
+                    <div class="container">
+                        <div class="section-header">
+                            <div class="section-header__top">
+                                <h2 class="section-header__title section-title">Наша продукция</h2>
+                                <a class="section-header__link link link--black" href="#"><span>смотреть все</span>
+                                    <svg>
+                                        <use xlink:href="#link-arrow-icon"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="section-header__line"></div>
+                        </div>
+                        <div class="directions-single__products-slider-container js-init-slider-container">
+                            <div class="directions-single__products-slider swiper js-init-slider" data-space="24" data-slides="auto" style="clip-path: url(#products-slider); --overlay-color: rgba(0, 0, 0, 0.2);">
+                                <div class="swiper-wrapper">
+                                    <a class="directions-single__products-slide swiper-slide" href="#product">
+                                        <div class="directions-single__products-img" style="background: radial-gradient(73.54% 73.54% at 49.02% 56.29%, #EEE1D9 0%, #DDC6BA 100%)">
+                                            <img class="lazyload" data-src="img/meat-4.png" alt="Фото колбаски">
+                                        </div>
+                                        <div class="directions-single__products-content">
+                                            <h3 class="directions-single__products-title">колбаса полукопчёная охлаждённая «Краковская»</h3>
+                                            <svg class="directions-single__products-icon">
+                                                <use xlink:href="#link-arrow-icon"></use>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                    <a class="directions-single__products-slide swiper-slide" href="#product">
+                                        <div class="directions-single__products-img" style="background: radial-gradient(73.54% 73.54% at 49.02% 56.29%, #EEE1D9 0%, #DDC6BA 100%)">
+                                            <img class="lazyload" data-src="img/meat-5.png" alt="Фото колбаски">
+                                        </div>
+                                        <div class="directions-single__products-content">
+                                            <h3 class="directions-single__products-title">ветчина в оболочке</h3>
+                                            <svg class="directions-single__products-icon">
+                                                <use xlink:href="#link-arrow-icon"></use>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                    <a class="directions-single__products-slide swiper-slide" href="#product">
+                                        <div class="directions-single__products-img" style="background: radial-gradient(73.54% 73.54% at 49.02% 56.29%, #EEE1D9 0%, #DDC6BA 100%)">
+                                            <img class="lazyload" data-src="img/meat-6.png" alt="Фото колбаски">
+                                        </div>
+                                        <div class="directions-single__products-content">
+                                            <h3 class="directions-single__products-title">колбаса сырокопчёная охлаждённая салями «Экстра»</h3>
+                                            <svg class="directions-single__products-icon">
+                                                <use xlink:href="#link-arrow-icon"></use>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                    <a class="directions-single__products-slide swiper-slide" href="#product">
+                                        <div class="directions-single__products-img" style="background: radial-gradient(73.54% 73.54% at 49.02% 56.29%, #EEE1D9 0%, #DDC6BA 100%)">
+                                            <img class="lazyload" data-src="img/meat-7.png" alt="Фото колбаски">
+                                        </div>
+                                        <div class="directions-single__products-content">
+                                            <h3 class="directions-single__products-title">колбаса варёная «Молочная»</h3>
+                                            <svg class="directions-single__products-icon">
+                                                <use xlink:href="#link-arrow-icon"></use>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                    <a class="directions-single__products-slide swiper-slide" href="#product">
+                                        <div class="directions-single__products-img" style="background: radial-gradient(73.54% 73.54% at 49.02% 56.29%, #EEE1D9 0%, #DDC6BA 100%)">
+                                            <img class="lazyload" data-src="img/meat-8.png" alt="Фото колбаски">
+                                        </div>
+                                        <div class="directions-single__products-content">
+                                            <h3 class="directions-single__products-title">колбаса полукопчёная охлаждённая «Домашняя»</h3>
+                                            <svg class="directions-single__products-icon">
+                                                <use xlink:href="#link-arrow-icon"></use>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                    <a class="directions-single__products-slide swiper-slide" href="#product">
+                                        <div class="directions-single__products-img" style="background: radial-gradient(73.54% 73.54% at 49.02% 56.29%, #EEE1D9 0%, #DDC6BA 100%)">
+                                            <img class="lazyload" data-src="img/meat-9.png" alt="Фото колбаски">
+                                        </div>
+                                        <div class="directions-single__products-content">
+                                            <h3 class="directions-single__products-title">колбаса полукопчёная охлаждённая «Донская»</h3>
+                                            <svg class="directions-single__products-icon">
+                                                <use xlink:href="#link-arrow-icon"></use>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="slider-navigation slider-navigation--green js-slider-navigation">
+                                <button class="slider-navigation__button js-prev-slide">
+                                    <svg>
+                                        <use xlink:href="#slider-arrow"></use>
+                                    </svg>
+                                </button>
+                                <button class="slider-navigation__button js-next-slide">
+                                    <svg>
+                                        <use xlink:href="#slider-arrow"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </section>
                 <section class="contacts">

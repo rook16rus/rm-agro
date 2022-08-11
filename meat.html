@@ -197,25 +197,21 @@
             <main class="page-main">
                 <section class="meat">
                     <div class="container">
-                        <ul class="breadcrumbs">
-                            <li class="breadcrumbs__item active">
-                                <a href="index.html">Главная</a>
-                            </li>
-                            <li class="breadcrumbs__item">
-                                <a href="sausages.html">Каталог</a>
-                            </li>
-                        </ul>
+                        <div class="breadcrumbs swiper js-init-slider" data-slides="auto">
+                            <div class="swiper-wrapper">
+                                <div class="breadcrumbs__item swiper-slide">
+                                    <a href="index.html">Главная</a>
+                                </div>
+                                <div class="breadcrumbs__item swiper-slide active">
+                                    <a href="sausages.html">Каталог</a>
+                                </div>
+                            </div>
+                        </div>
                         <div class="main-titles">
                             <div class="main-titles__links">
                                 <a class="main-titles__link button button--green" href="sausages.html"><span>Колбасные изделия</span>
-                                    <svg>
-                                        <use xlink:href="#link-arrow-icon"></use>
-                                    </svg>
                                 </a>
                                 <a class="main-titles__link button button--green active" href="meat.html"><span>Мясная продукция</span>
-                                    <svg>
-                                        <use xlink:href="#link-arrow-icon"></use>
-                                    </svg>
                                 </a>
                             </div>
                             <h2 class="main-titles__title">
