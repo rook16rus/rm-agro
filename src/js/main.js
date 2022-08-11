@@ -28,6 +28,7 @@ import modals from "./build-in/modals";
 import productSlider from "./build-in/productSlider";
 import menuModalClose from "./build-in/menuModalClose";
 import partnersSlider from "./build-in/partnersSlider";
+import tagsSlider from "./build-in/tagsSlider";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -58,6 +59,7 @@ document.addEventListener('DOMContentLoaded', function () {
     productSlider();
     menuModalClose();
     partnersSlider();
+    tagsSlider();
 });
 
 document.addEventListener('lazyloaded', () => {

@@ -36,11 +36,13 @@
                             <div class="directions-single__types-content">
                                 <h3 class="directions-single__types-title">{{{this.title}}}</h3>
                                 {{#if tags }}
-                                    <ul class="directions-single__types-tags">
-                                        {{#each tags }}
-                                            <li class="directions-single__types-tag">{{this.text}}</li>
-                                        {{/each}}
-                                    </ul>
+                                    <div class="directions-single__types-tags swiper">
+                                        <div class="swiper-wrapper">
+                                            {{#each tags }}
+                                                <div class="directions-single__types-tag swiper-slide">{{this.text}}</div>
+                                            {{/each}}
+                                        </div>
+                                    </div>
                                 {{/if}}
                                 {{#if text }}
                                     <div class="directions-single__types-text">
