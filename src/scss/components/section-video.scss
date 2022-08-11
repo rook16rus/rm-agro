@@ -11,6 +11,12 @@
 
   color: #fff;
 
+  &:hover {
+    .video-button {
+      transform: translate(-50%, -50%) scale(1.2);
+    }
+  }
+
   @include breakpoint(tablet) {
     padding: 3rem;
   }
@@ -53,5 +59,7 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+
+    transition: 0.3s;
   }
 }
