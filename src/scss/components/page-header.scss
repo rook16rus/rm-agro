@@ -6,11 +6,27 @@
 
   color: #fff;
 
+  @include breakpoint(tablet) {
+    padding-bottom: 4rem;
+  }
+
+  @include breakpoint(small-tablet) {
+    padding-bottom: 3rem;
+  }
+
+  @include breakpoint(mobile) {
+    padding-bottom: 2rem;
+  }
+
   &__inner {
     display: flex;
     flex-direction: column;
     gap: 5rem;
     height: 100%;
+
+    @include breakpoint(small-tablet) {
+      gap: 4.3rem;
+    }
   }
   
   .breadcrumbs__item {
@@ -26,6 +42,7 @@
     margin-top: auto;
 
     font: var(--regular) 25rem/75% var(--secondary-ff);
+    overflow-wrap: break-word;
 
     @include breakpoint(tablet) {
       font-size: 16rem;

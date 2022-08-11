@@ -2,6 +2,8 @@
   display: flex;
   flex-wrap: wrap;
   margin: 0;
+
+  overflow: visible;
   
   &--white {
     .links-list__link {
@@ -48,6 +50,8 @@
     @include breakpoint(mobile) {
       height: 4.4rem;
       padding: 0 1rem;
+
+      border-radius: 1rem;
     }
   }
 }
