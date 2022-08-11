@@ -17,9 +17,17 @@ export default function partnersSlider() {
                 disableOnInteraction: false,
                 reverseDirection: !!swiper.dataset.reverse
             },
-            slidesPerView: 9,
+            slidesPerView: "auto",
             speed: 6000,
-            spaceBetween: 50,
+            spaceBetween: 10,
+            breakpoints: {
+                768: {
+                    spaceBetween: 30
+                },
+                1024: {
+                    spaceBetween: 50
+                }
+            }
         })
     })
 }
