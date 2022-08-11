@@ -1,6 +1,18 @@
 .news {
   padding-bottom: 15rem;
 
+  @include breakpoint(tablet) {
+    padding-bottom: 12rem;
+  }
+
+  @include breakpoint(small-tablet) {
+    padding-bottom: 10rem;
+  }
+
+  @include breakpoint(mobile) {
+    padding-bottom: 8rem;
+  }
+
   .main-titles {
     max-width: 126rem;
     padding-top: 5rem;
@@ -20,7 +32,7 @@
       margin-bottom: 2.8rem;
     }
 
-    a {
+    &__title a {
       font: var(--title-h1);
     }
   }
@@ -29,11 +41,31 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 2.4rem;
+
+    @include breakpoint(tablet) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include breakpoint(small-tablet) {
+      grid-template-columns: 1fr;
+    }
+
+    @include breakpoint(mobile) {
+      gap: 2rem;
+    }
   }
 
   &__item {
     &:first-child {
       grid-column: span 4;
+
+      @include breakpoint(tablet) {
+        grid-column: span 2;
+      }
+
+      @include breakpoint(small-tablet) {
+        grid-column: span 1;
+      }
 
       .news__link {
         display: grid;
@@ -41,29 +73,89 @@
         gap: 5rem;
         padding: 5rem;
         min-height: 53.1rem;
+
+        @include breakpoint(tablet) {
+          grid-template-columns: 1fr;
+          gap: 3rem;
+          padding: 3rem;
+          min-height: 36rem;
+        }
+
+        @include breakpoint(small-tablet) {
+          gap: 1.5rem;
+          min-height: 34rem;
+          padding: 1.5rem;
+        }
+
+        @include breakpoint(mobile) {
+          gap: 1rem;
+          padding: 1rem;
+          min-height: 32rem;
+
+          border-radius: 1.5rem;
+        }
       }
 
       .news__img {
         width: 70.4rem;
         height: 100%;
+
+        @include breakpoint(tablet) {
+          width: 100%;
+          height: auto;
+          aspect-ratio: 704 / 427;
+        }
+
+        @include breakpoint(small-tablet) {
+          height: 19rem;
+        }
+
+        @include breakpoint(mobile) {
+          height: 18rem;
+        }
       }
 
       .news__content {
         gap: 0;
+
+        @include breakpoint(small-tablet) {
+          gap: 2rem;
+        }
       }
 
       .news__title {
         margin-bottom: 2rem;
 
         font: var(--title-h3);
+
+        @include breakpoint(small-tablet) {
+          font: var(--text-t4);
+          margin-bottom: 0;
+        }
       }
 
       .news__meta {
         margin-bottom: 4rem;
+
+        @include breakpoint(tablet) {
+          margin-bottom: 3rem;
+        }
+
+        @include breakpoint(small-tablet) {
+          margin-bottom: 0;
+        }
+
+        @include breakpoint(mobile) {
+
+        }
       }
 
       .news__meta-icon {
         display: none;
+
+        @include breakpoint(small-tablet) {
+          display: block;
+        }
       }
     }
 
@@ -96,6 +188,22 @@
 
     border-radius: 2rem;
     background-color: #fff;
+
+    @include breakpoint(tablet) {
+      min-height: 36rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      min-height: 34rem;
+    }
+
+    @include breakpoint(mobile) {
+      gap: 1rem;
+      padding: 1rem;
+      min-height: 32rem;
+
+      border-radius: 1.5rem;
+    }
   }
 
   &__img {
@@ -106,6 +214,19 @@
     background-color: var(--bg-color);
     border-radius: 2rem;
     overflow: hidden;
+
+    @include breakpoint(tablet) {
+      height: 19.4rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      height: 19rem;
+    }
+
+    @include breakpoint(mobile) {
+      height: 18rem;
+      border-radius: 1.5rem;
+    }
 
     img {
       width: 100%;
@@ -149,6 +270,14 @@
     font: var(--text-t3);
     font-weight: 500;
     color: var(--title-color);
+
+    @include breakpoint(small-tablet) {
+      height: 3rem;
+    }
+
+    @include breakpoint(mobile) {
+      height: 2.6rem;
+    }
   }
 
   &__meta-date {
@@ -172,15 +301,44 @@
     margin-bottom: 4rem;
 
     font: var(--text-t4);
+
+    @include breakpoint(tablet) {
+      margin-bottom: 3rem;
+      max-width: none;
+    }
+
+    @include breakpoint(small-tablet) {
+      display: none;
+    }
   }
 
   &__button {
     align-self: flex-start;
     height: 4rem;
     padding: 0 2rem;
+
+    @include breakpoint(tablet) {
+      height: 3.6rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      display: none;
+    }
   }
 
   &__more-button {
     margin-top: 7rem;
+
+    @include breakpoint(tablet) {
+      margin-top: 5rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      margin-top: 3rem;
+    }
+
+    @include breakpoint(mobile) {
+      margin-top: 2rem;
+    }
   }
 }
