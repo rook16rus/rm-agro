@@ -258,6 +258,18 @@
 
   &__video {
     padding-bottom: 15rem;
+
+    @include breakpoint(tablet) {
+      padding-bottom: 12rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      padding-bottom: 10rem;
+    }
+
+    @include breakpoint(mobile) {
+      padding-bottom: 6rem;
+    }
   }
 
   &__partners {

@@ -2,8 +2,8 @@
   position: relative;
 
   display: block;
-  padding: 3.5rem;
   aspect-ratio: 1580 / 805;
+  padding: 3.5rem;
 
   border-radius: 2rem;
   overflow: hidden;
@@ -11,12 +11,31 @@
 
   color: #fff;
 
+  @include breakpoint(tablet) {
+    padding: 3rem;
+  }
+
+  @include breakpoint(small-tablet) {
+    padding: 2.4rem;
+  }
+
+  @include breakpoint(mobile) {
+    aspect-ratio: 330 / 221;
+    padding: 2rem;
+  }
+
   &__title {
     position: relative;
     z-index: 1;
 
     font: var(--text-t2);
+    color: var(--light-bg-color);
     text-transform: uppercase;
+
+    @include breakpoint(mobile) {
+      font-size: 1.2rem;
+      opacity: 0.6;
+    }
   }
 
   &__preview {

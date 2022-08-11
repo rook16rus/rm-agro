@@ -126,10 +126,40 @@
     background: url("../img/video-button-bg.svg") no-repeat center;
     background-size: cover;
 
+    @include breakpoint(tablet) {
+        width: 13rem;
+        height: 13rem;
+    }
+
+    @include breakpoint(small-tablet) {
+        width: 9rem;
+        height: 9rem;
+    }
+
+    @include breakpoint(mobile) {
+        width: 6rem;
+        height: 6rem;
+    }
+
     &__icon {
         width: 7rem;
         height: 8.4rem;
         margin-left: 9%;
+
+        @include breakpoint(tablet) {
+            width: 5.5rem;
+            height: 6rem;
+        }
+
+        @include breakpoint(small-tablet) {
+            width: 4rem;
+            height: 4.5rem;
+        }
+
+        @include breakpoint(mobile) {
+            width: 2.4rem;
+            height: 2.9rem;
+        }
     }
 }
 
