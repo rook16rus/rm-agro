@@ -139,6 +139,16 @@
     @include breakpoint(mobile) {
       height: 4rem;
     }
+
+    svg {
+      height: 1.4rem;
+    }
+
+    &:hover {
+      svg {
+        width: 1.4rem;
+      }
+    }
   }
 
   &__content {

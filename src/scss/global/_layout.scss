@@ -226,6 +226,14 @@
         height: 4.5rem;
         font-size: 1.4rem;
     }
+
+    svg {
+        height: 1.4rem;
+    }
+
+    &:hover svg {
+        width: 1.4rem;
+    }
 }
 
 .input {

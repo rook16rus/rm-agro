@@ -55,5 +55,13 @@
     @include breakpoint(mobile) {
       font-size: 9rem;
     }
+
+    br {
+      display: none;
+
+      @include breakpoint(mobile) {
+        display: block;
+      }
+    }
   }
 }
