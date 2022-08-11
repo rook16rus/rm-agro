@@ -226,6 +226,18 @@
   &__features {
     padding: 10rem 0;
 
+    @include breakpoint(tablet) {
+      padding: 8rem 0;
+    }
+
+    @include breakpoint(small-tablet) {
+      padding: 7rem 0;
+    }
+
+    @include breakpoint(mobile) {
+      padding: 6rem 0;
+    }
+
     .section-header__title {
       max-width: none;
     }
@@ -233,6 +245,14 @@
     .advantages-list {
       max-width: 131.6rem;
       margin-left: auto;
+
+      @include breakpoint(tablet) {
+        margin-top: 2.5rem;
+      }
+
+      @include breakpoint(small-tablet) {
+        margin-top: 1.5rem;
+      }
     }
   }
 
