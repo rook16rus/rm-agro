@@ -199,6 +199,7 @@
 
   .swiper-pagination {
     display: none;
+    width: auto;
 
     @include breakpoint(small-tablet) {
       position: absolute;
