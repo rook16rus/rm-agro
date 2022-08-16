@@ -42,6 +42,10 @@ body {
     font: var(--text-t2);
     font-variant-numeric: lining-nums;
     color: var(--text-color);
+
+    &.white {
+        background-color: #fff;
+    }
 }
 
 main {

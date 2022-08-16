@@ -19,6 +19,14 @@
         padding-right: max(env(safe-area-inset-right, 1.4rem), var(--content-padding));
     }
 
+    h1 {
+        margin-bottom: 2rem;
+
+        font: var(--title-h3);
+        text-transform: uppercase;
+        color: var(--title-color)
+    }
+
     h2 {
         margin-bottom: 5rem;
 
@@ -43,6 +51,232 @@
         margin-bottom: 2rem;
 
         font: var(--text-t2);
+    }
+}
+
+.text-container {
+    width: 100%;
+    max-width: calc(var(--max-narrow-container-width) + 2 * var(--content-padding));
+    margin: 0 auto;
+    padding: 0 var(--content-padding);
+
+    @supports (width: max(20vw, 100px)) {
+        padding-left: max(env(safe-area-inset-left, 1.4rem), var(--content-padding));
+        padding-right: max(env(safe-area-inset-right, 1.4rem), var(--content-padding));
+    }
+
+    & > * {
+        max-width: 79rem;
+    }
+
+    p {
+        margin-bottom: 2rem;
+        font: var(--text-t2);
+    }
+
+    h2 {
+        margin-top: 8rem;
+        margin-bottom: 2.2rem;
+
+        font: var(--semi-bold) 3.5rem/120% var(--main-ff);
+        color: var(--title-color);
+    }
+
+    h3 {
+        margin-top: 8rem;
+        margin-bottom: 3rem;
+
+        font: var(--text-t1);
+        color: var(--title-color);
+    }
+
+    & > img {
+        margin: 5rem 0 5.6rem;
+
+        width: 100%;
+        height: 56.3rem;
+        object-fit: cover;
+
+        border-radius: 2rem;
+        overflow: hidden;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        li {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+
+            font: var(--text-t4);
+
+            &::before {
+                content: '';
+
+                width: 0.5rem;
+                height: 0.5rem;
+                margin-top: 0.7rem;
+                flex-shrink: 0;
+                
+                border-radius: 50%;
+                background-color: var(--text-color);
+            }
+        }
+    }
+}
+
+.img-container {
+    max-width: calc(114.4rem + 2 * var(--content-padding));
+    margin: 0 auto;
+    padding: 0 var(--content-padding);
+    @supports (width: max(20vw, 100px)) {
+        padding-left: max(env(safe-area-inset-left, 1.4rem), var(--content-padding));
+        padding-right: max(env(safe-area-inset-right, 1.4rem), var(--content-padding));
+    }
+
+    border-radius: 2rem;
+    overflow: hidden;
+
+    &__img {
+        position: relative;
+
+        width: 100%;
+        padding-top: 59.61%;
+    }
+
+    img {
+        position: absolute;
+        left: 0;
+        top: 0;
+
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.blockquote {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    padding: 3.5rem 5.7rem 3.5rem 3.5rem;
+
+    border-radius: 2rem;
+    background-color: var(--bg-color);
+    overflow: hidden;
+    
+    &__top {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 2rem;
+    }
+
+    &__img {
+        width: 12.4rem;
+        height: 11.8rem;
+
+        border-radius: 50%;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__text {
+        position: relative;
+
+        display: flex;
+        flex-direction: column;
+        gap: 1.4rem;
+        padding: 3.3rem 0 0 4.4rem;
+
+        &::before {
+            content: '';
+
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            width: 6.9rem;
+            height: 6.9rem;
+
+            background: url("../img/quotes.svg") no-repeat center;
+            background-size: cover;
+        }
+
+        p {
+            font: var(--text-t1);
+        }
+    }
+
+    &__author {
+        display: flex;
+        flex-direction: column;
+        gap: 0.2rem
+    }
+
+    &__author-name {
+        font: var(--text-t1);
+        color: var(--title-color);
+    }
+
+    &__author-position {
+        font: var(--text-t2);
+    }
+}
+
+.video {
+    display: block;
+
+    border-radius: 2rem;
+    overflow: hidden;
+    cursor: pointer;
+
+    &:hover {
+        .video-button {
+            transform: translate(-50%, -50%) scale(1.2);
+        }
+    }
+
+    &__block {
+        position: relative;
+
+        width: 100%;
+        padding-top: 71.26%;
+    }
+
+    .video-button {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+
+        width: 9.8rem;
+        height: 9.8rem;
+
+        transition: 0.3s;
+
+        svg {
+            width: 3.9rem;
+            height: 4.7rem;
+        }
+    }
+
+    img {
+        position: absolute;
+        left: 0;
+        top: 0;
+
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 }
 
