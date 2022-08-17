@@ -43,7 +43,9 @@
                             <ul class="intro__list">
                                 {{#each introActivities }}
                                     <li class="intro__list-item" data-text="{{this.text}}">
-                                        <img class="lazyload" data-src="{{this.img}}" alt="Фото направления">
+                                        <a href="#">
+                                            <img class="lazyload" data-src="{{this.img}}" alt="Фото направления">
+                                        </a>
                                     </li>
                                 {{/each}}
                             </ul>
