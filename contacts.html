@@ -22,7 +22,7 @@
         <link rel="stylesheet" href="assets/backend/backend.css">
         <title></title>
     </head>
-    <body class="no-touch white" ontouchstart="">
+    <body class="no-touch" ontouchstart="">
         <div class="sprite" aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;">
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <symbol viewBox="0 0 51 60" fill="none" id="arrow-icon" xmlns="http://www.w3.org/2000/svg">
@@ -195,7 +195,7 @@
             </div>
 
             <main class="page-main">
-                <section class="news-single">
+                <section class="contacts">
                     <div class="container">
                         <div class="breadcrumbs swiper js-init-slider" data-slides="auto">
                             <div class="swiper-wrapper">
@@ -203,73 +203,35 @@
                                     <a href="index.html">Главная</a>
                                 </div>
                                 <div class="breadcrumbs__item swiper-slide active">
-                                    <a href="news.html">Новости</a>
-                                </div>
-                                <div class="breadcrumbs__item swiper-slide active">
-                                    <a href="news-single.html">Заседание коллегии Министерства сельского хозяйства и продовольствия Республики Татарстан</a>
+                                    <a href="contacts.html">Контакты</a>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="img-container">
-                        <div class="img-container__img">
-                            <img class="lazyload" data-src="img/news-single-1.jpg" alt="Фото церемонии">
-                        </div>
-                    </div>
-                    <div class="narrow-container">
-                        <h1>Cлет передовиков сельского хозяйства Мамадышского района</h1>
-                        <div class="meta"><span class="meta__tag">Новость</span>
-                            <time class="meta__date" datetime="2022-03-04">04 марта 2022</time>
-                        </div>
-                    </div>
-                    <div class="text-container">
-                        <p>4 марта прошёл слёт передовиков сельского хозяйства Мамадышского района. В нем приняли участие заместитель Председателя Государственного Совета Республики Татарстан Марат Ахметов, заместитель министра сельского хозяйства и продовольствия Республики Татарстан Ришат Хабипов, глава муниципального района Анатолий Иванов, руководители организаций и предприятий, труженики села и работники всех отраслей сельского хозяйства.</p>
-                        <p>Передовиков поздравил заместитель министра сельского хозяйства и продовольствия Республики Татарстан Рашит Хабипов. Он передал слова глубокой благодарности труженикам сельского хозяйства района от имени заместителя Премьер-министра — министра сельского хозяйства и продовольствия РТ Марата Зяббарова.</p>
-                        <p>В адрес работников группы компаний РМ прозвучали искренние слова благодарности за высоко организованную работу и за добросовестное отношение к труду. Мероприятие сопровождалось концертными номерами.</p>
-                        <h2>Загловок 1</h2>
-                        <p>Генеральный директор группы компаний «РМ АГРО» Рифат Мутигуллин выступил на расширенном заседание коллегии Министерства сельского хозяйства и продовольствия Республики Татарстан</p>
-                        <blockquote class="blockquote">
-                            <div class="blockquote__top">
-                                <div class="blockquote__img">
-                                    <img class="lazyload" data-src="img/director.jpg" alt="Директор">
+                        <h1 class="contacts__title">Контакты</h1>
+                        <div class="contacts__content">
+                            <div class="contacts__content-top">
+                                <div class="contacts__links">
+                                    <a class="contacts__link" href="tel:+78556335237">+7 (85563) 3–52–37</a>
+                                    <a class="contacts__link" href="mailto:sbyt@rm-mamad.ru">sbyt@rm-mamad.ru</a><span class="contacts__desc"><img class="lazyload" data-src="img/feedback-icon.svg" alt="Иконка обратной связи"><span>Мы всегда на связи</span>
+                                    </span>
                                 </div>
-                                <div class="blockquote__text">
-                                    <p>РМ Агро — компания, где можно начать или продолжить карьерный путь</p>
-                                </div>
+                                <ul class="contacts__info">
+                                    <li class="contacts__info-item">
+                                        <h3 class="contacts__info-title">АДРЕС</h3>
+                                        <address class="contacts__info-address">422191, РТ, Мамадыш, ул. Дачная, д. 6а</address>
+                                    </li>
+                                    <li class="contacts__info-item">
+                                        <h3 class="contacts__info-title">ОТДЕЛ КАДРОВ</h3>
+                                        <a class="contacts__info-link" href="tel:+78556335237">+7 (85563) 3–52–37</a>
+                                    </li>
+                                    <li class="contacts__info-item">
+                                        <h3 class="contacts__info-title">отдел продаж</h3>
+                                        <a class="contacts__info-link" href="tel:+79061201515">+7 906 120-15-15</a>
+                                    </li>
+                                </ul>
                             </div>
-                            <div class="blockquote__author">
-                                <cite class="blockquote__author-name">Мутигуллин Рифат Махмутович</cite><span class="blockquote__author-position">Генеральный директор РМ Агро</span>
-                            </div>
-                        </blockquote>
-                        <h3>Загловок 2</h3>
-                        <p>На празднике урожая передовикам труда были вручены государственные награды, медали, благодарственные письма, дипломы и почётные грамоты</p>
-                        <a class="img" data-src="img/news-single-2.jpg" data-fancybox>
-                            <img class="lazyload" data-src="img/news-single-2.jpg" alt="Фото">
-                        </a>
-                        <a class="img" data-src="img/news-single-3.jpg" data-fancybox>
-                            <img class="lazyload" data-src="img/news-single-2.jpg" alt="Фото">
-                        </a>
-                        <a class="img" data-src="img/news-single-4.jpg" data-fancybox>
-                            <img class="lazyload" data-src="img/news-single-2.jpg" alt="Фото">
-                        </a>
-                        <h3>Заголовок 2</h3>
-                        <p>На празднике урожая передовикам труда были вручены государственные награды, медали, благодарственные письма, дипломы и почётные грамоты</p>
-                        <ul>
-                            <li>Были нарушены правила хранения, транспортировки, установки или эксплуатации изделия</li>
-                            <li>Изделие имеет механические повреждения</li>
-                            <li>Изделие ремонтировалось или подвергалось модификации не в условиях официального СЦ</li>
-                            <li>Неисправность изделия вызвана стихийными бедствиями, пожарами, бытовыми или другими факторами, не зависящими от действий изготовителя</li>
-                        </ul>
-                        <a class="video" data-src="https://youtu.be/e-Y7jWF1ATo" data-fancybox>
-                            <div class="video__block">
-                                <button class="video-button" type="button">
-                                    <svg class="video-button__icon">
-                                        <use xlink:href="#arrow-icon"></use>
-                                    </svg>
-                                </button>
-                                <img class="video__preview lazyload" data-src="img/news-single-5.jpg" alt="Видео о РМ Агро">
-                            </div>
-                        </a>
+                            <div class="contacts__content-map" id="map"></div>
+                        </div>
                     </div>
                 </section>
                 <section class="contacts-section">
