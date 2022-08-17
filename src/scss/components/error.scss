@@ -11,6 +11,11 @@
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+
+    @include breakpoint(tablet) {
+      flex-direction: column;
+      gap: 13rem;
+    }
   }
 
   &__content {
@@ -27,6 +32,10 @@
 
     font: var(--text-t3);
     text-transform: uppercase;
+
+    @include breakpoint(mobile) {
+      margin-bottom: 1.5rem;
+    }
   }
 
   &__title {
@@ -34,11 +43,28 @@
 
     font: var(--title-h3);
     text-transform: uppercase;
+
+    @include breakpoint(tablet) {
+      margin-bottom: 3rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      margin-bottom: 2rem;
+    }
+
+    @include breakpoint(mobile) {
+      margin-bottom: 1.5rem;
+    }
   }
 
   &__link {
     height: 4rem;
     font-size: 1.6rem;
+
+    @include breakpoint(mobile) {
+      font-size: 1.4rem;
+      height: 3.3rem;
+    }
   }
 
   &__number {
@@ -46,5 +72,19 @@
 
     font: var(--regular) 87rem/75% var(--secondary-ff);
     color: var(--bg-color);
+
+    @include breakpoint(tablet) {
+      padding-top: 0;
+      font-size: 70rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      font-size: 60rem;
+    }
+
+    @include breakpoint(mobile) {
+      font-size: 48rem;
+      margin-bottom: -13rem;
+    }
   }
 }
