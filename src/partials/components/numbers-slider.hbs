@@ -1,0 +1,10 @@
+<div class="numbers-slider swiper js-init-slider" data-slides="auto" data-space="180">
+    <div class="swiper-wrapper">
+        {{#each data }}
+            <div class="numbers-slider__slide swiper-slide">
+                <p class="numbers-slider__text">{{this.text}}</p>
+                <span class="numbers-slider__number">{{this.number}}</span>
+            </div>
+        {{/each}}
+    </div>
+</div>

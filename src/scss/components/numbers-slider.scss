@@ -1,0 +1,19 @@
+.numbers-slider {
+  overflow: visible;
+
+  &__slide {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    width: auto;
+  }
+
+  &__text {
+    font: var(--text-t2);
+  }
+
+  &__number {
+    font: var(--title-h1);
+    color: var(--accent-color);
+  }
+}
