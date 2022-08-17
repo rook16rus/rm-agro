@@ -29,6 +29,7 @@ import productSlider from "./build-in/productSlider";
 import menuModalClose from "./build-in/menuModalClose";
 import partnersSlider from "./build-in/partnersSlider";
 import tagsSlider from "./build-in/tagsSlider";
+import yandexMap from "./build-in/yandexMap";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -60,6 +61,7 @@ document.addEventListener('DOMContentLoaded', function () {
     menuModalClose();
     partnersSlider();
     tagsSlider();
+    yandexMap();
 });
 
 document.addEventListener('lazyloaded', () => {
