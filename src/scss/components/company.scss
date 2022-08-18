@@ -10,4 +10,70 @@
   &__video {
     padding-bottom: 12rem;
   }
+
+  &__achievements {
+    padding-bottom: 12.8rem;
+  }
+
+  &__achievements-inner {
+    padding: 3.5rem 3.5rem 6.6rem;
+
+    border-radius: 2rem;
+    background-color: #fff;
+  }
+
+  &__achievements-list {
+    max-width: 128rem;
+    margin-left: auto;
+  }
+
+  &__achievements-item {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    align-items: flex-end;
+    padding: 3rem 0;
+
+    border-bottom: 1px solid var(--stroke-color);
+
+    &:first-child {
+      padding-top: 0;
+    }
+  }
+
+  &__achievements-number-block {
+    display: flex;
+    align-items: flex-end;
+    gap: 4rem;
+  }
+
+  &__achievements-number {
+    margin-bottom: -2.5rem;
+
+    font: var(--title-h2);
+    color: var(--accent-color);
+  }
+
+  &__achievements-desc {
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+    max-width: 17rem;
+
+    font: var(--text-t2);
+  }
+
+  &__achievements-tag {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 3.5rem;
+    padding: 0.2rem 1.5rem 0;
+
+    border: 1px solid var(--stroke-color);
+    border-radius: 3rem;
+
+    font: var(--text-t4);
+    text-transform: uppercase;
+    color: var(--title-color);
+  }
 }

@@ -30,6 +30,28 @@
                 {{> section-video title='Видео о компании' preview='img/company-video.jpg' }}
             </div>
         </section>
+        <section class="company__achievements">
+            <div class="container">
+                <div class="company__achievements-inner">
+                    {{> section-header title='Достижения' dot=true }}
+                    <ul class="company__achievements-list">
+                        {{#each achievements }}
+                            <li class="company__achievements-item">
+                                <div class="company__achievements-number-block">
+                                    <span class="company__achievements-number">{{this.number}}</span>
+                                    <div class="company__achievements-desc">
+                                        <p>{{{this.text}}}</p>
+                                    </div>
+                                </div>
+                                <div class="company__achievements-tag-block">
+                                    <span class="company__achievements-tag">{{this.tag}}</span>
+                                </div>
+                            </li>
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+        </section>
 
     {{/content}}
 {{/extend}}
