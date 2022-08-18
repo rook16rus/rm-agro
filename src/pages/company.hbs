@@ -85,6 +85,49 @@
                 </div>
             </div>
         </section>
+        <section class="company__history">
+            <div class="container">
+                <h2 class="company__history-title">история компании</h2>
+                <div class="company__history-wrapper">
+                    <div class="company__history-numbers">
+                        <div class="company__history-numbers-slider swiper">
+                            <div class="swiper-wrapper">
+                                {{#each history }}
+                                    <div class="company__history-numbers-slide swiper-slide">{{this.number}}</div>
+                                {{/each}}
+                            </div>
+                            {{> slider-navigation mod='slider-navigation--green' }}
+                        </div>
+                        <div class="company__history-numbers-sub-slider swiper">
+                            <div class="swiper-wrapper">
+                                {{#each history }}
+                                    <div class="company__history-numbers-sub-slide swiper-slide">{{this.number}}</div>
+                                {{/each}}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="company__history-content">
+                        <div class="company__history-content-slider swiper">
+                            <div class="swiper-wrapper">
+                                {{#each history }}
+                                    <div class="company__history-content-slide swiper-slide">
+                                        <h3 class="company__history-content-title">{{this.title}}</h3>
+                                        <div class="company__history-content-text">
+                                            <p>{{this.text}}</p>
+                                        </div>
+                                        <div class="company__history-content-img-block">
+                                            <div class="company__history-content-img">
+                                                <img class="lazyload" data-src="{{this.img}}" alt="Фото">
+                                            </div>
+                                        </div>
+                                    </div>
+                                {{/each}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
     {{/content}}
 {{/extend}}

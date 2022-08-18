@@ -31,6 +31,7 @@ import partnersSlider from "./build-in/partnersSlider";
 import tagsSlider from "./build-in/tagsSlider";
 import yandexMap from "./build-in/yandexMap";
 import teamSlider from "./build-in/teamSlider";
+import history from "./build-in/history";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -63,7 +64,8 @@ document.addEventListener('DOMContentLoaded', function () {
     partnersSlider();
     tagsSlider();
     yandexMap();
-    teamSlider()
+    teamSlider();
+    history();
 });
 
 document.addEventListener('lazyloaded', () => {

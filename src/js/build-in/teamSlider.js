@@ -10,6 +10,8 @@ export default function teamSlider() {
     swipers.forEach(swiper => {
         new Swiper(swiper, {
             loop: true,
+            allowTouchMove: false,
+            noSwiping: true,
             freeMode: {
                 enabled: true,
                 momentum: false
@@ -17,7 +19,9 @@ export default function teamSlider() {
             autoplay: {
                 delay: 0,
                 disableOnInteraction: false,
-                reverseDirection: !!swiper.dataset.reverse
+                reverseDirection: !!swiper.dataset.reverse,
+                pauseOnMouseEnter: true,
+                waitForTransition: false
             },
             slidesPerView: "auto",
             speed: 6000,
@@ -28,23 +32,6 @@ export default function teamSlider() {
                 },
                 1024: {
                     spaceBetween: 50
-                }
-            },
-            on: {
-                init() {
-                    console.log(this);
-                    this.slides.forEach(slide => {
-                       slide.addEventListener('mouseenter', () => {
-                           this.autoplay.stop();
-                           this.speed = 0;
-                           this.$wrapperEl[0].classList.add('none');
-                       });
-                        slide.addEventListener('mouseleave', () => {
-                            this.autoplay.start();
-                            this.speed = 0;
-                            this.$wrapperEl[0].classList.remove('none');
-                        });
-                    });
                 }
             },
         })

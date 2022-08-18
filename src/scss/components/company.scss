@@ -98,7 +98,7 @@
       transition: linear;
 
       &.none {
-        animation-play-state: paused;
+        transition-duration: 10000000s !important;
       }
     }
   }
@@ -178,6 +178,122 @@
       height: auto;
 
       visibility: hidden;
+    }
+  }
+
+  &__history {
+    padding: 7rem 0 10rem;
+  }
+
+  &__history-title {
+    margin-bottom: 5rem;
+
+    font: var(--text-t2);
+    text-transform: uppercase;
+    color: var(--title-color);
+  }
+
+  &__history-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 8rem;
+    max-width: 135.7rem;
+    margin-left: 8rem;
+  }
+
+  &__history-numbers {
+    position: relative;
+    min-width: 0;
+  }
+
+  &__history-numbers-slider {
+    position: static;
+
+    width: auto;
+    margin: 0;
+
+    .slider-navigation {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &__history-numbers-slider {
+    cursor: grab;
+
+    font: var(--regular) 55rem/95% var(--secondary-ff);
+    letter-spacing: 0.01em;
+    color: rgba(57, 89, 55, 0.2);
+  }
+
+  &__history-numbers-sub-slider {
+    width: auto;
+    margin: -6rem auto 0;
+
+    .swiper-wrapper {
+      justify-content: center;
+    }
+  }
+
+  &__history-numbers-sub-slide {
+    width: auto;
+
+    cursor: pointer;
+    opacity: 0.2;
+
+    font: var(--text-t3);
+    letter-spacing: -0.01em;
+    color: var(--title-color);
+
+    transition: 0.3s;
+
+    &.swiper-slide-thumb-active {
+      opacity: 1;
+    }
+  }
+
+  &__history-content {
+    min-width: 0;
+    max-width: 68.3rem;
+
+    cursor: default;
+  }
+
+  &__history-content-title {
+    margin-bottom: 2rem;
+
+    font: var(--title-h3);
+    text-transform: uppercase;
+    color: var(--title-color);
+  }
+
+  &__history-content-text {
+    margin-bottom: 3rem;
+
+    font: var(--text-t4);
+  }
+
+  &__history-content-img-block {
+    max-width: 61.2rem;
+
+    border-radius: 2rem;
+    overflow: hidden;
+  }
+
+  &__history-content-img {
+    position: relative;
+    padding-top: 66.01%;
+
+    img {
+      position: absolute;
+      left: 0;
+      top: 0;
+
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
   }
 }
