@@ -665,9 +665,33 @@
   &__activities {
     padding-bottom: 10rem;
     background-color: var(--bg-color);
+
+    @include breakpoint(tablet) {
+      padding: 8rem 0;
+    }
+
+    @include breakpoint(small-tablet) {
+      padding: 7rem 0;
+    }
+
+    @include breakpoint(mobile) {
+      padding: 6rem 0;
+    }
   }
 
   &__partners {
     padding-bottom: 15rem;
+
+    @include breakpoint(tablet) {
+      padding-bottom: 12rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      padding-bottom: 10rem;
+    }
+
+    @include breakpoint(mobile) {
+      padding-bottom: 8rem;
+    }
   }
 }
