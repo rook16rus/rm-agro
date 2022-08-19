@@ -1,11 +1,18 @@
+import loadApi from "./loadApi";
+
 export default function yandexMap() {
-    ymaps.ready(init);
+    let map = document.querySelector('#map');
+    if (!map) return;
+
+    const urlElement = document.querySelector('.js-map-url');
+    if (!urlElement) return;
+
+    const url = `https://api-maps.yandex.ru/2.1/?apikey=${urlElement.dataset.api}&lang=ru_RU`;
+    loadApi('yandex', url, () => {
+        ymaps.ready(init);
+    })
 
     function init() {
-        let map = document.querySelector('#map');
-
-        if (!map) return;
-
         map = new ymaps.Map('map', {
             center: [55.68678156906752,51.39040749999995],
             zoom: 16
