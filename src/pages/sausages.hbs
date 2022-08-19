@@ -4,7 +4,8 @@
         <section class="sausages">
             <div class="container">
                 {{> breadcrumbs data=breadcrumbs }}
-                {{> main-titles firstLink='sausages.html' secondLink='meat.html' firstTitleMain=true title-1='Колбасные изделия' title-2='Мясная продукция' }}
+                {{> section-filter label1='Колбасные изделия' label2='Мясная продукция' }}
+                <h1 class="sausages__title">Колбасные изделия</h1>
                 <div class="sausages__filter">
                     <div class="sausages__filter-tags">
                         {{> filter-tags data=filter }}
