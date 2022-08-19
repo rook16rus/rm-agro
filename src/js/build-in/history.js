@@ -1,6 +1,6 @@
-import {Swiper, Navigation, EffectFade, Autoplay, Pagination, HashNavigation, Grid, FreeMode, Thumbs} from "swiper";
+import {Swiper, Navigation, EffectFade, Autoplay, Pagination, HashNavigation, Grid, FreeMode, Thumbs, SnapPlugin, SnapGrid, SlideGrid} from "swiper";
 
-Swiper.use([Navigation, EffectFade, Autoplay, Pagination, HashNavigation, Grid, FreeMode, Thumbs]);
+Swiper.use([Navigation, EffectFade, Autoplay, Pagination, HashNavigation, Grid, FreeMode, Thumbs, SnapPlugin, SnapGrid, SlideGrid]);
 
 export default function history() {
     const history = document.querySelector('.company__history');
@@ -8,7 +8,12 @@ export default function history() {
 
     const numbersSubSwiper = new Swiper('.company__history-numbers-sub-slider', {
         slidesPerView: "auto",
-        spaceBetween: 20,
+        spaceBetween: 7,
+        breakpoints: {
+            641: {
+                spaceBetween: 20,
+            }
+        },
         on: {
             touchEnd: function(s,e) {
                 let range = 5;
@@ -35,9 +40,19 @@ export default function history() {
     });
 
     const contentSwiper = new Swiper('.company__history-content-slider', {
-        slidesPerView: 1,
+        slidesPerView: "auto",
         thumbs: {
             swiper: numbersSubSwiper
+        },
+        spaceBetween: 30,
+        breakpoints: {
+            641: {
+                spaceBetween: 50
+            },
+            1025: {
+                slidesPerView: 1,
+                spaceBetween: 0
+            }
         }
     });
 
@@ -48,4 +63,6 @@ export default function history() {
     contentSwiper.on('slideChange',() => {
         numbersSwiper.slideTo(contentSwiper.activeIndex);
     })
+
+    contentSwiper.snapGrid[contentSwiper.snapGrid.length - 1] = contentSwiper.slidesGrid[contentSwiper.slidesGrid.length - 1];
 }
