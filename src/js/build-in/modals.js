@@ -12,10 +12,15 @@ export default function modals() {
     window.activeModal = null;
 
     function openModal(id, event) {
+
         const modal = document.querySelector(`.js-modal-${id}`);
         if (!modal) {
             // console.error(`Modal with ID: ${id} not found`);
             return;
+        }
+
+        if (window.onOpenModal) {
+            window.onOpenModal(modal);
         }
 
         if (typeof window.closeMenu === 'function') {
@@ -59,6 +64,11 @@ export default function modals() {
     }
 
     function closeModal(modal) {
+        
+        if (window.onCloseModal) {
+            window.onCloseModal(modal);
+        }
+        
         const container = modal.querySelector('.modal__container');
 
         document.body.classList.remove('modal-open');
