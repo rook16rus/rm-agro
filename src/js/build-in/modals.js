@@ -20,7 +20,7 @@ export default function modals() {
         }
 
         if (window.onOpenModal) {
-            window.onOpenModal(modal);
+            window.onOpenModal(modal, event);
         }
 
         if (typeof window.closeMenu === 'function') {
@@ -31,8 +31,6 @@ export default function modals() {
             event.preventDefault();
         }
 
-        console.log('Opening modal', id);
-
         const openHandler = () => {
             lockScroll(modal, {
                 reserveScrollBarGap: true,
@@ -42,7 +40,6 @@ export default function modals() {
             window.activeModal = modal;
 
             const container = modal.querySelector('.modal__container');
-            console.log(document.documentElement.clientHeight);
 
             if (container.clientHeight >= document.documentElement.clientHeight) {
                 container.style.top = 0 + 'px';

@@ -20,8 +20,6 @@ export default function mediaPlayer() {
             document.addEventListener('openmodal', () => {
                 if (insideModal.classList.contains('active')) {
                     instance.play();
-                } else {
-                    console.log('Not inside modal', insideModal);
                 }
             });
             document.addEventListener('closemodal', () => {
