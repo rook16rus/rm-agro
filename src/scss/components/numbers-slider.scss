@@ -1,11 +1,35 @@
 .numbers-slider {
   overflow: visible;
 
+  .swiper-wrapper {
+    @include breakpoint(small-tablet) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 4rem;
+    }
+
+    @include breakpoint(mobile) {
+      gap: 2rem;
+    }
+  }
+
   &__slide {
     display: flex;
     flex-direction: column;
     gap: 5rem;
     width: auto;
+
+    @include breakpoint(tablet) {
+      gap: 4rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      gap: 3rem;
+    }
+
+    @include breakpoint(mobile) {
+      gap: 2rem;
+    }
   }
 
   &__text {

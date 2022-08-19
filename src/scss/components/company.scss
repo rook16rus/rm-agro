@@ -2,13 +2,49 @@
   &__about {
     padding: 6.8rem 0 10rem;
 
+    @include breakpoint(tablet) {
+      padding: 6.6rem 0 7rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      padding: 6.4rem 0 5rem;
+    }
+
+    @include breakpoint(mobile) {
+      padding: 6rem 0 3rem;
+    }
+
     .numbers-slider {
       margin-top: 10rem;
+
+      @include breakpoint(tablet) {
+        margin-top: 8rem;
+      }
+
+      @include breakpoint(small-tablet) {
+        margin-top: 7rem;
+      }
+
+      @include breakpoint(mobile) {
+        margin-top: 5rem;
+      }
     }
   }
 
   &__video {
     padding-bottom: 12rem;
+
+    @include breakpoint(tablet) {
+      padding-bottom: 10rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      padding-bottom: 8rem;
+    }
+
+    @include breakpoint(mobile) {
+      padding-bottom: 6rem;
+    }
   }
 
   &__achievements {

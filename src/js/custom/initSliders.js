@@ -5,7 +5,8 @@ Swiper.use([Navigation, EffectFade, Autoplay, Pagination, HashNavigation, Grid, 
 export default function initSliders() {
     const sliders = Array.from(document.querySelectorAll('.js-init-slider'));
     sliders.forEach((slider, i) => {
-        if (slider.classList.contains('js-init-slider-mobile') && matchMedia('(max-width: 640px)').matches) return
+        if (slider.classList.contains('js-init-slider-mobile') && matchMedia('(max-width: 640px)').matches) return;
+        if (slider.classList.contains('js-init-slider-small-tablet') && matchMedia('(max-width: 768px)').matches) return;
 
         const fadeEffect = slider.dataset.fade ? {effect: 'fade', fadeEffect: {crossFade: true}} : {};
         const autoplay = slider.dataset.delay ? {
@@ -62,7 +63,7 @@ export default function initSliders() {
         let breakpointsSpacebetween = slider.dataset.spaces;
         if (breakpointsSpacebetween) {
             const widths = breakpointsSpacebetween.match(/[0-9]{3,4}:/g).map(i => i.slice(0, -1));
-            const spaces = breakpointsSpacebetween.match(/:[0-9]{1,2}/g).map(i => i.slice(1));
+            const spaces = breakpointsSpacebetween.match(/:[0-9]{1,3}/g).map(i => i.slice(1));
 
             breakpointsSpacebetween =
                 {

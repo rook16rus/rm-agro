@@ -19,7 +19,7 @@
         padding-right: max(env(safe-area-inset-right, 1.4rem), var(--content-padding));
     }
 
-    h1 {
+    & > h1 {
         margin-bottom: 2rem;
 
         font: var(--title-h3);
@@ -27,7 +27,7 @@
         color: var(--title-color)
     }
 
-    h2 {
+    & > h2 {
         margin-bottom: 5rem;
 
         font: var(--title-h3);
@@ -47,7 +47,7 @@
         }
     }
 
-    p {
+    & > p {
         margin-bottom: 2rem;
 
         font: var(--text-t2);
