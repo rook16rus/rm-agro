@@ -160,14 +160,6 @@
     font: var(--title-h2);
     color: var(--accent-color);
 
-    @include breakpoint(tablet) {
-
-    }
-
-    @include breakpoint(small-tablet) {
-
-    }
-
     @include breakpoint(mobile) {
       margin-bottom: 0;
     }
@@ -221,8 +213,33 @@
   &__team {
     padding-bottom: 10rem;
 
+    @include breakpoint(tablet) {
+      padding-bottom: 8rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      padding-top: 6rem;
+      padding-bottom: 7rem;
+    }
+
+    @include breakpoint(mobile) {
+      padding-bottom: 6rem;
+    }
+
     .section-header {
       margin-bottom: 4rem;
+
+      @include breakpoint(tablet) {
+        margin-bottom: 3rem;
+      }
+
+      @include breakpoint(small-tablet) {
+        margin-bottom: 1rem;
+      }
+
+      @include breakpoint(mobile) {
+        margin-bottom: 0;
+      }
     }
   }
 
@@ -231,15 +248,32 @@
 
     overflow: visible;
 
+    @include breakpoint(tablet) {
+      margin-bottom: 3rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      margin: 0;
+    }
+
+    @include breakpoint(mobile) {
+      margin-left: 1rem;
+    }
+
     &:last-of-type {
       margin-bottom: 0;
+
+      @include breakpoint(small-tablet) {
+        display: none;
+      }
     }
 
     .swiper-wrapper {
       transition: linear;
+      align-items: flex-start;
 
-      &.none {
-        transition-duration: 10000000s !important;
+      @include breakpoint(small-tablet) {
+        transition: inherit;
       }
     }
   }
@@ -261,6 +295,25 @@
 
     transition: 0.3s;
 
+    @include breakpoint(tablet) {
+      width: 25rem;
+      height: 35rem;
+      padding: 2rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      width: 19rem;
+      height: auto;
+      padding: 0;
+      border-radius: 0;
+
+      color: var(--title-color);
+    }
+
+    @include breakpoint(mobile) {
+      width: 14.5rem;
+    }
+
     &:hover {
       transform: scale(1.1);
       box-shadow: 0 3.9rem 7.4rem rgba(51, 51, 51, 0.35);
@@ -272,17 +325,61 @@
       .company__team-text {
         height: var(--text-height);
       }
+
+      @include breakpoint(small-tablet) {
+        transform: scale(1);
+        box-shadow: none;
+
+        .company__team-content {
+          gap: 0.5rem;
+        }
+
+        .company__team-text {
+          height: auto;
+        }
+      }
     }
   }
 
-  &__team-img {
+  &__team-img-block {
     position: absolute;
     left: 0;
     top: 0;
 
     width: 100%;
     height: 100%;
-    object-fit: cover;
+
+    @include breakpoint(small-tablet) {
+      position: static;
+      width: 100%;
+      height: auto;
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__team-img {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    @include breakpoint(small-tablet) {
+      height: auto;
+      padding-top: 128.27%;
+
+      border-radius: 1rem;
+      overflow: hidden;
+    }
+
+    img {
+      position: absolute;
+      left: 0;
+      top: 0;
+
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
 
   &__team-content {
@@ -294,12 +391,29 @@
     gap: 0;
 
     transition: 0.3s;
+
+    @include breakpoint(small-tablet) {
+        gap: 0.5rem;
+    }
   }
 
   &__team-title {
     max-width: 22rem;
 
     font: var(--medium) 2.4rem/120% var(--main-ff);
+
+    @include breakpoint(tablet) {
+      font-size: 2rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      font-size: 1.8rem;
+    }
+
+    @include breakpoint(mobile) {
+      font-size: 1.6rem;
+      font-weight: 600;
+    }
   }
 
   &__team-text {
@@ -311,6 +425,11 @@
     font: var(--text-t5);
 
     transition: 0.3s;
+
+    @include breakpoint(small-tablet) {
+      height: auto;
+      opacity: 0.6;
+    }
 
     &--js-hide {
       position: absolute;

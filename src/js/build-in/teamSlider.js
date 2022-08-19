@@ -10,24 +10,28 @@ export default function teamSlider() {
     swipers.forEach(swiper => {
         new Swiper(swiper, {
             loop: true,
-            allowTouchMove: false,
-            noSwiping: true,
-            freeMode: {
-                enabled: true,
-                momentum: false
-            },
-            autoplay: {
-                delay: 0,
-                disableOnInteraction: false,
-                reverseDirection: !!swiper.dataset.reverse,
-                pauseOnMouseEnter: true,
-                waitForTransition: false
-            },
             slidesPerView: "auto",
-            speed: 6000,
-            spaceBetween: 10,
+            spaceBetween: 15,
+            autoplay: {
+                enabled: false
+            },
             breakpoints: {
-                768: {
+                769: {
+                    allowTouchMove: false,
+                    noSwiping: true,
+                    freeMode: {
+                        enabled: true,
+                        momentum: false
+                    },
+                    speed: 6000,
+                    autoplay: {
+                        enabled: true,
+                        delay: 0,
+                        disableOnInteraction: false,
+                        reverseDirection: !!swiper.dataset.reverse,
+                        pauseOnMouseEnter: true,
+                        waitForTransition: false
+                    },
                     spaceBetween: 30
                 },
                 1024: {
