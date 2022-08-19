@@ -49,6 +49,20 @@
 
   &__achievements {
     padding-bottom: 12.8rem;
+
+    @include breakpoint(tablet) {
+      padding-bottom: 10rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      padding-top: 6rem;
+      padding-bottom: 8rem;
+      background-color: #F2F2F2;
+    }
+
+    @include breakpoint(mobile) {
+      padding-bottom: 6rem;
+    }
   }
 
   &__achievements-inner {
@@ -56,11 +70,27 @@
 
     border-radius: 2rem;
     background-color: var(--light-bg-color);
+
+    @include breakpoint(tablet) {
+      padding: 3.5rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      padding: 0;
+    }
   }
 
   &__achievements-list {
     max-width: 128rem;
     margin-left: auto;
+
+    @include breakpoint(tablet) {
+      margin-top: 2rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      margin-top: 1rem;
+    }
   }
 
   &__achievements-item {
@@ -71,8 +101,34 @@
 
     border-bottom: 1px solid var(--stroke-color);
 
+    @include breakpoint(tablet) {
+      padding: 2.8rem 0;
+      grid-template-columns: auto 1fr;
+      gap: 2rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      padding: 2.4rem 0;
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+    }
+
+    @include breakpoint(mobile) {
+      padding: 2rem 0;
+      display: grid;
+      grid-template-columns: 1fr auto;
+    }
+
     &:first-child {
       padding-top: 0;
+    }
+
+    &:last-child {
+      @include breakpoint(mobile) {
+        border-bottom: 0;
+        padding-bottom: 0;
+      }
     }
   }
 
@@ -80,6 +136,22 @@
     display: flex;
     align-items: flex-end;
     gap: 4rem;
+
+    @include breakpoint(tablet) {
+      gap: 3rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 2rem;
+    }
+
+    @include breakpoint(mobile) {
+      grid-column: 2 / 3;
+      gap: 1rem;
+      flex-shrink: 0;
+    }
   }
 
   &__achievements-number {
@@ -87,6 +159,18 @@
 
     font: var(--title-h2);
     color: var(--accent-color);
+
+    @include breakpoint(tablet) {
+
+    }
+
+    @include breakpoint(small-tablet) {
+
+    }
+
+    @include breakpoint(mobile) {
+      margin-bottom: 0;
+    }
   }
 
   &__achievements-desc {
@@ -98,11 +182,24 @@
     font: var(--text-t2);
   }
 
+  &__achievements-tag-block {
+    @include breakpoint(tablet) {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    @include breakpoint(mobile) {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+      justify-content: flex-start;
+    }
+  }
+
   &__achievements-tag {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    height: 3.5rem;
+    min-height: 3.5rem;
     padding: 0.2rem 1.5rem 0;
 
     border: 1px solid var(--stroke-color);
@@ -111,6 +208,14 @@
     font: var(--text-t4);
     text-transform: uppercase;
     color: var(--title-color);
+
+    @include breakpoint(small-tablet) {
+      min-height: 3.2rem;
+    }
+
+    @include breakpoint(mobile) {
+      min-height: 3rem;
+    }
   }
 
   &__team {
