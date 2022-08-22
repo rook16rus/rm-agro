@@ -4,7 +4,7 @@
         <section class="directions">
             <div class="container">
                 {{> breadcrumbs data=breadcrumbs }}
-                <h1 class="directions__title">Направления деятелности</h1>
+                <h1 class="directions__title">Направления деятельности</h1>
                 <ul class="directions__list">
                     {{#each directions }}
                         <li class="directions__item">
@@ -48,7 +48,7 @@
                                 <div class="contacts-section__checkbox-wrapper">
                                     <input class="contacts-section__checkbox checkbox" name="contactsCheckbox" id="contactsCheckbox"
                                            type="checkbox" required>
-                                    <label for="contactsCheckbox">Согласен на обработку персональных данных</label>
+                                    <label for="contactsCheckbox">Согласен на обработку<a href="#" download>персональных данных</a></label>
                                 </div>
                             </div>
                             <button class="contacts-section__button button button--white js-submit-form" type="submit">

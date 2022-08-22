@@ -1,0 +1,32 @@
+{
+  "breadcrumbs": [
+    {
+      "text": "Главная",
+      "href": "index.html"
+    },
+    {
+      "text": "Медиагаллерея",
+      "href": "media.html",
+      "active": true
+    }
+  ],
+  "linksData": [
+    {
+      "href": "company.html",
+      "text": "О холдинге"
+    },
+    {
+      "href": "team.html",
+      "text": "наша команда"
+    },
+    {
+      "href": "media.html",
+      "text": "медиагаллерея",
+      "active": true
+    },
+    {
+      "href": "awards.html",
+      "text": "Награды и сертификаты"
+    }
+  ]
+}

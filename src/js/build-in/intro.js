@@ -16,15 +16,18 @@ export default function intro() {
         const itemImg = item.querySelector('img');
         const itemText = item.dataset.text;
         const itemTitle = item.closest('.intro__footer-column').querySelector('.intro__list-title');
-        const itemTitleSpan = itemTitle.querySelector(`span:nth-of-type(${index + 2})`);
+        const itemTitleSpans = itemTitle.querySelectorAll('.js-list-title-hide');
         const introHideImg = document.querySelector(`.intro__video-hide-img:nth-of-type(${index + 2})`);
 
         item.addEventListener('mouseenter', (e) => {
             introHideImg.classList.add('active');
-
             itemTitle.classList.add('active');
 
-            itemTitleSpan.classList.add('active');
+            item.closest('.intro__list').querySelectorAll('.intro__list-item').forEach((introItem, i)=> {
+                if (introItem === item) {
+                    itemTitleSpans[i].classList.add('active');
+                }
+            })
 
             introListItem.forEach(anotherItem => {
                 if (anotherItem !== item) {
@@ -42,7 +45,12 @@ export default function intro() {
         item.addEventListener('mouseleave', (e) => {
             introHideImg.classList.remove('active');
             itemTitle.classList.remove('active');
-            itemTitleSpan.classList.remove('active');
+
+            item.closest('.intro__list').querySelectorAll('.intro__list-item').forEach((introItem, i)=> {
+                if (introItem === item) {
+                    itemTitleSpans[i].classList.remove('active');
+                }
+            })
 
             introListItem.forEach(anotherItem => {
                 anotherItem.style.opacity = '1';

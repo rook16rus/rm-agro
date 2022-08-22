@@ -31,10 +31,7 @@
                             <a class="intro__list-title" href="#">
                                 <span>направления <br> деятельности</span>
                                 {{#each introActivities }}
-                                    <span>{{this.text}}</span>
-                                {{/each}}
-                                {{#each introProducts }}
-                                    <span>{{this.text}}</span>
+                                    <span class="js-list-title-hide">{{this.text}}</span>
                                 {{/each}}
                                 <svg>
                                     <use xlink:href="#link-arrow-icon"></use>
@@ -53,11 +50,8 @@
                         <div class="intro__footer-column">
                             <a class="intro__list-title" href="#">
                                 <span>смотреть <br> продукцию</span>
-                                {{#each introActivities }}
-                                    <span>{{this.text}}</span>
-                                {{/each}}
                                 {{#each introProducts }}
-                                    <span>{{this.text}}</span>
+                                    <span class="js-list-title-hide">{{this.text}}</span>
                                 {{/each}}
                                 <svg>
                                     <use xlink:href="#link-arrow-icon"></use>
@@ -265,7 +259,7 @@
                                 <div class="contacts-section__checkbox-wrapper">
                                     <input class="contacts-section__checkbox checkbox" name="contactsCheckbox" id="contactsCheckbox"
                                            type="checkbox" required>
-                                    <label for="contactsCheckbox">Согласен на обработку персональных данных</label>
+                                    <label for="contactsCheckbox">Согласен на обработку<a href="#" download>персональных данных</a></label>
                                 </div>
                             </div>
                             <button class="contacts-section__button button button--white js-submit-form" type="submit">

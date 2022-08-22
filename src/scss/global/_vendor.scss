@@ -10,6 +10,10 @@
     flex-direction: column;
 }
 
+.swiper-button-lock {
+    display: none !important;
+}
+
 .lazyload,
 .lazyloading {
     opacity: 0;

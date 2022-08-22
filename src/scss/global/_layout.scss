@@ -755,6 +755,10 @@
 
         &:hover {
             opacity: 1;
+            
+            a {
+                text-decoration: underline;
+            }
         }
 
         &::before {
@@ -767,6 +771,11 @@
             border-radius: 0.4rem;
             
             transition: 0.3s;
+        }
+
+        a {
+            display: inline-block;
+            margin-left: -0.4rem;
         }
     }
 
