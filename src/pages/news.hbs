@@ -4,7 +4,50 @@
         <section class="news">
             <div class="container">
                 {{> breadcrumbs data=breadcrumbs }}
-                {{> main-titles firstLink='news.html' secondLink='promotion.html' firstTitleMain=true title-1='Новости' title-2='Акции' }}
+                {{> section-filter label1='Новости' label2='Акции' }}
+                <ul class="news__list-large">
+                    {{#each news-large }}
+                        <li class="news__item">
+                            <a class="news__link" href="news-single.html">
+                                <div class="news__img-block">
+                                    <div class="news__img">
+                                        {{#if this.img }}
+                                            <img class="lazyload" data-src="{{this.img}}" alt="Фото новости">
+                                        {{else}}
+                                            <img class="lazyload" data-src="img/empty-logo.png" alt="Логотип компании">
+                                        {{/if}}
+                                    </div>
+                                </div>
+                                <div class="news__content">
+                                    <h3 class="news__title">{{this.title}}</h3>
+                                    <div class="news__meta">
+                                        {{> meta }}
+                                        <svg class="news__meta-icon">
+                                            <use xlink:href="#link-arrow-icon"></use>
+                                        </svg>
+                                    </div>
+                                    {{#if text }}
+                                        <div class="news__text">
+                                            <p>
+                                                Генеральный директор группы компаний «РМ АГРО» Рифат Мутигуллин выступил
+                                                на расширенном заседание коллегии Министерства сельского хозяйства
+                                                и продовольствия Республики Татарстан
+                                            </p>
+                                        </div>
+                                    {{/if}}
+                                    {{#if button }}
+                                        <span class="news__button button button--green">
+                                            <span>читать подробнее</span>
+                                            <svg>
+                                                <use xlink:href="#link-arrow-icon"></use>
+                                            </svg>
+                                        </span>
+                                    {{/if}}
+                                </div>
+                            </a>
+                        </li>
+                    {{/each}}
+                </ul>
                 <ul class="news__list">
                     {{#each news }}
                         <li class="news__item">
@@ -46,7 +89,7 @@
                         </li>
                     {{/each}}
                 </ul>
-                <button class="news__more-button more-button button button--white">
+                <button class="more-button button button--white">
                     <span>показать больше</span>
                     <svg>
                         <use xlink:href="#link-arrow-icon"></use>

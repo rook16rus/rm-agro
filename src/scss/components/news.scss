@@ -13,7 +13,7 @@
     padding-bottom: 8rem;
   }
 
-  .main-titles {
+  .section-filter {
     max-width: 126rem;
     padding-top: 5rem;
     margin-bottom: 7rem;
@@ -32,47 +32,37 @@
       margin-bottom: 2.8rem;
     }
 
-    &__title a {
+    &__label {
       font: var(--title-h1);
+
+      @include breakpoint(tablet) {
+        font: var(--text-t4);
+      }
+
+      @include breakpoint(mobile) {
+        font-size: 1.4rem;
+      }
     }
   }
 
-  &__list {
+  &__list-large {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 1fr;
     gap: 2.4rem;
-
-    @include breakpoint(tablet) {
-      grid-template-columns: repeat(2, 1fr);
-    }
-
-    @include breakpoint(small-tablet) {
-      grid-template-columns: 1fr;
-    }
+    margin-bottom: 2.4rem;
 
     @include breakpoint(mobile) {
       gap: 2rem;
+      margin-bottom: 2rem;
     }
-  }
 
-  &__item {
-    &:first-child {
-      grid-column: span 4;
-
-      @include breakpoint(tablet) {
-        grid-column: span 2;
-      }
-
-      @include breakpoint(small-tablet) {
-        grid-column: span 1;
-      }
-
+    .news__item {
       .news__link {
         display: grid;
         grid-template-columns: auto 1fr;
         gap: 5rem;
         padding: 5rem;
-        min-height: 53.1rem;
+        min-height: 52rem;
 
         @include breakpoint(tablet) {
           grid-template-columns: 1fr;
@@ -96,14 +86,12 @@
         }
       }
 
-      .news__img {
+      .news__img-block {
         width: 70.4rem;
-        height: 100%;
 
         @include breakpoint(tablet) {
           width: 100%;
           height: auto;
-          aspect-ratio: 704 / 427;
         }
 
         @include breakpoint(small-tablet) {
@@ -112,6 +100,33 @@
 
         @include breakpoint(mobile) {
           height: 18rem;
+        }
+      }
+
+      .news__img {
+        position: relative;
+
+        width: 100%;
+        padding-top: 60.65%;
+
+        border-radius: 2rem;
+        overflow: hidden;
+
+        @include breakpoint(small-tablet) {
+          border-radius: 1.5rem;
+          padding-top: 0;
+          width: 100%;
+          height: 100%;
+        }
+
+        img {
+          position: absolute;
+          left: 0;
+          top: 0;
+
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
         }
       }
 
@@ -135,7 +150,7 @@
       }
 
       .news__meta {
-        margin-bottom: 4rem;
+        margin-bottom: 3.6rem;
 
         @include breakpoint(tablet) {
           margin-bottom: 3rem;
@@ -157,6 +172,40 @@
           display: block;
         }
       }
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2.4rem;
+
+    @include breakpoint(tablet) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include breakpoint(small-tablet) {
+      grid-template-columns: 1fr;
+    }
+
+    @include breakpoint(mobile) {
+      gap: 2rem;
+    }
+  }
+
+  &__item {
+    min-height: 38.4rem;
+
+    @include breakpoint(tablet) {
+      min-height: 36rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      min-height: 34rem;
+    }
+
+    @include breakpoint(mobile) {
+      min-height: 32rem;
     }
 
     &:hover {
@@ -183,24 +232,14 @@
     flex-direction: column;
     gap: 1.5rem;
     height: 100%;
-    min-height: 38.4rem;
     padding: 1.5rem;
 
     border-radius: 2rem;
     background-color: #fff;
 
-    @include breakpoint(tablet) {
-      min-height: 36rem;
-    }
-
-    @include breakpoint(small-tablet) {
-      min-height: 34rem;
-    }
-
     @include breakpoint(mobile) {
       gap: 1rem;
       padding: 1rem;
-      min-height: 32rem;
 
       border-radius: 1.5rem;
     }
@@ -298,7 +337,7 @@
     }
   }
 
-  &__more-button {
+  .more-button {
     margin-top: 7rem;
 
     @include breakpoint(tablet) {

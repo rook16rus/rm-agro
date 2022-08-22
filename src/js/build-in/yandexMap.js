@@ -13,9 +13,14 @@ export default function yandexMap() {
     })
 
     function init() {
+        const mapElement = document.querySelector('#map');
+        const zoom = mapElement.dataset.zoom;
+        const marker = mapElement.dataset.marker;
+        const coords = mapElement.dataset.coordinates.split(',');
+
         map = new ymaps.Map('map', {
-            center: [55.68678156906752,51.39040749999995],
-            zoom: 16
+            center: [...coords],
+            zoom
         });
 
         map.controls.remove('geolocationControl'); // удаляем геолокацию
@@ -25,13 +30,13 @@ export default function yandexMap() {
         map.controls.remove('fullscreenControl'); // удаляем кнопку перехода в полноэкранный режим
         map.controls.remove('rulerControl'); // удаляем контрол правил
 
-        addMarker([55.68678156906752,51.39040749999995], map);
+        addMarker([55.68678156906752,51.39040749999995], map, marker);
     }
 
-    function addMarker(coords, map) {
+    function addMarker(coords, map, markerIcon) {
         const marker = new ymaps.Placemark(coords, {}, {
             iconLayout: 'default#image',
-            iconImageHref: 'img/placemarker.svg',
+            iconImageHref: markerIcon,
             iconImageSize: [60, 77],
             iconImageOffset: [-30, -77]
         });
