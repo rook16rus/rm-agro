@@ -6,44 +6,23 @@
                 {{> breadcrumbs data=breadcrumbs }}
                 {{> links-list data=linksData mod='links-list--green' }}
                 <h1 class="media__title">Медиагалерея</h1>
-                <form class="media__filter" action="#">
-                    <div class="media__filter-block">
-                        <input class="media__filter-input visually-hidden" type="radio" name="mediaRadio" id="mediaRadio1" checked>
-                        <label class="media__filter-label" for="mediaRadio1">все</label>
-                    </div>
-                    <div class="media__filter-block">
-                        <input class="media__filter-input visually-hidden" type="radio" name="mediaRadio" id="mediaRadio2">
-                        <label class="media__filter-label" for="mediaRadio2">Фотогалерея</label>
-                    </div>
-                    <div class="media__filter-block">
-                        <input class="media__filter-input visually-hidden" type="radio" name="mediaRadio" id="mediaRadio3">
-                        <label class="media__filter-label" for="mediaRadio3">Видеогалерея</label>
-                    </div>
-                </form>
-                <ul class="media__list">
+                <a class="media__link" href="media.html">
+                    <svg>
+                        <use xlink:href="#link-arrow-icon"></use>
+                    </svg>
+                    <span>Вернуться к галерее альбомов</span>
+                </a>
+                <h2 class="media__sub-title">Весенне-полевые работы 2021 года</h2>
+                <ul class="media__list media__list--single">
                     {{#each media }}
                         <li class="media__item">
-                            <a class="media__item-link" {{#if video }}data-fancybox data-src="https://youtu.be/e-Y7jWF1ATo" {{else}} href="media-single.html"{{/if}}>
+                            <a class="media__item-link" {{#if video }}data-fancybox data-src="https://youtu.be/e-Y7jWF1ATo" {{else}} data-fancybox="photo" data-src="{{this.img}}" {{/if}}>
                                 <div class="media__item-img">
                                     <img class="lazyload" data-src="{{this.img}}" alt="Фото">
-                                    {{#unless video }}
-                                        <img class="lazyload" data-src="{{this.img}}" alt="Фото">
-                                        <img class="lazyload" data-src="{{this.img}}" alt="Фото">
-                                    {{/unless}}
                                     {{#if video }}
                                         {{> video-button }}
                                     {{/if}}
-                                    {{#unless video }}
-                                        <div class="media__item-album">
-                                            <span>12</span>
-                                            <svg>
-                                                <use xlink:href="#album-icon"></use>
-                                            </svg>
-                                        </div>
-                                    {{/unless}}
                                 </div>
-                                <h3 class="media__item-title">Весенне-полевые работы 2021 года</h3>
-                                <time class="media__item-time" datetime="2022-03-04">04 марта 2022</time>
                             </a>
                         </li>
                     {{/each}}
@@ -111,3 +90,19 @@
 
     {{/content}}
 {{/extend}}
+
+<!--
+
+  @include breakpoint(tablet) {
+
+  }
+
+  @include breakpoint(small-tablet) {
+
+  }
+
+  @include breakpoint(mobile) {
+
+  }
+
+-->
