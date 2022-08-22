@@ -1,12 +1,40 @@
 .media {
   padding-bottom: 15rem;
 
+  @include breakpoint(tablet) {
+    padding-bottom: 12rem;
+  }
+
+  @include breakpoint(small-tablet) {
+    padding-bottom: 10rem;
+  }
+
+  @include breakpoint(mobile) {
+    padding-bottom: 8rem;
+  }
+
   .breadcrumbs {
     margin-bottom: 3.7rem;
+
+    @include breakpoint(mobile) {
+      margin-bottom: 4rem;
+    }
   }
 
   .links-list {
     margin-bottom: 5.8rem;
+
+    @include breakpoint(tablet) {
+      margin-bottom: 5rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      margin-bottom: 4.5rem;
+    }
+
+    @include breakpoint(mobile) {
+      margin-bottom: 4rem;
+    }
   }
 
   &__title {
@@ -34,6 +62,21 @@
     display: flex;
     gap: 2rem;
     margin-bottom: 7rem;
+
+    @include breakpoint(tablet) {
+      gap: 1.6rem;
+      margin-bottom: 6rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      gap: 1.2rem;
+      margin-bottom: 5rem;
+    }
+
+    @include breakpoint(mobile) {
+      gap: 0.7rem;
+      margin-bottom: 4rem;
+    }
   }
 
   &__filter-input:checked + &__filter-label {
@@ -58,12 +101,36 @@
     color: var(--title-color);
 
     transition: 0.3s;
+
+    @include breakpoint(small-tablet) {
+      height: 3.5rem;
+      padding: 0 1.2rem;
+    }
+
+    @include breakpoint(mobile) {
+      height: 3.2rem;
+      padding: 0 1rem;
+    }
   }
 
   &__list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 5rem 2.5rem;
+
+    @include breakpoint(tablet) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 4rem 2.5rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      gap: 3rem 2.5rem;
+    }
+
+    @include breakpoint(mobile) {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
   }
 
   &__item-link {
@@ -74,6 +141,18 @@
     cursor: pointer;
 
     transition: 0.3s;
+
+    @include breakpoint(tablet) {
+      min-height: 38rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      min-height: 34rem;
+    }
+
+    @include breakpoint(mobile) {
+      min-height: 27rem;
+    }
 
     &:hover .media__item-img {
       box-shadow: 0 1rem 3.4rem 0 rgba(51, 51, 51, 0.35);
@@ -90,6 +169,19 @@
     border-radius: 2rem;
 
     transition: 0.3s;
+
+    @include breakpoint(tablet) {
+
+    }
+
+    @include breakpoint(small-tablet) {
+      margin-bottom: 2.5rem;
+    }
+
+    @include breakpoint(mobile) {
+      padding-top: 63.93%;
+      margin-bottom: 2rem;
+    }
 
     img {
       position: absolute;
@@ -112,9 +204,39 @@
       width: 11.8rem;
       height: 11.8rem;
 
+      @include breakpoint(tablet) {
+        width: 10rem;
+        height: 10rem;
+      }
+
+      @include breakpoint(small-tablet) {
+        width: 8rem;
+        height: 8rem;
+      }
+
+      @include breakpoint(mobile) {
+        width: 6.1rem;
+        height: 6.1rem;
+      }
+
       svg {
         width: 4.7rem;
         height: 5.7rem;
+
+        @include breakpoint(tablet) {
+          width: 4rem;
+          height: 5rem;
+        }
+
+        @include breakpoint(small-tablet) {
+          width: 3.2rem;
+          height: 4rem;
+        }
+
+        @include breakpoint(mobile) {
+          width: 2.4rem;
+          height: 3rem;
+        }
       }
     }
   }
@@ -136,6 +258,10 @@
     font: var(--text-t5);
     color: #fff;
 
+    @include breakpoint(mobile) {
+      font-size: 1.4rem;
+    }
+
     svg {
       width: 1.8rem;
       height: 1.8rem;
@@ -147,6 +273,10 @@
 
     font: var(--text-t1);
     color: var(--title-color);
+
+    @include breakpoint(mobile) {
+      margin-bottom: 0.5rem;
+    }
   }
 
   &__item-time {
@@ -155,5 +285,17 @@
 
   .more-button {
     margin-top: 5rem;
+
+    @include breakpoint(tablet) {
+      margin-top: 4rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      margin-top: 3rem;
+    }
+
+    @include breakpoint(mobile) {
+      margin-top: 2rem;
+    }
   }
 }
