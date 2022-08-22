@@ -1,4 +1,4 @@
-.sausages {
+.catalog {
   padding-bottom: 15rem;
 
   @include breakpoint(tablet) {
@@ -102,6 +102,20 @@
     @include breakpoint(mobile) {
       gap: 2rem;
     }
+
+    &--meat {
+      li.catalog__item {
+        grid-column: span 1;
+      }
+    }
+
+    li.catalog__item--menu {
+      grid-column: span 2;
+
+      @include breakpoint(small-tablet) {
+        grid-column: span 1;
+      }
+    }
   }
 
   &__item {
@@ -148,7 +162,7 @@
         transform: scale(1.1);
       }
 
-      .sausages__item-icon {
+      .catalog__item-icon {
         transform: rotate(45deg);
       }
     }
@@ -209,6 +223,131 @@
     height: 1.6rem;
 
     transition: 0.3s;
+  }
+
+  &__menu-item-link {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    width: 100%;
+    height: 100%;
+    padding: 3.5rem;
+
+    border-radius: 2rem;
+    overflow: hidden;
+
+    color: #fff;
+
+    @include breakpoint(tablet) {
+      gap: 3.5rem;
+      padding: 3rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      gap: 2.5rem;
+      padding: 2.4rem;
+    }
+
+    @include breakpoint(mobile) {
+      gap: 1.6rem;
+      padding: 2rem;
+
+      border-radius: 1.5rem;
+    }
+  }
+
+  &__menu-item-title {
+    font: var(--title-h3);
+    text-transform: uppercase;
+  }
+
+  &__menu-item-wrapper {
+    position: relative;
+
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1.6rem 0.8rem;
+    margin-top: auto;
+  }
+
+  &__menu-item-digits {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    max-width: 28rem;
+    margin-bottom: -2rem;
+
+    @include breakpoint(tablet) {
+      gap: 1rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      margin-bottom: -1rem;
+    }
+
+    @include breakpoint(mobile) {
+      gap: 1.2rem;
+      max-width: 17rem;
+    }
+  }
+
+  &__menu-item-digit {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+
+    @include breakpoint(mobile) {
+      gap: 1rem;
+    }
+  }
+
+  &__menu-item-number {
+    font: var(--regular) 14rem/95% var(--secondary-ff);
+    letter-spacing: 0.03em;
+
+    @include breakpoint(tablet) {
+      font-size: 12rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      font-size: 9rem;
+    }
+
+    @include breakpoint(mobile) {
+      font-size: 6rem
+    }
+  }
+
+  &__menu-item-text {
+    margin-top: auto;
+    padding-bottom: 2.5rem;
+
+    font: var(--text-t4);
+
+    @include breakpoint(small-tablet) {
+      padding-bottom: 1.5rem;
+    }
+
+    @include breakpoint(mobile) {
+      padding-bottom: 1rem;
+    }
+  }
+
+  &__menu-item-button {
+    span {
+      display: inline-block;
+      margin-left: 0.5rem;
+    }
+
+    @include breakpoint(mobile) {
+      padding: 0 2rem;
+
+      span {
+        display: none;
+      }
+    }
   }
 
   .more-button {

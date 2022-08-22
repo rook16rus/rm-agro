@@ -206,12 +206,13 @@
   }
 
   &__body {
-    display: flex;
+    display: grid;
+    grid-template-columns: 59.4rem 1fr;
     gap: 5rem;
     margin-bottom: 5rem;
 
     @include breakpoint(tablet) {
-      flex-direction: column;
+      grid-template-columns: 1fr;
       margin-bottom: 3.4rem;
       gap: 0;
     }
@@ -225,6 +226,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
 
     border-radius: 2rem;
     background-color: var(--bg-color);
@@ -505,7 +507,7 @@
       position: fixed;
       left: auto;
       right: 1.5rem;
-      bottom: calc(var(--modal-height) + 0.5rem);
+      top: calc(var(--modal-height) - 1rem);
     }
   }
 
