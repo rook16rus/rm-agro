@@ -28,5 +28,49 @@
       "href": "awards.html",
       "text": "Награды и сертификаты"
     }
+  ],
+  "media": [
+    {
+      "img": "img/media-1.jpg"
+    },
+    {
+      "img": "img/media-2.jpg"
+    },
+    {
+      "img": "img/media-3.jpg"
+    },
+    {
+      "img": "img/media-4.jpg",
+      "video": true
+    },
+    {
+      "img": "img/media-4.jpg",
+      "video": true
+    },
+    {
+      "img": "img/media-4.jpg",
+      "video": true
+    },
+    {
+      "img": "img/media-1.jpg"
+    },
+    {
+      "img": "img/media-2.jpg"
+    },
+    {
+      "img": "img/media-3.jpg"
+    },
+    {
+      "img": "img/media-4.jpg",
+      "video": true
+    },
+    {
+      "img": "img/media-4.jpg",
+      "video": true
+    },
+    {
+      "img": "img/media-4.jpg",
+      "video": true
+    }
   ]
 }
