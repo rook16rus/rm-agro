@@ -34,6 +34,7 @@ import teamSlider from "./build-in/teamSlider";
 import history from "./build-in/history";
 import videoButton from "./build-in/videoButton";
 import gallerySlider from "./build-in/gallerySlider";
+import successSlider from "./build-in/successSlider";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -70,6 +71,7 @@ document.addEventListener('DOMContentLoaded', function () {
     history();
     videoButton();
     gallerySlider();
+    successSlider();
 });
 
 document.addEventListener('lazyloaded', () => {

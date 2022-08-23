@@ -113,4 +113,123 @@
 
     font: var(--text-t2);
   }
+
+  &__success {
+    padding: 10rem 0 12rem;
+
+    .slider-navigation {
+      position: absolute;
+      top: 0;
+      right: 0rem;
+      z-index: 1;
+
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__success-slider {
+    margin-left: 3.5rem;
+    max-width: 134.7rem;
+    overflow: visible;
+  }
+
+  &__success-slide {
+    display: grid;
+    grid-template-columns: 52.7rem 1fr;
+    gap: 4.2rem;
+  }
+
+  &__success-img {
+    position: relative;
+
+    padding-top: 105.12%;
+    margin-bottom: 3rem;
+
+    border-radius: 2rem;
+    overflow: hidden;
+
+    img {
+      position: absolute;
+      left: 0;
+      top: 0;
+
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__success-name {
+    display: block;
+    margin-bottom: 1rem;
+
+    font: var(--text-t1);
+    color: var(--title-color);
+
+    span {
+      display: block;
+    }
+  }
+
+  &__success-position {
+    font: var(--text-t4)
+  }
+
+  &__success-title {
+    max-width: 65rem;
+    margin-bottom: 2rem;
+
+    font: var(--title-h3);
+    text-transform: uppercase;
+    color: var(--title-color);
+  }
+
+  &__success-quote {
+    position: relative;
+
+    max-width: 43.6rem;
+    padding: 3.9rem 0 0 3.5rem;
+    margin-bottom: 3rem;
+
+    font: var(--text-t2);
+    color: var(--title-color);
+
+    &::before {
+      content: '';
+
+      position: absolute;
+      left: 0;
+      top: 0;
+
+      width: 7rem;
+      height: 6.5rem;
+
+      background: url("../img/quotes-green.svg") no-repeat center;
+      background-size: cover;
+    }
+  }
+
+  &__success-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    max-width: 66.7rem;
+    margin-bottom: 2rem;
+
+    font: var(--text-t2);
+  }
+
+  &__success-button {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    font: var(--text-t5);
+
+    img {
+      width: 1.2rem;
+      height: 0.6rem;
+      margin-top: 0.2rem;
+    }
+  }
 }
