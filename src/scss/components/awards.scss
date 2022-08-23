@@ -1,12 +1,41 @@
 .awards {
   padding-bottom: 15rem;
 
+  @include breakpoint(tablet) {
+    padding-bottom: 12rem;
+  }
+
+  @include breakpoint(small-tablet) {
+    padding-bottom: 10rem;
+  }
+
+  @include breakpoint(mobile) {
+    padding-bottom: 8rem;
+  }
+
   .breadcrumbs {
     margin-bottom: 3.7rem;
+
+    @include breakpoint(mobile) {
+      margin-bottom: 4rem;
+      margin-top: 1rem;
+    }
   }
 
   .links-list {
     margin-bottom: 5.8rem;
+
+    @include breakpoint(tablet) {
+      margin-bottom: 5rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      margin-bottom: 4.5rem;
+    }
+
+    @include breakpoint(mobile) {
+      margin-bottom: 4rem;
+    }
   }
 
   &__title {
@@ -35,6 +64,21 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 5rem 2.4rem;
+
+    @include breakpoint(tablet) {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 4rem 2.4rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 3rem 2.4rem;
+    }
+
+    @include breakpoint(mobile) {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
   }
 
   &__item-img {
@@ -46,6 +90,11 @@
 
     border-radius: 2rem;
     background-color: var(--light-bg-color);
+
+
+    @include breakpoint(mobile) {
+      padding-top: 63.93%;
+    }
 
     img {
       position: absolute;
@@ -66,6 +115,12 @@
 
     font: var(--text-t1);
     color: var(--title-color);
+
+
+    @include breakpoint(mobile) {
+      margin-bottom: 0.5rem;
+      font-size: 1.6rem;
+    }
   }
 
   &__item-text {
@@ -74,9 +129,25 @@
     gap: 1.6rem;
 
     font: var(--text-t4);
+
+    @include breakpoint(mobile) {
+      font-size: 1.6rem;
+    }
   }
 
   .more-button {
     margin-top: 5rem;
+
+    @include breakpoint(tablet) {
+      margin-top: 4rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      margin-top: 3rem;
+    }
+
+    @include breakpoint(mobile) {
+      margin-top: 2rem;
+    }
   }
 }
