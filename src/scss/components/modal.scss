@@ -619,7 +619,25 @@
   }
 
   .modal__inner {
+    display: flex;
+    flex-direction: column;
     padding: 5rem;
+
+    @include breakpoint(tablet) {
+      padding: 4.5rem 4rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      padding: 4rem 2.5rem;
+    }
+
+    @include breakpoint(mobile) {
+      padding: 3rem 1.5rem;
+    }
+  }
+
+  &__slider-container {
+    min-width: 0;
   }
 
   &__slider {
@@ -627,12 +645,23 @@
 
     border-radius: 2rem;
     overflow: hidden;
+
+    @include breakpoint(mobile) {
+      overflow: visible;
+    }
   }
 
   &__slide {
     padding-top: 59.10%;
 
-    img {
+    @include breakpoint(mobile) {
+      padding-top: 71.51%;
+
+      border-radius: 2rem;
+      overflow: hidden;
+    }
+
+    img, iframe {
       position: absolute;
       left: 0;
       top: 0;
@@ -650,6 +679,21 @@
     letter-spacing: -0.01em;
     text-transform: uppercase;
     color: var(--title-color);
+
+    @include breakpoint(tablet) {
+      font-size: 2.6rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      font-size: 2.2rem;
+    }
+
+    @include breakpoint(mobile) {
+      order: -1;
+      margin-bottom: 2rem;
+
+      font-size: 1.8rem;
+    }
   }
 
   &__download {
@@ -671,6 +715,14 @@
     margin-bottom: 2.3rem;
 
     font: var(--text-t5);
+
+    @include breakpoint(mobile) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__sub-slider-container {
+    min-width: 0;
   }
 
   &__sub-slider {
@@ -688,8 +740,40 @@
 
     transition: 0.3s;
 
+    @include breakpoint(tablet) {
+      width: 9rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      width: 8rem;
+    }
+
+    @include breakpoint(mobile) {
+      width: 7.5rem;
+    }
+
     &.swiper-slide-thumb-active {
       opacity: 1;
+    }
+
+    .video-button {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+
+      width: 3.5rem;
+      height: 3.5rem;
+
+      svg {
+        width: 2.5rem;
+        height: 2.5rem;
+      }
+
+      &__text {
+        display: none;
+      }
     }
   }
 
@@ -700,6 +784,11 @@
 
     border-radius: 1rem;
     overflow: hidden;
+
+
+    @include breakpoint(mobile) {
+      padding-top: 66.66%;
+    }
 
     img {
       position: absolute;
