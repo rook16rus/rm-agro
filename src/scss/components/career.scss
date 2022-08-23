@@ -232,4 +232,20 @@
       margin-top: 0.2rem;
     }
   }
+
+  &__care {
+    padding-bottom: 15rem;
+  }
+
+  &__care-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 131.6rem;
+    margin-left: auto;
+  }
+
+  &__care-button {
+    margin-top: 4.4rem;
+  }
 }
