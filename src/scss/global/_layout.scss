@@ -517,13 +517,14 @@
 }
 
 .video-button {
+    position: relative;
+
     display: flex;
     justify-content: center;
     align-items: center;
     width: 17.4rem;
     height: 17.4rem;
 
-    background: url("../img/video-button-bg.svg") no-repeat center;
     background-size: cover;
 
     @include breakpoint(tablet) {
@@ -539,6 +540,28 @@
     @include breakpoint(mobile) {
         width: 6rem;
         height: 6rem;
+    }
+
+    &__text {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+
+        font: var(--medium) 1.2rem/130% var(--main-ff);
+        color: #fff;
+
+        @include breakpoint(tablet) {
+            transform: translate(-50%, -50%) scale(0.9);
+        }
+
+        @include breakpoint(small-tablet) {
+            transform: translate(-50%, -50%) scale(0.8);
+        }
+
+        @include breakpoint(mobile) {
+            transform: translate(-50%, -50%) scale(0.7);
+        }
     }
 
     &__icon {
