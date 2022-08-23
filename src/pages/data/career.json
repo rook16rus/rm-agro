@@ -1,0 +1,24 @@
+{
+  "headerMod": "header--dark",
+  "breadcrumbs": [
+    {
+      "text": "Главная",
+      "href": "index.html"
+    },
+    {
+      "text": "Карьера",
+      "href": "career.html",
+      "active": true
+    }
+  ],
+  "numbers": [
+    {
+      "text": "Квалифицированных сотрудников",
+      "number": "13 000"
+    },
+    {
+      "text": "Квалифицированных сотрудников",
+      "number": "13 000"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+.career {
+  &__intro {
+    padding-bottom: 10rem;
+  }
+
+  .breadcrumbs {
+    margin-bottom: 5.8rem;
+  }
+
+  .main-titles {
+    max-width: 151.5rem;
+    margin-bottom: 7rem;
+
+    h1, h2 {
+      font-size: 30rem;
+    }
+  }
+
+  .numbers-slider {
+    margin-top: 10rem;
+  }
+}
