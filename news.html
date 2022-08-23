@@ -210,25 +210,23 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="main-titles">
-                            <div class="main-titles__links">
-                                <a class="main-titles__link button button--green active" href="news.html"><span>Новости</span>
-                                </a>
-                                <a class="main-titles__link button button--green" href="promotion.html"><span>Акции</span>
-                                </a>
+                        <form class="section-filter" action="#">
+                            <div class="section-filter__radio-block">
+                                <input class="section-filter__radio visually-hidden" id="sectionRadio1" name="sectionRadio" type="radio">
+                                <label for="sectionRadio1" class="section-filter__label">Новости</label>
                             </div>
-                            <h1 class="main-titles__title main-titles__title--active">
-                                <a href="news.html">Новости</a>
-                            </h1>
-                            <h2 class="main-titles__title">
-                                <a href="promotion.html">Акции</a>
-                            </h2>
-                        </div>
-                        <ul class="news__list">
+                            <div class="section-filter__radio-block">
+                                <input class="section-filter__radio visually-hidden" id="sectionRadio2" name="sectionRadio" type="radio">
+                                <label for="sectionRadio2" class="section-filter__label">Акции</label>
+                            </div>
+                        </form>
+                        <ul class="news__list-large">
                             <li class="news__item">
                                 <a class="news__link" href="news-single.html">
-                                    <div class="news__img">
-                                        <img class="lazyload" data-src="img/news-5.jpg" alt="Фото новости">
+                                    <div class="news__img-block">
+                                        <div class="news__img">
+                                            <img class="lazyload" data-src="img/news-5.jpg" alt="Фото новости">
+                                        </div>
                                     </div>
                                     <div class="news__content">
                                         <h3 class="news__title">Заседание коллегии Министерства сельского хозяйства и продовольствия Республики Татарстан</h3>
@@ -250,6 +248,8 @@
                                     </div>
                                 </a>
                             </li>
+                        </ul>
+                        <ul class="news__list">
                             <li class="news__item">
                                 <a class="news__link" href="news-single.html">
                                     <div class="news__img">
@@ -467,7 +467,7 @@
                                 </a>
                             </li>
                         </ul>
-                        <button class="news__more-button more-button button button--white"><span>показать больше</span>
+                        <button class="more-button button button--white"><span>показать больше</span>
                             <svg>
                                 <use xlink:href="#link-arrow-icon"></use>
                             </svg>
