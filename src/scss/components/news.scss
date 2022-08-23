@@ -45,6 +45,28 @@
     }
   }
 
+  &__section-title {
+    display: none;
+
+    font: var(--regular) 25rem/75% var(--secondary-ff);
+    color: var(--title-color);
+
+    @include breakpoint(tablet) {
+      display: block;
+      margin-bottom: 3rem;
+
+      font-size: 16rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      font-size: 12rem;
+    }
+
+    @include breakpoint(mobile) {
+      font-size: 9rem;
+    }
+  }
+
   &__list-large {
     display: grid;
     grid-template-columns: 1fr;

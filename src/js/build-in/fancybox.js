@@ -5,8 +5,5 @@ export default function fancybox() {
         Image: {
             zoom: false
         },
-        keyboard: {
-            ArrowLeft: 'prev'
-        }
     })
 }
