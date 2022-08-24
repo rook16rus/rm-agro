@@ -795,11 +795,6 @@
             
             transition: 0.3s;
         }
-
-        a {
-            display: inline-block;
-            margin-left: -0.4rem;
-        }
     }
 
     &:checked + label::before {
