@@ -1,4 +1,4 @@
-.news-single {
+.students {
   display: flex;
   flex-direction: column;
   padding-bottom: 15rem;
@@ -20,6 +20,7 @@
       order: -1;
     }
   }
+
 
   .narrow-container {
     @include breakpoint(mobile) {
@@ -58,29 +59,6 @@
 
     @include breakpoint(mobile) {
       margin-bottom: 3rem;
-    }
-  }
-
-  .meta {
-    margin-bottom: 5rem;
-
-    @include breakpoint(tablet) {
-      margin-bottom: 4rem;
-    }
-
-    @include breakpoint(small-tablet) {
-      margin-bottom: 3rem;
-    }
-
-    @include breakpoint(mobile) {
-      margin-bottom: 2rem;
-    }
-
-    &__tag {
-      @include breakpoint(mobile) {
-        padding-top: 0.2rem;
-        font-size: 1.2rem;
-      }
     }
   }
 

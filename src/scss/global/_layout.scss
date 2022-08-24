@@ -187,6 +187,17 @@
     }
 }
 
+.text-lead {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 2rem;
+
+    p {
+        font: var(--text-t1);
+    }
+}
+
 .img-container {
     max-width: calc(114.4rem + 2 * var(--content-padding));
     margin: 0 auto;
