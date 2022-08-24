@@ -1,0 +1,54 @@
+{{#extend "layout"}}
+    {{#content "main"}}
+
+        <section class="vacancy">
+            <div class="container">
+                {{> breadcrumbs data=breadcrumbs }}
+                {{> main-titles firstLink='career.html' secondLink='vacancy.html' secondTitleMain=true title-1='Карьера' title-2='Вакансии' }}
+                {{> section-header title='открыто 10 вакансий' dot=true }}
+                <ul class="vacancy__list">
+                    {{#each vacancy }}
+                        <li class="vacancy__item">
+                            <div class="vacancy__item-content">
+                                <h3 class="vacancy__item-title">{{this.title}}</h3>
+                                <div class="vacancy__item-text">
+                                    <p>{{this.text}}</p>
+                                </div>
+                            </div>
+                            <div class="vacancy__item-price-block">
+                                <span class="vacancy__item-price">{{this.price}}</span>
+                                <a class="vacancy__item-link button button--green" href="#">
+                                    <span>Смотреть</span>
+                                    <img class="lazyload" data-src="img/hh-icon.png" alt="Иконка hh.ru">
+                                </a>
+                            </div>
+                        </li>
+                    {{/each}}
+                </ul>
+                <button class="more-button button button--white">
+                    <span>показать больше</span>
+                    <svg>
+                        <use xlink:href="#link-arrow-icon"></use>
+                    </svg>
+                </button>
+            </div>
+        </section>
+
+    {{/content}}
+{{/extend}}
+
+<!--
+
+  @include breakpoint(tablet) {
+
+  }
+
+  @include breakpoint(small-tablet) {
+
+  }
+
+  @include breakpoint(mobile) {
+
+  }
+
+-->
