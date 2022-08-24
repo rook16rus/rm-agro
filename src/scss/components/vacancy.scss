@@ -1,6 +1,18 @@
 .vacancy {
   padding-bottom: 15rem;
 
+  @include breakpoint(tablet) {
+    padding-bottom: 12rem;
+  }
+
+  @include breakpoint(small-tablet) {
+    padding-bottom: 10rem;
+  }
+
+  @include breakpoint(mobile) {
+    padding-bottom: 8rem;
+  }
+
   .breadcrumbs {
     margin-bottom: 5.8rem;
 
@@ -54,6 +66,19 @@
     padding: 2rem 0;
     border-bottom: 1px solid var(--stroke-color);
 
+    @include breakpoint(tablet) {
+      align-items: stretch;
+    }
+
+    @include breakpoint(small-tablet) {
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    @include breakpoint(mobile) {
+      padding: 1.6rem 0 2rem;
+    }
+
     &:first-child {
       padding-top: 0;
     }
@@ -63,6 +88,10 @@
     display: flex;
     flex-direction: column;
     gap: 2rem;
+
+    @include breakpoint(mobile) {
+      gap: 1rem;
+    }
   }
 
   &__item-title {
@@ -73,6 +102,7 @@
     color: var(--title-color);
 
     @include breakpoint(tablet) {
+      max-width: 43rem;
       font-size: 2.8rem;
     }
 
@@ -92,13 +122,21 @@
     max-width: 52.5rem;
 
     font: var(--text-t4);
-
   }
 
   &__item-price-block {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include breakpoint(tablet) {
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      flex-direction: row;
+    }
   }
 
   &__item-price {
@@ -107,6 +145,15 @@
 
     font: var(--other);
     color: var(--accent-color);
+
+    @include breakpoint(tablet) {
+      margin-right: 0;
+      margin-left: 0;
+    }
+
+    @include breakpoint(mobile) {
+      text-transform: uppercase;
+    }
   }
 
   &__item-link {
@@ -119,13 +166,56 @@
     font: var(--text-t4);
     color: #F7F7F7;
 
+    @include breakpoint(tablet) {
+      height: 4.5rem;
+      padding: 0 1.2rem 0 1.7rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      height: 3.5rem;
+      padding: 0 1.5rem 0 1.7rem;
+    }
+
+    @include breakpoint(mobile) {
+      gap: 1rem;
+      height: 3rem;
+      padding: 0 2rem;
+    }
+
     img {
       width: 3.9rem;
       height: 3.9rem;
+
+      @include breakpoint(tablet) {
+        width: 3rem;
+        height: 3rem;
+      }
+
+      @include breakpoint(small-tablet) {
+        width: 2rem;
+        height: 2rem;
+      }
+
+      @include breakpoint(mobile) {
+        width: 1.5rem;
+        height: 1.5rem;
+      }
     }
   }
 
   .more-button {
     margin-top: 8.6rem;
+
+    @include breakpoint(tablet) {
+      margin-top: 6rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      margin-top: 4rem;
+    }
+
+    @include breakpoint(mobile) {
+      margin-top: 2rem;
+    }
   }
 }
