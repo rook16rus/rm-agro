@@ -2,21 +2,69 @@
   &__intro {
     padding-bottom: 10rem;
 
+    @include breakpoint(tablet) {
+      padding-bottom: 8rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      padding-bottom: 7rem;
+    }
+
+    @include breakpoint(mobile) {
+      padding-bottom: 6rem;
+    }
+
     .breadcrumbs {
       margin-bottom: 5.8rem;
+
+      @include breakpoint(tablet) {
+        margin-bottom: 4.6rem;
+      }
+
+      @include breakpoint(small-tablet) {
+        margin-bottom: 3.6rem;
+      }
+
+      @include breakpoint(mobile) {
+        margin-bottom: 2.6rem;
+      }
     }
 
     .main-titles {
       max-width: 151.5rem;
       margin-bottom: 7rem;
 
+      @include breakpoint(tablet) {
+        margin-bottom: 6rem;
+      }
+
+      @include breakpoint(small-tablet) {
+        margin-bottom: 5rem;
+      }
+
+      @include breakpoint(mobile) {
+        margin-bottom: 4rem;
+      }
+
       h1, h2 {
-        font-size: 30rem;
+        font: var(--title-h1);
       }
     }
 
     .numbers-slider {
       margin-top: 10rem;
+
+      @include breakpoint(tablet) {
+        margin-top: 8rem;
+      }
+
+      @include breakpoint(small-tablet) {
+        margin-top: 6rem;
+      }
+
+      @include breakpoint(mobile) {
+        margin-top: 5rem;
+      }
     }
   }
 
@@ -24,22 +72,56 @@
     padding: 9.3rem 0 18.6rem;
     background-color: #fff;
 
+    @include breakpoint(tablet) {
+      padding: 9rem 0 13rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      padding: 7rem 0;
+    }
+
+    @include breakpoint(mobile) {
+      padding: 6rem 0;
+    }
+
     .link-block {
       max-width: 46rem;
+
+      @include breakpoint(mobile) {
+        gap: 2rem;
+      }
     }
   }
 
   &__skill-wrapper {
     max-width: 131.6rem;
     margin-left: auto;
+
+    @include breakpoint(tablet) {
+      margin-top: 1.5rem;
+    }
   }
 
   &__skill-top {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    gap: 2rem;
+    gap: 3rem;
     margin-bottom: 5rem;
+
+    @include breakpoint(tablet) {
+      flex-direction: column;
+      margin-bottom: 4rem;
+      gap: 0;
+    }
+
+    @include breakpoint(small-tablet) {
+      margin-bottom: 3rem;
+    }
+
+    @include breakpoint(mobile) {
+      margin-bottom: 2rem;
+    }
   }
 
   &__skill-title {
@@ -49,6 +131,10 @@
     font: var(--title-h3);
     text-transform: uppercase;
     color: #000;
+
+    @include breakpoint(mobile) {
+      margin-bottom: 2rem;
+    }
   }
 
   &__skill-img {
@@ -59,6 +145,12 @@
 
     border-radius: 2rem;
     overflow: hidden;
+
+
+    @include breakpoint(mobile) {
+      padding-top: 68.9%;
+      margin-bottom: 5rem;
+    }
 
     img {
       position: absolute;
@@ -76,11 +168,19 @@
     align-items: flex-start;
     justify-content: space-between;
     gap: 2rem;
+
+    @include breakpoint(tablet) {
+      flex-direction: column-reverse;
+    }
   }
 
   &__skill-bottom-img-block {
     width: 100%;
     max-width: 52.7rem;
+
+    @include breakpoint(mobile) {
+      max-width: none;
+    }
   }
 
   &__skill-bottom-img {
@@ -90,6 +190,10 @@
 
     border-radius: 2rem;
     overflow: hidden;
+
+    @include breakpoint(mobile) {
+      padding-top: 68.9%;
+    }
 
     img {
       position: absolute;
@@ -117,13 +221,29 @@
   &__success {
     padding: 10rem 0 12rem;
 
+    @include breakpoint(tablet) {
+      padding: 8rem 0;
+    }
+
+    @include breakpoint(small-tablet) {
+      padding: 7rem 0;
+    }
+
+    @include breakpoint(mobile) {
+      padding: 6rem 0;
+    }
+
     .slider-navigation {
       position: absolute;
       top: 0;
-      right: 0rem;
+      right: 0;
       z-index: 1;
 
       flex-direction: column-reverse;
+
+      @include breakpoint(tablet) {
+        display: none;
+      }
     }
   }
 
@@ -131,12 +251,37 @@
     margin-left: 3.5rem;
     max-width: 134.7rem;
     overflow: visible;
+
+    cursor: default;
+
+    @include breakpoint(tablet) {
+      margin-left: 0;
+      margin-top: 1.5rem;
+      max-width: 70%;
+    }
+
+    @include breakpoint(small-tablet) {
+      max-width: 90%;
+    }
   }
 
   &__success-slide {
     display: grid;
     grid-template-columns: 52.7rem 1fr;
     gap: 4.2rem;
+
+    @include breakpoint(tablet) {
+      grid-template-columns: 1fr;
+      gap: 3.5rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      gap: 3rem;
+    }
+
+    @include breakpoint(mobile) {
+      gap: 2rem;
+    }
   }
 
   &__success-img {
@@ -147,6 +292,15 @@
 
     border-radius: 2rem;
     overflow: hidden;
+
+    @include breakpoint(small-tablet) {
+      margin-bottom: 2rem;
+    }
+
+    @include breakpoint(mobile) {
+      padding-top: 105.88%;
+      margin-bottom: 1rem;
+    }
 
     img {
       position: absolute;
@@ -166,8 +320,17 @@
     font: var(--text-t1);
     color: var(--title-color);
 
+    @include breakpoint(mobile) {
+      margin-bottom: 0.5rem;
+    }
+
     span {
       display: block;
+
+      @include breakpoint(tablet) {
+        display: inline-block;
+        margin-right: 0.2rem;
+      }
     }
   }
 
@@ -182,6 +345,10 @@
     font: var(--title-h3);
     text-transform: uppercase;
     color: var(--title-color);
+
+    @include breakpoint(mobile) {
+      margin-bottom: 1.5rem;
+    }
   }
 
   &__success-quote {
@@ -193,6 +360,20 @@
 
     font: var(--text-t2);
     color: var(--title-color);
+
+    @include breakpoint(tablet) {
+      padding: 2.8rem 0 0 3.2rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      padding: 2.2rem 0 0 2.8rem;
+      margin-bottom: 2rem;
+    }
+
+    @include breakpoint(mobile) {
+      padding: 1.2rem 0 0 2.2rem;
+      margin-bottom: 1.5rem;
+    }
 
     &::before {
       content: '';
@@ -206,6 +387,21 @@
 
       background: url("../img/quotes-green.svg") no-repeat center;
       background-size: cover;
+
+      @include breakpoint(tablet) {
+        width: 6rem;
+        height: 5.5rem;
+      }
+
+      @include breakpoint(small-tablet) {
+        width: 4rem;
+        height: 3.5rem;
+      }
+
+      @include breakpoint(mobile) {
+        width: 3rem;
+        height: 2.5rem;
+      }
     }
   }
 
@@ -217,6 +413,10 @@
     margin-bottom: 2rem;
 
     font: var(--text-t2);
+
+    @include breakpoint(mobile) {
+      margin-bottom: 1rem;
+    }
   }
 
   &__success-button {
@@ -235,6 +435,18 @@
 
   &__care {
     padding-bottom: 15rem;
+
+    @include breakpoint(tablet) {
+      padding-bottom: 12rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      padding-bottom: 10rem;
+    }
+
+    @include breakpoint(mobile) {
+      padding-bottom: 8rem;
+    }
   }
 
   &__care-wrapper {
@@ -243,9 +455,25 @@
     align-items: flex-start;
     max-width: 131.6rem;
     margin-left: auto;
+
+    @include breakpoint(tablet) {
+      margin-top: 1.5rem;
+    }
   }
 
   &__care-button {
     margin-top: 4.4rem;
+
+    @include breakpoint(tablet) {
+      margin-top: 3.5rem;
+    }
+
+    @include breakpoint(small-tablet) {
+      margin-top: 3rem;
+    }
+
+    @include breakpoint(mobile) {
+      margin-top: 2rem;
+    }
   }
 }
