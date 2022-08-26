@@ -98,6 +98,10 @@
         @include breakpoint(tablet) {
           max-width: 48%;
         }
+
+        @media (max-width: 340px) {
+          min-width: 13rem;
+        }
       }
 
       .team__item-img {

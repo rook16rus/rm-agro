@@ -19,7 +19,7 @@ export default function activitiesSlider() {
     });
 
     const swiper = new Swiper('.js-activities-slider', {
-        slidesPerView: "auto",
+        slidesPerView: 1.1,
         spaceBetween: 25,
         autoHeight: true,
         thumbs: {
@@ -41,5 +41,4 @@ export default function activitiesSlider() {
         contents[swiper.activeIndex] ? contents[swiper.activeIndex].classList.add('active') : null;
     })
 
-    swiper.snapGrid[swiper.snapGrid.length - 1] = swiper.slidesGrid[swiper.slidesGrid.length - 1];
 }

@@ -204,18 +204,24 @@
   }
 
   .more-button {
+    max-width: 106.3rem;
     margin-top: 8.6rem;
+
+    font-size: 2rem;
 
     @include breakpoint(tablet) {
       margin-top: 6rem;
+      font-size: 1.8rem;
     }
 
     @include breakpoint(small-tablet) {
       margin-top: 4rem;
+      font-size: 1.6rem;
     }
 
     @include breakpoint(mobile) {
       margin-top: 2rem;
+      font-size: 1.4rem;
     }
   }
 }
