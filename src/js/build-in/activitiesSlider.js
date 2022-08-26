@@ -1,6 +1,6 @@
-import {Swiper, Navigation, EffectFade, Autoplay, Pagination, HashNavigation, Grid, FreeMode, Thumbs} from "swiper";
+import {Swiper, Navigation, EffectFade, Autoplay, Pagination, HashNavigation, Grid, FreeMode, Thumbs, SnapPlugin, SnapGrid, SlideGrid} from "swiper";
 
-Swiper.use([Navigation, EffectFade, Autoplay, Pagination, HashNavigation, Grid, FreeMode, Thumbs]);
+Swiper.use([Navigation, EffectFade, Autoplay, Pagination, HashNavigation, Grid, FreeMode, Thumbs, SnapPlugin, SnapGrid, SlideGrid]);
 
 export default function activitiesSlider() {
     const slider = document.querySelector('.js-activities-slider');
@@ -40,4 +40,6 @@ export default function activitiesSlider() {
         contents.forEach(item => item.classList.remove('active'));
         contents[swiper.activeIndex] ? contents[swiper.activeIndex].classList.add('active') : null;
     })
+
+    swiper.snapGrid[swiper.snapGrid.length - 1] = swiper.slidesGrid[swiper.slidesGrid.length - 1];
 }

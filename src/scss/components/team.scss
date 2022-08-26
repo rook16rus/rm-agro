@@ -94,6 +94,10 @@
         width: 100%;
         max-width: 38rem;
         min-width: 16.4rem;
+
+        @include breakpoint(tablet) {
+          max-width: 48%;
+        }
       }
 
       .team__item-img {
@@ -106,6 +110,7 @@
       }
 
       .team__item-content {
+        flex-grow: 1;
         padding: 5rem 1.1rem 3.5rem 3.5rem;
 
         border-radius: 0 2rem 2rem 0;

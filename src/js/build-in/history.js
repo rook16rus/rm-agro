@@ -25,8 +25,8 @@ export default function history() {
     });
 
     const numbersSwiper = new Swiper('.company__history-numbers-slider', {
-        effect: "fade",
         slidesPerView: 1,
+        effect: "fade",
         fadeEffect: {
             crossFade: true
         },
@@ -41,6 +41,10 @@ export default function history() {
 
     const contentSwiper = new Swiper('.company__history-content-slider', {
         slidesPerView: "auto",
+        effect: "fade",
+        fadeEffect: {
+            crossFade: true
+        },
         thumbs: {
             swiper: numbersSubSwiper
         },

@@ -519,6 +519,8 @@
     width: auto;
     margin: 0;
 
+    overflow: visible;
+
     @include breakpoint(tablet) {
       display: none;
     }
@@ -649,6 +651,7 @@
   }
 
   &__history-content-img-block {
+    margin-top: auto;
     max-width: 61.2rem;
 
     border-radius: 2rem;
