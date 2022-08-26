@@ -172,6 +172,7 @@
       }
 
       .news__meta {
+        margin-top: auto;
         margin-bottom: 3.6rem;
 
         @include breakpoint(tablet) {
@@ -180,10 +181,6 @@
 
         @include breakpoint(small-tablet) {
           margin-bottom: 0;
-        }
-
-        @include breakpoint(mobile) {
-
         }
       }
 

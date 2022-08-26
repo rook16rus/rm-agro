@@ -1,12 +1,11 @@
 export default function careerMoreButton() {
     const buttons = document.querySelectorAll('.career__success-button');
-    const textContainers = document.querySelectorAll('.career__success-text');
+    const textContainers = document.querySelectorAll('.career__success-text-block');
 
     textContainers.forEach(container => {
-        const paragraphs = container.querySelectorAll('p:not(:first-child)');
-        paragraphs.forEach(paragraph => paragraph.classList.add('visually-hidden'));
+        const hiddenText = document.querySelector('.career__success-hidden-text');
 
-        if (paragraphs.length <= 0) {
+        if (!hiddenText.textContent.trim()) {
             container.nextElementSibling.remove();
         }
     })
@@ -14,7 +13,7 @@ export default function careerMoreButton() {
     buttons.forEach(button => {
         button.addEventListener('click', () => {
             const textContainer = button.previousElementSibling;
-            textContainer.querySelectorAll('p:not(:first-child)').forEach(paragraph => paragraph.classList.remove('visually-hidden'));
+            textContainer.querySelector('.career__success-hidden-text').classList.remove('visually-hidden');
 
             button.remove()
         })

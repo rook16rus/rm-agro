@@ -147,6 +147,78 @@
         grid-column: span 1;
       }
     }
+
+    &:nth-child(12n + 1){
+      .catalog__item-img {
+        background: radial-gradient(73.54% 73.54% at 49.02% 56.29%, #EEE1D9 0%, #DDC6BA 100%);
+      }
+    }
+
+    &:nth-child(12n + 2) {
+      .catalog__item-img {
+        background: radial-gradient(50% 109.44% at 54.12% 50%, #EBEDE2 0%, #CDD1BC 100%);
+      }
+    }
+
+    &:nth-child(12n + 3) {
+      .catalog__item-img {
+        background: radial-gradient(73.54% 73.54% at 49.02% 56.29%, #FFF0E8 0%, #E4CDC0 100%);
+      }
+    }
+
+    &:nth-child(12n + 4) {
+      .catalog__item-img {
+        background: radial-gradient(62.43% 62.43% at 50% 50%, #D8D8D8 0%, #CAC8D3 100%);
+      }
+    }
+
+    &:nth-child(12n + 5) {
+      .catalog__item-img {
+        background: radial-gradient(50% 50% at 50% 50%, #E3D2A9 0%, #DFCA98 100%);
+      }
+    }
+
+    &:nth-child(12n + 6) {
+      .catalog__item-img {
+        background: radial-gradient(50% 50% at 50% 50%, #DDE1F4 0%, #C9CFF1 100%);
+      }
+    }
+
+    &:nth-child(12n + 7){
+      .catalog__item-img {
+        background: radial-gradient(50% 109.44% at 54.12% 50%, #EBEDE2 0%, #CDD1BC 100%);
+      }
+    }
+
+    &:nth-child(12n + 8) {
+      .catalog__item-img {
+        background: radial-gradient(73.54% 73.54% at 49.02% 56.29%, #EEE1D9 0%, #DDC6BA 100%);
+      }
+    }
+
+    &:nth-child(12n + 9) {
+      .catalog__item-img {
+        background: radial-gradient(50% 50% at 50% 50%, #E3D2A9 0%, #DFCA98 100%);
+      }
+    }
+
+    &:nth-child(12n + 10) {
+      .catalog__item-img {
+        background: radial-gradient(50% 50% at 50% 50%, #E3D2A9 0%, #DFCA98 100%);
+      }
+    }
+
+    &:nth-child(12n + 11) {
+      .catalog__item-img {
+        background: radial-gradient(50% 50% at 50% 50%, #DDE1F4 0%, #C9CFF1 100%);
+      }
+    }
+
+    &:nth-child(12n + 12) {
+      .catalog__item-img {
+        background: radial-gradient(50% 109.44% at 54.12% 50%, #EBEDE2 0%, #CDD1BC 100%);
+      }
+    }
   }
 
   &__item-link {

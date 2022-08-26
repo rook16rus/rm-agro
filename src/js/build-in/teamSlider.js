@@ -7,13 +7,19 @@ export default function teamSlider() {
 
     /* Инициализация свайперов */
 
-    swipers.forEach(swiper => {
-        new Swiper(swiper, {
+    swipers.forEach(slider => {
+        const swiper = new Swiper(slider, {
             loop: true,
             slidesPerView: "auto",
             spaceBetween: 15,
+            speed: 6000,
             autoplay: {
-                enabled: false
+                enabled: true,
+                delay: 0,
+                disableOnInteraction: false,
+                reverseDirection: !!slider.dataset.reverse,
+                pauseOnMouseEnter: true,
+                waitForTransition: false
             },
             breakpoints: {
                 769: {
@@ -24,14 +30,6 @@ export default function teamSlider() {
                         momentum: false
                     },
                     speed: 6000,
-                    autoplay: {
-                        enabled: true,
-                        delay: 0,
-                        disableOnInteraction: false,
-                        reverseDirection: !!swiper.dataset.reverse,
-                        pauseOnMouseEnter: true,
-                        waitForTransition: false
-                    },
                     spaceBetween: 30
                 },
                 1024: {
@@ -39,6 +37,8 @@ export default function teamSlider() {
                 }
             },
         })
+
+        if (matchMedia('(max-width: 640px)').matches) swiper.autoplay.stop();
     });
 
     /* Ховер эффект */

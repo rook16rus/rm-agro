@@ -3,6 +3,9 @@ import {Swiper, Navigation, EffectFade, Autoplay, Pagination, HashNavigation, Gr
 Swiper.use([Navigation, EffectFade, Autoplay, Pagination, HashNavigation, Grid, FreeMode, Thumbs]);
 
 export default function gallerySlider() {
+    const gallerySlider  = document.querySelector('.modal-gallery__slider-container');
+    if (!gallerySlider) return;
+
     /* Инициализация слайдеров */
 
     const subSwiper = new Swiper('.modal-gallery__sub-slider', {
@@ -29,13 +32,6 @@ export default function gallerySlider() {
         }
     })
 
-    /* Синхронизация слайдера в модальном окне с нажатой карточкой */
-
-    const images = document.querySelectorAll('.media__list--single .media__item');
-    images.forEach((img, index) => {
-        img.addEventListener('click', () => swiper.slideTo(index, 0))
-    })
-
     /* Lazy load для iframe */
 
     const iframes = document.querySelectorAll('.modal-gallery iframe')
@@ -48,6 +44,32 @@ export default function gallerySlider() {
             currentIframe.src = 'https://www.youtube.com/embed/Z3TWuCm4ncI';
         }
     })
+
+    /* Смена ссылки на скачивание и размера файла при свайпе */
+
+    const sizeDisplay = document.querySelector('.modal-gallery__size');
+    const downloadLinkDisplay = document.querySelector('.modal-gallery__download');
+    const downloadLinkDesc = document.querySelector('.modal-gallery__download span span');
+
+    swiper.on('slideChange', changeModalContent);
+
+    /* Синхронизация слайдера в модальном окне с нажатой карточкой */
+
+    const images = document.querySelectorAll('.media__list--single .media__item');
+    images.forEach((img, index) => {
+        img.addEventListener('click', () => swiper.slideTo(index, 0))
+        changeModalContent();
+    })
+
+    function changeModalContent() {
+        const currentGraphic = swiper.slides[swiper.activeIndex].querySelector('img, iframe');
+        if (!currentGraphic) return;
+
+        (currentGraphic.tagName.toLowerCase() === 'iframe') ? downloadLinkDesc.innerHTML = ' видео' : downloadLinkDesc.innerHTML = ' фотографию';
+
+        sizeDisplay.innerHTML = currentGraphic.dataset.size;
+        downloadLinkDisplay.setAttribute('download', currentGraphic.dataset.src);
+    }
 }
 
 window.initGallerySlider = gallerySlider;

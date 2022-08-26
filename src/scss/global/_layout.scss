@@ -682,7 +682,6 @@
     font: var(--text-t2);
     font-variant-numeric: lining-nums;
     color: rgba(251, 251, 251, 1);
-    text-transform: uppercase;
 
     @include breakpoint(tablet) {
         height: 5rem;

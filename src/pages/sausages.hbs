@@ -12,9 +12,9 @@
                     </div>
                     {{> download-link }}
                 </div>
-                <ul class="catalog__list catalog__list--meat">
+                <ul class="catalog__list">
                     {{#each sausages }}
-                        <li class="catalog__item{{#if menuCard }} catalog__item--menu{{/if}}"{{#if menuCard }} style="background: url('img/meat-menu-bg.png') no-repeat center; background-size: cover"{{/if}}>
+                        <li class="catalog__item{{#if menuCard }} catalog__item--menu{{/if}}"{{#if menuCard }} style="background: #DDC6BA url('img/meat-menu-bg.png') no-repeat center; background-size: cover"{{/if}}>
                         {{#if menuCard }}
                                 <a class="catalog__menu-item-link" href="#menu">
                                     <h3 class="catalog__menu-item-title">субпродукты</h3>
@@ -37,7 +37,7 @@
                                 </a>
                         {{else}}
                                 <a class="catalog__item-link" href="#product">
-                                    <div class="catalog__item-img" style="background: {{this.background}}">
+                                    <div class="catalog__item-img">
                                         <img class="lazyload" data-src="{{this.img}}" alt="Фото колбаски">
                                     </div>
                                     <div class="catalog__item-content">

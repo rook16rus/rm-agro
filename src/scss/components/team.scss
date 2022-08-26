@@ -85,7 +85,7 @@
     flex-direction: column;
     gap: 2rem;
 
-    &:first-child {
+    &--large {
       grid-column: span 2;
       flex-direction: row;
       gap: 0;
@@ -217,9 +217,27 @@
 
     font: var(--text-t1);
     color: var(--title-color);
+  }
 
-    span {
-      display: block;
+  &__item-surname {
+    display: block;
+
+    @include breakpoint(mobile) {
+      display: inline;
+    }
+  }
+
+  &__item-name {
+    @include breakpoint(mobile) {
+      display: none;
+    }
+  }
+
+  &__item-initials {
+    display: none;
+
+    @include breakpoint(mobile) {
+      display: inline;
     }
   }
 

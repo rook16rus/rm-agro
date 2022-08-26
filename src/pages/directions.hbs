@@ -9,6 +9,7 @@
                     {{#each directions }}
                         <li class="directions__item">
                             <a class="directions__item-link" href="directions-single.html" style="background: {{this.color}} url('{{this.bg}}') no-repeat center; background-size: cover">
+                                <div class="directions__item-overlay" style="background-color: #000; opacity: 0.1"></div>
                                 <img class="directions__item-img lazyload" data-src="{{this.img}}" alt="Фото направления">
                                 <span class="directions__item-text">
                                     <span>{{{this.text}}}</span>

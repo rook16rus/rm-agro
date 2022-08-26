@@ -201,12 +201,20 @@
     text-transform: uppercase;
     color: var(--title-color);
 
+    transition: 0.3s;
+
     @include breakpoint(small-tablet) {
       min-height: 3.2rem;
     }
 
     @include breakpoint(mobile) {
       min-height: 3rem;
+    }
+
+    &:hover {
+      background-color: rgba(27, 80, 26, 0.1);
+      border-color: rgba(27, 80, 26, 0.1);
+      color: var(--accent-color);
     }
   }
 

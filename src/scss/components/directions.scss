@@ -55,6 +55,15 @@
       gap: 2rem;
     }
   }
+  &__item-overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+
+    width: 100%;
+    height: 100%;
+  }
 
   &__item-link {
     position: relative;

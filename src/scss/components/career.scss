@@ -405,7 +405,7 @@
     }
   }
 
-  &__success-text {
+  &__success-text-block {
     display: flex;
     flex-direction: column;
     gap: 1.6rem;
@@ -417,6 +417,12 @@
     @include breakpoint(mobile) {
       margin-bottom: 1rem;
     }
+  }
+
+  &__success-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
   }
 
   &__success-button {

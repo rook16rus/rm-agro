@@ -81,6 +81,18 @@
     }
   }
 
+  &__item {
+    min-height: 50rem;
+
+    @include breakpoint(tablet) {
+      min-height: 37rem;
+    }
+
+    @include breakpoint(mobile) {
+      min-height: 28rem;
+    }
+  }
+
   &__item-img {
     position: relative;
 

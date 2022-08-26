@@ -57,6 +57,7 @@
     min-width: 0;
     margin: 6rem 0;
     padding: 5rem 4rem 5rem 5rem;
+    min-height: 50rem;
 
     background-color: var(--light-bg-color);
     border-radius: 2rem;
@@ -703,6 +704,8 @@
 
     font: var(--text-t3);
     color: var(--text-color);
+
+    cursor: pointer;
 
     svg {
       width: 2.8rem;
