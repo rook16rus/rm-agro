@@ -1,0 +1,147 @@
+<div class="loader">
+    <div class="loader__text">
+        <span class="loader__number-block">
+            <div class="loader__largest-number">100</div>
+            <span class="loader__number active">1</span>
+            <span class="loader__number">5</span>
+        </span>%
+    </div>
+</div>
+
+<style>
+    .loader {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 600;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        background-color: #395937;
+    }
+
+    .loader__svg {
+        position: absolute;
+        left: 0;
+        top: 0;
+
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .loader__text {
+        position: absolute;
+        top: 19.3rem;
+        left: 5rem;
+
+        padding-top: 0.5rem;
+
+        clip-path: inset(0 0 0 0);
+        overflow: hidden;
+
+        font: 400 46rem/90% 'Oniks';
+        color: #fff;
+
+        transition: 1s ease-in;
+    }
+
+    .loader__text.hide {
+        clip-path: inset(0 100% 0 0);
+    }
+
+    @media (max-width: 1024px) {
+        .loader__text, .loader__largest-number {
+            font-size: 25rem;
+        }
+    }
+
+    @media (max-width: 640px) {
+        .loader__text, .loader__largest-number {
+            font-size: 15rem;
+        }
+    }
+
+    @media (max-width: 350px) {
+        .loader__text, .loader__largest-number {
+            font-size: 12rem;
+        }
+    }
+
+    .loader__largest-number {
+        position: relative;
+
+        opacity: 1;
+        visibility: hidden;
+
+        font: 400 46rem/90% 'Oniks';
+    }
+
+    .loader__number-block {
+        position: relative;
+
+        display: inline-flex;
+        justify-content: flex-end;
+    }
+
+    .loader__number {
+        position: absolute;
+        top: 120%;
+        right: 0;
+
+        transition: 0.3s;
+    }
+
+    .loader__number.active {
+        top: 0;
+        transition: 0.3s;
+    }
+
+    .loader__number.hide {
+        top: -120%;
+        transition: 0.3s;
+    }
+
+    .animatable .loader {
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity .4s ease .4s, visibility 0s linear .8s;
+    }
+</style>
+
+<script>
+    const text = document.querySelector('.loader__text');
+    const numberDisplay = document.querySelector('.loader__number');
+    const numberBlock = document.querySelector('.loader__number-block');
+    let timerId;
+    let count = 5;
+
+    function moveUpNumber() {
+        const hideNumber = document.querySelector('.loader__number.hide');
+        if (hideNumber) hideNumber.remove();
+
+        const activeNumber = document.querySelector('.loader__number.active:not(.hide)');
+        if (activeNumber) activeNumber.classList.add('hide');
+
+
+        const number = document.querySelector('.loader__number:not(.active):not(.hide)');
+        if (number) number.classList.add('active');
+
+        const newNumber = document.createElement('span');
+        newNumber.classList.add('loader__number');
+        numberBlock.append(newNumber);
+
+        count += 10;
+        if (count >= 100) {
+            newNumber.innerHTML = '100';
+            clearInterval(timerId);
+        } else {
+            newNumber.innerHTML = count;
+        }
+    }
+
+    timerId = setInterval(moveUpNumber, 1000);
+</script>
