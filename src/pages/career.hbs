@@ -8,7 +8,7 @@
                 {{> section-header title='работа в рм агро' dot=true }}
             </div>
             <div class="narrow-container">
-                <h2>Главная ценность нашей компании — это команда из 13 000 квалифицированных и преданных своему делу
+                <h2>Главная ценность нашей компании — это&nbsp;команда из 13 000 квалифицированных и преданных своему делу
                     сотрудников</h2>
                 <p>
                     Мы создаём новые рабочие места, обеспечиваем стабильную занятость, достойную заработную плату,
@@ -99,7 +99,12 @@
                 {{> section-header title='мы заботимся о вас' dot=true }}
                 <div class="career__care-wrapper">
                     {{> advantages-list data=care }}
-                    <a class="career__care-button button button--white" href="vacancy.html">смотреть вакансии</a>
+                    <a class="career__care-button button button--white" href="vacancy.html">
+                        <span>смотреть вакансии</span>
+                        <svg>
+                            <use xlink:href="#link-arrow-icon"></use>
+                        </svg>
+                    </a>
                 </div>
             </div>
         </section>

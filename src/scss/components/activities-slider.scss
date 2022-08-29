@@ -32,20 +32,25 @@
       }
     }
 
-    .activities-slider__img {
+    .activities-slider__img-block {
       display: none;
 
       @include breakpoint(small-tablet) {
-        position: static;
+        position: relative;
+        top: 0;
+        left: 0;
 
         display: block;
         width: 100%;
-        aspect-ratio: 301 / 195;
         margin-bottom: 2rem;
 
         border-radius: 8rem 2rem 8rem 2rem;
         opacity: 1;
       }
+    }
+
+    .activities-slider__img {
+      padding-top: 64.78%;
     }
 
     div.link-block {
@@ -79,7 +84,8 @@
 
     &.active {
       z-index: -1;
-      .activities-slider__img {
+
+      .activities-slider__img-block {
         width: 91.3rem;
 
         opacity: 1;
@@ -127,17 +133,16 @@
     }
   }
 
-  &__img {
+  &__img-block {
     position: absolute;
     left: 0;
     bottom: 0;
 
     width: 0;
-    aspect-ratio: 913 / 588;
 
     border-radius: 30rem 2rem 30rem 2rem;
-    opacity: 0;
     overflow: hidden;
+    opacity: 0;
 
     transition: width 0s 0.3s, opacity 0.3s;
 
@@ -152,6 +157,11 @@
       margin-bottom: 1rem;
       margin-left: 1rem;
     }
+  }
+
+  &__img {
+    width: 100%;
+    padding-top: 64.40%;
 
     img {
       position: absolute;
@@ -166,10 +176,8 @@
       border-radius: 30rem 2rem 30rem 2rem;
 
       @include breakpoint(tablet) {
-        position: static;
         border-radius: 17rem 2rem 17rem 2rem;
       }
-
     }
   }
 
@@ -184,6 +192,7 @@
     @include breakpoint(tablet) {
       transform: none;
       top: 65%;
+      left: 0;
 
       max-width: 46rem;
     }

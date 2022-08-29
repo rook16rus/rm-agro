@@ -31,7 +31,7 @@
     justify-content: center;
     align-items: center;
     width: 5rem;
-    aspect-ratio: 1 / 1;
+    height: 5rem;
 
     border-radius: 50%;
     border: 1px solid rgba(17, 17, 17, 0.3);
@@ -42,10 +42,12 @@
 
     @include breakpoint(small-tablet) {
       width: 4rem;
+      height: 4rem;
     }
 
     @include breakpoint(mobile) {
       width: 3.6rem;
+      height: 3.6rem;
     }
 
     &:last-child {

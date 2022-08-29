@@ -69,7 +69,7 @@
         max-width: 79rem;
     }
 
-    p {
+    & > p {
         margin-bottom: 2rem;
         font: var(--text-t2);
     }
@@ -145,6 +145,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+            object-position: top;
         }
     }
 
@@ -643,17 +644,17 @@
 
     border-radius: 4rem;
 
-    font: var(--medium) 3rem/120% var(--main-ff);
+    font: var(--text-t2);
     text-transform: uppercase;
     color: #38271F;
 
     @include breakpoint(tablet) {
         height: 5rem;
-        font-size: 2.4rem;
+        font-size: 1.8rem;
     }
 
     @include breakpoint(small-tablet) {
-        font-size: 2rem;
+        font-size: 1.6rem;
     }
 
     @include breakpoint(mobile) {

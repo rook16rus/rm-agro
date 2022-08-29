@@ -10,7 +10,7 @@
   }
 
   @include breakpoint(mobile) {
-    padding: 5rem 0 1.8rem;
+    padding: 5rem 0 1rem;
   }
 
   &--none {
@@ -64,7 +64,7 @@
       border-bottom: 1px solid rgba(60, 60, 58, 0.2);
 
       @include breakpoint(tablet) {
-        padding-bottom: 3rem;
+        padding-bottom: 2rem;
       }
 
       @include breakpoint(small-tablet) {
@@ -74,7 +74,7 @@
     }
 
     &:last-child {
-      padding-top: 3rem;
+      padding-top: 2rem;
     }
   }
 
@@ -181,10 +181,14 @@
   }
 
   &__confidence {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
     width: 100%;
-    max-width: 73.2rem;
+    max-width: 55rem;
 
-    font: var(--text-t4);
+    font: var(--text-t5);
     font-variant-numeric: lining-nums;
     color: #414141;
 
@@ -194,17 +198,23 @@
     }
 
     @include breakpoint(small-tablet) {
+      flex-direction: column;
       line-height: 1.7;
-      margin-bottom: 1.8rem;
+      margin-bottom: 2rem;
     }
   }
 
   &__developer {
     display: flex;
     gap: 2.2rem;
+    margin-left: auto;
 
     font: var(--text-t4);
     color: #414141;
+
+    @include breakpoint(small-tablet) {
+      margin-left: 0;
+    }
 
     &:hover {
       color: var(--accent-color);

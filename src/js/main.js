@@ -37,6 +37,7 @@ import gallerySlider from "./build-in/gallerySlider";
 import successSlider from "./build-in/successSlider";
 import careerMoreButton from "./build-in/careerMoreButton";
 import fileInputs from "./build-in/fileInputs";
+import resetForms from "./build-in/resetForms";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -76,6 +77,7 @@ document.addEventListener('DOMContentLoaded', function () {
     successSlider();
     careerMoreButton();
     fileInputs();
+    resetForms()
 });
 
 document.addEventListener('lazyloaded', () => {

@@ -181,10 +181,12 @@
 
   &__types-tags {
     margin: 0;
+
     .swiper-wrapper {
       display: flex;
       flex-wrap: wrap;
       gap: 1.5rem;
+      padding-bottom: 2px;
 
       @include breakpoint(small-tablet) {
         flex-wrap: nowrap;
