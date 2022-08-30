@@ -1,4 +1,5 @@
 import './build-in/lazyload';
+
 import detectTouch from './build-in/detectTouch';
 import setScrollbarWidth from './build-in/setScrollbarWidth';
 import anchorLinks from './build-in/anchorLinks';

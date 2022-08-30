@@ -7,6 +7,13 @@ export default function teamSlider() {
 
     /* Инициализация свайперов */
 
+    if (matchMedia('(max-width: 767px)').matches) {
+        const mobileSwiper = new Swiper('.company__mobile-team-slider', {
+            slidesPerView: "auto",
+            spaceBetween: 15,
+        })
+    }
+
     swipers.forEach(slider => {
         const swiper = new Swiper(slider, {
             loop: true,
@@ -37,8 +44,6 @@ export default function teamSlider() {
                 }
             },
         })
-
-        if (matchMedia('(max-width: 640px)').matches) swiper.autoplay.stop();
     });
 
     /* Ховер эффект */

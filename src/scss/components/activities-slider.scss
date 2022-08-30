@@ -35,7 +35,7 @@
     .activities-slider__img-block {
       display: none;
 
-      @include breakpoint(small-tablet) {
+      @include breakpoint(tablet) {
         position: relative;
         top: 0;
         left: 0;
@@ -56,7 +56,7 @@
     div.link-block {
       display: none;
 
-      @include breakpoint(small-tablet) {
+      @include breakpoint(tablet) {
         position: static;
         transform: translateY(0);
 
@@ -78,7 +78,7 @@
     height: 100%;
     margin-left: 3.5rem;
 
-    @include breakpoint(small-tablet) {
+    @include breakpoint(tablet) {
       display: none;
     }
 
