@@ -32,45 +32,57 @@
   ],
   "media": [
     {
-      "img": "img/media-1.jpg"
+      "img": "img/media-1.jpg",
+      "imgWebp": "img/media-1.webp"
     },
     {
-      "img": "img/media-2.jpg"
+      "img": "img/media-2.jpg",
+      "imgWebp": "img/media-2.webp"
     },
     {
-      "img": "img/media-3.jpg"
+      "img": "img/media-3.jpg",
+      "imgWebp": "img/media-3.webp"
     },
     {
       "img": "img/media-4.jpg",
+      "imgWebp": "img/media-4.webp",
       "video": true
     },
     {
       "img": "img/media-4.jpg",
+      "imgWebp": "img/media-4.webp",
       "video": true
     },
     {
       "img": "img/media-4.jpg",
+      "imgWebp": "img/media-4.webp",
       "video": true
     },
     {
-      "img": "img/media-1.jpg"
+      "img": "img/media-1.jpg",
+      "imgWebp": "img/media-1.webp"
     },
     {
-      "img": "img/media-2.jpg"
+      "img": "img/media-2.jpg",
+      "imgWebp": "img/media-2.webp"
     },
     {
-      "img": "img/media-3.jpg"
+      "img": "img/media-3.jpg",
+      "imgWebp": "img/media-3.webp"
     },
     {
       "img": "img/media-4.jpg",
+      "imgWebp": "img/media-4.webp",
       "video": true
     },
     {
       "img": "img/media-4.jpg",
+      "imgWebp": "img/media-4.webp",
       "video": true
     },
     {
       "img": "img/media-4.jpg",
+      "imgWebp": "img/media-4.webp",
       "video": true
     }
   ]

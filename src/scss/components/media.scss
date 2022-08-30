@@ -198,12 +198,36 @@
         gap: 2rem;
       }
 
+      .media__item {
+        min-height: 36.6rem;
+
+        @include breakpoint(tablet) {
+          min-height: 31rem;
+        }
+
+        @include breakpoint(small-tablet) {
+          min-height: 26rem;
+        }
+
+        @include breakpoint(mobile) {
+          min-height: 21.1rem;
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
       .media__item-link {
         min-height: 0;
       }
 
       .media__item-img {
+        height: 100%;
         padding-top: 71.76%;
+        margin-bottom: 0;
       }
     }
   }

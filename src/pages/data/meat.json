@@ -1,5 +1,6 @@
 {
   "headerMod": "header--dark",
+  "catalogModal": true,
   "breadcrumbs": [
     {
       "href": "index.html",
@@ -9,6 +10,33 @@
       "href": "sausages.html",
       "text": "Каталог",
       "active": true
+    }
+  ],
+  "guarantee": [
+    {
+      "img": "img/guarantee-1.svg",
+      "text": "от +0 до +6 С"
+    },
+    {
+      "img": "img/guarantee-2.svg",
+      "text": "30 суток"
+    }
+  ],
+  "serving": [
+    {
+      "img": "img/serving-1.jpg"
+    },
+    {
+      "img": "img/serving-2.jpg"
+    },
+    {
+      "img": "img/serving-3.jpg"
+    },
+    {
+      "img": "img/serving-1.jpg"
+    },
+    {
+      "img": "img/serving-2.jpg"
     }
   ],
   "filter": [

@@ -32,42 +32,107 @@
   ],
   "media": [
     {
-      "img": "img/media-1.jpg"
+      "img": "img/media-1.jpg",
+      "imgWebp": "img/media-1.webp"
     },
     {
-      "img": "img/media-1.jpg"
+      "img": "img/media-1.jpg",
+      "imgWebp": "img/media-1.webp"
     },
     {
-      "img": "img/media-1.jpg"
+      "img": "img/media-1.jpg",
+      "imgWebp": "img/media-1.webp"
     },
     {
-      "img": "img/media-1.jpg"
+      "img": "img/media-1.jpg",
+      "imgWebp": "img/media-1.webp"
     },
     {
-      "img": "img/media-1.jpg"
+      "img": "img/media-1.jpg",
+      "imgWebp": "img/media-1.webp"
     },
     {
-      "img": "img/media-1.jpg"
+      "img": "img/media-1.jpg",
+      "imgWebp": "img/media-1.webp"
     },
     {
-      "img": "img/media-1.jpg"
+      "img": "img/media-1.jpg",
+      "imgWebp": "img/media-1.webp"
     },
     {
-      "img": "img/media-1.jpg"
+      "img": "img/media-1.jpg",
+      "imgWebp": "img/media-1.webp"
     },
     {
-      "img": "img/media-1.jpg"
+      "img": "img/media-1.jpg",
+      "imgWebp": "img/media-1.webp"
     },
     {
       "img": "img/media-4.jpg",
+      "imgWebp": "img/media-1.webp",
       "video": true
     },
     {
       "img": "img/media-4.jpg",
+      "imgWebp": "img/media-1.webp",
       "video": true
     },
     {
       "img": "img/media-4.jpg",
+      "imgWebp": "img/media-1.webp",
+      "video": true
+    }
+  ],
+  "mediaModal": [
+    {
+      "img": "img/media-1.jpg",
+      "imgWebp": "img/media-1.webp"
+    },
+    {
+      "img": "img/media-1.jpg",
+      "imgWebp": "img/media-1.webp"
+    },
+    {
+      "img": "img/media-1.jpg",
+      "imgWebp": "img/media-1.webp"
+    },
+    {
+      "img": "img/media-1.jpg",
+      "imgWebp": "img/media-1.webp"
+    },
+    {
+      "img": "img/media-1.jpg",
+      "imgWebp": "img/media-1.webp"
+    },
+    {
+      "img": "img/media-1.jpg",
+      "imgWebp": "img/media-1.webp"
+    },
+    {
+      "img": "img/media-1.jpg",
+      "imgWebp": "img/media-1.webp"
+    },
+    {
+      "img": "img/media-1.jpg",
+      "imgWebp": "img/media-1.webp"
+    },
+    {
+      "img": "img/media-1.jpg",
+      "imgWebp": "img/media-1.webp"
+    },
+    {
+      "img": "img/media-4.jpg",
+      "imgWebp": "img/media-1.webp",
+      "video": true
+    },
+    {
+      "img": "img/media-4.jpg",
+      "imgWebp": "img/media-1.webp",
+      "video": true
+    },
+    {
+      "img": "img/media-4.jpg",
+      "imgWebp": "img/media-1.webp",
       "video": true
     }
   ]
