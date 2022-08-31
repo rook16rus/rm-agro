@@ -610,6 +610,7 @@
   &__history-content {
     min-width: 0;
     max-width: 68.3rem;
+    flex-shrink: 0;
 
     cursor: default;
 
