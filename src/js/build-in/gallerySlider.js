@@ -44,8 +44,9 @@ export default function gallerySlider() {
         const currentIframe = swiper.slides[swiper.activeIndex].querySelector('iframe');
 
         iframes.forEach(iframe => iframe.src = '')
+
         if (currentIframe) {
-            currentIframe.src = 'https://www.youtube.com/embed/Z3TWuCm4ncI';
+            currentIframe.src = currentIframe.dataset.src;
         }
     })
 
@@ -53,7 +54,7 @@ export default function gallerySlider() {
 
     const sizeDisplay = document.querySelector('.modal-gallery__size');
     const downloadLinkDisplay = document.querySelector('.modal-gallery__download');
-    const downloadLinkDesc = document.querySelector('.modal-gallery__download span span');
+
 
     swiper.on('slideChange', changeModalContent);
 
@@ -69,7 +70,13 @@ export default function gallerySlider() {
         const currentGraphic = swiper.slides[swiper.activeIndex].querySelector('img, iframe');
         if (!currentGraphic) return;
 
-        (currentGraphic.tagName.toLowerCase() === 'iframe') ? downloadLinkDesc.innerHTML = ' видео' : downloadLinkDesc.innerHTML = ' фотографию';
+        if (currentGraphic.tagName.toLowerCase() === 'iframe') {
+            downloadLinkDisplay.style.opacity = '0';
+            sizeDisplay.style.opacity = '0';
+        } else {
+            downloadLinkDisplay.style.opacity = '1';
+            sizeDisplay.style.opacity = '1';
+        }
 
         sizeDisplay.innerHTML = currentGraphic.dataset.size;
         downloadLinkDisplay.setAttribute('download', currentGraphic.dataset.src);

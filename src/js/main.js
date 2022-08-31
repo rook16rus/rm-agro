@@ -55,8 +55,6 @@ document.addEventListener('DOMContentLoaded', function () {
     fancybox();
     header();
     intro();
-    activitiesSlider();
-    hoverButton();
     aboutAnimation();
     activitiesAnimation();
     productsAnimation();
@@ -84,6 +82,11 @@ document.addEventListener('DOMContentLoaded', function () {
 document.addEventListener('lazyloaded', () => {
     ScrollTrigger.refresh();
 });
+
+document.fonts.ready.then((res) => {
+    activitiesSlider();
+    hoverButton();
+})
 
 window.addEventListener('load', function () {
     document.body.classList.add('loaded');

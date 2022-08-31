@@ -6,6 +6,7 @@ export default function activitiesSlider() {
     const slider = document.querySelector('.js-activities-slider');
     if (!slider) return;
 
+
     const swiperThumb = new Swiper('.js-activities-slider-thumb', {
         slidesPerView: 'auto',
         on: {
@@ -14,7 +15,7 @@ export default function activitiesSlider() {
                 let diff = s.touches.diff = s.isHorizontal() ? s.touches.currentX - s.touches.startX : s.touches.currentY
                     - s.touches.startY;
                 if (diff < range || diff > -range) s.allowClick = true;
-            }
+            },
         }
     });
 
@@ -30,7 +31,7 @@ export default function activitiesSlider() {
                 slidesPerView: 'auto',
                 spaceBetween: 110,
             }
-        },
+        }
     })
 
     const contents = document.querySelectorAll('.activities-slider__content');
