@@ -1,17 +1,23 @@
 .intro {
   display: flex;
   min-height: 80vh;
-  padding-top: calc(var(--header-height) + 1.6rem);
+  padding-top: calc(16.8rem + 1.6rem);
   padding-bottom: 4.3rem;
 
   color: #fff;
 
   @include breakpoint(tablet) {
     min-height: 0;
-    padding-top: calc(var(--header-height) + 2.4rem);
+    padding-top: calc(12.8rem + 2.4rem);
   }
 
   @include breakpoint(small-tablet) {
+    padding-top: calc(11.2rem + 2.4rem);
+    padding-bottom: 3rem;
+  }
+
+  @include breakpoint(mobile) {
+    padding-top: calc(7.6rem + 2.4rem);
     padding-bottom: 3rem;
   }
 

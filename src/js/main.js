@@ -39,6 +39,7 @@ import successSlider from "./build-in/successSlider";
 import careerMoreButton from "./build-in/careerMoreButton";
 import fileInputs from "./build-in/fileInputs";
 import resetForms from "./build-in/resetForms";
+import introAnimation from "./build-in/introAnimation";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -55,6 +56,7 @@ document.addEventListener('DOMContentLoaded', function () {
     fancybox();
     header();
     intro();
+    introAnimation();
     aboutAnimation();
     productsAnimation();
     jobAnimation();
@@ -91,5 +93,5 @@ document.fonts.ready.then((res) => {
 window.addEventListener('load', function () {
     document.body.classList.add('loaded');
     ScrollTrigger.refresh();
-    /*setTimeout(() => document.body.classList.add('animatable'), 300);*/
+    setTimeout(() => document.body.classList.add('animatable'), 300);
 });

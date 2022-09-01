@@ -26,14 +26,14 @@ export default function header() {
     } else if (pageHeader) {
         pageHeader.style.setProperty('--header-height', header.clientHeight + 'px');
     } else if (error) {
-        error   .style.setProperty('--header-height', header.clientHeight + 'px');
+        error.style.setProperty('--header-height', header.clientHeight + 'px');
     } else {
         document.documentElement.style.setProperty('--header-height', header.clientHeight + 'px');
     }
 
     window.addEventListener('scroll', () => {
-        let scrollDistance = window.scrollY;
-        if (scrollDistance >= 25) {
+        let scrollDistance = document.documentElement.getBoundingClientRect().top;
+        if (scrollDistance <= -25) {
             if (header.classList.contains('header--white')) return;
             header.classList.add('header--white');
         } else {
