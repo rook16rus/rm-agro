@@ -68,6 +68,153 @@
             </svg>
         </div>
         <div class="page-content">
+            <div class="loader loader--img">
+                <img class="loader__img" src="img/loader-logo.png">
+            </div>
+            <style>
+                .loader {
+                    position: fixed;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    z-index: 600;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: flex-start;
+                    background-color: #395937;
+                }
+
+                .loader--img {
+                    background-color: #E5E2DB;
+                }
+
+                .loader__img {
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+
+                    width: 13.5rem;
+                    height: 19.6rem;
+
+                    transition: transform .4s ease .4s, visibility 0s linear .8s;
+                }
+
+                .loader__text {
+                    position: absolute;
+                    top: 19.3rem;
+                    left: 5rem;
+
+                    padding-top: 0.5rem;
+
+                    clip-path: inset(0 0 0 0);
+                    overflow: hidden;
+
+                    font: 400 46rem/90% 'Oniks';
+                    color: #fff;
+
+                    transition: 1s ease;
+                }
+
+                .loader__text.hide {
+                    clip-path: inset(0 100% 0 0);
+                }
+
+                .loader__largest-number {
+                    position: relative;
+
+                    opacity: 1;
+                    visibility: hidden;
+
+                    font: 400 46rem/90% 'Oniks';
+                }
+
+                @media (max-width: 1024px) {
+
+                    .loader__text,
+                    .loader__largest-number {
+                        font-size: 25rem;
+                    }
+
+                    .loader__img {
+                        width: 12.5rem;
+                        height: 18.6rem;
+                    }
+                }
+
+                @media (max-width: 640px) {
+
+                    .loader__text,
+                    .loader__largest-number {
+                        font-size: 15rem;
+                    }
+
+                    .loader__img {
+                        width: 10.5rem;
+                        height: 16.6rem;
+                    }
+                }
+
+                @media (max-width: 350px) {
+
+                    .loader__text,
+                    .loader__largest-number {
+                        font-size: 12rem;
+                    }
+                }
+
+                .loader__number-block {
+                    position: relative;
+
+                    display: inline-flex;
+                    justify-content: flex-end;
+                }
+
+                .loader__number {
+                    position: absolute;
+                    top: 120%;
+                    right: 0;
+
+                    transition: 0.3s;
+                }
+
+                .loader__number.active {
+                    top: 0;
+                    transition: 0.3s;
+                }
+
+                .loader__number.hide {
+                    top: -120%;
+                    transition: 0.3s;
+                }
+
+                .disable-scroll {
+                    overflow: hidden;
+                    height: 100vh;
+                    position: fixed;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                }
+
+                .animatable .loader--img {
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: opacity .4s ease .4s, visibility 0s linear .8s;
+                }
+
+                .animatable .loader__img {
+                    transform: translate(-50%, -50%) scale(1.2);
+                }
+
+                .loader.hide {
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: opacity .4s ease .4s, visibility 0s linear .8s;
+                }
+            </style>
             <div class="header-container">
 
                 <header class="header header--dark">
@@ -868,6 +1015,93 @@
                     </div>
                 </div>
             </div>
+            <script>
+                const loader = document.querySelector('.loader');
+                const text = document.querySelector('.loader__text');
+                const numberDisplay = document.querySelector('.loader__number');
+                const numberBlock = document.querySelector('.loader__number-block');
+                let timerId;
+                let count = 3;
+
+                if (text) {
+                    disableScroll();
+                    repositionText();
+                    timerId = setInterval(moveUpNumber, 500);
+                }
+
+                function disableScroll() {
+                    lockPadding();
+                    window.scrollY = 0;
+                    document.body.classList.add('disable-scroll');
+                }
+
+                function enableScroll() {
+                    unlockPadding();
+                    window.srollY = 'auto';
+                    document.body.classList.remove('disable-scroll');
+                }
+
+                function lockPadding() {
+                    let paddingOffset = window.innerWidth - document.body.offsetWidth + 'px';
+                    document.body.style.paddingRight = paddingOffset;
+                }
+
+                function unlockPadding() {
+                    document.body.style.paddingRight = '0px';
+                }
+
+                function repositionText() {
+                    const introTitle = document.querySelector('.intro__title');
+                    if (!introTitle) return;
+                    let topPadding = 0;
+
+                    if (document.documentElement.clientWidth <= 768) topPadding = 10;
+                    if (document.documentElement.clientWidth <= 640) topPadding = 20;
+
+                    text.style.left = introTitle.getBoundingClientRect().left + 'px';
+                    text.style.top = introTitle.getBoundingClientRect().top + topPadding + 'px';
+                }
+
+                function moveUpNumber() {
+                    const hideNumber = document.querySelector('.loader__number.hide');
+                    if (hideNumber) hideNumber.remove();
+
+                    const activeNumber = document.querySelector('.loader__number.active:not(.hide)');
+                    if (activeNumber) activeNumber.classList.add('hide');
+
+
+                    const number = document.querySelector('.loader__number:not(.active):not(.hide)');
+                    if (number) number.classList.add('active');
+
+                    const newNumber = document.createElement('span');
+                    newNumber.classList.add('loader__number');
+                    numberBlock.append(newNumber);
+
+                    if (numberDisplay.classList.contains('loaded')) {
+                        clearInterval(timerId);
+                        if (text.closest('.animatable')) {
+                            setTimeout(loaderHide, 500);
+                            setTimeout(enableScroll, 1500);
+                        }
+                    }
+
+                    count += 9;
+                    if (count >= 100 || text.closest('.animatable')) {
+                        newNumber.innerHTML = '100';
+                        numberDisplay.classList.add('loaded');
+                    } else {
+                        newNumber.innerHTML = count;
+                    }
+                }
+
+                function loaderHide() {
+                    text.classList.add('hide');
+                    setTimeout(() => {
+                        loader.classList.add('hide')
+                        window.initIntroAnimation();
+                    }, 600);
+                }
+            </script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
             <div class="js-map-url" data-api="ваш API-ключ"></div>
             <script src="js/app.js"></script>
