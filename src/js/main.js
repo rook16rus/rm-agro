@@ -56,7 +56,6 @@ document.addEventListener('DOMContentLoaded', function () {
     header();
     intro();
     aboutAnimation();
-    activitiesAnimation();
     productsAnimation();
     jobAnimation();
     newsAnimation();
@@ -85,6 +84,7 @@ document.addEventListener('lazyloaded', () => {
 
 document.fonts.ready.then((res) => {
     activitiesSlider();
+    activitiesAnimation();
     hoverButton();
 })
 
