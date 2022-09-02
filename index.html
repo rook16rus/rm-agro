@@ -175,19 +175,22 @@
 
                 .loader__number {
                     position: absolute;
-                    top: 120%;
+                    top: 0;
+                    transform: translateY(110%);
                     right: 0;
 
                     transition: 0.3s;
                 }
 
                 .loader__number.active {
+                    transform: translateY(0%);
                     top: 0;
                     transition: 0.3s;
                 }
 
                 .loader__number.hide {
-                    top: -120%;
+                    top: 0;
+                    transform: translateY(-110%);
                     transition: 0.3s;
                 }
 
