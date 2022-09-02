@@ -304,12 +304,13 @@
 
     img {
       width: 10rem;
-      aspect-ratio: 1 / 1;
+      height: 10rem;
 
       border-radius: 50%;
 
       @include breakpoint(mobile) {
         width: 6rem;
+        height: 6rem;
       }
 
       &:not(:first-child) {

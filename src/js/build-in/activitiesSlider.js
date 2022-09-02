@@ -29,7 +29,8 @@ export default function activitiesSlider() {
         breakpoints: {
             1024: {
                 slidesPerView: 'auto',
-                spaceBetween: 110,
+                allowTouchMove: false,
+                spaceBetween: 36,
             }
         }
     })
@@ -42,4 +43,31 @@ export default function activitiesSlider() {
         contents[swiper.activeIndex] ? contents[swiper.activeIndex].classList.add('active') : null;
     })
 
+    const thumbSlides = document.querySelectorAll('.activities .section-header__slide');
+
+    thumbSlides.forEach((item, index) => {
+        item.addEventListener('click', () => {
+            swiper.slideTo(index);
+            console.log(swiper.activeIndex);
+            console.log(swiper);
+        })
+    })
+
 }
+
+
+/*{
+      "title": "молочное производство",
+      "text": "Растениеводческие предприятия Группы формируют собственную кормовую базу, богатую витаминами и полезными микроэлементами. Качество конечной продукции напрямую зависит от кормов, поставляемых на животноводческие предприятия.",
+      "img": "img/activities-1.jpg"
+    },
+    {
+      "title": "колбасное производство",
+      "text": "Растениеводческие предприятия Группы формируют собственную кормовую базу, богатую витаминами и полезными микроэлементами. Качество конечной продукции напрямую зависит от кормов, поставляемых на животноводческие предприятия.",
+      "img": "img/activities-1.jpg"
+    },
+    {
+      "title": "забой скота",
+      "text": "Растениеводческие предприятия Группы формируют собственную кормовую базу, богатую витаминами и полезными микроэлементами. Качество конечной продукции напрямую зависит от кормов, поставляемых на животноводческие предприятия.",
+      "img": "img/activities-1.jpg"
+    }*/

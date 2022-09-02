@@ -35,7 +35,7 @@ export default function aboutAnimation() {
         xPercent: 60,
         duration: 3,
         ease: "power3.out"
-    }).from('.about .features-slider__slide-img', {
+    }).from('.about .features-slider__slide-img-block', {
         width: '20rem',
         duration: 3,
         ease: "power3.out"

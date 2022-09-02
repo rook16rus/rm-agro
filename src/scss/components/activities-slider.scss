@@ -115,7 +115,7 @@
     position: relative;
     z-index: 1;
 
-    font: var(--title-h1);
+    font: var(--regular) 25rem/75% var(--secondary-ff);
     color: #0B100C;
     opacity: 0.2;
     cursor: pointer;
@@ -123,9 +123,15 @@
 
     transition: 0.3s;
 
+    @include breakpoint(tablet) {
+      font-size: 13.4rem;
+    }
+
     @include breakpoint(small-tablet) {
       margin-bottom: 1rem;
       margin-left: 1rem;
+
+      font-size: 10rem;
     }
 
     @include breakpoint(small-mobile) {

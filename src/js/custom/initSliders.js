@@ -22,6 +22,7 @@ export default function initSliders() {
         const allowTouchMove = !slider.dataset.noTouch;
         const slidesPerColumn = Number(slider.dataset.column);
         const reverseDirection = !!slider.dataset.reverse;
+        const autoHeight = !!slider.dataset.autoHeight;
         let freeMode = slider.dataset.freeMode;
 
         let gridColumn;
@@ -102,6 +103,7 @@ export default function initSliders() {
 
         const swiper = new Swiper(slider, {
             slidesPerView,
+            autoHeight,
             grid: gridColumn,
             spaceBetween,
             freeMode,

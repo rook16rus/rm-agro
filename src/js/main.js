@@ -40,6 +40,8 @@ import careerMoreButton from "./build-in/careerMoreButton";
 import fileInputs from "./build-in/fileInputs";
 import resetForms from "./build-in/resetForms";
 import introAnimation from "./build-in/introAnimation";
+import alignHeights from "./custom/alignHeights";
+import features from "./build-in/features";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -77,7 +79,9 @@ document.addEventListener('DOMContentLoaded', function () {
     successSlider();
     careerMoreButton();
     fileInputs();
-    resetForms()
+    resetForms();
+    alignHeights('.features-slider', '.features-slider__content');
+    features();
 });
 
 document.addEventListener('lazyloaded', () => {

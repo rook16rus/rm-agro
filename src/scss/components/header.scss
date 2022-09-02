@@ -404,6 +404,12 @@
     flex-direction: column;
     gap: 2rem;
 
+    transition: 0.3s;
+
+    :hover {
+      opacity: 0.8;
+    }
+
     @include breakpoint(mobile) {
       gap: 1.5rem;
     }
@@ -438,6 +444,12 @@
     font: var(--text-t4);
     text-transform: uppercase;
     color: var(--text-color);
+
+    transition: 0.3s;
+
+    &:hover {
+      opacity: 0.8;
+    }
   }
 
   &__burger-menu {
@@ -467,6 +479,12 @@
     font: var(--medium) 3rem/120% var(--main-ff);
     text-transform: uppercase;
     color: var(--title-color);
+
+    transition: 0.3s;
+
+    &:hover {
+      opacity: 0.8;
+    }
 
     @include breakpoint(tablet) {
       font-size: 2.8rem;
