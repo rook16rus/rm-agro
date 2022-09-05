@@ -97,5 +97,7 @@ document.fonts.ready.then((res) => {
 window.addEventListener('load', function () {
     document.body.classList.add('loaded');
     ScrollTrigger.refresh();
-    setTimeout(() => document.body.classList.add('animatable'), 300);
+    setTimeout(() => {
+        document.body.classList.add('animatable')
+    }, 300);
 });
