@@ -1041,6 +1041,11 @@
                 }
 
                 function moveUpNumber() {
+                    const newNumber = document.createElement('span');
+                    const hideNumber = document.querySelector('.loader__number.hide');
+                    const activeNumber = document.querySelector('.loader__number.active:not(.hide)');
+                    const number = document.querySelector('.loader__number:not(.active):not(.hide)');
+
                     if (numberDisplay.classList.contains('loaded')) {
                         clearInterval(timerId);
                         if (text.closest('.animatable')) {
@@ -1048,24 +1053,6 @@
                             setTimeout(enableScroll, 1500);
                         }
                     }
-
-                    if (count >= 85) {
-                        return
-                    }
-
-                    const hideNumber = document.querySelector('.loader__number.hide');
-                    if (hideNumber) hideNumber.remove();
-
-                    const activeNumber = document.querySelector('.loader__number.active:not(.hide)');
-                    if (activeNumber) activeNumber.classList.add('hide');
-
-
-                    const number = document.querySelector('.loader__number:not(.active):not(.hide)');
-                    if (number) number.classList.add('active');
-
-                    const newNumber = document.createElement('span');
-                    newNumber.classList.add('loader__number');
-                    numberBlock.append(newNumber);
 
                     count += 9;
 
@@ -1075,10 +1062,21 @@
                     } else {
                         if (count >= 85) {
                             count = 85;
-
+                            newNumber.innerHTML = count;
+                            return
                         }
                         newNumber.innerHTML = count;
                     }
+
+
+                    if (hideNumber) hideNumber.remove();
+
+                    if (activeNumber) activeNumber.classList.add('hide');
+
+                    if (number) number.classList.add('active');
+
+                    newNumber.classList.add('loader__number');
+                    numberBlock.append(newNumber);
                 }
 
                 function loaderHide() {
