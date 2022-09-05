@@ -1106,7 +1106,7 @@
                 const numberDisplay = document.querySelector('.loader__number');
                 const numberBlock = document.querySelector('.loader__number-block');
                 let timerId;
-                let count = 3;
+                let count = 5;
 
                 if (text) {
                     disableScroll();
@@ -1148,6 +1148,18 @@
                 }
 
                 function moveUpNumber() {
+                    if (numberDisplay.classList.contains('loaded')) {
+                        clearInterval(timerId);
+                        if (text.closest('.animatable')) {
+                            setTimeout(loaderHide, 500);
+                            setTimeout(enableScroll, 1500);
+                        }
+                    }
+
+                    if (count >= 85) {
+                        return
+                    }
+
                     const hideNumber = document.querySelector('.loader__number.hide');
                     if (hideNumber) hideNumber.remove();
 
@@ -1162,19 +1174,16 @@
                     newNumber.classList.add('loader__number');
                     numberBlock.append(newNumber);
 
-                    if (numberDisplay.classList.contains('loaded')) {
-                        clearInterval(timerId);
-                        if (text.closest('.animatable')) {
-                            setTimeout(loaderHide, 500);
-                            setTimeout(enableScroll, 1500);
-                        }
-                    }
-
                     count += 9;
-                    if (count >= 100 || text.closest('.animatable')) {
+
+                    if (text.closest('.animatable')) {
                         newNumber.innerHTML = '100';
                         numberDisplay.classList.add('loaded');
                     } else {
+                        if (count >= 85) {
+                            count = 85;
+
+                        }
                         newNumber.innerHTML = count;
                     }
                 }
