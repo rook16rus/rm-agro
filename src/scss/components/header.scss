@@ -167,16 +167,9 @@
 
     & + .header__burger-nav {
       position: relative;
-      bottom: 0;
-
-      margin: 1rem 1.5rem;
 
       opacity: 1;
       visibility: visible;
-
-      @include breakpoint(small-tablet) {
-        margin: -1px 0 0;
-      }
     }
   }
 
@@ -392,7 +385,7 @@
     bottom: 0;
 
     padding: 6rem 0;
-    margin: 0;
+    margin: 1rem 1.5rem;
 
     border-radius: 2rem;
     background: var(--bg-color) url("../img/burger-bg.svg") repeat center;
@@ -409,6 +402,7 @@
     @include breakpoint(small-tablet) {
       border-radius: 0 0 2rem 2rem;
       padding: 4rem 0 2rem;
+      margin: 0;
     }
 
     @include breakpoint(mobile) {
