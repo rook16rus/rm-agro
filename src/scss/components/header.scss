@@ -1,5 +1,5 @@
 .header {
-  position: fixed;
+  position: relative;
   top: 0;
   left: 0;
   right: 0;
@@ -71,7 +71,6 @@
       padding: 1.6rem 0;
       margin: 0;
 
-      border: none;
       border-bottom: 1px solid var(--title-color);
       border-radius: 0;
     }
@@ -147,17 +146,15 @@
     }
 
     .header__burger {
-      justify-content: center;
-
       @include breakpoint(tablet) {
         margin-left: auto;
       }
 
       &::before, &::after {
-        transform: rotate(45deg);
-        transform-origin: center;
+        top: 50%;
+        transform: translateY(-50%) rotate(45deg);
 
-        width: 3.1rem;
+        width: 3rem;
       }
 
       &::after {
@@ -213,10 +210,6 @@
       gap: 4rem;
       align-items: center;
     }
-
-    @include breakpoint(small-tablet) {
-
-    }
   }
 
   &__logo {
@@ -256,13 +249,6 @@
     gap: 1rem;
 
     @include breakpoint(tablet) {
-      flex-direction: column;
-      align-items: stretch;
-    }
-
-    @include breakpoint(small-tablet) {
-      flex-direction: row;
-      align-items: center;
       padding-top: 0;
     }
   }
@@ -279,10 +265,6 @@
     transition: 0.3s;
 
     @include breakpoint(tablet) {
-      gap: 2.4rem;
-    }
-
-    @include breakpoint(small-tablet) {
       display: none;
     }
   }
@@ -298,9 +280,6 @@
 
   &__burger {
     position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     width: 4.7rem;
     height: 1.2rem;
     margin-left: 4rem;
@@ -312,43 +291,39 @@
     }
 
     @include breakpoint(small-tablet) {
-      margin-left: 2rem;
-    }
-
-    @include breakpoint(mobile) {
       margin-left: 0;
     }
 
     &::before {
       content: '';
 
-      /*position: absolute;
+      position: absolute;
       top: 0;
-      left: 0;*/
+      left: 0;
 
-      width: 100%;
+      width: 4.7rem;
       height: 2px;
 
       border-radius: 0.2rem;
       background-color: #fff;
 
-      transition: 0.4s;
+      transition: 0.3s;
     }
 
     &::after {
       content: '';
 
-      /*position: absolute;
+      position: absolute;
       bottom: 0;
-      left: 0;*/
+      left: 0;
 
-      width: 85%;
+      width: 4rem;
       height: 2px;
 
       border-radius: 0.2rem;
       background-color: #fff;
 
-      transition: 0.4s;
+      transition: 0.3s;
     }
 
     &:hover::after, &:hover::before {
@@ -380,7 +355,7 @@
   }
 
   &__burger-nav {
-    position: absolute;
+    position: relative;
     left: 0;
     right: 0;
     bottom: 0;
