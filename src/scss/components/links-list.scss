@@ -15,13 +15,6 @@
         background-color: #fff;
         color: var(--title-color);
       }
-
-      @include breakpoint(small-tablet) {
-        &:hover {
-          background-color: transparent;
-          color: #fff;
-        }
-      }
     }
   }
 
@@ -35,19 +28,29 @@
         background-color: var(--accent-color);
         color: #fff;
       }
-
-      @include breakpoint(small-tablet) {
-        &:hover {
-          background-color: transparent;
-          color: var(--accent-color);
-        }
-      }
     }
   }
 
   .swiper-wrapper {
     padding-bottom: 2px;
   }
+
+  /*.active {
+    position: relative;
+
+    &::before {
+      content: '';
+
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: -1;
+
+      height: 100%;
+      width: var(--slide-width);
+      background-color: red;
+    }
+  }*/
 
   &__link {
     display: flex;

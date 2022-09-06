@@ -27,8 +27,8 @@ export default function activitiesSlider() {
             swiper: swiperThumb,
         },
         breakpoints: {
-            1024: {
-                slidesPerView: 'auto',
+            769: {
+                slidesPerView: 1,
                 allowTouchMove: false,
                 spaceBetween: 36,
             }

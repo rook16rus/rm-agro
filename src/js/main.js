@@ -42,6 +42,7 @@ import resetForms from "./build-in/resetForms";
 import introAnimation from "./build-in/introAnimation";
 import alignHeights from "./custom/alignHeights";
 import features from "./build-in/features";
+import linksSlider from "./build-in/linksSlider";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -89,8 +90,9 @@ document.addEventListener('lazyloaded', () => {
 });
 
 document.fonts.ready.then((res) => {
-    activitiesSlider();
     activitiesAnimation();
+    activitiesSlider();
+    linksSlider();
     hoverButton();
 })
 

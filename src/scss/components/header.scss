@@ -211,10 +211,11 @@
 
     @include breakpoint(tablet) {
       gap: 4rem;
+      align-items: center;
     }
 
     @include breakpoint(small-tablet) {
-      align-items: center;
+
     }
   }
 
@@ -582,6 +583,11 @@
 
   &__burger-contacts-phone {
     color: var(--title-color);
+    transition: 0.3s;
+
+    &:hover {
+      opacity: 0.8;
+    }
   }
 }
 

@@ -109,16 +109,15 @@
 
     @include breakpoint(small-tablet) {
       padding: 2.4rem 0;
-      display: flex;
-      flex-direction: row-reverse;
-      justify-content: space-between;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
       align-items: flex-start;
     }
 
     @include breakpoint(mobile) {
       padding: 2rem 0;
       display: grid;
-      grid-template-columns: 1fr 1fr;
+
     }
 
     &:first-child {
@@ -181,9 +180,13 @@
       justify-content: flex-end;
     }
 
-    @include breakpoint(mobile) {
+    @include breakpoint(small-tablet) {
+      justify-content: flex-start;
       grid-column: 1 / 2;
       grid-row: 1 / 2;
+    }
+
+    @include breakpoint(mobile) {
       justify-content: flex-start;
     }
   }
@@ -254,6 +257,8 @@
 
   &__team-slider {
     margin: 0 0 4rem;
+    -webkit-transform: translateZ(0);
+    -webkit-backface-visibility: visible;
 
     overflow: visible;
 
@@ -449,6 +454,10 @@
 
   &__mobile-team-slider {
     display: none;
+
+    .swiper-wrapper {
+      align-items: flex-start;
+    }
 
     @include breakpoint(small-tablet) {
       display: block;

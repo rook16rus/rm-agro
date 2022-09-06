@@ -20,14 +20,6 @@ export default function teamSlider() {
             slidesPerView: "auto",
             spaceBetween: 15,
             speed: 6000,
-            autoplay: {
-                enabled: true,
-                delay: 0,
-                disableOnInteraction: false,
-                reverseDirection: !!slider.dataset.reverse,
-                pauseOnMouseEnter: true,
-                waitForTransition: false
-            },
             breakpoints: {
                 769: {
                     allowTouchMove: false,
@@ -44,6 +36,18 @@ export default function teamSlider() {
                 }
             },
         })
+
+        if (slider.dataset.reverse) {
+            swiper.slidePrev()
+            swiper.on('slidePrevTransitionEnd', () => {
+                swiper.slidePrev()
+            });
+        } else {
+            swiper.slideNext()
+            swiper.on('slideNextTransitionEnd', () => {
+                swiper.slideNext()
+            });
+        }
     });
 
     /* Ховер эффект */
