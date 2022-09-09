@@ -433,6 +433,12 @@
     gap: 1.6rem;
   }
 
+  &__success-hidden-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+  }
+
   &__success-button {
     display: flex;
     align-items: center;
