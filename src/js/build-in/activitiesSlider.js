@@ -31,6 +31,9 @@ export default function activitiesSlider() {
                 slidesPerView: 1.2,
                 spaceBetween: 36,
             },
+            920: {
+                slidesPerView: 1.4,
+            },
             1025: {
                 slidesPerView: 1,
                 allowTouchMove: false,
