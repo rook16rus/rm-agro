@@ -90,8 +90,8 @@ document.addEventListener('lazyloaded', () => {
 });
 
 document.fonts.ready.then((res) => {
-    activitiesAnimation();
     activitiesSlider();
+    activitiesAnimation();
     linksSlider();
     hoverButton();
 })

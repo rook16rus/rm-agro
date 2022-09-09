@@ -470,8 +470,19 @@
   }
 
   .slider-navigation__button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+
     width: 5.7rem;
     height: 5.7rem;
+
+    &.js-next-slide {
+      right: 0;
+      left: auto;
+      transform: translateY(-50%) rotate(180deg);
+    }
 
     svg {
       width: 2.4rem;

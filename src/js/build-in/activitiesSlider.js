@@ -28,9 +28,12 @@ export default function activitiesSlider() {
         },
         breakpoints: {
             769: {
+                slidesPerView: 1.2,
+                spaceBetween: 36,
+            },
+            1025: {
                 slidesPerView: 1,
                 allowTouchMove: false,
-                spaceBetween: 36,
             }
         }
     })
@@ -48,8 +51,6 @@ export default function activitiesSlider() {
     thumbSlides.forEach((item, index) => {
         item.addEventListener('click', () => {
             swiper.slideTo(index);
-            console.log(swiper.activeIndex);
-            console.log(swiper);
         })
     })
 
