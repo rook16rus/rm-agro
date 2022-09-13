@@ -79,7 +79,7 @@ export default function gallerySlider() {
         }
 
         sizeDisplay.innerHTML = currentGraphic.dataset.size;
-        downloadLinkDisplay.setAttribute('download', currentGraphic.dataset.src);
+        downloadLinkDisplay.setAttribute('href', currentGraphic.dataset.src);
     }
 }
 

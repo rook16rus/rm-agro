@@ -20,9 +20,9 @@ export default function teamSlider() {
             slidesPerView: "auto",
             spaceBetween: 15,
             speed: 6000,
+            allowTouchMove: false,
             breakpoints: {
                 769: {
-                    allowTouchMove: false,
                     noSwiping: true,
                     freeMode: {
                         enabled: true,
