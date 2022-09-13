@@ -10,3 +10,5 @@ export default function filterTags() {
         spaceBetween: 14,
     })
 }
+
+window.initFilterTags = filterTags;
