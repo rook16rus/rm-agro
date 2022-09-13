@@ -55,11 +55,13 @@ export default function teamSlider() {
     const slides = document.querySelectorAll('.company__team-slide');
 
     slides.forEach(slide => {
-        slide.addEventListener('mouseenter', () => {
-            const text = slide.querySelector('.company__team-text');
-            const hideText = text.nextElementSibling;
+        const text = slide.querySelector('.company__team-text');
+        const hideText = text.nextElementSibling;
 
-            text.style.setProperty('--text-height', hideText.clientHeight + 'px');
+        text.style.setProperty('--text-height', hideText.clientHeight + 'px');
+
+        slide.addEventListener('mouseenter', () => {
+
         })
     })
 }

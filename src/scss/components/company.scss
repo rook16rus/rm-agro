@@ -336,7 +336,8 @@
       }
 
       .company__team-text {
-        height: var(--text-height);
+        transform: scaleY(1);
+        margin-top: 0;
       }
 
       @include breakpoint(small-tablet) {
@@ -431,8 +432,11 @@
   }
 
   &__team-text {
+    transform: scaleY(0);
+    transform-origin: bottom;
+
     max-width: 27rem;
-    height: 0;
+    margin-top: calc(var(--text-height) -  2 * var(--text-height));
 
     overflow: hidden;
 

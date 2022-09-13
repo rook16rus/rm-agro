@@ -4,3 +4,5 @@ export default function menuModalClose() {
 
     closeButton.style.setProperty('--modal-height', menuModal.offsetTop - closeButton.clientHeight + 'px');
 }
+
+window.initMenuModalClose = menuModalClose;
