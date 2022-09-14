@@ -336,7 +336,7 @@
       }
 
       .company__team-text {
-        transform: scaleY(1);
+        transform: translateY(0);
         margin-top: 0;
       }
 
@@ -432,7 +432,7 @@
   }
 
   &__team-text {
-    transform: scaleY(0);
+    transform: translateY(200%);
     transform-origin: bottom;
 
     max-width: 27rem;
