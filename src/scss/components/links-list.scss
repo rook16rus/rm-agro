@@ -15,6 +15,20 @@
         background-color: #fff;
         color: var(--title-color);
       }
+
+      &:hover {
+        @include breakpoint(small-tablet) {
+          background-color: transparent;
+          color: #fff;
+        }
+      }
+
+      &:active {
+        @include breakpoint(small-tablet) {
+          background-color: #fff;
+          color: var(--title-color);
+        }
+      }
     }
   }
 
@@ -27,6 +41,20 @@
       &:hover {
         background-color: var(--accent-color);
         color: #fff;
+      }
+
+      &:hover {
+        @include breakpoint(small-tablet) {
+          background-color: transparent;
+          color: var(--accent-color);
+        }
+      }
+
+      &:active {
+        @include breakpoint(small-tablet) {
+          background-color: var(--accent-color);
+          color: #fff;
+        }
       }
     }
   }

@@ -55,7 +55,7 @@
         <section class="company__team">
             <div class="container">
                 {{> section-header title='наша команда' allLink='смотреть всех руководителей' }}
-                <div class="company__team-slider swiper">
+                <div class="company__team-slider swiper" data-speed="6000">
                     <div class="swiper-wrapper">
                         {{#each team }}
                             <div class="company__team-slide swiper-slide">
@@ -73,7 +73,7 @@
                         {{/each}}
                     </div>
                 </div>
-                <div class="company__team-slider swiper" data-reverse="true">
+                <div class="company__team-slider swiper" data-reverse="true" data-speed="6000">
                     <div class="swiper-wrapper">
                         {{#each team }}
                             <div class="company__team-slide swiper-slide">

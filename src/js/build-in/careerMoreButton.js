@@ -13,9 +13,22 @@ export default function careerMoreButton() {
     buttons.forEach(button => {
         button.addEventListener('click', () => {
             const textContainer = button.previousElementSibling;
-            textContainer.querySelector('.career__success-hidden-text').classList.remove('visually-hidden');
+            const hiddenText = textContainer.querySelector('.career__success-hidden-text');
+            if (!hiddenText) return
 
-            button.remove()
+            if (hiddenText.classList.contains('visually-hidden')) {
+                hiddenText.classList.remove('visually-hidden');
+                button.innerHTML = `
+                    <span>Скрыть текст</span>
+                    <img class="lazyload" style="transform: rotate(180deg)" data-src="img/down-arrow.svg" alt="Иконка">
+               `
+            } else {
+                hiddenText.classList.add('visually-hidden');
+                button.innerHTML = `
+                    <span>Читать полностью</span>
+                    <img class="lazyload" data-src="img/down-arrow.svg" alt="Иконка">
+               `
+            }
         })
     })
 }

@@ -19,7 +19,7 @@ export default function teamSlider() {
             loop: true,
             slidesPerView: "auto",
             spaceBetween: 15,
-            speed: 6000,
+            speed: slider.dataset.speed * 1,
             allowTouchMove: false,
             breakpoints: {
                 769: {
