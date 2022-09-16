@@ -7,7 +7,7 @@ export default function history() {
     if (!history) return;
 
     const numbersSubSwiper = new Swiper('.company__history-numbers-sub-slider', {
-        slidesPerView: "auto",
+        sliKdesPerView: "auto",
         spaceBetween: 7,
         breakpoints: {
             641: {
@@ -40,17 +40,17 @@ export default function history() {
     });
 
     const contentSwiper = new Swiper('.company__history-content-slider', {
-        slidesPerView: "auto",
-        effect: "fade",
-        fadeEffect: {
-            crossFade: true
-        },
+        slidesPerView: 1.1,
         thumbs: {
             swiper: numbersSubSwiper
         },
         spaceBetween: 30,
         breakpoints: {
             641: {
+                effect: "fade",
+                fadeEffect: {
+                    crossFade: true
+                },
                 spaceBetween: 50
             },
             1025: {

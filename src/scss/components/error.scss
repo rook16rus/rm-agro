@@ -19,7 +19,7 @@
 
     @include breakpoint(mobile) {
       flex-direction: column;
-      gap: 13rem;
+      gap: 5rem;
     }
   }
 
@@ -63,6 +63,9 @@
   }
 
   &__link {
+    position: relative;
+    z-index: 1;
+
     height: 4rem;
     font-size: 1.6rem;
 
@@ -75,7 +78,7 @@
   &__number {
     padding-top: 7rem;
 
-    font: var(--regular) 87rem/75% var(--secondary-ff);
+    font: var(--regular) 87rem/100% var(--secondary-ff);
     color: var(--bg-color);
 
     @include breakpoint(tablet) {
@@ -89,7 +92,7 @@
 
     @include breakpoint(mobile) {
       font-size: 48rem;
-      margin-bottom: -13rem;
+      margin-bottom: -15rem;
     }
   }
 }

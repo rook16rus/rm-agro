@@ -471,11 +471,18 @@
 
     font: var(--text-t4);
     text-transform: uppercase;
+    white-space: nowrap;
 
     transition: 0.4s;
 
+    span {
+        transition: 0.4s;
+    }
+
     &:hover {
-        gap: 1rem;
+        span {
+            margin-right: 1rem;
+        }
 
         svg {
             transform: scaleX(1) rotate(45deg);
