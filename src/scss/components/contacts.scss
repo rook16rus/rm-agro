@@ -182,6 +182,8 @@
     }
 
     &__info-title {
+        max-width: 70%;
+
         font: var(--text-t2);
         text-transform: uppercase;
     }
