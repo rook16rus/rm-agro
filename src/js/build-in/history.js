@@ -7,7 +7,7 @@ export default function history() {
     if (!history) return;
 
     const numbersSubSwiper = new Swiper('.company__history-numbers-sub-slider', {
-        sliKdesPerView: "auto",
+        slidesPerView: "auto",
         spaceBetween: 7,
         breakpoints: {
             641: {

@@ -10,7 +10,7 @@ export default function careerMoreButton() {
         }
     })
 
-    buttons.forEach(button => {
+    buttons.forEach((button, index) => {
         button.addEventListener('click', () => {
             const textContainer = button.previousElementSibling;
             const hiddenText = textContainer.querySelector('.career__success-hidden-text');
@@ -29,6 +29,8 @@ export default function careerMoreButton() {
                     <img class="lazyload" data-src="img/down-arrow.svg" alt="Иконка">
                `
             }
+
+            window.successSwiper.update();
         })
     })
 }

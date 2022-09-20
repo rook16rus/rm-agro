@@ -149,6 +149,33 @@
         }
     }
 
+    & > img {
+        display: block;
+        margin: 5rem 0 5.6rem;
+        width: 100%;
+        height: 56.3rem;
+        object-fit: cover;
+
+        border-radius: 2rem;
+        overflow: hidden;
+        cursor: pointer;
+
+        @include breakpoint(tablet) {
+            margin: 4rem 0;
+            height: 45rem;
+        }
+
+        @include breakpoint(small-tablet) {
+            margin: 3rem 0;
+            height: 35rem;
+        }
+
+        @include breakpoint(mobile) {
+            margin: 2rem 0;
+            height: 21.1rem;
+        }
+    }
+
     ul {
         display: flex;
         flex-direction: column;
@@ -806,6 +833,9 @@
 
             border: 1px solid rgba(255, 255, 255, 0.6);
             border-radius: 0.4rem;
+            background-size: 1.5rem 1.5rem;
+            background-repeat: no-repeat;
+            background-position: center;
             
             transition: 0.3s;
         }

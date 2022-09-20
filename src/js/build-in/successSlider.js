@@ -24,6 +24,8 @@ export default function successSlider() {
         }
     })
 
+    window.successSwiper = swiper;
+
     swiper.on('slideNextTransitionEnd', () => {
         const previousSlide = swiper.slides[swiper.previousIndex];
         const button = previousSlide.querySelector('.career__success-button');
@@ -58,3 +60,5 @@ export default function successSlider() {
         }
     })
 }
+
+window.initSuccessSlider = successSlider;

@@ -9,6 +9,8 @@ export default function features() {
         const titleSpan = item.querySelector('.features-slider__content h3 span');
         const text = item.querySelector('.features-slider__content p');
 
+        console.log(titlePaddingRight, titleSpan.clientWidth);
+
         text.style.width = titlePaddingRight  + titleSpan.clientWidth + 'px';
     })
 }

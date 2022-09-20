@@ -82,7 +82,6 @@ document.addEventListener('DOMContentLoaded', function () {
     fileInputs();
     resetForms();
     alignHeights('.features-slider', '.features-slider__content');
-    features();
 });
 
 document.addEventListener('lazyloaded', () => {
@@ -94,6 +93,7 @@ document.fonts.ready.then((res) => {
     activitiesAnimation();
     linksSlider();
     hoverButton();
+    features();
 })
 
 window.addEventListener('load', function () {

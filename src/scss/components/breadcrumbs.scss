@@ -14,6 +14,8 @@
     color: var(--title-color);
     opacity: 1;
 
+    transition: 0.3s;
+
     &.active {
       opacity: 0.6;
     }
@@ -21,6 +23,17 @@
     a {
       display: block;
       padding: 0 1rem;
+
+      @include breakpoint(mobile) {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        max-width: 145px;
+      }
+    }
+
+    &:not(:last-child):hover {
+      opacity: 0.8;
     }
 
     &:first-child a {
