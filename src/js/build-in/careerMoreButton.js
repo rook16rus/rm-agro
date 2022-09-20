@@ -18,16 +18,12 @@ export default function careerMoreButton() {
 
             if (hiddenText.classList.contains('visually-hidden')) {
                 hiddenText.classList.remove('visually-hidden');
-                button.innerHTML = `
-                    <span>Скрыть текст</span>
-                    <img class="lazyload" style="transform: rotate(180deg)" data-src="img/down-arrow.svg" alt="Иконка">
-               `
+                button.querySelector('span').textContent = 'Cкрыть текст'
+                button.querySelector('img').style.transform = 'rotate(180deg)';
             } else {
                 hiddenText.classList.add('visually-hidden');
-                button.innerHTML = `
-                    <span>Читать полностью</span>
-                    <img class="lazyload" data-src="img/down-arrow.svg" alt="Иконка">
-               `
+                button.querySelector('span').textContent = 'Читать полностью'
+                button.querySelector('img').style.transform = 'rotate(0deg)';
             }
 
             window.successSwiper.update();
