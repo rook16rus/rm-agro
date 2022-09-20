@@ -24,6 +24,21 @@ export default function careerMoreButton() {
                 hiddenText.classList.add('visually-hidden');
                 button.querySelector('span').textContent = 'Читать полностью'
                 button.querySelector('img').style.transform = 'rotate(0deg)';
+
+                const slider = button.closest('.career__success-slider');
+                const sliderTopOffset = slider.getBoundingClientRect().top + window.pageYOffset;
+
+                if (matchMedia('(max-width: 1024px)').matches) {
+                    window.scrollTo({
+                        top: sliderTopOffset + 300,
+                        behavior: 'smooth',
+                    });
+                } else {
+                    window.scrollTo({
+                        top: sliderTopOffset - 300,
+                        behavior: 'smooth',
+                    });
+                }
             }
 
             window.successSwiper.update();
