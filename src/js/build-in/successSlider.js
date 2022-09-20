@@ -36,10 +36,9 @@ export default function successSlider() {
 
         if (!hiddenText.classList.contains('visually-hidden')) {
             hiddenText.classList.add('visually-hidden');
-            button.innerHTML = `
-                    <span>Читать полностью</span>
-                    <img class="lazyload" data-src="img/down-arrow.svg" alt="Иконка">
-               `
+
+            button.querySelector('span').textContent = 'Читать полностью'
+            button.querySelector('img').style.transform = 'rotate(0deg)';
         }
     })
 
@@ -53,10 +52,8 @@ export default function successSlider() {
 
         if (!hiddenText.classList.contains('visually-hidden')) {
             hiddenText.classList.add('visually-hidden');
-            button.innerHTML = `
-                    <span>Читать полностью</span>
-                    <img class="lazyload" data-src="img/down-arrow.svg" alt="Иконка">
-               `
+            button.querySelector('span').textContent = 'Читать полностью'
+            button.querySelector('img').style.transform = 'rotate(0deg)';
         }
     })
 }
