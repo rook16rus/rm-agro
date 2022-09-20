@@ -5,7 +5,9 @@ export default function videoButton() {
     buttons.forEach(button => {
         if (button.classList.contains('circled')) return;
 
-        new CircleType(button);
+        const cirecleType = new CircleType(button);
+        cirecleType.forceWidth(true);
+
         button.classList.add('circled');
     });
 }
