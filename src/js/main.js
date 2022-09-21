@@ -81,7 +81,6 @@ document.addEventListener('DOMContentLoaded', function () {
     careerMoreButton();
     fileInputs();
     resetForms();
-    alignHeights('.features-slider', '.features-slider__content');
 });
 
 document.addEventListener('lazyloaded', () => {
@@ -93,6 +92,7 @@ document.fonts.ready.then((res) => {
     activitiesAnimation();
     linksSlider();
     hoverButton();
+    alignHeights('.features-slider', '.features-slider__content');
     features();
 })
 
