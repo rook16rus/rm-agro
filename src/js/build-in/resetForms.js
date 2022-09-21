@@ -7,6 +7,7 @@ export default function resetForms() {
             labels.forEach(label => label.classList.remove('active'));
 
             const inputFileDesc = form.querySelector('.js-input-file-desc');
+            if (!inputFileDesc) return;
             inputFileDesc.innerText = 'Прикреприть свое резюме';
         })
     })
