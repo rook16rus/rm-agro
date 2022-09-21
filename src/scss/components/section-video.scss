@@ -15,6 +15,10 @@
   &:hover {
     .video-button {
       transform: translate(-50%, -50%) scale(1.2);
+
+      @include breakpoint(tablet) {
+        transform: translate(-50%, -50%);
+      }
     }
   }
 

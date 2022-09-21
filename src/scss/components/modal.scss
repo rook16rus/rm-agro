@@ -502,25 +502,13 @@
     overflow-x: auto;
   }
 
-  .modal__container {
-    min-width: 120rem;
-
-    @include breakpoint(mobile) {
-      min-width: 54.8rem;
-    }
+  .modal__inner-container {
+    position: relative;
   }
 
   .modal__inner {
     padding-bottom: 0;
-  }
-
-  .modal__close {
-    @include breakpoint(tablet) {
-      position: fixed;
-      left: auto;
-      right: 1.5rem;
-      top: calc(var(--modal-height) - 1rem);
-    }
+    overflow: auto;
   }
 
   &__content {
@@ -531,6 +519,8 @@
     padding-bottom: 5rem;
 
     overflow: auto;
+
+    min-width: 120rem;
 
     @include breakpoint(tablet) {
       gap: 4.4rem;
@@ -544,6 +534,7 @@
     @include breakpoint(mobile) {
       gap: 3.5rem;
       padding-bottom: 3rem;
+      min-width: 54.8rem;
     }
   }
 

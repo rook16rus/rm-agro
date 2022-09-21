@@ -27,6 +27,7 @@
     cursor: default;
 
     @include breakpoint(tablet) {
+      min-width: 25rem;
       min-height: 32rem;
       width: auto;
       padding: 2rem 0 0;
@@ -34,6 +35,8 @@
 
     @include breakpoint(small-tablet) {
       width: auto;
+      max-width: 25.5rem;
+      min-width: auto;
       min-height: 28rem;
       padding: 2rem 4rem 0 0;
     }

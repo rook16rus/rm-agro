@@ -186,6 +186,10 @@
 
         font: var(--text-t2);
         text-transform: uppercase;
+
+        @include breakpoint(mobile) {
+            max-width: 50%;
+        }
     }
 
     &__info-link, &__info-address {

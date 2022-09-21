@@ -1,5 +1,5 @@
 export default function features() {
-    if (matchMedia('(max-width: 640px)').matches) return;
+    if (matchMedia('(max-width: 768px)').matches) return;
 
     const items = document.querySelectorAll('.features-slider__slide');
 
