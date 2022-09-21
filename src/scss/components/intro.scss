@@ -295,7 +295,7 @@
 
   &__list {
     display: flex;
-    gap: 3rem;
+    gap: 2rem;
 
     @include breakpoint(tablet) {
       gap: 1.6rem;
@@ -307,7 +307,7 @@
   }
 
   &__list-item {
-    width: 15.5rem;
+    width: 14rem;
     height: 8rem;
 
     border-radius: 20rem;
