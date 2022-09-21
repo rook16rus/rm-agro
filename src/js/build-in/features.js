@@ -28,7 +28,7 @@ export default function features() {
                     trigger: section,
                     start: "top center",
                     pin: section.closest('.container'),
-                    scrub: 0.2,
+                    scrub: 1,
                 }
             });
         });
