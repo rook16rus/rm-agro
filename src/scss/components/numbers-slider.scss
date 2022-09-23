@@ -1,7 +1,18 @@
 .numbers-slider {
-  overflow: visible;
+  min-width: 0;
+  display: flex;
+  gap: 9rem;
 
-  .swiper-wrapper {
+  &__wrapper {
+    display: flex;
+    min-width: 100%;
+    flex-shrink: 0;
+    gap: 18rem;
+
+    @include breakpoint(tablet) {
+      gap: 9rem;
+    }
+
     @include breakpoint(small-tablet) {
       display: grid;
       grid-template-columns: repeat(2, 1fr);

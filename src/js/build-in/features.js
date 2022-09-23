@@ -17,8 +17,9 @@ export default function features() {
         text.style.width = titlePaddingRight  + titleSpan.clientWidth + 'px';
     })
 
-    if (window.matchMedia("(min-width: 641px)").matches) {
-        gsap.utils.toArray('.js-section').forEach((section, index) => {
+    gsap.utils.toArray('.js-section').forEach((section, index) => {
+        if (section.dataset.mobile && window.matchMedia("(min-width: 641px)").matches)
+        {
             const w = section.querySelector('.js-section-wrapper');
             const [x, xEnd] = [0, section.offsetWidth - w.offsetWidth];
             if (xEnd === 0) return;
@@ -27,10 +28,26 @@ export default function features() {
                 scrollTrigger: {
                     trigger: section,
                     start: "top center",
-                    pin: section.closest('.container'),
+                    pin: section.closest('.narrow-container') || section.closest('.container'),
                     scrub: 1,
                 }
             });
-        });
-    }
+        }
+
+        if (section.dataset.tablet && window.matchMedia("(min-width: 769px)").matches)
+        {
+            const w = section.querySelector('.js-section-wrapper');
+            const [x, xEnd] = [0, section.offsetWidth - w.offsetWidth];
+            if (xEnd === 0) return;
+            gsap.fromTo(w, {x}, {
+                x: xEnd,
+                scrollTrigger: {
+                    trigger: section,
+                    start: "top center",
+                    pin: section.closest('.narrow-container') || section.closest('.container'),
+                    scrub: 1,
+                }
+            });
+        }
+    });
 }

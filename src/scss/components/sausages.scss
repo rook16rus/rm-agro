@@ -115,6 +115,24 @@
       @include breakpoint(small-tablet) {
         grid-column: span 1;
       }
+
+      &:hover {
+        img {
+          transform: scale(1.1);
+        }
+
+        .meat__item-icon {
+          transform: rotate(45deg);
+        }
+
+        .button {
+          gap: 1rem;
+
+          svg {
+            transform: scaleX(1) rotate(45deg);
+          }
+        }
+      }
     }
   }
 

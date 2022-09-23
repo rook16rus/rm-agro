@@ -55,7 +55,7 @@ export default function history() {
             },
             1025: {
                 slidesPerView: 1,
-                spaceBetween: 0
+                spaceBetween: 10
             }
         }
     });

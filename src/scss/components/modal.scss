@@ -502,20 +502,29 @@
     overflow-x: auto;
   }
 
+  .modal__container {
+    @include breakpoint(tablet) {
+      padding: 0;
+    }
+  }
+
   .modal__inner-container {
     position: relative;
+
+    max-height: 85%;
   }
 
   .modal__inner {
     padding-bottom: 0;
     overflow: auto;
+    height: 100%;
   }
 
   &__content {
     display: flex;
     flex-direction: column;
     gap: 5rem;
-    max-height: 80vh;
+    height: 100%;
     padding-bottom: 5rem;
 
     overflow: auto;

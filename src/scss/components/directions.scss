@@ -67,6 +67,7 @@
 
   &__item-link {
     position: relative;
+    z-index: 1;
 
     display: flex;
     flex-direction: column;
@@ -118,6 +119,8 @@
     opacity: 0;
 
     transition: 0.5s;
+
+    @include transitionfix();
 
     @include breakpoint(tablet) {
       opacity: 1;

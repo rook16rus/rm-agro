@@ -149,7 +149,7 @@
         }
     }
 
-    & > img {
+    & img:not(.img-container__photo, .blockquote__photo, .section-video__preview) {
         display: block;
         margin: 5rem 0 5.6rem;
         width: 100%;
@@ -412,6 +412,10 @@
     &:hover {
         .video-button {
             transform: translate(-50%, -50%) scale(1.2);
+
+            @include breakpoint(tablet) {
+                transform: translate(-50%, -50%);
+            }
         }
     }
 
@@ -618,6 +622,7 @@
         @include breakpoint(tablet) {
             width: 5.5rem;
             height: 6rem;
+            margin-left: 9%;
         }
 
         @include breakpoint(small-tablet) {
