@@ -42,6 +42,7 @@ export default function careerMoreButton() {
             }
 
             window.successSwiper.update();
+            window.successSwiper.updateAutoHeight(2000);
             window.successSwiper.updateSize();
         })
     })

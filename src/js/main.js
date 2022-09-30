@@ -93,12 +93,12 @@ document.fonts.ready.then((res) => {
     linksSlider();
     hoverButton();
     alignHeights('.features-slider', '.features-slider__content');
-    features();
 })
 
 window.addEventListener('load', function () {
     document.body.classList.add('loaded');
     ScrollTrigger.refresh();
+    features();
     setTimeout(() => {
         document.body.classList.add('animatable')
     }, 300);
