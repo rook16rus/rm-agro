@@ -126,7 +126,9 @@
         }
 
         .button {
-          gap: 1rem;
+          span {
+            margin-right: 1rem;
+          }
 
           svg {
             transform: scaleX(1) rotate(45deg);
@@ -428,15 +430,7 @@
   &__menu-item-button {
     span {
       display: inline-block;
-      margin-left: 0.5rem;
-    }
-
-    @include breakpoint(mobile) {
-      padding: 0 2rem;
-
-      span {
-        display: none;
-      }
+      margin-top: 0.2rem;
     }
   }
 

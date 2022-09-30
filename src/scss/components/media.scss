@@ -257,7 +257,13 @@
     transition: 0.3s;
 
     &:hover .media__item-img {
-      box-shadow: 0 1rem 3.4rem 0 rgba(51, 51, 51, 0.35);
+      .media__item-img {
+        box-shadow: 0 1rem 3.4rem 0 rgba(51, 51, 51, 0.35);
+      }
+
+      .video-button {
+        transform: translate(-50%, -50%) scale(1.1);
+      }
     }
   }
 
@@ -332,6 +338,8 @@
       width: 11.8rem;
       height: 11.8rem;
 
+      transition: 0.3s;
+
       @include breakpoint(tablet) {
         width: 10rem;
         height: 10rem;
@@ -347,9 +355,10 @@
         height: 6.1rem;
       }
 
-      svg {
+      &::before {
         width: 4.7rem;
         height: 5.7rem;
+        margin-left: 0.4rem;
 
         @include breakpoint(tablet) {
           width: 4rem;
@@ -364,6 +373,7 @@
         @include breakpoint(mobile) {
           width: 2.4rem;
           height: 3rem;
+          margin-left: 0.2rem;
         }
       }
     }

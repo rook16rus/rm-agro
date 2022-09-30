@@ -22,10 +22,6 @@ export default function gallerySlider() {
 
     const swiper = new Swiper('.modal-gallery__slider', {
         spaceBetween: 10,
-        effect: "fade",
-        fadeEffect: {
-            crossFade: true
-        },
         thumbs: {
             swiper: subSwiper
         },

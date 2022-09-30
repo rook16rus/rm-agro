@@ -613,6 +613,38 @@
             transform: translate(-50%, -50%) scale(0.7);
         }
     }
+    
+    &::before {
+        content: '';
+
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+
+        width: 7rem;
+        height: 8.4rem;
+        margin-left: 0.8rem;
+
+        background: url("../img/icons/arrow-icon.svg") no-repeat center;
+        background-size: contain;
+
+        @include breakpoint(tablet) {
+            width: 5.5rem;
+            height: 6rem;
+            margin-left: 9%;
+        }
+
+        @include breakpoint(small-tablet) {
+            width: 4rem;
+            height: 4.5rem;
+        }
+
+        @include breakpoint(mobile) {
+            width: 2.4rem;
+            height: 2.9rem;
+        }
+    }
 
     &__icon {
         width: 7rem;
