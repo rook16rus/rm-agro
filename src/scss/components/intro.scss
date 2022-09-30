@@ -136,6 +136,10 @@
       transition: 0.3s;
 
       @include transitionfix();
+
+      &:nth-of-type(n + 2) {
+        z-index: 1;
+      }
     }
   }
 
