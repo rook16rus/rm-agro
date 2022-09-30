@@ -511,30 +511,16 @@
   .modal__inner-container {
     position: relative;
 
-    max-height: 85%;
+    height: 85%;
+    -webkit-overflow-scrolling: touch;
   }
 
   .modal__inner {
     padding-bottom: 0;
     overflow-x: hidden;
     overflow-y: hidden;
-    height: 100%;
+    height: calc(100% + 1px);
     min-height: 20rem;
-    -webkit-overflow-scrolling: touch;
-
-    ::-webkit-scrollbar{
-
-      -webkit-appearance: none;
-      width: 7px;
-
-    }
-
-    ::-webkit-scrollbar-thumb {
-
-      border-radius: 4px;
-      background-color: rgba(0,0,0,.5);
-      -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
-    }
 
     @include breakpoint(tablet) {
       overflow: scroll;
@@ -548,7 +534,6 @@
     padding-bottom: 5rem;
 
     overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
 
     min-width: 120rem;
 
