@@ -10,17 +10,21 @@ export default function activitiesAnimation() {
     const headerTl = gsap.timeline({
         scrollTrigger: {
             trigger: '.activities',
-            start: "top 80%",
+            start: "top 70%",
         }
     });
 
-    headerTl.from('.activities .section-header', {
-        y: '20rem',
-        duration: 1,
-    }).from('.activities .activities-slider__title-wrapper', {
-        y: '30rem',
-        duration: 1,
-    }, '=-0.9')
+    if (matchMedia('(max-width: 640px)').matches) {
+
+    } else {
+        headerTl.from('.activities .section-header', {
+            y: '20rem',
+            duration: 1,
+        }).from('.activities .activities-slider__title-wrapper', {
+            y: '30rem',
+            duration: 1,
+        }, '=-0.9')
+    }
 
     const sliderTl = gsap.timeline({
         scrollTrigger: {

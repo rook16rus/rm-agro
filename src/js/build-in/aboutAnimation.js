@@ -31,13 +31,21 @@ export default function aboutAnimation() {
         }
     });
 
-    sliderTl.from('.about .features-slider', {
-        xPercent: 60,
-        duration: 3,
-        ease: "power3.out"
-    }).from('.about .features-slider__slide-img-block', {
-        width: '20rem',
-        duration: 3,
-        ease: "power3.out"
-    }, '=-3')
+    if (matchMedia('(max-width: 640px)').matches) {
+        sliderTl.from('.about .features-slider', {
+            yPercent: 10,
+            duration: 3,
+            ease: "power3.out"
+        })
+    } else {
+        sliderTl.from('.about .features-slider', {
+            xPercent: 60,
+            duration: 3,
+            ease: "power3.out"
+        }).from('.about .features-slider__slide-img-block', {
+            width: '20rem',
+            duration: 3,
+            ease: "power3.out"
+        }, '=-3')
+    }
 }

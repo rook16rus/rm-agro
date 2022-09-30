@@ -5,6 +5,8 @@ export default function hoverButton() {
         const clone = button.nextElementSibling.classList.contains('js-hover-button-clone') ? button.nextElementSibling : null;
         if (!clone) return;
 
-        button.style.setProperty('--button-width', clone.clientWidth + 'px');
+        console.log(clone.offsetWidth);
+
+        button.style.setProperty('--button-width', clone.offsetWidth + 'px');
     })
 }

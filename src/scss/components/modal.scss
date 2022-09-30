@@ -512,9 +512,6 @@
     position: relative;
 
     max-height: 85%;
-
-    -webkit-overflow-scrolling: touch;
-    -webkit-overflow-scrolling-x: touch;
   }
 
   .modal__inner {
@@ -524,10 +521,23 @@
     height: 100%;
     min-height: 20rem;
     -webkit-overflow-scrolling: touch;
-    -webkit-overflow-scrolling-x: touch;
+
+    ::-webkit-scrollbar{
+
+      -webkit-appearance: none;
+      width: 7px;
+
+    }
+
+    ::-webkit-scrollbar-thumb {
+
+      border-radius: 4px;
+      background-color: rgba(0,0,0,.5);
+      -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+    }
 
     @include breakpoint(tablet) {
-      overflow: auto;
+      overflow: scroll;
     }
   }
 
@@ -535,10 +545,10 @@
     display: flex;
     flex-direction: column;
     gap: 5rem;
-    height: calc(100% + 1px);
     padding-bottom: 5rem;
 
     overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
 
     min-width: 120rem;
 

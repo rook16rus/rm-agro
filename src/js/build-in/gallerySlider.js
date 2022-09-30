@@ -29,6 +29,10 @@ export default function gallerySlider() {
             641: {
                 spaceBetween: 0
             }
+        },
+        navigation: {
+            nextEl: document.querySelector('.modal-gallery__slider').querySelector('.js-next-slide'),
+            prevEl: document.querySelector('.modal-gallery__slider').querySelector('.js-prev-slide'),
         }
     })
 
