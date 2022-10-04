@@ -10,6 +10,7 @@ export default function successSlider() {
         slidesPerView: 1,
         spaceBetween: 30,
         autoHeight: true,
+        observer: true,
         navigation: {
             nextEl: success.querySelector('.js-next-slide'),
             prevEl: success.querySelector('.js-prev-slide'),

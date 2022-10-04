@@ -358,7 +358,7 @@
       &::before {
         width: 4.7rem;
         height: 5.7rem;
-        margin-left: 0.4rem;
+        left: 55%;
 
         @include breakpoint(tablet) {
           width: 4rem;
@@ -373,7 +373,6 @@
         @include breakpoint(mobile) {
           width: 2.4rem;
           height: 3rem;
-          margin-left: 0.2rem;
         }
       }
     }

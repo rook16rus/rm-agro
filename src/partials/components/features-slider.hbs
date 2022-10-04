@@ -1,7 +1,7 @@
-<div class="features-slider js-section" data-mobile="true">
-    <div class="features-slider__wrapper js-section-wrapper">
+<div class="features-slider js-section swiper">
+    <div class="features-slider__wrapper js-section-wrapper swiper-wrapper">
         {{#each data }}
-            <div class="features-slider__slide">
+            <div class="features-slider__slide js-section-slide swiper-slide">
                 <div class="features-slider__content">
                     <h3><span>{{this.title}}</span></h3>
                     <p>{{{this.text}}}</p>

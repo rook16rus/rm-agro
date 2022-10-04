@@ -437,6 +437,10 @@
     display: flex;
     flex-direction: column;
     gap: 1.6rem;
+
+    &.hide {
+      display: none;
+    }
   }
 
   &__success-button {

@@ -25,5 +25,11 @@
     font: var(--text-t2);
     opacity: 0.8;
   }
+
+  &__link {
+    span {
+      margin-top: 0.2rem;
+    }
+  }
 }
 

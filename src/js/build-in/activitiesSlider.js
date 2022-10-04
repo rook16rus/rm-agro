@@ -1,6 +1,6 @@
-import {Swiper, Navigation, EffectFade, Autoplay, Pagination, HashNavigation, Grid, FreeMode, Thumbs, SnapPlugin, SnapGrid, SlideGrid} from "swiper";
+import {Swiper, Navigation, EffectFade, Autoplay, Pagination, HashNavigation, Grid, FreeMode, Thumbs, SnapPlugin, SnapGrid, SlideGrid, Lazy} from "swiper";
 
-Swiper.use([Navigation, EffectFade, Autoplay, Pagination, HashNavigation, Grid, FreeMode, Thumbs, SnapPlugin, SnapGrid, SlideGrid]);
+Swiper.use([Navigation, EffectFade, Autoplay, Pagination, HashNavigation, Grid, FreeMode, Thumbs, SnapPlugin, SnapGrid, SlideGrid, Lazy]);
 
 export default function activitiesSlider() {
     const slider = document.querySelector('.js-activities-slider');
@@ -9,6 +9,10 @@ export default function activitiesSlider() {
 
     const swiperThumb = new Swiper('.js-activities-slider-thumb', {
         slidesPerView: 'auto',
+        watchSlidesProgress: true,
+        preloadImages: false,
+        lazy: true,
+        init: true,
         on: {
             touchEnd: function(s,e) {
                 let range = 5;
@@ -23,6 +27,9 @@ export default function activitiesSlider() {
         slidesPerView: 1.1,
         spaceBetween: 25,
         autoHeight: true,
+        watchSlidesProgress: true,
+        preloadImages: false,
+        lazy: true,
         thumbs: {
             swiper: swiperThumb,
         },

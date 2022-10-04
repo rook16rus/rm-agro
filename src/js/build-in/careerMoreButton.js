@@ -16,12 +16,12 @@ export default function careerMoreButton() {
             const hiddenText = textContainer.querySelector('.career__success-hidden-text');
             if (!hiddenText) return
 
-            if (hiddenText.classList.contains('visually-hidden')) {
-                hiddenText.classList.remove('visually-hidden');
+            if (hiddenText.classList.contains('hide')) {
+                hiddenText.classList.remove('hide');
                 button.querySelector('span').textContent = 'Cкрыть текст'
                 button.querySelector('img').style.transform = 'rotate(180deg)';
             } else {
-                hiddenText.classList.add('visually-hidden');
+                hiddenText.classList.add('hide');
                 button.querySelector('span').textContent = 'Читать полностью'
                 button.querySelector('img').style.transform = 'rotate(0deg)';
 
@@ -41,9 +41,10 @@ export default function careerMoreButton() {
                 }
             }
 
+            window.successSwiper.init();
             window.successSwiper.update();
-            window.successSwiper.updateAutoHeight(2000);
             window.successSwiper.updateSize();
+            window.successSwiper.updateAutoHeight(200);
         })
     })
 }

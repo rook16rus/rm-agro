@@ -43,6 +43,8 @@ import introAnimation from "./build-in/introAnimation";
 import alignHeights from "./custom/alignHeights";
 import features from "./build-in/features";
 import linksSlider from "./build-in/linksSlider";
+import numbersSlider from "./build-in/numbersSlider";
+import featuresSlider from "./build-in/featuresSlider";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -92,6 +94,7 @@ document.fonts.ready.then((res) => {
     activitiesAnimation();
     linksSlider();
     hoverButton();
+    numbersSlider();
     alignHeights('.features-slider', '.features-slider__content');
 })
 
@@ -99,6 +102,7 @@ window.addEventListener('load', function () {
     document.body.classList.add('loaded');
     ScrollTrigger.refresh();
     features();
+    featuresSlider();
     setTimeout(() => {
         document.body.classList.add('animatable')
     }, 300);
