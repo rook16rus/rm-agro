@@ -14,7 +14,7 @@ export default function activitiesAnimation() {
         }
     });
 
-    if (matchMedia('(max-width: 640px)').matches) {
+    if (matchMedia('(max-width: 1024px)').matches) {
 
     } else {
         headerTl.from('.activities .section-header', {

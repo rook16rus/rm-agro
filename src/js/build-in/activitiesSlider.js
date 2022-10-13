@@ -45,6 +45,10 @@ export default function activitiesSlider() {
                 slidesPerView: 1,
                 allowTouchMove: false,
             }
+        },
+        navigation: {
+            nextEl: slider.querySelector('.js-next-slide'),
+            prevEl: slider.querySelector('.js-prev-slide'),
         }
     })
 
@@ -54,6 +58,7 @@ export default function activitiesSlider() {
     swiper.on('slideChange', () => {
         contents.forEach(item => item.classList.remove('active'));
         contents[swiper.activeIndex] ? contents[swiper.activeIndex].classList.add('active') : null;
+        swiperThumb.slideTo(swiper.activeIndex)
     })
 
     const thumbSlides = document.querySelectorAll('.activities .section-header__slide');

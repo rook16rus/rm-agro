@@ -35,8 +35,8 @@ export default function successSlider() {
         const hiddenText = textContainer.querySelector('.career__success-hidden-text');
         if (!hiddenText) return
 
-        if (!hiddenText.classList.contains('visually-hidden')) {
-            hiddenText.classList.add('visually-hidden');
+        if (!hiddenText.classList.contains('hide')) {
+            hiddenText.classList.add('hide');
 
             button.querySelector('span').textContent = 'Читать полностью'
             button.querySelector('img').style.transform = 'rotate(0deg)';
@@ -51,8 +51,8 @@ export default function successSlider() {
         const hiddenText = textContainer.querySelector('.career__success-hidden-text');
         if (!hiddenText) return
 
-        if (!hiddenText.classList.contains('visually-hidden')) {
-            hiddenText.classList.add('visually-hidden');
+        if (!hiddenText.classList.contains('hide')) {
+            hiddenText.classList.add('hide');
             button.querySelector('span').textContent = 'Читать полностью'
             button.querySelector('img').style.transform = 'rotate(0deg)';
         }

@@ -24,18 +24,6 @@ html {
 
     @include noHighlight();
 
-    @media (max-width: 1536px) {
-        font-size: 9px;
-    }
-
-    @media (max-width: 1440px) {
-        font-size: 8px;
-    }
-
-    @media (max-width: 1199px) {
-        font-size: 7.5px;
-    }
-
     @include breakpoint(tablet) {
         font-size: 10px;
     }

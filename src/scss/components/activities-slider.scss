@@ -221,4 +221,14 @@
       margin-left: 0;
     }
   }
+
+  .slider-navigation {
+    position: absolute;
+    left: 103.5rem;
+    bottom: 0;
+
+    @include breakpoint(tablet) {
+      display: none;
+    }
+  }
 }

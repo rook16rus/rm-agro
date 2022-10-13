@@ -497,6 +497,8 @@
 }
 
 .modal-menu {
+  height: calc(var(--vh, 1vh) * 100);
+
   @include breakpoint(tablet) {
     align-items: flex-start;
     overflow: hidden;
@@ -511,7 +513,7 @@
   .modal__inner-container {
     position: relative;
 
-    height: 85%;
+    height: 85vh;
     -webkit-overflow-scrolling: touch;
   }
 
@@ -722,7 +724,11 @@
     &.js-next-slide {
       right: 0;
       left: auto;
-      transform: translateY(-50%) rotate(180deg);
+
+      svg {
+        transform: rotate(180deg);
+        transform-origin: center;
+      }
     }
 
     svg {

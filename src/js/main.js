@@ -45,6 +45,7 @@ import features from "./build-in/features";
 import linksSlider from "./build-in/linksSlider";
 import numbersSlider from "./build-in/numbersSlider";
 import featuresSlider from "./build-in/featuresSlider";
+import modalMenu from "./build-in/modalMenu";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -83,6 +84,7 @@ document.addEventListener('DOMContentLoaded', function () {
     careerMoreButton();
     fileInputs();
     resetForms();
+    modalMenu();
 });
 
 document.addEventListener('lazyloaded', () => {
