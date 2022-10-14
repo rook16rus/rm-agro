@@ -3,6 +3,7 @@
 	font-weight: 400;
 	font-style: normal;
     font-display: block;
+    unicode-range: U+0030-0039, U+0410-044F;
 	src: url('./Oniks.otf');
 }
 
