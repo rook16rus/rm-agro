@@ -49,7 +49,7 @@
     max-width: 27rem;
 
     @include breakpoint(small-tablet) {
-      max-width: 15rem;
+      max-width: 25rem;
     }
 
     @include breakpoint(mobile) {
