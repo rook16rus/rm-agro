@@ -498,6 +498,7 @@
 
 .modal-menu {
   height: calc(var(--vh, 1vh) * 100);
+  max-height: 100vh;
 
   @include breakpoint(tablet) {
     align-items: flex-start;
@@ -505,6 +506,8 @@
   }
 
   .modal__container {
+    margin-top: 0;
+
     @include breakpoint(tablet) {
       padding: 0;
     }
@@ -513,8 +516,9 @@
   .modal__inner-container {
     position: relative;
 
+    margin-top: auto;
     height: 85vh;
-    -webkit-overflow-scrolling: touch;
+    transform: translateZ(0);
   }
 
   .modal__inner {
@@ -523,6 +527,7 @@
     overflow-y: hidden;
     height: calc(100% + 1px);
     min-height: 20rem;
+    -webkit-overflow-scrolling: touch;
 
     @include breakpoint(tablet) {
       overflow: scroll;
@@ -534,14 +539,16 @@
     flex-direction: column;
     gap: 5rem;
     padding-bottom: 5rem;
+    height: calc(100% + 1px);
 
+    -webkit-overflow-scrolling: touch;
     overflow-y: auto;
 
     min-width: 120rem;
 
     @include breakpoint(tablet) {
       gap: 4.4rem;
-      overflow: hidden;
+      overflow: visible;
       padding-bottom: 0;
     }
 
