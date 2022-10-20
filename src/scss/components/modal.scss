@@ -515,17 +515,14 @@
 
   .modal__inner-container {
     position: relative;
-
-    margin-top: auto;
-    height: 85vh;
-    transform: translateZ(0);
   }
 
   .modal__inner {
+    max-height: 85vh;
+    transform: translateZ(0);
     padding-bottom: 0;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    height: calc(100% + 1px);
+    overflow: hidden;
+   /* height: calc(100% + 1px);*/
     min-height: 20rem;
     -webkit-overflow-scrolling: touch;
 
@@ -541,7 +538,6 @@
     padding-bottom: 5rem;
     height: calc(100% + 1px);
 
-    -webkit-overflow-scrolling: touch;
     overflow-y: auto;
 
     min-width: 120rem;
