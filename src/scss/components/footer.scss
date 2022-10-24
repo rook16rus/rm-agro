@@ -31,8 +31,20 @@
 
   &__logo {
     img {
-      width: 7rem;
-      height: 10.2rem;
+      width: 13.7rem;
+      height: 7.3rem;
+
+      transition: 0.3s;
+
+      @include breakpoint(tablet) {
+        width: 10rem;
+        height: 5.5rem;
+      }
+
+      @include breakpoint(mobile) {
+        width: 6.8rem;
+        height: 4rem;
+      }
     }
   }
 
