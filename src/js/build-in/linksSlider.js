@@ -11,15 +11,18 @@ export default function linksSlider() {
             768: {
                 spaceBetween: 20
             }
-        }
-    })
+        },
+        on: {
+            init() {
+                swiper.slides.forEach((slide, index) => {
+                    if (slide.classList.contains('active')) {
+                        const activeSlideDistance = slide.offsetLeft + slide.clientWidth;
 
-    swiper.slides.forEach((slide, index) => {
-        if (slide.classList.contains('active')) {
-            const activeSlideDistance = slide.offsetLeft + slide.clientWidth;
-
-            if (activeSlideDistance > document.documentElement.clientWidth) {
-                swiper.slideTo(index);
+                        if (activeSlideDistance > document.documentElement.clientWidth) {
+                            swiper.slideTo(index, 0);
+                        }
+                    }
+                })
             }
         }
     })
