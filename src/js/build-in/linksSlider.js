@@ -13,12 +13,13 @@ export default function linksSlider() {
             }
         },
         on: {
-            init() {
+            init(swiper) {
                 swiper.slides.forEach((slide, index) => {
                     if (slide.classList.contains('active')) {
                         const activeSlideDistance = slide.offsetLeft + slide.clientWidth;
+                        console.log(activeSlideDistance, document.documentElement.clientWidth )
 
-                        if (activeSlideDistance > document.documentElement.clientWidth) {
+                        if (activeSlideDistance > document.documentElement.clientWidth - swiper.$el[0].getBoundingClientRect().left) {
                             swiper.slideTo(index, 0);
                         }
                     }

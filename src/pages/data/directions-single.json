@@ -17,8 +17,7 @@
   "linksData": [
     {
       "href": "directions-single.html",
-      "text": "растениеводство",
-      "active": true
+      "text": "растениеводство"
     },
     {
       "href": "directions-single.html",
@@ -39,6 +38,15 @@
     {
       "href": "directions-single.html",
       "text": "ГРК «АПРЕЛЬ»"
+    },
+    {
+      "href": "directions-single.html",
+      "text": "Гостинично-ресторанный комплекс «Апрель» ",
+      "active": true
+    },
+    {
+      "href": "directions-single.html",
+      "text": "Строительство"
     }
   ],
   "descriptionSlider": [
