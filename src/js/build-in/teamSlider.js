@@ -38,14 +38,14 @@ export default function teamSlider() {
             on: {
                 init(swiperInit) {
                     if (slider.dataset.reverse) {
-                        swiper.slidePrev()
-                        swiper.on('slidePrevTransitionEnd', () => {
-                            swiper.slidePrev()
+                        swiperInit.slidePrev()
+                        swiperInit.on('slidePrevTransitionEnd', () => {
+                            swiperInit.slidePrev()
                         });
                     } else {
-                        swiper.slideNext()
-                        swiper.on('slideNextTransitionEnd', () => {
-                            swiper.slideNext()
+                        swiperInit.slideNext()
+                        swiperInit.on('slideNextTransitionEnd', () => {
+                            swiperInit.slideNext()
                         });
                     }
                 }
