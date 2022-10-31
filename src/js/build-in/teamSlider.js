@@ -35,19 +35,22 @@ export default function teamSlider() {
                     spaceBetween: 50
                 }
             },
+            on: {
+                init(swiperInit) {
+                    if (slider.dataset.reverse) {
+                        swiper.slidePrev()
+                        swiper.on('slidePrevTransitionEnd', () => {
+                            swiper.slidePrev()
+                        });
+                    } else {
+                        swiper.slideNext()
+                        swiper.on('slideNextTransitionEnd', () => {
+                            swiper.slideNext()
+                        });
+                    }
+                }
+            }
         })
-
-        if (slider.dataset.reverse) {
-            swiper.slidePrev()
-            swiper.on('slidePrevTransitionEnd', () => {
-                swiper.slidePrev()
-            });
-        } else {
-            swiper.slideNext()
-            swiper.on('slideNextTransitionEnd', () => {
-                swiper.slideNext()
-            });
-        }
     });
 
     /* Ховер эффект */
