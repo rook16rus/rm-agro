@@ -32,9 +32,17 @@ export default function modals() {
         }
 
         const openHandler = () => {
-            lockScroll(modal, {
-                reserveScrollBarGap: true,
-            });
+            if (modal.classList.contains('modal-menu')) {
+                console.log(modal.querySelector('.modal__inner'))
+                lockScroll(modal.querySelector('.modal__inner'), {
+                    reserveScrollBarGap: true,
+                });
+            } else {
+                lockScroll(modal, {
+                    reserveScrollBarGap: true,
+                });
+            }
+
             modal.classList.add('active');
             document.body.classList.add('modal-open');
             window.activeModal = modal;

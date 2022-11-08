@@ -515,36 +515,27 @@
 
   .modal__inner-container {
     position: relative;
+
+    max-height: 85%;
+    min-height: 20rem;
   }
 
   .modal__inner {
-    max-height: 85%;
     transform: translateZ(0);
-    padding-bottom: 0;
-    overflow: hidden;
-    min-height: 20rem;
-    -webkit-overflow-scrolling: touch;
 
-    @include breakpoint(tablet) {
-      overflow: scroll;
-    }
-  }
-
-  &__content {
     display: flex;
     flex-direction: column;
     gap: 5rem;
-    padding-bottom: 5rem;
-    height: calc(100% + 1px);
+    height: 100%;
+    padding-bottom: 0;
 
-    overflow-y: auto;
-
-    min-width: 120rem;
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch;
 
     @include breakpoint(tablet) {
       gap: 4.4rem;
-      overflow: visible;
       padding-bottom: 0;
+      overflow: scroll;
     }
 
     @include breakpoint(small-tablet) {
@@ -553,7 +544,6 @@
 
     @include breakpoint(mobile) {
       gap: 3.5rem;
-      min-width: 54.8rem;
     }
   }
 
@@ -561,6 +551,7 @@
     display: flex;
     flex-direction: column;
     gap: 3rem;
+    min-width: 120rem;
 
     &:last-child {
       .modal-menu__list {
@@ -574,6 +565,7 @@
 
     @include breakpoint(mobile) {
       gap: 2rem;
+      min-width: 54.8rem;
     }
   }
 

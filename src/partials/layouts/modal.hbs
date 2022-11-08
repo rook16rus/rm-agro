@@ -98,71 +98,71 @@
                 </svg>
             </button>
             <div class="modal__inner">
-                <div class="modal-menu__content">
-                    <div class="modal-menu__content-block">
-                        <h3 class="modal-menu__title">субпродукты</h3>
-                        <ul class="modal-menu__list">
+
+                <div class="modal-menu__content-block">
+                    <h3 class="modal-menu__title">субпродукты</h3>
+                    <ul class="modal-menu__list">
+                        <li class="modal-menu__item">
+                            <span>Наименование</span>
+                            <span>вес</span>
+                            <span>ед.изм</span>
+                            <span>ср. вес единицы</span>
+                            <span>Стандарт</span>
+                        </li>
+                        {{#each subProducts }}
                             <li class="modal-menu__item">
                                 <span>Наименование</span>
-                                <span>вес</span>
-                                <span>ед.изм</span>
-                                <span>ср. вес единицы</span>
-                                <span>Стандарт</span>
+                                <span>1,000</span>
+                                <span>кг</span>
+                                <span>1,80</span>
+                                <span>ТУ 10.13.14–001–61806639–2020</span>
                             </li>
-                            {{#each subProducts }}
-                                <li class="modal-menu__item">
-                                    <span>Наименование</span>
-                                    <span>1,000</span>
-                                    <span>кг</span>
-                                    <span>1,80</span>
-                                    <span>ТУ 10.13.14–001–61806639–2020</span>
-                                </li>
-                            {{/each}}
-                        </ul>
-                    </div>
-                    <div class="modal-menu__content-block">
-                        <h3 class="modal-menu__title">халяль</h3>
-                        <ul class="modal-menu__list">
-                            <li class="modal-menu__item">
-                                <span>Наименование</span>
-                                <span>вес</span>
-                                <span>ед.изм</span>
-                                <span>ср. вес единицы</span>
-                                <span>Стандарт</span>
-                            </li>
-                            {{#each halal }}
-                                <li class="modal-menu__item">
-                                    <span>Наименование</span>
-                                    <span>1,000</span>
-                                    <span>кг</span>
-                                    <span>1,80</span>
-                                    <span>ТУ 10.13.14–001–61806639–2020</span>
-                                </li>
-                            {{/each}}
-                        </ul>
-                    </div>
-                    <div class="modal-menu__content-block">
-                        <h3 class="modal-menu__title">вырезка</h3>
-                        <ul class="modal-menu__list">
-                            <li class="modal-menu__item">
-                                <span>Наименование</span>
-                                <span>вес</span>
-                                <span>ед.изм</span>
-                                <span>ср. вес единицы</span>
-                                <span>Стандарт</span>
-                            </li>
-                            {{#each clipping }}
-                                <li class="modal-menu__item">
-                                    <span>Наименование</span>
-                                    <span>1,000</span>
-                                    <span>кг</span>
-                                    <span>1,80</span>
-                                    <span>ТУ 10.13.14–001–61806639–2020</span>
-                                </li>
-                            {{/each}}
-                        </ul>
-                    </div>
+                        {{/each}}
+                    </ul>
                 </div>
+                <div class="modal-menu__content-block">
+                    <h3 class="modal-menu__title">халяль</h3>
+                    <ul class="modal-menu__list">
+                        <li class="modal-menu__item">
+                            <span>Наименование</span>
+                            <span>вес</span>
+                            <span>ед.изм</span>
+                            <span>ср. вес единицы</span>
+                            <span>Стандарт</span>
+                        </li>
+                        {{#each halal }}
+                            <li class="modal-menu__item">
+                                <span>Наименование</span>
+                                <span>1,000</span>
+                                <span>кг</span>
+                                <span>1,80</span>
+                                <span>ТУ 10.13.14–001–61806639–2020</span>
+                            </li>
+                        {{/each}}
+                    </ul>
+                </div>
+                <div class="modal-menu__content-block">
+                    <h3 class="modal-menu__title">вырезка</h3>
+                    <ul class="modal-menu__list">
+                        <li class="modal-menu__item">
+                            <span>Наименование</span>
+                            <span>вес</span>
+                            <span>ед.изм</span>
+                            <span>ср. вес единицы</span>
+                            <span>Стандарт</span>
+                        </li>
+                        {{#each clipping }}
+                            <li class="modal-menu__item">
+                                <span>Наименование</span>
+                                <span>1,000</span>
+                                <span>кг</span>
+                                <span>1,80</span>
+                                <span>ТУ 10.13.14–001–61806639–2020</span>
+                            </li>
+                        {{/each}}
+                    </ul>
+                </div>
+
             </div>
         </div>
 
@@ -183,7 +183,10 @@
                         {{#each mediaModal }}
                             <div class="modal-gallery__slide swiper-slide">
                                 {{#if video }}
-                                    <iframe data-src="https://www.youtube.com/embed/Z3TWuCm4ncI" data-size="10 мб MP3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    <iframe data-src="https://www.youtube.com/embed/Z3TWuCm4ncI" data-size="10 мб MP3"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowfullscreen></iframe>
                                 {{else}}
                                     <picture>
                                         <source srcset="{{this.imgWebp}}" type="image/webp">
