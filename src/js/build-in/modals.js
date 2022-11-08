@@ -7,6 +7,7 @@
 ###### */
 
 import { disableBodyScroll as lockScroll, clearAllBodyScrollLocks as unlockScroll } from 'body-scroll-lock';
+import { disableScroll, enableScroll } from '../custom/disableScroll';
 
 export default function modals() {
     window.activeModal = null;
@@ -32,9 +33,10 @@ export default function modals() {
         }
 
         const openHandler = () => {
-            lockScroll(modal, {
-                reserveScrollBarGap: true,
-            });
+            // lockScroll(modal, {
+            //     reserveScrollBarGap: true,
+            // });
+            disableScroll();
             modal.classList.add('active');
             document.body.classList.add('modal-open');
             window.activeModal = modal;
@@ -63,7 +65,8 @@ export default function modals() {
 
         document.body.classList.remove('modal-open');
 
-        unlockScroll();
+        // unlockScroll();
+        enableScroll();
         modal.classList.remove('active');
 
         const container = modal.querySelector('.modal__container');
