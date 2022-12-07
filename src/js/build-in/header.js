@@ -31,7 +31,7 @@ export default function header() {
         document.documentElement.style.setProperty('--header-height', header.clientHeight + 'px');
     }
 
-    window.addEventListener('scroll', () => {
+    /*window.addEventListener('scroll', () => {
         let scrollDistance = document.documentElement.getBoundingClientRect().top;
         if (scrollDistance <= -25) {
             if (header.classList.contains('header--white')) return;
@@ -39,5 +39,5 @@ export default function header() {
         } else {
             header.classList.remove('header--white');
         }
-    });
+    });*/
 }
